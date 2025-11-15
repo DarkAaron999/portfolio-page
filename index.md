@@ -19,22 +19,15 @@ Below are some of my featured projects:
 
 <div class="project-card">
   <a href="https://github.com/YOURNAME/ScavengerHuntApp">
-    <img src="assets/scavenger.png" alt="Scavenger Hunt App">
-    <div class="project-card-title">Scavenger Hunt App (SwiftUI)</div>
+    <img src="assets/images/3dart_project.png" alt="3D Art">
+    <div class="project-card-title">3D Art</div>
   </a>
 </div>
 
 <div class="project-card">
   <a href="https://github.com/YOURNAME/SuperPodcast">
-    <img src="assets/podcast.png" alt="SuperPodcast">
-    <div class="project-card-title">SuperPodcast (Android/Kotlin)</div>
-  </a>
-</div>
-
-<div class="project-card">
-  <a href="https://github.com/YOURNAME/ConservationReservations">
-    <img src="assets/reservations.png" alt="Reservations App">
-    <div class="project-card-title">Conservation Reservations (Angular)</div>
+    <img src="assets/images/3dart_project.png" alt="3D Art">
+    <div class="project-card-title">3D Art</div>
   </a>
 </div>
 
