@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Aaron Rennick - Portfolio
-Email: **your.email@example.com**  
+ 
 
 ---
 
