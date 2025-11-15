@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: "Home"
@@ -30,8 +29,3 @@ title: "Home"
 </div>
 
 </div>
-
-## 📫 Contact Me
-
-**Email:** your.email@example.com  
-**GitHub:** https://github.com/YOURNAME
