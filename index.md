@@ -18,7 +18,7 @@ title: Aaron Rennick - Portfolio
 
 <div class="project-card">
   <a href="https://github.com/DarkAaron999/SuperPodcast">
-    <img src="https://via.placeholder.com/600x350.png?text=SuperPodcast+Android">
+    <img src= /assets/images/3dart_projects>
     <div class="project-card-title">SuperPodcast (Android/Kotlin)</div>
   </a>
 </div>
