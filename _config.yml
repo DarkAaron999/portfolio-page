@@ -1,5 +1,4 @@
 # Build settings
-markdown: kramdown
 theme: jekyll-theme-cayman # You can change to another theme or remove if using custom layout
 
 # Site settings
