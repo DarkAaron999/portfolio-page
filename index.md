@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Home"
+title: "Aaron Rennick - Portfolio
 ---
 
 # 👾 Welcome to My Game Dev & Code Portfolio
