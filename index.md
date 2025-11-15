@@ -3,13 +3,16 @@ layout: default
 title: "Home"
 ---
 
-# 👋 Hi, I’m Aaron Rennick
-**Developer · Game · Creator**
+---
+layout: default
+title: "Home"
+---
+
+# 👋 Hi, I’m Louise Rennick  
+**Developer · Instructor · Creator**
 
 Welcome to my portfolio.  
-I build applications using SwiftUI, Kotlin, Android, Angular, React, Windows Server, Linux, SwiftData, and more.
-
-Below are some of my featured projects:
+Below are some of my featured projects displayed in a clean 3-column grid.
 
 ---
 
@@ -43,9 +46,9 @@ Below are some of my featured projects:
 
 </div>
 
-
 ---
 
 ## 📫 Contact Me
+
 **Email:** your.email@example.com  
 **GitHub:** https://github.com/YOURNAME
