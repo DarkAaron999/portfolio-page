@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Aaron Rennick - Protfolio
 ---
 
 <section class="projects">
