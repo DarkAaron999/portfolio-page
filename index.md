@@ -1,4 +1,7 @@
-
+---
+layout: default
+title: "Home"
+---
 
 # 👾 Welcome to My Game Dev & Code Portfolio
 
@@ -10,7 +13,6 @@ I build apps, tools, and experiences inspired by game worlds, UI from RPGs, and 
 Welcome to my gamer-themed portfolio. Check out my highlighted work below.
 
 <div class="project-grid">
-<a class="email-link" href="mailto:your.email@example.com">Email Me</a>
 
 <div class="project-card">
   <img src="assets/images/3dart_project.png">
@@ -28,7 +30,6 @@ Welcome to my gamer-themed portfolio. Check out my highlighted work below.
 </div>
 
 </div>
----
 
 ## 🕹 Contact & Links
 
