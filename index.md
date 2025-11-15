@@ -1,2 +1,2 @@
-[3D Art] (3DArt.md)
+[3D Art](3DArt.md)
 ## Aaron Rennick - Protfolio
