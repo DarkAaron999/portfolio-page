@@ -29,7 +29,6 @@
         z-index: 10;
       }
 
-      /* Left-side links */
       .nav-links a {
         margin-right: 25px;
         text-decoration: none;
@@ -41,7 +40,6 @@
         text-decoration: underline;
       }
 
-      /* Email button */
       .email-button {
         background: #1a73e8;
         color: white;
@@ -55,15 +53,13 @@
         background: #155fc2;
       }
 
-        .grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-
       .container {
         max-width: 1100px;
         margin: 0 auto;
         padding: 40px 25px;
       }
 
+      /* FIXED GRID — WORKS 100% */
       .project-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -96,12 +92,6 @@
         margin-top: 10px;
         color: #222;
       }
-        .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
 
       footer {
         margin-top: 50px;
@@ -118,14 +108,12 @@
 <body>
 
   <nav>
-    <!-- Left Navigation -->
     <div class="nav-links">
       <a href="/">Home</a>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
     </div>
 
-    <!-- Right Navigation: EMAIL BUTTON -->
     <a class="email-button" href="mailto:your.email@example.com">Email Me</a>
   </nav>
 
@@ -139,4 +127,3 @@
 
 </body>
 </html>
-
