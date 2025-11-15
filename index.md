@@ -8,22 +8,24 @@ title: Aaron Rennick - Portfolio
 Hi, I’m **Aaron** (a.k.a. `darkaaron999`) — a gamer, developer, and creator.  
 I build apps, tools, and experiences inspired by game worlds, UI from RPGs, and neon cyberpunk interfaces.
 
-# Featured Projects
+# 🎮 Featured Projects
+
+Welcome to my gamer-themed portfolio. Check out my highlighted work below.
 
 <div class="project-grid">
 
 <div class="project-card">
-  <img src="assets/images/sample.png">
+  <img src="assets/images/3dart_project.png">
   <div class="project-card-title">Project One</div>
 </div>
 
 <div class="project-card">
-  <img src="assets/images/sample.png">
+  <img src="assets/images/3dart_project.png">
   <div class="project-card-title">Project Two</div>
 </div>
 
 <div class="project-card">
-  <img src="assets/images/sample.png">
+  <img src="assets/images/3dart_project.png">
   <div class="project-card-title">Project Three</div>
 </div>
 
