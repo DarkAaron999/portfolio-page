@@ -8,7 +8,7 @@ title: Aaron Rennick - Portfolio
   <div class="project-row">
     <!-- Project 1 -->
     <div class="project-card">
-      _assets/images/3DArt_Project.png
+      /images/3DArt_Project.png
       <h3>Project 1</h3>
       <p>A short description of Project 1.</p>
       3DArt.md Project</a>
