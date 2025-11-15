@@ -1,1 +1,40 @@
-theme: jekyll-theme-cayman
+# Site settings
+title: "Aaron Rennick - Portfolio"
+description: "Game Design Student | 3D Artist | Creative Developer"
+author: "Aaron Rennick"
+email: "your.email@example.com"
+url: "https://yourusername.github.io" # Your GitHub Pages URL
+baseurl: "/portfolio" # Change if your repo name is different
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman # You can change to another theme or remove if using custom layout
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Include and exclude settings
+include:
+  - assets
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Collections (optional for projects)
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults for collections
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Permalinks
+permalink: pretty
