@@ -5,8 +5,6 @@ title: "Aaron Rennick - Protfolio"
 layout: default
 ---
 
-# 👋 Hello and welcome!
-
 ## My Projects
 - 🔹 3D Art
 - 🔹 2D Art
