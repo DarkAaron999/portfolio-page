@@ -7,7 +7,7 @@ title: Aaron Rennick - Protfolio
   <h2>Featured Projects</h2>
   <div class="project-row">
     <div class="project-card">
-      <img src="/assets/project1.jpg" altect 1</h3>
+      <img src="/assets/images/3Dart_Project" altect 1</h3>
       <p>A short description of Project 1.</p>
       /projects/project1.htmlView Project</a>
     </div>
