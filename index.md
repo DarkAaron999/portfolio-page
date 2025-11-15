@@ -6,30 +6,29 @@ title: Aaron Rennick - Portfolio
 <!-- Featured Projects -->
 <section id="projects" class="projects">
   <h2>Featured Projects</h2>
-  <div class="project-row">
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      /assets/images/3dart_project.png
-      <h3>3D Art Showcase</h3>
-      <p>A collection of 3D models and environments created using Blender and Unreal Engine.</p>
-      /projects/3DArt.htmlView Project</a>
-    </div>
+<div class="project-grid">
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <img src="/assets/images/project2.png" alt Prototype</h3>
-      <p>An interactive game prototype built in Unity, focusing on mechanics and level design.</p>
-      /projects/project2.htmlView Project</a>
-    </div>
+<div class="project-card">
+  <a href="https://github.com/YOURNAME/ScavengerHuntApp">
+    <img src="https://via.placeholder.com/600x350.png?text=Scavenger+Hunt+App">
+    <div class="project-card-title">Scavenger Hunt App</div>
+  </a>
+</div>
 
-    <!-- Project 3 -->
-    <div class="project-card">
-      /assets/images/project3.png
-      <h3>UI/UX Design</h3>
-      <p>Interface designs for games and apps, emphasizing usability and aesthetics.</p>
-      /projects/project3.htmlView Project</a>
-    </div>
+<div class="project-card">
+  <a href="https://github.com/DarkAaron999/SuperPodcast">
+    <img src="https://via.placeholder.com/600x350.png?text=SuperPodcast+Android">
+    <div class="project-card-title">SuperPodcast (Android/Kotlin)</div>
+  </a>
+</div>
+
+<div class="project-card">
+  <a href="https://github.com/YOURNAME/ConservationReservations">
+    <img src="https://via.placeholder.com/600x350.png?text=Conservation+Reservations">
+    <div class="project-card-title">Conservation Reservations (Angular 19)</div>
+  </a>
+</div>
 
   </div>
 </section>
