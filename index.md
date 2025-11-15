@@ -1,7 +1,7 @@
 [3D Art](3DArt.md)
 
 ---
-title: "Aaron Rennick - Protfolio"
+<h1>Aaron Rennick - Protfolio</h1>
 ---
 
 ## My Projects
