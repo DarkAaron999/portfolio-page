@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Aaron Rennick - Portfolio
+<a class="email-link" href="mailto:your.email@example.com">Email Me</a>
+
 ---
 
 # 👾 Welcome to My Game Dev & Code Portfolio
