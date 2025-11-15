@@ -1,9 +1,6 @@
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-cayman # You can change to another theme or remove if using custom layout
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
 
 # Site settings
 title: "Aaron Rennick - Portfolio"
@@ -27,14 +24,3 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
-
-# Defaults for collections
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-
-# Permalinks
-permalink: pretty
