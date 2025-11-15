@@ -8,10 +8,10 @@ title: Aaron Rennick - Portfolio
   <div class="project-row">
     <!-- Project 1 -->
     <div class="project-card">
-      /images/3DArt_Project.png
+      /assets/images/3DArt_Project.png
       <h3>Project 1</h3>
       <p>A short description of Project 1.</p>
-      3DArt.md Project</a>
+      /projects/3DArt.htmlView Project</a>
     </div>
 
     <!-- Project 2 -->
@@ -19,7 +19,7 @@ title: Aaron Rennick - Portfolio
       /assets/images/project2.png
       <h3>Project 2</h3>
       <p>A short description of Project 2.</p>
-      <a class="project2.htmlView Project</a>
+      /projects/project2.htmlView Project</a>
     </div>
 
     <!-- Project 3 -->
