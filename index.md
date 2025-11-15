@@ -19,7 +19,7 @@ title: Aaron Rennick - Portfolio
 
     <!-- Project 1 -->
     <div class="project-card">
-      /assets/images/3DArt_Project.png
+      /assets/images/3dart_project.png
       <h3>3D Art Showcase</h3>
       <p>A collection of 3D models and environments created using Blender and Unreal Engine.</p>
       /projects/3DArt.htmlView Project</a>
