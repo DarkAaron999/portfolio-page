@@ -1,1 +1,71 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- Optional: your external stylesheet if you want -->
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --card-bg: #111827;
+      --accent: #00f6ff;
+      --accent-soft: rgba(0, 246, 255, 0.3);
+      --accent-2: #a855ff;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    /* TOP NAV – GAMER STYLE */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 32px;
+      background: linear-gradient(to right, #020617cc, #020617f0);
+      border-bottom: 1px solid #1f2937;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: var(--text
+
