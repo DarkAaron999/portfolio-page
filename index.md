@@ -3,15 +3,6 @@ layout: default
 title: Aaron Rennick - Portfolio
 ---
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Hi, I'm Aaron Rennick</h1>
-    <p>Game Design Student | 3D Artist | Creative Developer</p>
-    #projectsView My Work</a>
-  </div>
-</section>
-
 <!-- Featured Projects -->
 <section id="projects" class="projects">
   <h2>Featured Projects</h2>
