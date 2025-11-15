@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Aaron Rennick - Portfolio
- 
 
 ---
 
