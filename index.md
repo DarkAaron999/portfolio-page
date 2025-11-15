@@ -11,7 +11,7 @@ title: Aaron Rennick - Portfolio
 
 <div class="project-card">
   <a href="https://github.com/YOURNAME/ScavengerHuntApp">
-    <img src="https://via.placeholder.com/600x350.png?text=Scavenger+Hunt+App">
+    <img src="[https://via.placeholder.com/600x350.png?text=Scavenger+Hunt+App](https://github.com/DarkAaron999/portfolio-page/blob/gh_pages/assets/images/3dart_project.png)">
     <div class="project-card-title">Scavenger Hunt App</div>
   </a>
 </div>
