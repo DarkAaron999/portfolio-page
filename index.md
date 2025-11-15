@@ -11,20 +11,20 @@ title: Aaron Rennick - Portfolio
       /_assets/images/3DArt_Project.png
       <h3>Project 1</h3>
       <p>A short description of Project 1.</p>
-      <a class="btn" href="/lView Project</a>
+      3DArt.md Project</a>
     </div>
 
     <!-- Project 2 -->
     <div class="project-card">
-      /assets/images/project2.jpg
+      /assets/images/project2.png
       <h3>Project 2</h3>
       <p>A short description of Project 2.</p>
-      /projects/project2.htmlView Project</a>
+      <a class="project2.htmlView Project</a>
     </div>
 
     <!-- Project 3 -->
     <div class="project-card">
-      /assets/images/project3.jpg
+      /assets/images/project3.png
       <h3>Project 3</h3>
       <p>A short description of Project 3.</p>
       /projects/project3.htmlView Project</a>
