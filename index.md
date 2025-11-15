@@ -42,13 +42,3 @@ title: Aaron Rennick - Portfolio
 
   </div>
 </section>
-
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; {{ site.time | date: '%Y' }} Aaron Rennick. All rights reserved.</p>
-  <p>
-    mailto:your.email@example.comContact Me</a> |
-    https://github.com/yourusernameGitHub</a> |
-    <a href="https://linkedinourusernameLinkedIn</a>
-  </p>
-</footer>
