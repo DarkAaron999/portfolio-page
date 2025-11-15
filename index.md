@@ -8,15 +8,16 @@ title: Aaron Rennick - Portfolio
   <div class="project-row">
     <!-- Project 1 -->
     <div class="project-card">
-      /assets/images/3DArt_Project.png
+      /_assets/images/3DArt_Project.png
       <h3>Project 1</h3>
       <p>A short description of Project 1.</p>
-      <a classs/project1.htmlView Project</a>
+      <a class="btn" href="/lView Project</a>
     </div>
 
     <!-- Project 2 -->
     <div class="project-card">
-      <img src="/assets/images/project2.jpg" altect 2</h3>
+      /assets/images/project2.jpg
+      <h3>Project 2</h3>
       <p>A short description of Project 2.</p>
       /projects/project2.htmlView Project</a>
     </div>
