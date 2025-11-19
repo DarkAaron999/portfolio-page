@@ -10,8 +10,9 @@ Hi, I’m **Aaron** — developer, gamer, and creator.
 # 🎮 Featured Projects
 
 <div class="project-grid">
-        <div class="project-card">
-                <a href="/3dart.html"<img src="assets/images/3dart_project.png"><div class="project-card-title">3D Art</div></a>
+        <a href="/3dart.html"<div class="project-card"></a>
+                <img src="assets/images/3dart_project.png">
+                <div class="project-card-title">3D Art</div>
         </div>
         <div class="project-card">
                 <img src="assets/images/flag.png">
