@@ -11,7 +11,7 @@ Hi, I’m **Aaron** — developer, gamer, and creator.
 
 <div class="project-grid">
     <div class="project-card">
-        <a href="/projects/3DArt.md">
+        <a href="projects/3DArt.md">
         <img src="assets/images/3dart_project.png">
         </a>
         <div class="project-card-title">3D Art</div>
