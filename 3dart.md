@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Projects"
+title: "3D Art"
 ---
 
 # 🎮 My Projects
