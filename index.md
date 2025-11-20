@@ -31,7 +31,7 @@ Hi, I’m **Aaron** — developer, gamer, and creator.
 </div>
 
 <div class="project-grid">
-        <div class="project-card"><img src="assets/images/3dart_project.png"><div class="project-card-title">Unity Projects</div></div>
+        <div class="project-card"><img src="assets/images/flag.png"><div class="project-card-title">Unity Projects</div></div>
         <div class="project-card"><img src="assets/images/flag.png"><div class="project-card-title">Design Week</div></div>
         <div class="project-card"><img src="assets/images/flag.png"><div class="project-card-title">Card Game</div></div>
 </div>
