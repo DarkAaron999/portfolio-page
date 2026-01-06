@@ -104,31 +104,31 @@ body {
   background-color: #6d28d9;
 }
 
-/* Centered Sketchfab section */
+/* Center the embed in the viewport */
 .embed-section {
   display: grid;
-  place-items: center;      /* centers horizontally + vertically */
-  min-height: 70vh;         /* adjust to taste (60–80vh) */
+  place-items: center;   /* centers horizontally + vertically */
+  min-height: 70vh;      /* adjust to taste */
   padding: 20px;
 }
 
 /* Responsive wrapper */
 .sketchfab-embed-wrapper {
-  width: min(92vw, 900px);  /* caps width on desktop */
+  width: min(92vw, 900px);
   margin: 0 auto;
 }
 
 .sketchfab-embed-wrapper iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;     /* change to 4 / 3 if you prefer */
+  aspect-ratio: 16 / 9;  /* change to 4 / 3 if you prefer the original 640×480 look */
   border: 0;
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-/* Optional caption */
+/* Optional caption styling */
 .sketchfab-caption {
-  margin: 10px 0 0;
+  margin-top: 10px;
   text-align: center;
   color: #666;
   font-size: 0.95rem;
