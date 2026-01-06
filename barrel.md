@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Wooden Barrel"
-permalink: /portfolio-page/barrel.html
 ---
 
 <section class="projects">
