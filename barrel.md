@@ -2,7 +2,6 @@
 ---
 layout: default
 title: "Wooden Barrel"
-permalink: /portfolio-page/barrel.md
 ---
 
 # Wooden Barrel
