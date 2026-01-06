@@ -8,7 +8,7 @@
   <!-- SEO basics -->
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}" />
-  {{ page.url | absolute_url }}
+  <linkge.url | absolute_url }}
 
   <!-- Theme color for mobile address bar -->
   <meta name="theme-color" content="#11192e" />
@@ -17,14 +17,14 @@
   /portfolio-page/assets/css/style.css
 
   <!-- Optional favicon (add your file then uncomment) -->
-  <!-- /portfolio-page/assets/images/favicon.ico -->
+  <!-- <portfolio-page/assets/images/favicon.ico -->
 </head>
 <body>
 
   <!-- Skip link for keyboard users -->
   #mainSkip to content</a>
 
-  <!-- Header / Hero -->
+  <!-- Header -->
   <header role="banner">
     <h1>Aaron Rennick — Portfolio</h1>
     <p>Neon Gamer Portfolio</p>
@@ -48,7 +48,7 @@
     <div id="nav-links" class="nav-links">
       /portfolio-page/Home</a>
       /portfolio-page/about.htmlAbout</a>
-      https://darkaaron999.github.io/portfolio-page/contact.htmlContact</a>
+      <atps://darkaaron999.github.io/portfolio-page/contact.htmlContact</a>
       mailto:your.email@example.comEmail Me</a>
     </div>
   </nav>
@@ -63,13 +63,11 @@
     © {{ site.time | date: "%Y" }} {{ site.title | default: "Aaron Rennick" }} — Gamer Mode 🎮
   </footer>
 
-  <!-- Minimal JS: footer year (if you prefer), and mobile nav toggle -->
+  <!-- Minimal JS: mobile nav toggle -->
   <script>
-    // Nav toggle (accessible)
     (function () {
       const toggle = document.querySelector('.nav-toggle');
       const links = document.getElementById('nav-links');
-
       if (!toggle || !links) return;
 
       toggle.addEventListener('click', function () {
@@ -81,3 +79,4 @@
   </script>
 </body>
 </html>
+``
