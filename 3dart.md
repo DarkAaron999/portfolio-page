@@ -19,7 +19,7 @@ Below are some of my featured project pages. Click any card to view more details
 <div class="project-card">
   <a href="/portfolio-page/barrel.html">
     <img src="/portfolio-page/assets/images/3dart_project.png">
-    <div class="project-card-title">Wooden Barrel</div>
   </a>
+  <div class="project-card-title">Fantasy Plants</div>
 </div>
 </div>
