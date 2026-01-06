@@ -20,7 +20,3 @@ A small showcase of my 3D wooden barrel. Use your mouse/touch to orbit, pan, and
     </p>
   </div>
 </div>
-
-<p style="text-align:center; margin-top:24px;">
-  /portfolio-page/← Back to 3D Art</a>
-</p>
