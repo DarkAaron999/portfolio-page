@@ -3,10 +3,11 @@ layout: default
 title: "Wooden Barrel"
 ---
 
-<section class="projects">
-  <h2>Model Viewer</h2>
+# 🎮 My Projects
 
-  <div class="project-row" style="display:flex; justify-content:center;">
+Below are some of my featured project pages. Click any card to view more details.
+
+<div class="project-row" style="display:flex; justify-content:center;">
     <div class="sketchfab-embed-wrapper">
       <iframe
         title="Wooden Barrel"
@@ -20,9 +21,4 @@ title: "Wooden Barrel"
       </p>
     </div>
   </div>
-
-  <p style="text-align:center; margin-top:24px;">
-    /portfolio-page/← Back to 3D Art</a>
-  </p>
-</section>
 
