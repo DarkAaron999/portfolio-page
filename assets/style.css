@@ -104,6 +104,48 @@ body {
   background-color: #6d28d9;
 }
 
+
+/* Centered Sketchfab section */
+.embed-section {
+  display: grid;
+  place-items: center;      /* centers horizontally + vertically */
+  min-height: 70vh;         /* adjust 60–80vh to taste */
+  padding: 20px;
+  background: transparent;  /* keeps your white card style outside */
+}
+
+/* Responsive wrapper */
+.sketchfab-embed-wrapper {
+  width: min(92vw, 900px);  /* caps width, responsive on mobile */
+  margin: 0 auto;
+}
+
+/* Maintain aspect ratio and theme polish */
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;     /* use 4 / 3 if you prefer original 640×480 */
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Optional caption that fits your palette */
+.sketchfab-caption {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+.sketchfab-caption a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+.sketchfab-caption a:hover {
+  color: #6d28d9;
+  text-decoration: underline;
+}
+
 /* Footer */
 .footer {
   text-align: center;
