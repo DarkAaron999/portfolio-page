@@ -1,78 +1,220 @@
-/* Reset some default styles */
+
+/* =========================================================
+   Aaron Rennick Portfolio — Clean CSS
+   Theme: Indigo (#4f46e5) & Purple (#6d28d9)
+   ========================================================= */
+
+/* -----------------------------
+   0) CSS Reset / Base
+   ----------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-/* Hero Section */
+/* Remove default margins on common block elements */
+h1, h2, h3, h4, h5, h6,
+p,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Images are responsive by default */
+img,
+svg,
+video,
+canvas,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 3px solid #6d28d9;
+  outline-offset: 2px;
+}
+
+/* Link defaults */
+a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility classes */
+.container {
+  width: min(1200px, 92vw);
+  margin-inline: auto;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
+/* -----------------------------
+   1) Theme Tokens
+   ----------------------------- */
+:root {
+  --indigo: #4f46e5;
+  --purple: #6d28d9;
+  --text: #333;
+  --muted: #666;
+  --bg: #f9f9f9;
+  --card-bg: #fff;
+  --radius: 10px;
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* -----------------------------
+   2) Typography
+   ----------------------------- */
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+p.lead {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+/* -----------------------------
+   3) Hero Section
+   ----------------------------- */
 .hero {
-  background: linear-gradient(135deg, #4f46e5, #6d28d9);
+  background: linear-gradient(135deg, var(--indigo), var(--purple));
   color: #fff;
   text-align: center;
   padding: 80px 20px;
 }
-
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(255, 255, 255, 0.15);
 }
-
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
+/* -----------------------------
+   4) Buttons
+   ----------------------------- */
+.btn,
 .btn-primary {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #fff;
-  color: #4f46e5;
-  font-weight: bold;
-  text-decoration: none;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Primary button (indigo on white) */
+.btn-primary {
+  background-color: #fff;
+  color: var(--indigo);
+  box-shadow: var(--shadow-sm);
+}
 .btn-primary:hover {
-  background-color: #e0e0e0;
+  background-color: #eaeaea;
+  color: var(--indigo);
+  text-decoration: none;
 }
 
-/* Projects Section */
+/* Accent button (filled indigo) */
+.btn-accent {
+  background-color: var(--indigo);
+  color: #fff;
+}
+.btn-accent:hover {
+  background-color: var(--purple);
+  color: #fff;
+}
+
+/* -----------------------------
+   5) Projects Section & Grid
+   ----------------------------- */
 .projects {
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .projects h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 2rem;
 }
 
-.project-row {
+/* Responsive grid of cards */
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  align-items: stretch;
 }
 
+/* Center a single child within the grid (detail page) */
+.project-grid--center {
+  grid-template-columns: 1fr;
+  min-height: 70vh;
+  place-content: center;  /* vertical + horizontal centering of grid tracks */
+}
+
+/* Card */
 .project-card {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
   text-align: center;
   padding: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
-
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
+/* Card image */
 .project-card img {
   width: 100%;
   height: auto;
@@ -80,44 +222,116 @@ body {
   margin-bottom: 15px;
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+/* Card title (inline element in your markup) */
+.project-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 8px;
 }
 
+/* Card description (optional) */
 .project-card p {
   font-size: 1rem;
+  color: var(--muted);
   margin-bottom: 15px;
 }
 
+/* Card CTA button */
 .project-card .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4f46e5;
+  background-color: var(--indigo);
   color: #fff;
-  text-decoration: none;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
-
 .project-card .btn:hover {
-  background-color: #6d28d9;
+  background-color: var(--purple);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
 }
 
-/* Footer */
+/* -----------------------------
+   6) Sketchfab Embed (Centered)
+   ----------------------------- */
+
+/* Center the embed in its own viewport section */
+.embed-section {
+  display: grid;
+  place-items: center; /* centers horizontally + vertically */
+  min-height: 70vh;
+  padding: 20px;
+}
+
+/* Responsive wrapper (desktop cap, mobile fluid) */
+.sketchfab-embed-wrapper {
+  width: min(92vw, 1100px); /* matches your fixed width preference on desktop */
+  margin: 0 auto;
+}
+
+/* Fluid iframe while preserving ratio
+   - If you prefer original 640×480, use aspect-ratio: 4 / 3 */
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 2 / 1; /* matches your 1100×550 fixed size */
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+/* Caption beneath the viewer */
+.sketchfab-caption {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.sketchfab-caption a {
+  color: var(--indigo);
+  font-weight: 700;
+  text-decoration: none;
+}
+.sketchfab-caption a:hover {
+  color: var(--purple);
+  text-decoration: underline;
+}
+
+/* -----------------------------
+   7) Footer
+   ----------------------------- */
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #4f46e5;
+  background-color: var(--indigo);
   color: #fff;
 }
-
 .footer a {
   color: #fff;
   text-decoration: none;
   margin: 0 10px;
 }
-
 .footer a:hover {
   text-decoration: underline;
 }
+
+/* -----------------------------
+   8) Responsive Tweaks
+   ----------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 64px 16px;
+  }
+  .projects {
+    padding: 40px 16px;
+  }
+  .project-card {
+    padding: 16px;
+  }
+  .btn,
+  .btn-primary {
+    padding: 10px 18px;
+  }
+}
+
+@media (min-width: 1280px) {
