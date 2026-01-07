@@ -3,7 +3,7 @@ layout: default
 title: "Fantasy Plants"
 ---
 
-# Wooden Barrel
+# Fantasy Plants
 
 A small showcase of my 3D Fantasy Plants. Use your mouse/touch to orbit, pan, and zoom.
 
