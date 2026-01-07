@@ -41,5 +41,5 @@ I have created games in Unity and worked with teams to develop a card game, a pr
 ## 2D & Image Editing:
   **Adobe Photoshop** -Texture Creation, UI Design, Photo Manipulation
 
-# 🎯 My Vision
+# My Vision
 Creating immersive experiences inspired by RPG and fantasy worlds.
