@@ -15,7 +15,7 @@ I’m always open to chatting about:
 - Collaborations  
 
 ## 📧 Email  
-  <a class="mailto:aaronrennick1221@gmail.comaaronrennick1221@gmail.com</a>"></a>
+<a href="mailto:aaronrennick1221@gmail.com">Send Email</a>
 
 ## 🐙 GitHub  
 https://github.com/darkaaron999
