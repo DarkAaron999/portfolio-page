@@ -15,9 +15,13 @@ I have created games in Unity and worked with teams to develop a card game, a pr
 ## Were my passion comes from:
 
 🛠 Creating detailed 3D models for games and environments.
+
 🎮 Playing games like Destiny, Halo, Skyrim, Fallout, and Star Wars titles.
+
 🎬 Watching movies such as Star Wars, Aliens and Lord of the Rings.
+
 🧩 Building LEGO and collecting Star Wars figures.
+
 🎲 Playing board games like Catan.
 
 # 🔥 My Skills
