@@ -18,4 +18,4 @@ I’m always open to chatting about:
 <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
 
 ## 🐙 GitHub  
-https://github.com/darkaaron999
+<a href="https://github.com/DarkAaron999">https://github.com/DarkAaron999</a>
