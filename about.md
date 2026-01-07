@@ -3,30 +3,36 @@ layout: default
 title: "About Me"
 ---
 
-# 🧑‍💻 About Aaron (darkaaron999)
+# 🧑‍💻 About Aaron Rennick
 
-Hi! I’m **Aaron**, a gamer, developer, digital creator, and UI enthusiast.
+Hello. I am a third-year student in the Bachelor of Game Design program at Sheridan College. 
+I have been making 3D/2D art for the past four years. 
+I have created games in Unity and worked with teams to develop a card game, a progression system for an existing game, a board game, and various Unity games.
 
-I love building:
+## Were my passion comes from:
 
-- 🎮 Game-inspired apps  
-- ⚡ Neon cyberpunk interfaces  
-- 🛠 Tools that feel like they belong inside an RPG or sci-fi world  
-- 📱 Mobile + web experiences with clean UX  
+🛠 Creating detailed 3D models for games and environments.
+🎮 Playing games like Destiny, Halo, Skyrim, Fallout, and Star Wars titles.
+🎬 Watching movies such as Star Wars, Aliens and Lord of the Rings.
+🧩 Building LEGO and collecting Star Wars figures.
+🎲 Playing board games like Catan.
 
 ## 🔥 My Skills
 
-- **Languages:** Swift, Kotlin, JavaScript, HTML/CSS  
-- **Frameworks:** SwiftUI, Jetpack Compose, React  
-- **Game-style UI:** neon, pixel-style, HUD-style layouts  
-- **Other:** Firebase, JSON APIs, GitHub Pages, Xcode  
+**-3D Software:**
+  -Maya – Modeling, UV Unwrapping
+  -Substance Painter – PBR Texturing, Hand-Painted Texturing
+  -Blender – Modeling, UV Unwrapping
+
+**-Game Engines:**
+  -Unity – C# Scripting, Level Design
+  -Unreal Engine – Blueprint Scripting, Lighting
+
+**-2D & Image Editing:**
+  -Adobe Photoshop – Texture Creation, UI Design, Photo Manipulation
 
 ## 🎯 My Vision
 
-I merge gaming aesthetics with real-world development.  
-Everything I build has a **style**, not just functionality.
-
-If a UI glows… I probably made it. 💡😄
-
+Creating immersive experiences inspired by RPG and fantasy worlds.
 ---
 
