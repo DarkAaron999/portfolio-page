@@ -21,17 +21,17 @@ I have created games in Unity and worked with teams to develop a card game, a pr
 
 ## 🔥 My Skills
 
-**3D Software:**
-  Maya – Modeling, UV Unwrapping
-  Substance Painter – PBR Texturing, Hand-Painted Texturing
-  Blender – Modeling, UV Unwrapping
+## 3D Software:
+  Maya Modeling, UV Unwrapping
+  Substance Painter PBR Texturing, Hand-Painted Texturing
+  Blender Modeling, UV Unwrapping
 
-**Game Engines:**
-  Unity – C# Scripting, Level Design
-  Unreal Engine – Blueprint Scripting, Lighting
+## Game Engines:
+  Unity C# Scripting, Level Design
+  Unreal Engine Blueprint Scripting, Lighting
 
-**2D & Image Editing:**
-  Adobe Photoshop – Texture Creation, UI Design, Photo Manipulation
+## 2D & Image Editing:
+  Adobe Photoshop Texture Creation, UI Design, Photo Manipulation
 
 ## 🎯 My Vision
 
