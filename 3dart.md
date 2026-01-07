@@ -17,7 +17,7 @@ Below are some of my featured project pages. Click any card to view more details
 </div>
 
 <div class="project-card">
-  <a href="/portfolio-page/barrel.html">
+  <a href="/portfolio-page/fantasyplants.html">
     <img src="/portfolio-page/assets/images/fantasyplants.png">
   </a>
   <div class="project-card-title">Fantasy Plants</div>
