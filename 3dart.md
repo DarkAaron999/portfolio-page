@@ -27,14 +27,14 @@ Below are some of my featured project pages. Click any card to view more details
 <div class="project-grid">
 
 <div class="project-card">
-  <a href="/portfolio-page/barrel.html">
+  <a href="/portfolio-page/pinetree.html">
     <img src="/portfolio-page/assets/images/pinetree.png">
   </a>
   <div class="project-card-title">Pine Tree</div>
 </div>
 
 <div class="project-card">
-  <a href="/portfolio-page/fantasyplants.html">
+  <a href="/portfolio-page/alchemyhouse.html">
     <img src="/portfolio-page/assets/images/alchemyhouse.png">
   </a>
   <div class="project-card-title">Alchemy House</div>
