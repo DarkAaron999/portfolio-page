@@ -3,7 +3,7 @@ layout: default
 title: "Rocks"
 ---
 
-# Rockso
+# Rocks
 
 A small showcase of my 3D rocks. Use your mouse/touch to orbit, pan, and zoom.
 
