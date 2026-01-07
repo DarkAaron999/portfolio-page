@@ -4,6 +4,7 @@ title: "About Me"
 ---
 
 # 🧑‍💻 About Aaron Rennick
+Game Designer/2D/3D Artist
 
 Hello. I am a third-year student in the Bachelor of Game Design program at Sheridan College. 
 I have been making 3D/2D art for the past four years. 
