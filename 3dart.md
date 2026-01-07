@@ -37,7 +37,7 @@ Below are some of my 3D models. Click any card to view more details.
   <a href="/portfolio-page/kitchen.html">
     <img src="/portfolio-page/assets/images/kitchen.png">
   </a>
-  <div class="project-card-title">Pine Tree</div>
+  <div class="project-card-title">Kitchen</div>
 </div>
 
 <div class="project-card">
@@ -51,7 +51,7 @@ Below are some of my 3D models. Click any card to view more details.
   <a href="/portfolio-page/factoryassets.html">
     <img src="/portfolio-page/assets/images/factoryassets.png">
   </a>
-  <div class="project-card-title">Alchemy House</div>
+  <div class="project-card-title">Factory Assets</div>
 </div>
 </div>
 
@@ -61,20 +61,20 @@ Below are some of my 3D models. Click any card to view more details.
   <a href="/portfolio-page/lgglogo.html">
     <img src="/portfolio-page/assets/images/lgglogo.png">
   </a>
-  <div class="project-card-title">Pine Tree</div>
+  <div class="project-card-title">Lgg Logo</div>
 </div>
 
 <div class="project-card">
   <a href="/portfolio-page/rocks.html">
     <img src="/portfolio-page/assets/images/rocks.png">
   </a>
-  <div class="project-card-title">Alchemy House</div>
+  <div class="project-card-title">Rocks</div>
 </div>
 
 <div class="project-card">
   <a href="/portfolio-page/deadtree.html">
     <img src="/portfolio-page/assets/images/deadtree.png">
   </a>
-  <div class="project-card-title">Alchemy House</div>
+  <div class="project-card-title">Dead Tree</div>
 </div>
 </div>
