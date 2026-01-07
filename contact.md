@@ -15,17 +15,7 @@ I’m always open to chatting about:
 - Collaborations  
 
 ## 📧 Email  
-**your.email@example.com**
+**aaronrennick1221@gmail.com**
 
 ## 🐙 GitHub  
 https://github.com/darkaaron999
-
-## 🎮 Gaming + Social  
-(You can add these if you want)
-
-- Discord: *yourDiscordName#0000*  
-- Twitch: *yourchannel*  
-- Instagram: *@yourname*  
-
-Feel free to reach out — I reply fast!
-
