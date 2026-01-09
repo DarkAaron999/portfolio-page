@@ -12,14 +12,13 @@ Hi, I’m **Aaron** — developer, gamer, and creator.
 <div class="project-grid">
         <div class="project-card">
   <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/test.png">
+    <img src="assets/images/3dart.png">
   </a>
 </div>
         <div class="project-card">
   <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/flag.png">
+    <img src="assets/images/2dart.png">
   </a>
-    <div class="project-card-title">2D Art</div>
 </div>
         <div class="project-card">
   <a href="/portfolio-page/3dart.html">
