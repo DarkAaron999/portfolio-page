@@ -22,14 +22,25 @@ Hi, I’m **Aaron** — developer, gamer, and creator.
 </div>
         <div class="project-card">
   <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/flag.png">
+    <img src="assets/images/leveldesign.png">
   </a>
-    <div class="project-card-title">Level Design</div>
 </div>
 </div>
 
 <div class="project-grid">
-        <div class="project-card"><img src="assets/images/flag.png"><div class="project-card-title">Unity Projects</div></div>
-        <div class="project-card"><img src="assets/images/flag.png"><div class="project-card-title">Design Week</div></div>
-        <div class="project-card"><img src="assets/images/flag.png"><div class="project-card-title">Card Game</div></div>
+        <div class="project-card">
+  <a href="/portfolio-page/3dart.html">
+    <img src="assets/images/unityprojects.png">
+  </a>
+</div>
+        <div class="project-card">
+  <a href="/portfolio-page/3dart.html">
+    <img src="assets/images/designweek.png">
+  </a>
+</div>
+        <div class="project-card">
+  <a href="/portfolio-page/3dart.html">
+    <img src="assets/images/cardgame.png">
+  </a>
+</div>
 </div>
