@@ -5,7 +5,7 @@ title: Home
 
 # 👾 Welcome to My Portfolio
 
-Hi, I’m **Aaron** — developer, gamer, and creator.
+Hi, I’m **Aaron Rennick** — Game Designer/2D/3D Artist
 
 # 🎮 Featured Projects
 
