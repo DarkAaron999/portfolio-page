@@ -14,3 +14,8 @@ Through discussion and compromise, we developed a shared vision that balanced cr
 From a design perspective, I gained insight into how environmental storytelling can guide player exploration without explicit instructions. We used visual cues such as lighting, terrain, and landmarks to create a natural flow through the level.
 
 Playtesting was another critical step. It revealed areas where players felt lost or disengaged, allowing us to adjust paths and improve clarity.
+
+<a href="/portfolio-page/barrel.html">
+  <img src="/portfolio-page/assets/images/woodenbarrel.png">
+</a>
+<div class="project-card-title">Level Wprk in Progress</div>
