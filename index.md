@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# 👾 Welcome to My Gamer Portfolio
+# 👾 Welcome to My Portfolio
 
 Hi, I’m **Aaron** — developer, gamer, and creator.
 
