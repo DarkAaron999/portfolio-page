@@ -1,8 +1,9 @@
 <div class="project-grid">
 
 <div class="project-card">
-  <a href="/portfolio-page/designweek01.html">Design Week 01</a>
+  <a href="/portfolio-page/designweek01.html">
   </a>
+  Design Week 01
 </div>
 
 <div class="project-card">
