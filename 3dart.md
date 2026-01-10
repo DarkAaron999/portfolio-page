@@ -78,3 +78,4 @@ Below are some of my 3D models. Click any card to view more details.
   </a>
   <div class="project-card-title">Dead Tree</div>
 </div>
+</div>
