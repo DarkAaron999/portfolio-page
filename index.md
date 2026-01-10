@@ -34,7 +34,7 @@ Hi, I’m **Aaron** — developer, gamer, and creator.
   </a>
 </div>
         <div class="project-card">
-  <a href="/portfolio-page/3dart.html">
+  <a href="/portfolio-page/designweek01.html">
     <img src="assets/images/designweek.png">
   </a>
 </div>
