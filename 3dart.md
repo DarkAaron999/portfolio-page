@@ -63,7 +63,6 @@ Below are some of my 3D models. Click any card to view more details.
   </a>
   <div class="project-card-title">Factory Assets</div>
 </div>
-</div>
 
 <div class="project-card">
   <a href="/portfolio-page/rocks.html">
