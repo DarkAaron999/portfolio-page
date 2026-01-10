@@ -2,8 +2,8 @@
 
 <div class="project-card">
   /portfolio-page/designweek01.html
+  <a href="/portfolio-page/designweek01.html">Design Week 01</a>
   </a>
-  <div class="project-card-title">Design Week 01</div>
 </div>
 
 <div class="project-card">
