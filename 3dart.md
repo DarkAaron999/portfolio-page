@@ -53,7 +53,6 @@ Below are some of my 3D models. Click any card to view more details.
   </a>
   <div class="project-card-title">Alchemy House</div>
 </div>
-
 </div>
 
 <div class="project-grid">
@@ -78,6 +77,7 @@ Below are some of my 3D models. Click any card to view more details.
     <img src="/portfolio-page/assets/images/deadtree.png">
   </a>
   <div class="project-card-title">Dead Tree</div>
+</div>
 </div>
 
 <div class="project-grid">
