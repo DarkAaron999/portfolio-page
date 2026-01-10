@@ -79,13 +79,3 @@ Below are some of my 3D models. Click any card to view more details.
   <div class="project-card-title">Dead Tree</div>
 </div>
 </div>
-
-<div class="project-grid">
-
-<div class="project-card">
-  <a href="/portfolio-page/lgglogo.html">
-    <img src="/portfolio-page/assets/images/lgglogo.png">
-  </a>
-  <div class="project-card-title">Lgg Logo</div>
-</div>
-</div>
