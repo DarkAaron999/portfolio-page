@@ -2,6 +2,7 @@
 
 <div class="project-card">
   <a href="/portfolio-page/designweek01.html">
+    <div class="project-card-title"></div>
   </a>
   Design Week 01
 </div>
