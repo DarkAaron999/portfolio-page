@@ -1,5 +1,5 @@
 /* =========================================================
-   Aaron Rennick Portfolio — Dark Neon Theme
+   Aaron Rennick Portfolio — Dark Neon Theme (Enhanced)
    ========================================================= */
 
 /* -----------------------------
@@ -14,6 +14,13 @@
   --text:#e5e7eb;
   --muted:#9ca3af;
   --border:#1f2937;
+}
+
+/* -----------------------------
+   Global Transitions
+   ----------------------------- */
+* {
+  transition: color .2s ease, background .2s ease, border-color .2s ease;
 }
 
 /* -----------------------------
@@ -37,10 +44,18 @@ img, iframe {
    ----------------------------- */
 .site-header {
   background:linear-gradient(135deg, var(--header), #020617);
+  background-size:200% 200%;
+  animation:headerGlow 6s ease infinite;
   padding:45px 20px;
   text-align:center;
   color:white;
   box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+@keyframes headerGlow {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
 }
 
 .site-header h1 {
@@ -114,8 +129,12 @@ img, iframe {
   border-radius:10px;
   border:1px solid var(--border);
   text-align:center;
-  transition:.2s;
+  transition:.25s ease;
   box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.project-card img:hover {
+  box-shadow:0 0 18px var(--accent);
 }
 
 .project-card:hover {
@@ -174,6 +193,9 @@ img, iframe {
   margin-bottom:40px;
 }
 
+/* -----------------------------
+   7) Back Button (Underline Removed)
+   ----------------------------- */
 .project-back {
   text-align:center;
   margin-top:40px;
@@ -188,6 +210,7 @@ img, iframe {
   font-weight:bold;
   text-transform:uppercase;
   letter-spacing:.05em;
+  text-decoration:none; /* ← underline removed */
   transition:.2s;
   box-shadow:0 0 12px var(--accent);
 }
@@ -199,7 +222,7 @@ img, iframe {
 }
 
 /* -----------------------------
-   7) Footer
+   8) Footer
    ----------------------------- */
 .site-footer {
   margin-top:40px;
@@ -208,4 +231,25 @@ img, iframe {
   color:var(--muted);
   text-align:center;
   border-top:1px solid var(--border);
+}
+
+/* -----------------------------
+   9) Mobile Tweaks
+   ----------------------------- */
+@media (max-width:600px) {
+  .container {
+    padding:20px;
+  }
+
+  .project-title {
+    font-size:1.8rem;
+  }
+
+  .project-subtitle {
+    font-size:1rem;
+  }
+
+  .project-embed {
+    padding-top:75%;
+  }
 }
