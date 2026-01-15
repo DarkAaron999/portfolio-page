@@ -14,11 +14,11 @@ title: "Wooden Barrel"
 </div>
 
 <h1 class="project-title">Wooden Barrel</h1>
-<p class="project-subtitle">A stylized 3D asset created in Blender and Substance Painter</p>
+<p class="project-subtitle">A stylized 3D asset created in Maya and Substance Painter</p>
 
 <div class="project-body">
   <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
-  <p>This wooden barrel was modeled in Blender and textured in Substance Painter.</p>
+  <p>This wooden barrel was modeled in Maya and textured in Substance Painter.</p>
 </div>
 
 <div class="project-back">
