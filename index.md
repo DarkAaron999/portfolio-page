@@ -5,42 +5,50 @@ title: Home
 
 # 👾 Welcome to My Portfolio
 
-Hi, I’m **Aaron Rennick** — Game Designer/2D/3D Artist
+Hi, I’m **Aaron Rennick** — Game Designer / 2D / 3D Artist
 
 # 🎮 Featured Projects
 
 <div class="project-grid">
-        <div class="project-card">
-  <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/3dart.png">
-  </a>
-</div>
-        <div class="project-card">
-  <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/2dart.png">
-  </a>
-</div>
-        <div class="project-card">
-  <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/leveldesign.png">
-  </a>
-</div>
+
+  <div class="project-card">
+    <a href="{{ '/projects/3dart.html' | relative_url }}">
+      <img src="{{ '/assets/images/3dart.png' | relative_url }}">
+    </a>
+  </div>
+
+  <div class="project-card">
+    <a href="{{ '/projects/2dart.html' | relative_url }}">
+      <img src="{{ '/assets/images/2dart.png' | relative_url }}">
+    </a>
+  </div>
+
+  <div class="project-card">
+    <a href="{{ '/projects/leveldesign.html' | relative_url }}">
+      <img src="{{ '/assets/images/leveldesign.png' | relative_url }}">
+    </a>
+  </div>
+
 </div>
 
 <div class="project-grid">
-        <div class="project-card">
-  <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/unityprojects.png">
-  </a>
-</div>
-        <div class="project-card">
-  <a href="/portfolio-page/designweek.html">
-    <img src="assets/images/designweek.png">
-  </a>
-</div>
-        <div class="project-card">
-  <a href="/portfolio-page/3dart.html">
-    <img src="assets/images/cardgame01.png">
-  </a>
-</div>
+
+  <div class="project-card">
+    <a href="{{ '/projects/unity.html' | relative_url }}">
+      <img src="{{ '/assets/images/unityprojects.png' | relative_url }}">
+    </a>
+  </div>
+
+  <div class="project-card">
+    <a href="{{ '/projects/designweek.html' | relative_url }}">
+      <img src="{{ '/assets/images/designweek.png' | relative_url }}">
+    </a>
+  </div>
+
+  <div class="project-card">
+    <a href="{{ '/projects/cardgame.html' | relative_url }}">
+      <img src="{{ '/assets/images/cardgame01.png' | relative_url }}">
+    </a>
+  </div>
+
 </div>
