@@ -1,26 +1,48 @@
 ---
 layout: default
-title: "Kitchen"
+title: "Design Week 01 — Guided Exploration in Minecraft"
+description: "A collaborative Minecraft level that guides players through an intentional exploration path, integrating a curated section of poems via environmental storytelling, signposting, and iterative playtesting."
 ---
 
 # Design Week 01
 
-During Design Week, our challenge was to create an environment in Minecraft that guided players through an intentional exploration experience, incorporating a section of poems. 
-This project required us to apply various aspects of game design, including level design, sketching, and playtesting, while working collaboratively in a group setting.
+**Challenge.** Create a Minecraft environment that intentionally guides players through an exploration experience, integrating a curated section of poems. The work combined **level design**, **sketching**, and **playtesting** in a collaborative setting.
 
-One of the most valuable lessons I learned was the importance of communication and teamwork. At the start, our group had different ideas about how the environment should look and how the poems should be integrated. 
-Through discussion and compromise, we developed a shared vision that balanced creativity and functionality. Assigning roles and responsibilities helped us stay organized and ensured that everyone contributed meaningfully.
+## Key Lessons
 
-From a design perspective, I gained insight into how environmental storytelling can guide player exploration without explicit instructions. We used visual cues such as lighting, terrain, and landmarks to create a natural flow through the level.
+- **Collaboration & Communication.** Our team began with differing ideas about visual style and how to integrate poetry. Through discussion and compromise, we aligned on a shared vision balancing creativity with functionality. Clear roles and responsibilities kept us organized and ensured meaningful contributions across the board.
 
-Playtesting was another critical step. It revealed areas where players felt lost or disengaged, allowing us to adjust paths and improve clarity.
+- **Environmental Storytelling.** We guided players without explicit instructions by using:
+  - **Lighting** Used for creating breadcrumbs for the path, & to catch the players attention).
+  - **Section Breaking** Breaking up the level into different sections.
+
+- **Playtesting & Iteration.** Early tests revealed moments where players felt **lost** or **disengaged**. We adjusted:
+  - **Path clarity** (simplified pathing, adjust lighting for breadcrumbs).
+  - **Section pacing** (Adjusted each different section of the level).
+  - **Player Spawn** (orienting players immediately upon spawn).
+
+## Process Notes
+
+- **Poetry Integration.** Poems were used to create a story for the level.
+- **Sketch → Greybox → Detail.** I started with quick 2D sketches of what the level could look like.
+- **Greybox** As a group, we divided each section among group members, and I worked on the enclosure area.
+- **Environmental Storytelling** Used to tell the story of the poem through environmental elements.
 
 <div class="project-grid project-grid--center">
-    <img src="/portfolio-page/assets/images/wiplevel01.png">
-  <div class="project-card-title">Level Work in Progress</div>
+  <figure class="project-card">
+    <img src="/portfolio-page/assets/images/wiplevel01.png"
+         alt="Work-in-progress Minecraft level: greyboxed/figcaption>
+  </figure>
 </div>
 
 <div class="project-grid project-grid--center">
-    <img src="/portfolio-page/assets/images/finallevel01.png">
-  <div class="project-card-title">Final Level</div>
+  <figure class="project-card">
+    /portfolio-page/assets/images/finallevel01.png
+    <figcaption class="project-card-title">Final Level</figcaption>
+  </figure>
 </div>
+
+## Takeaway
+
+Guiding players effectively in a freeform space like Minecraft hinges on **wayfinding**, **pacing**, and **player orientation **, all validated through **playtesting**. Iterating on small friction points made the biggest difference in player confidence and engagement.
+
