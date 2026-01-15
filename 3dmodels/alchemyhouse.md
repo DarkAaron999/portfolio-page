@@ -18,7 +18,7 @@ title: "Alchemy House"
 </div>
 
 <h1 class="project-title">Alchemy House</h1>
-<p class="project-subtitle">A stylized alchemy house</p>
+<p class="project-subtitle">A 3D model of an alchemy house</p>
 
 <div class="project-body">
   <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
