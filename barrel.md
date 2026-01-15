@@ -26,5 +26,5 @@ title: "Wooden Barrel"
 </div>
 
 <div class="project-back">
-  <a href="{{ '/projects.html' | relative_url }}">← Back to Projects</a>
+  <a href="{{ '/3dart.html' | relative_url }}">← Back to 3D Art</a>
 </div>
