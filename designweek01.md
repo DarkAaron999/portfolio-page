@@ -15,6 +15,7 @@ description: "A collaborative Minecraft level that guides players through an int
 - **Environmental Storytelling.** We guided players without explicit instructions by using:
   - **Lighting** Used for creating breadcrumbs for the path, & to catch the players attention).
   - **Section Breaking** Breaking up the level into different sections.
+  
 
 - **Playtesting & Iteration.** Early tests revealed moments where players felt **lost** or **disengaged**. We adjusted:
   - **Path clarity** (simplified pathing, adjust lighting for breadcrumbs).
