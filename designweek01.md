@@ -6,7 +6,7 @@ description: "A collaborative Minecraft level that guides players through an int
 
 # Design Week 01
 
-**Design Challenge.** Create a Minecraft environment that intentionally guides players through an exploration experience, integrating a curated section of poems. The work combined **level design**, **sketching**, and **playtesting** in a collaborative setting.
+**Design Challenge:** Create a Minecraft environment that intentionally guides players through an exploration experience, integrating a curated section of poems. The work combined **level design**, **sketching**, and **playtesting** in a collaborative setting.
 
 ## Key Lessons
 
