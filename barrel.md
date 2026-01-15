@@ -5,10 +5,14 @@ title: "Wooden Barrel"
 
 <div class="project-hero">
   <div class="project-embed">
-    <iframe title="Wooden Barrel" frameborder="0" allowfullscreen
-    mozallowfullscreen="true" webkitallowfullscreen="true"
-    allow="autoplay; fullscreen; xr-spatial-tracking"
-    src="https://sketchfab.com/models/2fe64d91829c46eca57b2175c61f5357/embed">
+    <iframe 
+      title="Wooden Barrel"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      src="https://sketchfab.com/models/2fe64d91829c46eca57b2175c61f5357/embed">
     </iframe>
   </div>
 </div>
@@ -22,5 +26,5 @@ title: "Wooden Barrel"
 </div>
 
 <div class="project-back">
-  <a href="/portfolio-page/">← Back to Projects</a>
+  <a href="{{ '/projects.html' | relative_url }}">← Back to Projects</a>
 </div>
