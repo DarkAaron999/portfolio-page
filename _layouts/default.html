@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title }} — Aaron Rennick</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — Aaron Rennick</title>
 
-<link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Correct CSS path for GitHub Pages + Jekyll -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
 
-<header class="site-header">
-  <h1>Aaron Rennick</h1>
-  <p>Portfolio</p>
-</header>
+  <!-- Header -->
+  <header class="site-header">
+    <h1>Aaron Rennick</h1>
+    <p>Portfolio</p>
+  </header>
 
-<nav class="site-nav">
-  <a href="/portfolio-page/">Home</a>
-  <a href="/portfolio-page/about.html">About</a>
-  <a href="/portfolio-page/contact.html">Contact</a>
-  <a class="email-link" href="mailto:aaronrennick1221@gmail.com">Email Me</a>
-</nav>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <a href="/portfolio-page/">Home</a>
+    <a href="/portfolio-page/about.html">About</a>
+    <a href="/portfolio-page/contact.html">Contact</a>
+    <a class="email-link" href="mailto:aaronrennick1221@gmail.com">Email Me</a>
+  </nav>
 
-<div class="container">
-  {{ content }}
-</div>
+  <!-- Main Content -->
+  <div class="container">
+    {{ content }}
+  </div>
 
-<footer class="site-footer">
-  © {{ site.time | date: "%Y" }} {{ site.title }} — Gamer Mode 🎮
-</footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    © {{ site.time | date: "%Y" }} {{ site.title }} — Gamer Mode 🎮
+  </footer>
 
 </body>
 </html>
