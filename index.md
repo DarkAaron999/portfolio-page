@@ -34,7 +34,7 @@ Hi, I’m **Aaron Rennick** — Game Designer / 2D / 3D Artist
 <div class="project-grid">
 
   <div class="project-card">
-    <a href="{{ '/projects/unity.html' | relative_url }}">
+    <a href="{{ '/projects/unityprojects.html' | relative_url }}">
       <img src="{{ '/assets/images/unityprojects.png' | relative_url }}">
     </a>
   </div>
