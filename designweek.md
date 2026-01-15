@@ -18,10 +18,25 @@
   </a>
   <div class="project-card-title">Design Week 03</div>
 </div>
+</div>
+
+<div class="project-grid">
 
 <div class="project-card">
   <a href="/portfolio-page/designweek04.html">
   </a>
   <div class="project-card-title">Design Week 04</div>
+</div>
+
+<div class="project-card">
+  <a href="/portfolio-page/designweek04.html">
+  </a>
+  <div class="project-card-title">Design Week 05</div>
+</div>
+
+<div class="project-card">
+  <a href="/portfolio-page/designweek04.html">
+  </a>
+  <div class="project-card-title">Design Week 06</div>
 </div>
 </div>
