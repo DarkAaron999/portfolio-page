@@ -30,13 +30,11 @@ description: "A collaborative Minecraft level that guides players through an int
 
 <div class="project-card">
     <img src="/portfolio-page/assets/images/wiplevel01.png">
-  </a>
   <div class="project-card-title">Level: Work in Progress</div>
 </div>
 
 <div class="project-card">
     <img src="/portfolio-page/assets/images/finallevel01.png">
-  </a>
   <div class="project-card-title">Level: Final Version</div>
 </div>
 
