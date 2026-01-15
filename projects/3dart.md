@@ -10,7 +10,7 @@ A collection of my 3D models. Click any card to view more details.
 <div class="project-grid">
 
   <div class="project-card">
-    <a href="{{ '/barrel.html' | relative_url }}">
+    <a href="{{ '/woodenbarrel.html' | relative_url }}">
       <img src="{{ '/assets/images/woodenbarrel.png' | relative_url }}">
     </a>
     <div class="project-card-title">Wooden Barrel</div>
