@@ -16,11 +16,11 @@ From a design perspective, I gained insight into how environmental storytelling 
 Playtesting was another critical step. It revealed areas where players felt lost or disengaged, allowing us to adjust paths and improve clarity.
 
 <div class="project-grid project-grid--center">
-    <img src="/portfolio-page/assets/images/finalleveldesignweek01.png">
+    <img src="/portfolio-page/assets/images/wiplevel01.png">
   <div class="project-card-title">Level Work in Progress</div>
 </div>
 
 <div class="project-grid project-grid--center">
-    <img src="/portfolio-page/assets/images/wipdesignweek01.png">
+    <img src="/portfolio-page/assets/images/finallevel01.png">
   <div class="project-card-title">Final Level</div>
 </div>
