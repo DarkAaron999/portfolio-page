@@ -1,5 +1,5 @@
 /* =========================================================
-   Aaron Rennick Portfolio — Dark Neon Theme (Enhanced)
+   Aaron Rennick Portfolio — Dark Neon Theme (Final Clean Build)
    ========================================================= */
 
 /* -----------------------------
@@ -210,9 +210,18 @@ img, iframe {
   font-weight:bold;
   text-transform:uppercase;
   letter-spacing:.05em;
-  text-decoration:none; /* ← underline removed */
+  text-decoration:none;
   transition:.2s;
   box-shadow:0 0 12px var(--accent);
+}
+
+/* Force removal of underline in all states */
+.project-back a,
+.project-back a:link,
+.project-back a:visited,
+.project-back a:hover,
+.project-back a:active {
+  text-decoration:none !important;
 }
 
 .project-back a:hover {
