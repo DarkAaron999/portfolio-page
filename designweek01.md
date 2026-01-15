@@ -6,7 +6,7 @@ description: "A collaborative Minecraft level that guides players through an int
 
 # Design Week 01
 
-**Challenge.** Create a Minecraft environment that intentionally guides players through an exploration experience, integrating a curated section of poems. The work combined **level design**, **sketching**, and **playtesting** in a collaborative setting.
+**Design Challenge.** Create a Minecraft environment that intentionally guides players through an exploration experience, integrating a curated section of poems. The work combined **level design**, **sketching**, and **playtesting** in a collaborative setting.
 
 ## Key Lessons
 
@@ -31,15 +31,11 @@ description: "A collaborative Minecraft level that guides players through an int
 <div class="project-grid project-grid--center">
   <figure class="project-card">
     <img src="/portfolio-page/assets/images/wiplevel01.png"
-         alt="Work-in-progress Minecraft level: greyboxed/figcaption>
-  </figure>
 </div>
 
 <div class="project-grid project-grid--center">
   <figure class="project-card">
-    /portfolio-page/assets/images/finallevel01.png
-    <figcaption class="project-card-title">Final Level</figcaption>
-  </figure>
+    <img src="/portfolio-page/assets/images/finallevel01.png"
 </div>
 
 ## Takeaway
