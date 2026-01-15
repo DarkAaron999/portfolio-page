@@ -40,5 +40,5 @@ description: "A collaborative Minecraft level that guides players through an int
 
 ## Takeaway
 
-Guiding players effectively in a freeform space like Minecraft hinges on **wayfinding**, **pacing**, and **player orientation **, all validated through **playtesting**. Iterating on small friction points made the biggest difference in player confidence and engagement.
+Guiding players effectively in a freeform space like Minecraft hinges on **wayfinding**, **pacing**, and **player orientation**, all validated through **playtesting**. Iterating on small friction points made the biggest difference in player confidence and engagement.
 
