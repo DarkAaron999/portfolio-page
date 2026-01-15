@@ -1,1 +1,30 @@
+---
+layout: default
+title: "Factory Assets"
+---
 
+<div class="project-hero">
+  <div class="project-embed">
+    <iframe 
+      title="Factory Assets"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      src="https://sketchfab.com/models/4ab40d98ef9240d286cccd0459f892ff/embed">
+    </iframe>
+  </div>
+</div>
+
+<h1 class="project-title">Factory Assets</h1>
+<p class="project-subtitle">A collection of factory props created for environment building</p>
+
+<div class="project-body">
+  <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
+  <p>These factory assets were modeled in Maya and textured in Photoshop.</p>
+</div>
+
+<div class="project-back">
+  <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
+</div>
