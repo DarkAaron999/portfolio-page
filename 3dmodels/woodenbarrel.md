@@ -18,7 +18,7 @@ title: "Wooden Barrel"
 </div>
 
 <h1 class="project-title">Wooden Barrel</h1>
-<p class="project-subtitle">A stylized 3D asset created in Maya and Substance Painter</p>
+<p class="project-subtitle">3D model of a wooden barrel</p>
 
 <div class="project-body">
   <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
