@@ -206,7 +206,7 @@ p.lead {
 .project-card .sketchfab-embed-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 ratio */
+  padding-top: 75%; /* bigger = taller viewer (was 56.25%) */
   overflow: hidden;
   border-radius: 6px;
   margin-bottom: 15px;
