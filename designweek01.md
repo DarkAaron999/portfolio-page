@@ -28,14 +28,16 @@ description: "A collaborative Minecraft level that guides players through an int
 - **Greybox** As a group, we divided each section among group members, and I worked on the enclosure area.
 - **Environmental Storytelling** Used to tell the story of the poem through environmental elements.
 
-<div class="project-grid project-grid--center">
-  <figure class="project-card">
-    <img src="/portfolio-page/assets/images/wiplevel01.png"
+<div class="project-card">
+    <img src="/portfolio-page/assets/images/wiplevel01.png">
+  </a>
+  <div class="project-card-title">Level: Work in Progress</div>
 </div>
 
-<div class="project-grid project-grid--center">
-  <figure class="project-card">
-    <img src="/portfolio-page/assets/images/finallevel01.png"
+<div class="project-card">
+    <img src="/portfolio-page/assets/images/finallevel01.png">
+  </a>
+  <div class="project-card-title">Level: Final Version</div>
 </div>
 
 ## Takeaway
