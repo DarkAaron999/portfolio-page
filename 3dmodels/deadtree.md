@@ -18,11 +18,11 @@ title: "Dead Tree"
 </div>
 
 <h1 class="project-title">Dead Tree</h1>
-<p class="project-subtitle">A 3D model of a dead tree</p>
+<p class="project-subtitle">3D model of a dead tree</p>
 
 <div class="project-body">
   <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
-  <p>This dead tree model was created in Maya and textured using Photoshop.</p>
+  <p>This dead tree model was created in Maya and textured in Photoshop.</p>
 </div>
 
 <div class="project-back">
