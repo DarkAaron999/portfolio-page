@@ -3,10 +3,28 @@ layout: default
 title: "Wooden Barrel"
 ---
 
-# Wooden Barrel
+<section class="project-hero">
+  <h1>{{ page.title }}</h1>
+  <p class="subtitle">Interactive 3D Model Showcase</p>
+</section>
 
-A small showcase of my 3D wooden barrel. Use your mouse/touch to orbit, pan, and zoom.
+<section class="project-viewer">
+  <div class="sketchfab-viewer">
+    <iframe 
+      title="Wooden Barrel"
+      src="https://sketchfab.com/models/2fe64d91829c46eca57b2175c61f5357/embed"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-<div class="project-card">
-  <div class="sketchfab-embed-wrapper"> <iframe title="Wooden Barrel" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2fe64d91829c46eca57b2175c61f5357/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/wooden-barrel-2fe64d91829c46eca57b2175c61f5357?utm_medium=embed&utm_campaign=share-popup&utm_content=2fe64d91829c46eca57b2175c61f5357" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Wooden Barrel </a> by <a href="https://sketchfab.com/Aaron999?utm_medium=embed&utm_campaign=share-popup&utm_content=2fe64d91829c46eca57b2175c61f5357" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Aaron </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=2fe64d91829c46eca57b2175c61f5357" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-</div>
+  <p class="viewer-caption">
+    <a href="https://sketchfab.com/3d-models/wooden-barrel-2fe64d91829c46eca57b2175c61f5357" target="_blank">Wooden Barrel</a>
+    by <a href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a> on 
+    <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
+  </p>
+</section>
+
+<section class="project-description">
+  <h2>About This
