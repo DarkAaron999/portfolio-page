@@ -29,13 +29,13 @@ description: "A collaborative Minecraft level that guides players through an int
 - **Environmental Storytelling** Used to tell the story of the poem through environmental elements.
 
 <div class="project-card">
-    <img src="/portfolio-page/assets/images/wiplevel01.png">
   <div class="project-card-title">Level: Work in Progress</div>
+    <img src="/portfolio-page/assets/images/wiplevel01.png">
 </div>
 
 <div class="project-card">
-    <img src="/portfolio-page/assets/images/finallevel01.png">
   <div class="project-card-title">Level: Final Version</div>
+    <img src="/portfolio-page/assets/images/finallevel01.png">
 </div>
 
 ## Takeaway
