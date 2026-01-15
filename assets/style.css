@@ -4,7 +4,7 @@
    ========================================================= */
 
 /* -----------------------------
-   0) CSS Reset / Base
+   0) Base Reset
    ----------------------------- */
 *,
 *::before,
@@ -26,16 +26,6 @@ body {
   line-height: 1.6;
 }
 
-/* Remove default margins on common block elements */
-h1, h2, h3, h4, h5, h6,
-p,
-figure,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Images are responsive by default */
 img,
 svg,
 video,
@@ -45,13 +35,6 @@ iframe {
   max-width: 100%;
 }
 
-/* Accessible focus outline */
-:focus-visible {
-  outline: 3px solid #6d28d9;
-  outline-offset: 2px;
-}
-
-/* Link defaults */
 a {
   color: #4f46e5;
   text-decoration: none;
@@ -60,17 +43,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Utility classes */
-.container {
-  width: min(1200px, 92vw);
-  margin-inline: auto;
-}
-.sr-only {
-  position: absolute !important;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0);
-  white-space: nowrap; border: 0;
+:focus-visible {
+  outline: 3px solid #6d28d9;
+  outline-offset: 2px;
 }
 
 /* -----------------------------
@@ -137,17 +112,14 @@ p.lead {
 /* -----------------------------
    4) Buttons
    ----------------------------- */
-.btn,
-.btn-primary {
+.btn {
   display: inline-block;
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: 700;
-  text-decoration: none;
-  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Primary button (indigo on white) */
 .btn-primary {
   background-color: #fff;
   color: var(--indigo);
@@ -155,22 +127,18 @@ p.lead {
 }
 .btn-primary:hover {
   background-color: #eaeaea;
-  color: var(--indigo);
-  text-decoration: none;
 }
 
-/* Accent button (filled indigo) */
 .btn-accent {
   background-color: var(--indigo);
   color: #fff;
 }
 .btn-accent:hover {
   background-color: var(--purple);
-  color: #fff;
 }
 
 /* -----------------------------
-   5) Projects Section & Grid
+   5) Projects Section
    ----------------------------- */
 .projects {
   padding: 60px 20px;
@@ -182,22 +150,15 @@ p.lead {
   margin-bottom: 40px;
 }
 
-/* Responsive grid of cards */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  align-items: stretch;
 }
 
-/* Center a single child within the grid (detail page) */
-.project-grid--center {
-  grid-template-columns: 1fr;
-  min-height: 70vh;
-  place-content: center;  /* vertical + horizontal centering of grid tracks */
-}
-
-/* Card */
+/* -----------------------------
+   6) Project Cards
+   ----------------------------- */
 .project-card {
   background: var(--card-bg);
   border-radius: 8px;
@@ -205,99 +166,64 @@ p.lead {
   overflow: hidden;
   text-align: center;
   padding: 20px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
-/* Card image */
 .project-card img {
   width: 100%;
-  height: auto;
   border-radius: 6px;
   margin-bottom: 15px;
 }
 
-/* Card title (inline element in your markup) */
 .project-card-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text);
   margin-top: 8px;
 }
 
-/* Card description (optional) */
 .project-card p {
   font-size: 1rem;
   color: var(--muted);
   margin-bottom: 15px;
 }
 
-/* Card CTA button */
 .project-card .btn {
-  display: inline-block;
-  padding: 10px 20px;
   background-color: var(--indigo);
   color: #fff;
-  border-radius: 6px;
-  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 .project-card .btn:hover {
   background-color: var(--purple);
-  text-decoration: none;
-  box-shadow: var(--shadow-sm);
 }
 
 /* -----------------------------
-   6) Sketchfab Embed (Centered)
+   7) Sketchfab Embed (Card Version)
    ----------------------------- */
-
-/* Center the embed in its own viewport section */
-.embed-section {
-  display: grid;
-  place-items: center; /* centers horizontally + vertically */
-  min-height: 70vh;
-  padding: 20px;
-}
-
-/* Responsive wrapper (desktop cap, mobile fluid) */
-.sketchfab-embed-wrapper {
-  width: min(92vw, 1100px); /* matches your fixed width preference on desktop */
-  margin: 0 auto;
-}
-
-/* Fluid iframe while preserving ratio
-   - If you prefer original 640×480, use aspect-ratio: 4 / 3 */
-.sketchfab-embed-wrapper iframe {
+.project-card .sketchfab-embed-wrapper {
+  position: relative;
   width: 100%;
-  aspect-ratio: 2 / 1; /* matches your 1100×550 fixed size */
-  border: 0;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 15px;
 }
 
-/* Caption beneath the viewer */
-.sketchfab-caption {
-  margin-top: 10px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-.sketchfab-caption a {
-  color: var(--indigo);
-  font-weight: 700;
-  text-decoration: none;
-}
-.sketchfab-caption a:hover {
-  color: var(--purple);
-  text-decoration: underline;
+.project-card .sketchfab-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
 }
 
 /* -----------------------------
-   7) Footer
+   8) Footer
    ----------------------------- */
 .footer {
   text-align: center;
@@ -307,15 +233,13 @@ p.lead {
 }
 .footer a {
   color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
 }
 .footer a:hover {
   text-decoration: underline;
 }
 
 /* -----------------------------
-   8) Responsive Tweaks
+   9) Responsive Tweaks
    ----------------------------- */
 @media (max-width: 768px) {
   .hero {
@@ -327,10 +251,7 @@ p.lead {
   .project-card {
     padding: 16px;
   }
-  .btn,
-  .btn-primary {
+  .btn {
     padding: 10px 18px;
   }
 }
-
-@media (min-width: 1280px) {
