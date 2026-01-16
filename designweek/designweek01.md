@@ -56,5 +56,5 @@ description: "A collaborative Minecraft level that guides players through an int
 <p>Guiding players effectively in a freeform space like Minecraft hinges on <strong>wayfinding</strong>, <strong>pacing</strong>, and <strong>player orientation</strong>, all validated through <strong>playtesting</strong>. Iterating on small friction points made the biggest difference in player confidence and engagement.</p>
 
 <div class="project-back">
-  <a href="{{ '/projects/design.html' | relative_url }}">← Back to Design Projects</a>
+  <a href="{{ '/projects/designweek.html' | relative_url }}">← Back to Design Projects</a>
 </div>
