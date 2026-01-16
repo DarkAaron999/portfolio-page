@@ -1,1 +1,60 @@
+---
+layout: default
+title: "Design Week 01 — Guided Exploration in Minecraft"
+description: "A collaborative Minecraft level that guides players through an intentional exploration path, integrating a curated section of poems via environmental storytelling, signposting, and iterative playtesting."
+---
 
+<h1 class="project-title">Design Week 01 — Guided Exploration in Minecraft</h1>
+<p class="project-subtitle">A collaborative Minecraft level designed to guide players through an intentional exploration path using poetry, lighting, and environmental storytelling.</p>
+
+<div class="project-body">
+
+<p><strong>Design Challenge:</strong> Create a Minecraft environment that intentionally guides players through an exploration experience, integrating a curated section of poems. The work combined <strong>level design</strong>, <strong>sketching</strong>, and <strong>playtesting</strong> in a collaborative setting.</p>
+
+<h2>Key Lessons</h2>
+
+<ul>
+  <li><strong>Collaboration & Communication.</strong> Our team began with differing ideas about visual style and how to integrate poetry. Through discussion and compromise, we aligned on a shared vision balancing creativity with functionality. Clear roles and responsibilities kept us organized and ensured meaningful contributions across the board.</li>
+</ul>
+
+<h3>Environmental Storytelling</h3>
+<ul>
+  <li><strong>Lighting</strong> — Used to create breadcrumbs for the path and catch the player’s attention.</li>
+  <li><strong>Section Breaking</strong> — Dividing the level into distinct thematic areas.</li>
+</ul>
+
+<h3>Playtesting & Iteration</h3>
+<ul>
+  <li><strong>Path clarity</strong> — Simplified pathing and refined lighting cues.</li>
+  <li><strong>Section pacing</strong> — Adjusted the flow and rhythm of each area.</li>
+  <li><strong>Player spawn</strong> — Ensured players begin oriented and facing the intended direction.</li>
+</ul>
+
+<h2>Process Notes</h2>
+
+<ul>
+  <li><strong>Poetry Integration.</strong> Poems were used to shape the emotional tone and narrative of the level.</li>
+  <li><strong>Sketching.</strong> I began with quick 2D sketches to explore layout ideas.</li>
+  <li><strong>Greyboxing.</strong> Our team divided the level into sections; I focused on the enclosure area.</li>
+  <li><strong>Environmental Storytelling.</strong> Used environmental cues to reinforce the poem’s themes.</li>
+</ul>
+
+</div>
+
+<div class="project-card">
+  <div class="project-card-title">Level: Work in Progress</div>
+  <img src="{{ '/portfolio-page/assets/images/wiplevel01.png' | relative_url }}" alt="Work in Progress Level">
+</div>
+
+<div class="project-card">
+  <div class="project-card-title">Level: Final Version</div>
+  <img src="{{ '/portfolio-page/assets/images/finallevel01.png' | relative_url }}" alt="Final Level Version">
+</div>
+
+<h2>Takeaway</h2>
+
+<p>Guiding players effectively in a freeform space like Minecraft hinges on <strong>wayfinding</strong>, <strong>pacing</strong>, and <strong>player orientation</strong>, all validated through <strong>playtesting</strong>. Iterating on small friction points made the biggest difference in player confidence and engagement.</p>
+
+<div class="project-back">
+  <a href="{{ '/projects/design.html' | relative_url }}">← Back to Design Projects</a>
+</div>
