@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aaron Rennick — Portfolio</title>
+  <title>{{ page.title }} — Aaron Rennick</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Correct CSS path -->
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 
 <body>
@@ -13,66 +14,25 @@
   <!-- Header -->
   <header class="site-header">
     <h1>Aaron Rennick</h1>
-    <p>Game Designer • Developer • Artist</p>
+    <p>Portfolio</p>
   </header>
 
   <!-- Navigation -->
   <nav class="site-nav">
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/about.html' | relative_url }}">About</a>
+    <a href="{{ '/contact.html' | relative_url }}">Contact</a>
     <a class="email-link" href="mailto:aaronrennick1221@gmail.com">Email Me</a>
   </nav>
 
-  <!-- Main Container -->
-  <main class="container" id="home">
-
-    <section>
-      <h2 class="project-title">Featured Projects</h2>
-      <p class="project-subtitle">A selection of my game design, 3D modeling, and development work.</p>
-
-      <div class="project-grid">
-
-        <div class="project-card">
-          <img src="assets/project1.jpg" alt="Project 1">
-          <p class="project-card-title">Project One</p>
-        </div>
-
-        <div class="project-card">
-          <img src="assets/project2.jpg" alt="Project 2">
-          <p class="project-card-title">Project Two</p>
-        </div>
-
-        <div class="project-card">
-          <img src="assets/project3.jpg" alt="Project 3">
-          <p class="project-card-title">Project Three</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="about" style="margin-top: 60px;">
-      <h2 class="project-title">About Me</h2>
-      <p class="project-body">
-        I'm a game design student and developer specializing in Unity scripting, FPS mechanics, 
-        2D/3D art, and immersive player experience. I love building polished, responsive systems 
-        and exploring how math, probability, and design theory shape gameplay.
-      </p>
-    </section>
-
-    <section id="contact" style="margin-top: 60px;">
-      <h2 class="project-title">Contact</h2>
-      <div class="contact-email">
-        <a class="email-link" href="mailto:aaronrennick1221@gmail.com">Send Me an Email</a>
-      </div>
-    </section>
-
+  <!-- Main Content -->
+  <main class="container">
+    {{ content }}
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    © 2026 Aaron Rennick — Gamer Mode 🎮
+    © {{ site.time | date: "%Y" }} {{ site.title }} — Gamer Mode 🎮
   </footer>
 
 </body>
