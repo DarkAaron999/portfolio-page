@@ -43,12 +43,12 @@ description: "A collaborative Minecraft level that guides players through an int
 
 <div class="project-card">
   <div class="project-card-title">Level: Work in Progress</div>
-  <img src="{{ '/portfolio-page/assets/images/wiplevel01.png' | relative_url }}" alt="Work in Progress Level">
+  <img src="{{ '/assets/images/wiplevel01.png' | relative_url }}" alt="Work in Progress Level">
 </div>
 
 <div class="project-card">
   <div class="project-card-title">Level: Final Version</div>
-  <img src="{{ '/portfolio-page/assets/images/finallevel01.png' | relative_url }}" alt="Final Level Version">
+  <img src="{{ '/assets/images/finallevel01.png' | relative_url }}" alt="Final Level Version">
 </div>
 
 <h2>Takeaway</h2>
