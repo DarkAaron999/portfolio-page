@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aaron Rennick — Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — Aaron Rennick</title>
 
-  <!-- Project-safe relative link to CSS -->
-  assets/style.css
+  <!-- Main Stylesheet -->
+  {{ 
 </head>
+
 <body>
+
   <!-- Header -->
   <header class="site-header">
     <h1>Aaron Rennick</h1>
@@ -16,96 +18,24 @@
   </header>
 
   <!-- Navigation -->
-  <nav class="site-nav" role="navigation" aria-label="Primary">
-    index.htmlHome</a>
-    about.htmlAbout</a><!-- (optional page) -->
-    contact.htmlContact</a><!-- (optional page) -->
-    resume.htmlRésumé</a>
+  <nav class="site-nav">
+    {{ Home</a>
+    <a About</a>
+    {{ Contact</a>
+
+    <!-- Replaced Email with Résumé (project-safe URL) -->
+    {{ Résumé</a>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main Content Wrapper -->
   <main class="container">
-    <section class="center">
-      <h2 class="project-title">Featured Work</h2>
-      <p class="project-subtitle">Real‑time models and environments optimized for games.</p>
-    </section>
-
-    <!-- Featured Embed (replace with your Sketchfab link if you want) -->
-    <section class="project-hero" aria-labelledby="featured-title">
-      <h2 id="featured-title" class="visually-hidden">Featured 3D Model</h2>
-      <div class="project-embed" role="region" aria-label="Featured 3D Model">
-        <!-- Replace src with your embed URL -->
-        <iframe
-          title="Featured 3D Model"
-          src="https://sketchfab.com/models/xxxxxxxxxxxx/embed"
-          allow="autoplay; fullscreen; vr"
-         title" class="stack">
-      <h2 id="projects-title" class="h2">Recent Projects</h2>
-
-      <div class="project-grid" role="list">
-        <article class="project-card" role="listitem">
-          <ssets/projects/project-1.jpg
-          <h3 class="project-card-title">Sci‑Fi Prop</h3>
-          <p>High‑poly → low‑poly bake, PBR materials, game‑ready topology.</p>
-        </article>
-
-        <article class="project-card" role="listitem">
-          <img src="assets/projects/project-2.jpg" alt="Stylized environment with hand‑painted textures" loading="lazy">Hand‑painted textures, modular kit, trim sheets.</p>
-        </article>
-
-        <article class="project-card" role="listitem">
-          assets/projects/project-3.jpg
-          <h3 class="project-card-title">Realistic Weapon</h3>
-          <p>Efficient UVs, custom smart materials, LODs for performance.</p>
-        </article>
-
-        <article class="project-card" role="listitem">
-          <img src="assets/projects/project-4.jpg" alt="Cozy diorama with storytelling props" loading         <p>Lighting + set dressing for mood and storytelling.</p>
-        </article>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- About / Skills -->
-    <section class="stack" aria-labelledby="about-title">
-      <h2 id="about-title" class="h2">About</h2>
-      <p class="project-body">
-        I’m a game design student focused on immersive worlds and clean, game‑ready assets.
-        Tools: Unreal/Unity, Blender, Substance; workflows for performance and visual polish.
-      </p>
-
-      <h3 class="h2">Skills</h3>
-      <ul role="list" class="stack">
-        <li><strong>3D:</strong> Blender, basic Maya, ZBrush</li>
-        <li><strong>Engines:</strong> Unreal Engine, Unity</li>
-        <li><strong>Texturing:</strong> Substance 3D Painter/Designer, PBR, trim sheets</li>
-        <li><strong>Coding:</strong> C#, Blueprint, basic Python tooling</li>
-        <li><strong>Workflow:</strong> High→Low, baking, UVs, LODs, optimization</li>
-      </ul>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- CTA -->
-    <section class="contact-resume" aria-labelledby="cta-title">
-      <h2 id="cta-title" class="visually-hidden">Call to Action</h2>
-      resume.htmlView Résumé</a>
-    </section>
+    {{ content }}
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    © <span id="year"></span> Aaron Rennick — Gamer Mode 🎮
+  <footer class="site-footer">
+    © {{ site.time | date: "%Y" }} {{ site.title }} — Gamer Mode 🎮
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Utility to visually hide elements but keep them accessible -->
-  <style>
-    .visually-hidden{position:absolute!important;width:1px;height:1px;margin:-1px;border:0;padding:0;white-space:nowrap;clip-path:inset(100%);clip:rect(0 0 0 0);overflow:hidden}
-  </style>
 </body>
 </html>
