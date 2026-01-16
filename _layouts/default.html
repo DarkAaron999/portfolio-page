@@ -1,72 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================================================
-       META & SEO
-       ========================================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aaron Rennick — Portfolio</title>
-  <meta name="description" content="Portfolio of Aaron Rennick — Game design student showcasing 3D models, environment art, and interactive projects." />
-  <meta name="theme-color" content="#050816" />
+  <title>{{ page.title }} — Aaron Rennick</title>
 
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Aaron Rennick — Portfolio" />
-  <meta property="og:description" content="Game design student showcasing 3D models, environment art, and interactive projects." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://your-domain.example/" />
-  <meta property="og:image" content="https://your-domain.example/assets/og-image.jpg" />
-
-  <!-- Favicons (replace paths with your own) -->
-  <link rel="icon" href="assets/favicon.icof="assets/icon.svg" type="
-  <!-- Styles -->
-  <link rel="stylesheet" href="oad fonts or hero image if needed -->
-  <!-- <link rel="preload" as="image" href Structured Data (Organization/Person) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Aaron Rennick",
-    "jobTitle": "Game Design Student",
-    "url": "https://your-domain.example/",
-    "image": "https://your-domain.example/assets/profile.jpg",
-    "sameAs": [
-      "https://www.artstation.com/your-handle",
-      "https://sketchfab.com/your-handle",
-      "https://github.com/your-handle",
-      "https://www.linkedin.com/in/your-handle"
-    ]
-  }
-  </script>
+  <!-- Main Stylesheet: use relative_url for GitHub Pages -->
+  {{ 
 </head>
 
 <body>
-  <!-- Skip link for accessibility -->
-  <a href="#main" class/a>
-
-  <!-- =========================================================
-       HEADER
-       ========================================================= -->
-  <header class="site-header" role="banner">
+  <!-- Header -->
+  <header class="site-header">
     <h1>Aaron Rennick</h1>
     <p>Portfolio</p>
   </header>
 
-  <!-- =========================================================
-       NAVIGATION
-       ========================================================= -->
+  <!-- Navigation -->
   <nav class="site-nav" role="navigation" aria-label="Primary">
-    /Home</a>
-    <a hrefts.htmlProjects</a>
-    /about.htmlAbout</a>
-    /contact.htmlContact</a>
-    <!-- Résumé button (replaces Email Me) -->
-    <a class="resume-link btn btn--ghost"-- =========================================================
-       MAIN CONTENT
-       ========================================================= -->
-  <main id="main" class="container" role="main">
-    <!-- Hero / Featured Embed (e.g., Sketchfab) -->
-    <section class="project-hero" aria-labelledby="featured-title">
-      <div class="project-embed" role="region" aria-label="Featured 3D Model">
-        <!-- Replace with your Sketchfab embed -->
-        <iframe
+    {{ Home</a>
+    {{ About</a>
+    {{ Contact</a>
+    <!-- Résumé button (replaces Email) -->
+    {{ Résumé</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © {{ site.time | date: "%Y" }} {{ site.title }} — Gamer Mode 🎮
+  </footer>
+</body>
+</html>
