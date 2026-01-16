@@ -18,6 +18,10 @@
     </a>
   </div>
 
+</div>
+
+<div class="project-grid">
+
   <div class="project-card">
     <a href="/portfolio-page/designweek/designweek04.html">
       <img src="{{ '/assets/images/designweek04.png' | relative_url }}" alt="Design Week 04">
