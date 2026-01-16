@@ -24,7 +24,7 @@ A collection of my 3D models. Click any card to view more details.
   </div>
 
   <div class="project-card">
-    <a href="{{ '/3dmodels/pinetree.html' | relative_url }}">
+    <a href="{{ '/3dmodels/pinetree01.html' | relative_url }}">
       <img src="{{ '/assets/images/pinetree.png' | relative_url }}">
     </a>
     <div class="project-card-title">Pine Tree</div>
