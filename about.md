@@ -3,43 +3,44 @@ layout: default
 title: "About Me"
 ---
 
-# 🧑‍💻 About Me
-Aaron Rennick
+<h1 class="project-title">🧑‍💻 About Me</h1>
+<p class="project-subtitle">Aaron Rennick — Game Designer • 2D/3D Artist</p>
 
-Game Designer/2D/3D Artist
+<div class="project-body">
 
-Hello. I am a third-year student in the Bachelor of Game Design program at Sheridan College. 
-I have been making 3D/2D art for the past four years. 
-I have created games in Unity and worked with teams to develop a card game, a progression system for an existing game, a board game, and various Unity games.
+<p>Hello! I’m a third-year student in the Bachelor of Game Design program at Sheridan College. I’ve been creating 2D and 3D art for the past four years, and I’ve worked on a variety of game projects including Unity games, a card game, a progression system for an existing title, and a board game. I love building worlds, designing experiences, and collaborating with teams to bring ideas to life.</p>
 
-# Were my passion comes from:
+<h2>Where My Passion Comes From</h2>
 
-🛠 Creating detailed 3D models for games and environments.
+<ul>
+  <li>🛠 Crafting detailed 3D models for games and environments</li>
+  <li>🎮 Playing games like Destiny, Halo, Skyrim, Fallout, and Star Wars titles</li>
+  <li>🎬 Watching films such as Star Wars, Aliens, and Lord of the Rings</li>
+  <li>🧩 Building LEGO and collecting Star Wars figures</li>
+  <li>🎲 Playing board games like Catan</li>
+</ul>
 
-🎮 Playing games like Destiny, Halo, Skyrim, Fallout, and Star Wars titles.
+<h2>My Skills</h2>
 
-🎬 Watching movies such as Star Wars, Aliens and Lord of the Rings.
+<h3>3D Software</h3>
+<ul>
+  <li><strong>Maya</strong> — Modeling, UV Unwrapping</li>
+  <li><strong>Substance Painter</strong> — PBR Texturing, Hand‑Painted Texturing</li>
+  <li><strong>Blender</strong> — Modeling, UV Unwrapping</li>
+</ul>
 
-🧩 Building LEGO and collecting Star Wars figures.
+<h3>Game Engines</h3>
+<ul>
+  <li><strong>Unity</strong> — C# Scripting, Level Design</li>
+  <li><strong>Unreal Engine</strong> — Blueprint Scripting, Lighting</li>
+</ul>
 
-🎲 Playing board games like Catan.
+<h3>2D & Image Editing</h3>
+<ul>
+  <li><strong>Adobe Photoshop</strong> — Texture Creation, UI Design, Photo Manipulation</li>
+</ul>
 
-# My Skills
+<h2>My Vision</h2>
+<p>To create immersive experiences inspired by RPG and fantasy worlds — blending strong visual storytelling with engaging gameplay.</p>
 
-## 3D Software: 
-**Maya** -Modeling, UV Unwrapping 
-
-**Substance Painter** -PBR Texturing, Hand-Painted Texturing 
-
-**Blender** -Modeling, UV Unwrapping
-
-## Game Engines:
-  **Unity** -C# Scripting, Level Design
-  
-  **Unreal Engine** -Blueprint Scripting, Lighting
-
-## 2D & Image Editing:
-  **Adobe Photoshop** -Texture Creation, UI Design, Photo Manipulation
-
-# My Vision
-Creating immersive experiences inspired by RPG and fantasy worlds.
+</div>
