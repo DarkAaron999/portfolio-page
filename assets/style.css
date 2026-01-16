@@ -1,7 +1,8 @@
 /* =========================================================
-   GLOBAL THEME
+   THEME TOKENS
    ========================================================= */
 :root {
+  /* Colors */
   --bg: #050816;
   --panel: #0d1224;
   --header: #11192e;
@@ -10,20 +11,140 @@
   --text: #e5e7eb;
   --muted: #9ca3af;
   --border: #1f2937;
+  --shadow: 0 10px 30px rgba(0, 246, 255, 0.08);
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans",
+    "Liberation Sans", "Helvetica Neue", sans-serif;
+  --fs-xs: 0.8125rem; /* 13px */
+  --fs-sm: 0.9375rem; /* 15px */
+  --fs-md: 1.0625rem; /* 17px */
+  --fs-lg: 1.25rem;   /* 20px */
+  --fs-xl: 1.75rem;   /* 28px */
+  --fs-2xl: 2.25rem;  /* 36px */
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --time-fast: 150ms;
+  --time-med: 250ms;
 }
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
+/* =========================================================
+   RESET & BASELINE
+   ========================================================= */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+:where(html) {
+  -webkit-text-size-adjust: 100%;
+}
+
+:where(body, h1, h2, h3, h4, p, figure, blockquote, dl, dd) {
+  margin: 0;
+}
+
+:where(ul[role="list"], ol[role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  min-height: 100dvh;
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
   line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent2);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+   LAYOUT: CONTAINER
+   ========================================================= */
+.container {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+  margin-block: var(--space-8);
+  padding: var(--space-7);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+/* Tight container variant (e.g., resume page) */
+.container--narrow {
+  width: min(800px, 92vw);
 }
 
 /* =========================================================
@@ -31,15 +152,23 @@ body {
    ========================================================= */
 .site-header {
   background: linear-gradient(135deg, var(--header), #020617);
-  padding: 40px 20px;
+  padding: clamp(24px, 4vw, 48px) 20px;
   text-align: center;
   color: white;
+  border-bottom: 1px solid var(--border);
 }
 
 .site-header h1 {
-  font-size: 2.4rem;
+  font-size: clamp(1.8rem, 4vw, var(--fs-2xl));
   font-weight: 800;
-  text-shadow: 0 0 10px var(--accent);
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 10px color-mix(in oklab, var(--accent) 70%, transparent);
+}
+
+.site-header p {
+  margin-top: var(--space-3);
+  color: var(--muted);
+  font-size: var(--fs-sm);
 }
 
 /* =========================================================
@@ -47,97 +176,127 @@ body {
    ========================================================= */
 .site-nav {
   background: #0b1121;
-  padding: 12px;
+  padding: var(--space-3);
   text-align: center;
   border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: saturate(120%) blur(6px);
 }
 
 .site-nav a {
   color: var(--muted);
-  margin: 0 18px;
+  margin: 0 var(--space-4);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0.05em;
+  font-size: var(--fs-sm);
+  padding: 6px 2px;
+  display: inline-block;
+  transition: color var(--time-fast) var(--ease);
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
   color: var(--accent);
 }
 
-/* =========================================================
-   MAIN CONTAINER
-   ========================================================= */
-.container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  background: var(--panel);
-  border-radius: 10px;
-  border: 1px solid var(--border);
+/* Optional resume pill in nav */
+.site-nav .resume-link {
+  margin-left: var(--space-4);
+  padding: 8px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  transition: background var(--time-med) var(--ease), color var(--time-med) var(--ease), transform var(--time-med) var(--ease);
+}
+.site-nav .resume-link:hover {
+  background: var(--accent);
+  color: #000;
+  transform: translateY(-1px);
 }
 
 /* =========================================================
-   TITLES & TEXT
+   TYPOGRAPHY HELPERS
    ========================================================= */
+.h1,
 .project-title {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 3.5vw, 2rem);
   font-weight: 800;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px var(--accent);
+  margin-bottom: var(--space-2);
+  text-shadow: 0 0 10px color-mix(in oklab, var(--accent) 70%, transparent);
+}
+
+.h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
 }
 
 .project-subtitle {
-  font-size: 1.1rem;
+  font-size: var(--fs-lg);
   color: var(--muted);
-  margin-bottom: 25px;
+  margin-bottom: var(--space-5);
 }
 
 .project-body {
-  font-size: 1.05rem;
-  margin-bottom: 40px;
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-7);
 }
 
 /* =========================================================
-   PROJECT GRID
+   GRID & CARDS
    ========================================================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: var(--space-5);
 }
 
 .project-card {
   background: #151a2e;
-  padding: 12px;
-  border-radius: 10px;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
   text-align: center;
-  transition: 0.25s ease;
+  transition: transform var(--time-med) var(--ease), border-color var(--time-med) var(--ease), box-shadow var(--time-med) var(--ease);
+  will-change: transform;
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent);
-  box-shadow: 0 0 15px var(--accent);
+  box-shadow: 0 0 15px color-mix(in oklab, var(--accent) 60%, transparent);
 }
 
 .project-card-title {
-  margin-bottom: 10px;
-  font-weight: bold;
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-2);
+  font-weight: 800;
   color: var(--accent);
+  font-size: var(--fs-md);
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: var(--fs-sm);
 }
 
 /* =========================================================
-   PROJECT EMBED (Sketchfab)
+   FEATURED EMBED / HERO (e.g., Sketchfab)
    ========================================================= */
 .project-hero {
   width: 100%;
-  padding: 30px 0;
+  padding: var(--space-7) 0;
   display: flex;
   justify-content: center;
 }
@@ -146,69 +305,91 @@ body {
   width: min(1100px, 95vw);
   position: relative;
   padding-top: 60%;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: #0b1121;
 }
 
 .project-embed iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
 /* =========================================================
-   BACK BUTTON
+   BUTTONS
    ========================================================= */
-.project-back {
-  text-align: center;
-  margin-top: 40px;
-}
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--accent);
+  --btn-bd: var(--accent);
 
-.project-back a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: var(--accent);
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.project-back a:hover {
-  background: var(--accent2);
-  color: white;
-}
-
-/* =========================================================
-   EMAIL BUTTON (FIXED FOR MOBILE)
-   ========================================================= */
-.email-link {
   display: inline-block;
   padding: 10px 18px;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  color: var(--accent);
+  border: 1px solid var(--btn-bd);
+  border-radius: var(--radius-sm);
+  color: var(--btn-fg);
+  background: var(--btn-bg);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 800;
   text-align: center;
+  letter-spacing: 0.02em;
+  transition: transform var(--time-fast) var(--ease), background var(--time-med) var(--ease), color var(--time-med) var(--ease), box-shadow var(--time-med) var(--ease);
+  will-change: transform;
 }
 
-.email-link:hover {
+.btn:hover {
   background: var(--accent);
   color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px color-mix(in oklab, var(--accent) 60%, transparent);
 }
 
-.contact-email {
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary accent variant */
+.btn--primary {
+  --btn-bg: var(--accent);
+  --btn-fg: #000;
+  --btn-bd: var(--accent);
+  color: var(--btn-fg);
+}
+
+.btn--primary:hover {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #fff;
+}
+
+/* Ghost variant */
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--accent);
+  --btn-bd: var(--accent);
+}
+
+/* =========================================================
+   RESUME CTA (REPLACES EMAIL)
+   ========================================================= */
+.contact-resume {
   text-align: center;
-  margin: 20px 0;
+  margin: var(--space-6) 0;
 }
 
-/* Mobile fix */
+.resume-link {
+  composes: btn btn--ghost; /* If your build tool doesn’t support composes, keep both classes in HTML */
+}
+
+/* Mobile-friendly CTA */
 @media (max-width: 600px) {
-  .email-link {
+  .btn,
+  .resume-link {
     display: block;
     width: 100%;
     max-width: 260px;
@@ -217,13 +398,59 @@ body {
 }
 
 /* =========================================================
+   UTILITIES
+   ========================================================= */
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border),
+    transparent
+  );
+  margin: var(--space-6) 0;
+  border: 0;
+}
+
+/* =========================================================
    FOOTER
    ========================================================= */
 .site-footer {
-  margin-top: 40px;
-  padding: 18px;
+  margin-top: var(--space-8);
+  padding: var(--space-4);
   text-align: center;
   background: #0b1121;
   color: var(--muted);
   border-top: 1px solid var(--border);
+  font-size: var(--fs-sm);
+}
+
+/* =========================================================
+   RESPONSIVE TWEAKS
+   ========================================================= */
+@media (max-width: 900px) {
+  .container {
+    padding: var(--space-5);
+  }
+}
+
+@media (max-width: 600px) {
+  .site-nav a {
+    margin: 0 var(--space-3);
+  }
+  .project-embed {
+    padding-top: 65%;
+  }
 }
