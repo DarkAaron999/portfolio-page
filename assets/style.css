@@ -30,9 +30,26 @@ body {
   line-height: 1.6;
 }
 
-/* Remove ALL underlines globally */
-a {
+/* =========================================================
+   REMOVE ALL UNDERLINES (GLOBAL FIX)
+   ========================================================= */
+a,
+a:visited,
+a:active,
+a:hover {
   text-decoration: none !important;
+  border: none !important;
+}
+
+/* Remove underlines from Jekyll heading anchors */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none !important;
+  color: inherit !important;
   border: none !important;
 }
 
@@ -175,7 +192,18 @@ a {
 }
 
 /* =========================================================
-   DESIGNWEEK03 IMAGE STACK (VERTICAL)
+   FULL-WIDTH IMAGES (DesignWeek01, 02, 03)
+   ========================================================= */
+.project-image-full {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   DESIGNWEEK03 VERTICAL STACK
    ========================================================= */
 .project-showcase-vertical {
   display: flex;
@@ -189,9 +217,9 @@ a {
    ========================================================= */
 .project-embed {
   width: 100%;
-  max-width: 900px; /* keeps embed inside container */
+  max-width: 900px;
   margin: 40px auto;
-  aspect-ratio: 16 / 9; /* perfect scaling */
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
