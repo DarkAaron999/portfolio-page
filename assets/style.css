@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-/* ⭐ FIX: Prevent left/right layout shift caused by scrollbar */
+/* ⭐ FIX: Prevent left/right layout shift */
 html {
   overflow-y: scroll;
 }
@@ -206,7 +206,7 @@ body {
 }
 
 /* =========================================================
-   EMAIL BUTTON (FIXED FOR MOBILE)
+   EMAIL BUTTON
    ========================================================= */
 .email-link {
   display: inline-block;
