@@ -81,12 +81,19 @@ body {
 }
 
 /* =========================================================
+   PAGE HEADER (fixes page jump)
+   ========================================================= */
+.page-header {
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* =========================================================
    TITLES & TEXT
    ========================================================= */
 .project-title {
   font-size: 2rem;
   font-weight: 800;
-  margin-top: 0;
   margin-bottom: 25px;
   text-shadow: 0 0 10px var(--accent);
 }
@@ -102,9 +109,9 @@ body {
   margin-bottom: 40px;
 }
 
-/* Spacing for headings inside project pages */
-.project-body h2,
-.project-body h3 {
+/* Heading spacing fix */
+.container h2,
+.container h3 {
   margin-top: 40px;
   margin-bottom: 15px;
 }
@@ -127,6 +134,10 @@ body {
   transition: 0.25s ease;
 }
 
+.project-card a {
+  text-decoration: none;
+}
+
 .project-card img {
   width: 100%;
   border-radius: 8px;
@@ -146,7 +157,7 @@ body {
 }
 
 /* =========================================================
-   PROJECT EMBED (Sketchfab)
+   PROJECT EMBED
    ========================================================= */
 .project-hero {
   width: 100%;
@@ -215,7 +226,6 @@ body {
   color: #000;
 }
 
-/* Mobile fix */
 @media (max-width: 600px) {
   .email-link {
     display: block;
