@@ -30,6 +30,12 @@ body {
   line-height: 1.6;
 }
 
+/* Remove ALL underlines globally */
+a {
+  text-decoration: none !important;
+  border: none !important;
+}
+
 /* =========================================================
    HEADER
    ========================================================= */
@@ -59,7 +65,6 @@ body {
 .site-nav a {
   color: var(--muted);
   margin: 0 18px;
-  text-decoration: none; /* FIX: removes underline */
   font-weight: bold;
   letter-spacing: 0.05em;
 }
@@ -116,7 +121,7 @@ body {
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* FIX: 3 per row */
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
   gap: 25px;
   margin-top: 40px;
 }
@@ -144,7 +149,7 @@ body {
   text-align: center;
   transition: 0.25s ease;
 
-  max-width: 320px; /* FIX: prevents giant cards */
+  max-width: 320px; /* keeps cards compact */
   width: 100%;
   margin: 0 auto;
 }
@@ -184,9 +189,9 @@ body {
    ========================================================= */
 .project-embed {
   width: 100%;
-  max-width: 900px; /* FIX: stays inside container */
+  max-width: 900px; /* keeps embed inside container */
   margin: 40px auto;
-  aspect-ratio: 16 / 9; /* FIX: perfect scaling */
+  aspect-ratio: 16 / 9; /* perfect scaling */
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -212,7 +217,6 @@ body {
   background: var(--accent);
   color: #000;
   font-weight: bold;
-  text-decoration: none;
   border-radius: 6px;
 }
 
