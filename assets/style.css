@@ -81,7 +81,7 @@ body {
 }
 
 /* =========================================================
-   PAGE HEADER (fixes page jump)
+   PAGE HEADER (prevents layout jump)
    ========================================================= */
 .page-header {
   padding-top: 10px;
@@ -102,6 +102,13 @@ body {
   font-size: 1.1rem;
   color: var(--muted);
   margin-bottom: 35px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--accent);
 }
 
 .project-body {
