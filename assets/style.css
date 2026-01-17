@@ -81,11 +81,17 @@ body {
 }
 
 /* =========================================================
-   PAGE HEADER (prevents layout jump)
+   PAGE HEADER (jump‑proof)
    ========================================================= */
 .page-header {
   padding-top: 10px;
   margin-bottom: 30px;
+
+  /* FIX: forces identical height across all pages */
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* =========================================================
@@ -94,14 +100,14 @@ body {
 .project-title {
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   text-shadow: 0 0 10px var(--accent);
 }
 
 .project-subtitle {
   font-size: 1.1rem;
   color: var(--muted);
-  margin-bottom: 35px;
+  margin-bottom: 10px;
 }
 
 .section-title {
