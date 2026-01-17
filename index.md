@@ -3,11 +3,10 @@ layout: default
 title: Home
 ---
 
-# 👾 Welcome to My Portfolio
+<h1 class="project-title">👾 Welcome to My Portfolio</h1>
+<p class="project-subtitle">Hi, I’m <strong>Aaron Rennick</strong> — Game Designer / 2D / 3D Artist</p>
 
-Hi, I’m **Aaron Rennick** — Game Designer / 2D / 3D Artist
-
-# 🎮 Featured Projects
+<h1 class="project-title">🎮 Featured Projects</h1>
 
 <div class="project-grid">
 
