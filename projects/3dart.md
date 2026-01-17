@@ -2,10 +2,9 @@
 layout: default
 title: "3D Art"
 ---
-
 <div class="page-header">
   <h1 class="project-title">🎮 3D Art</h1>
-  <p class="project-subtitle">A collection of my 3D models. Click any card to view more details.</p>
+  <p class="project-subtitle">A collection of my 3D models.</p>
 </div>
 
 <div class="project-grid">
