@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} — Aaron Rennick</title>
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
 
   <header class="site-header">
     <h1>Aaron Rennick</h1>
-    <p>Game Designer • 2D/3D Artist</p>
   </header>
 
   <nav class="site-nav">
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
+    <a href="{{ '/3dart.html' | relative_url }}">3D Art</a>
+    <a href="{{ '/designweek.html' | relative_url }}">Design Week</a>
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
-    <a class="email-link" href="mailto:aaronrennick1221@gmail.com">Email Me</a>
   </nav>
 
   <main class="container">
@@ -26,7 +26,7 @@
   </main>
 
   <footer class="site-footer">
-    © {{ site.time | date: "%Y" }} Aaron Rennick — Portfolio
+    © {{ site.time | date: "%Y" }} Aaron Rennick
   </footer>
 
 </body>
