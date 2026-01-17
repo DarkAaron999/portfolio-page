@@ -19,8 +19,9 @@
   box-sizing: border-box;
 }
 
+/* ⭐ FIX: Prevent left/right layout shift */
 html {
-  overflow-y: scroll; /* ⭐ FIX: prevents horizontal shifting */
+  overflow-y: scroll;
 }
 
 body {
@@ -61,7 +62,7 @@ body {
   margin: 0 18px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.25s ease;
+  letter-spacing: 0.05em;
 }
 
 .site-nav a:hover {
@@ -81,82 +82,146 @@ body {
 }
 
 /* =========================================================
-   PAGE HEADER (consistent height)
+   TITLES & TEXT
    ========================================================= */
-.page-header {
-  padding-top: 10px;
-  margin-bottom: 30px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .project-title {
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-shadow: 0 0 10px var(--accent);
 }
 
 .project-subtitle {
   font-size: 1.1rem;
   color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.project-body {
+  font-size: 1.05rem;
+  margin-bottom: 40px;
 }
 
 /* =========================================================
-   PROJECT GRID (centered rows)
+   PROJECT GRID
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 
-  justify-items: center; /* ⭐ FIX: centers incomplete rows */
+  /* ⭐ FIX: Center last row so it doesn't shift left */
+  justify-items: center;
 }
 
-@media (max-width: 800px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================================
-   PROJECT CARDS
-   ========================================================= */
 .project-card {
   background: #151a2e;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid var(--border);
   text-align: center;
-  width: 100%;
-  max-width: 320px; /* ⭐ FIX: consistent card width */
   transition: 0.25s ease;
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover; /* ⭐ FIX: prevents image stretching */
+  border-radius: 8px;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent);
+  box-shadow: 0 0 15px var(--accent);
 }
 
 .project-card-title {
-  margin-top: 10px;
+  margin-bottom: 10px;
   font-weight: bold;
   color: var(--accent);
+}
+
+/* =========================================================
+   PROJECT EMBED (Sketchfab)
+   ========================================================= */
+.project-hero {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.project-embed {
+  width: min(1100px, 95vw);
+  position: relative;
+  padding-top: 60%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+.project-back {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.project-back a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.project-back a:hover {
+  background: var(--accent2);
+  color: white;
+}
+
+/* =========================================================
+   EMAIL BUTTON (FIXED FOR MOBILE)
+   ========================================================= */
+.email-link {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.email-link:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+.contact-email {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+  .email-link {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
 }
 
 /* =========================================================
