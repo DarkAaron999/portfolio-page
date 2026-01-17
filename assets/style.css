@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-/* ⭐ FIX: Prevent left/right layout shift */
+/* Prevent layout shift */
 html {
   overflow-y: scroll;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 /* =========================================================
-   PAGE HEADER (⭐ FIX: this was missing)
+   PAGE HEADER
    ========================================================= */
 .page-header {
   margin-bottom: 30px;
@@ -122,10 +122,8 @@ body {
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-
-  /* ⭐ FIX: centers incomplete rows (3D Art has 10 items) */
   justify-items: center;
 }
 
@@ -136,6 +134,10 @@ body {
   border: 1px solid var(--border);
   text-align: center;
   transition: 0.25s ease;
+}
+
+.project-card a {
+  text-decoration: none;
 }
 
 .project-card img {
@@ -150,13 +152,13 @@ body {
 }
 
 .project-card-title {
-  margin-bottom: 10px;
+  margin-top: 10px;
   font-weight: bold;
   color: var(--accent);
 }
 
 /* =========================================================
-   PROJECT EMBED (Sketchfab)
+   PROJECT EMBED
    ========================================================= */
 .project-hero {
   width: 100%;
@@ -203,40 +205,6 @@ body {
 .project-back a:hover {
   background: var(--accent2);
   color: white;
-}
-
-/* =========================================================
-   EMAIL BUTTON
-   ========================================================= */
-.email-link {
-  display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-}
-
-.email-link:hover {
-  background: var(--accent);
-  color: #000;
-}
-
-.contact-email {
-  text-align: center;
-  margin: 20px 0;
-}
-
-/* Mobile fix */
-@media (max-width: 600px) {
-  .email-link {
-    display: block;
-    width: 100%;
-    max-width: 260px;
-    margin: 0 auto;
-  }
 }
 
 /* =========================================================
