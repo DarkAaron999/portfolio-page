@@ -1,13 +1,3 @@
----
-layout: default
-title: Home
----
-
-<div class="page-header">
-  <h1 class="project-title">👾 Welcome to My Portfolio</h1>
-  <p class="project-subtitle">Hi, I’m <strong>Aaron Rennick</strong> — Game Designer / 2D / 3D Artist</p>
-</div>
-
 <h2 class="project-title">🎮 Featured Projects</h2>
 
 <div class="project-grid">
