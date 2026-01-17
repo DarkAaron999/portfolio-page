@@ -134,11 +134,11 @@ h6 a {
 }
 
 /* =========================================================
-   PROJECT GRID (HOME PAGE)
+   PROJECT GRID (HOME, 3D ART, DESIGN WEEK INDEX)
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 40px;
 }
@@ -166,7 +166,7 @@ h6 a {
   text-align: center;
   transition: 0.25s ease;
 
-  max-width: 320px; /* keeps cards compact */
+  max-width: 320px;
   width: 100%;
   margin: 0 auto;
 }
@@ -202,14 +202,18 @@ h6 a {
   border-radius: 10px;
 }
 
-/* =========================================================
-   DESIGNWEEK03 VERTICAL STACK
-   ========================================================= */
-.project-showcase-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  margin-top: 40px;
+/* Title above full-width images */
+.project-image-block {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.project-image-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
 }
 
 /* =========================================================
