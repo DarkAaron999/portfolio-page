@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
 
+  <!-- Header -->
   <header class="site-header">
     <h1>Aaron Rennick</h1>
   </header>
 
+  <!-- Navigation -->
   <nav class="site-nav">
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
@@ -21,10 +25,12 @@
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
+  <!-- Main Content Wrapper -->
   <main class="container">
     {{ content }}
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     © {{ site.time | date: "%Y" }} Aaron Rennick
   </footer>
