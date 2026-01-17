@@ -117,8 +117,9 @@ body {
   margin-bottom: 40px;
 }
 
-/* Spacing above section headers */
-.section-spacer {
+/* Force spacing above section headings */
+.project-body h2,
+.project-body h3 {
   margin-top: 40px;
 }
 
