@@ -112,11 +112,11 @@ body {
 }
 
 /* =========================================================
-   PROJECT GRID (3 PER ROW)
+   PROJECT GRID (HOME PAGE)
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* FIX: always 3 per row */
+  grid-template-columns: repeat(3, 1fr); /* FIX: 3 per row */
   gap: 25px;
   margin-top: 40px;
 }
@@ -145,7 +145,8 @@ body {
   transition: 0.25s ease;
 
   max-width: 320px; /* FIX: prevents giant cards */
-  margin: 0 auto;   /* centers card */
+  width: 100%;
+  margin: 0 auto;
 }
 
 .project-card img {
@@ -182,7 +183,7 @@ body {
    EMBEDDED PDF / SKETCHFAB
    ========================================================= */
 .project-embed {
-  width: 100%; /* FIX: no overflow */
+  width: 100%;
   max-width: 900px; /* FIX: stays inside container */
   margin: 40px auto;
   aspect-ratio: 16 / 9; /* FIX: perfect scaling */
