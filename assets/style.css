@@ -31,7 +31,7 @@ body {
 }
 
 /* =========================================================
-   REMOVE ALL UNDERLINES (GLOBAL FIX)
+   REMOVE ALL UNDERLINES
    ========================================================= */
 a,
 a:visited,
@@ -39,11 +39,7 @@ a:active,
 a:hover {
   text-decoration: none !important;
   border: none !important;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  text-decoration: none !important;
-  color: inherit !important;
+  color: inherit;
 }
 
 /* =========================================================
@@ -127,25 +123,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 /* =========================================================
-   PROJECT GRID
+   PROJECT GRID (RESPONSIVE)
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
   margin-top: 40px;
-}
-
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* =========================================================
@@ -153,14 +137,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
    ========================================================= */
 .project-card {
   background: #151a2e;
-  padding: 12px;
+  padding: 15px;
   border-radius: 10px;
   border: 1px solid var(--border);
   text-align: center;
   transition: 0.25s ease;
-  max-width: 320px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .project-card:hover {
@@ -176,6 +158,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .project-card-thumb img {
   width: 100%;
+  height: auto;
   max-height: 260px;
   object-fit: contain;
   border-radius: 8px;
@@ -277,7 +260,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     margin: 25px 0;
     padding: 0 5px;
   }
-
   .project-image-full {
     margin-bottom: 20px;
   }
