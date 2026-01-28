@@ -196,31 +196,55 @@ img.responsive-img {
 }
 
 /* =========================================================
-   RESPONSIVE VIDEO
+   RESPONSIVE VIDEO (DESIGN WEEK 05)
    ========================================================= */
+
+/* Break out of container */
+.video-hero {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Centered wrapper */
 .video-wrapper {
   width: 100%;
   max-width: 900px;
-  margin: 30px auto;
-  border-radius: 10px;
+  margin: 0 auto;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
 }
 
-.video-wrapper iframe,
-.video-wrapper video {
+/* Responsive iframe */
+.video-wrapper iframe {
   width: 100%;
-  height: auto;
   aspect-ratio: 16 / 9;
+  height: auto;
   display: block;
   border: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .video-hero {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    left: 0;
+  }
 }
 
 /* =========================================================
    SKETCHFAB VIEWER — FINAL FIX
    ========================================================= */
 
-/* Break out of .container */
+/* Break out of container */
 .project-hero {
   width: 100vw;
   position: relative;
@@ -257,7 +281,6 @@ img.responsive-img {
     margin-left: 0;
     margin-right: 0;
     left: 0;
-    transform: none;
   }
 
   .project-embed iframe {
