@@ -41,16 +41,9 @@ a:hover {
   border: none !important;
 }
 
-/* Remove underlines from Jekyll heading anchors */
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none !important;
   color: inherit !important;
-  border: none !important;
 }
 
 /* =========================================================
@@ -176,13 +169,11 @@ h6 a {
   box-shadow: 0 0 15px var(--accent);
 }
 
-/* Only the title + image are clickable */
 .project-card-link {
   display: block;
   color: inherit;
 }
 
-/* Thumbnail */
 .project-card-thumb img {
   width: 100%;
   max-height: 260px;
@@ -190,7 +181,6 @@ h6 a {
   border-radius: 8px;
 }
 
-/* Title */
 .project-card-title {
   margin-top: 10px;
   font-weight: bold;
@@ -198,12 +188,46 @@ h6 a {
   text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
 }
 
-/* Description (NOT clickable) */
 .project-card-text {
   margin-top: 10px;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+/* =========================================================
+   FULL-WIDTH IMAGES (3D Art)
+   ========================================================= */
+.project-image-block {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.project-image-full {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   EMBEDDED VIEWERS (Sketchfab, PDFs)
+   ========================================================= */
+.project-embed {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* =========================================================
@@ -238,4 +262,35 @@ h6 a {
   background: #0b1121;
   color: var(--muted);
   border-top: 1px solid var(--border);
+}
+
+/* =========================================================
+   MOBILE FIXES
+   ========================================================= */
+@media (max-width: 600px) {
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  .project-image-block {
+    margin: 25px 0;
+    padding: 0 5px;
+  }
+
+  .project-image-full {
+    margin-bottom: 20px;
+  }
+
+  .project-body p {
+    margin: 15px 0;
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .project-subtitle {
+    font-size: 1rem;
+  }
 }
