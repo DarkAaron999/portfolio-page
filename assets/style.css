@@ -105,6 +105,31 @@ a {
 }
 
 /* =========================================================
+   NEON TITLES (3D MODELS, CARD TITLES)
+   ========================================================= */
+.model-title,
+.project-card-title,
+.asset-title {
+  color: var(--accent);
+  font-weight: bold;
+  text-shadow:
+    0 0 8px var(--accent),
+    0 0 12px var(--accent2),
+    0 0 20px var(--accent);
+  transition: 0.25s ease;
+}
+
+.model-title:hover,
+.project-card-title:hover,
+.asset-title:hover {
+  color: var(--accent2);
+  text-shadow:
+    0 0 10px var(--accent2),
+    0 0 18px var(--accent),
+    0 0 30px var(--accent2);
+}
+
+/* =========================================================
    PROJECT GRID — 3 COLUMNS DESKTOP
    ========================================================= */
 .project-grid {
@@ -157,7 +182,7 @@ a {
 }
 
 /* =========================================================
-   RESPONSIVE IMAGES — FIX SWORD MODEL OVERLAP
+   RESPONSIVE IMAGES (SWORD MODEL, GALLERIES)
    ========================================================= */
 .project-image-block img,
 .sword-image,
@@ -172,7 +197,7 @@ img.responsive-img {
 }
 
 /* =========================================================
-   RESPONSIVE VIDEO — FIX DESIGN WEEK 05 OVERLAP
+   RESPONSIVE VIDEO (DESIGN WEEK 05)
    ========================================================= */
 .video-wrapper {
   position: relative;
@@ -193,12 +218,44 @@ img.responsive-img {
   display: block;
 }
 
+@media (max-width: 600px) {
+  .video-wrapper {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
+
 /* =========================================================
-   RESPONSIVE ITCH.IO EMBEDS — FIX MOBILE + DESKTOP SIZE
+   RESPONSIVE SKETCHFAB EMBEDS
+   ========================================================= */
+.sketchfab-embed-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .sketchfab-embed-wrapper iframe {
+    height: 350px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE ITCH.IO EMBEDS
    ========================================================= */
 .itch-embed-wrapper {
   width: 100%;
-  max-width: 800px; /* prevents giant desktop embeds */
+  max-width: 800px;
   margin: 30px auto;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -214,7 +271,7 @@ img.responsive-img {
 }
 
 /* =========================================================
-   NEON BUTTONS — BACK BUTTONS + MODEL BUTTONS
+   NEON BUTTONS (BACK BUTTON, MODEL BUTTONS)
    ========================================================= */
 .neon-button,
 .project-back a,
@@ -239,6 +296,14 @@ img.responsive-img {
   color: #fff;
   border-color: var(--accent2);
   box-shadow: 0 0 15px var(--accent2), 0 0 30px var(--accent);
+}
+
+/* Center back button */
+.project-back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 /* =========================================================
