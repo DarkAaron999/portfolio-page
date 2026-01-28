@@ -219,14 +219,20 @@ img.responsive-img {
 /* =========================================================
    SKETCHFAB VIEWER — FINAL FIX
    ========================================================= */
+
+/* Break out of .container */
 .project-hero {
   width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
+/* Centered inner wrapper */
 .project-embed {
   width: 100%;
   max-width: 1200px;
@@ -236,6 +242,7 @@ img.responsive-img {
   border: 1px solid var(--border);
 }
 
+/* Large desktop viewer */
 .project-embed iframe {
   width: 100%;
   height: 800px;
@@ -243,11 +250,14 @@ img.responsive-img {
   display: block;
 }
 
+/* Mobile scaling */
 @media (max-width: 600px) {
   .project-hero {
     width: 100%;
-    transform: none;
     margin-left: 0;
+    margin-right: 0;
+    left: 0;
+    transform: none;
   }
 
   .project-embed iframe {
@@ -256,7 +266,7 @@ img.responsive-img {
 }
 
 /* =========================================================
-   ITCH.IO EMBEDS — FINAL FIX
+   ITCH.IO EMBEDS
    ========================================================= */
 .itch-embed-wrapper {
   width: 100%;
