@@ -26,7 +26,6 @@ body {
   line-height: 1.6;
 }
 
-/* Remove underlines */
 a {
   text-decoration: none;
   color: inherit;
@@ -105,31 +104,25 @@ a {
   margin: 20px 0;
 }
 
-.project-body h2,
-.project-body h3 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
 /* =========================================================
-   PROJECT GRID — ALWAYS 3 COLUMNS ON DESKTOP
+   PROJECT GRID — 3 COLUMNS DESKTOP
    ========================================================= */
 .project-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(3, 1fr); /* FORCE 3 COLUMNS */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 40px;
 }
 
-/* Tablet (2 columns) */
+/* Tablet */
 @media (max-width: 900px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile (1 column) */
+/* Mobile */
 @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
@@ -156,83 +149,32 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
-.project-card-thumb img,
 .project-card img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  display: block;
   border-radius: 8px;
 }
 
-.project-card-title {
-  margin-top: 10px;
-  font-weight: bold;
-  color: var(--accent);
-  text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
-}
-
-.project-card-text {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
 /* =========================================================
-   FULL-WIDTH IMAGES (3D Art)
+   RESPONSIVE ITCH.IO EMBEDS
    ========================================================= */
-.project-image-block {
-  margin: 40px auto;
-  text-align: center;
-}
-
-.project-image-full {
+.itch-embed-wrapper {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-  display: block;
-  border-radius: 10px;
-}
-
-/* =========================================================
-   EMBEDDED VIEWERS
-   ========================================================= */
-.project-embed {
-  width: 100%;
-  max-width: 900px;
-  margin: 40px auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
+  max-width: 100%;
   overflow: hidden;
+  position: relative;
+  border-radius: 10px;
   border: 1px solid var(--border);
+  margin: 30px 0;
 }
 
-.project-embed iframe {
-  width: 100%;
-  height: 100%;
+.itch-embed-wrapper iframe {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
   border: none;
-}
-
-/* =========================================================
-   BACK BUTTON
-   ========================================================= */
-.project-back {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.project-back a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: var(--accent);
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
-}
-
-.project-back a:hover {
-  background: var(--accent2);
-  color: white;
+  display: block;
 }
 
 /* =========================================================
