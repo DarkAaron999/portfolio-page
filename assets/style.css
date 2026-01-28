@@ -19,10 +19,6 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-y: scroll;
-}
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -30,15 +26,9 @@ body {
   line-height: 1.6;
 }
 
-/* =========================================================
-   REMOVE ALL UNDERLINES
-   ========================================================= */
-a,
-a:visited,
-a:active,
-a:hover {
-  text-decoration: none !important;
-  border: none !important;
+/* Remove all underlines */
+a {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -72,7 +62,6 @@ a:hover {
   color: var(--muted);
   margin: 0 18px;
   font-weight: bold;
-  letter-spacing: 0.05em;
 }
 
 .site-nav a:hover {
@@ -123,10 +112,11 @@ a:hover {
 }
 
 /* =========================================================
-   PROJECT GRID (RESPONSIVE)
+   PROJECT GRID — RESPONSIVE, NON-OVERLAPPING
    ========================================================= */
 .project-grid {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
   margin-top: 40px;
@@ -143,6 +133,8 @@ a:hover {
   text-align: center;
   transition: 0.25s ease;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .project-card:hover {
@@ -151,15 +143,9 @@ a:hover {
   box-shadow: 0 0 15px var(--accent);
 }
 
-.project-card-link {
-  display: block;
-  color: inherit;
-}
-
 .project-card-thumb img {
   width: 100%;
   height: auto;
-  max-height: 260px;
   object-fit: contain;
   border-radius: 8px;
 }
@@ -175,7 +161,6 @@ a:hover {
   margin-top: 10px;
   color: var(--muted);
   font-size: 0.95rem;
-  line-height: 1.4;
 }
 
 /* =========================================================
@@ -248,7 +233,7 @@ a:hover {
 }
 
 /* =========================================================
-   MOBILE FIXES
+   MOBILE FIXES — GUARANTEED NO OVERLAP
    ========================================================= */
 @media (max-width: 600px) {
 
@@ -256,16 +241,24 @@ a:hover {
     padding: 20px 15px;
   }
 
+  .project-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
   .project-image-block {
     margin: 25px 0;
     padding: 0 5px;
   }
+
   .project-image-full {
     margin-bottom: 20px;
-  }
-
-  .project-body p {
-    margin: 15px 0;
   }
 
   .project-title {
