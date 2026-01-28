@@ -221,7 +221,7 @@ img.responsive-img {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER — FINAL FIX
+   SKETCHFAB VIEWER — FULL WIDTH + CENTERED
    ========================================================= */
 
 .project-hero {
@@ -265,7 +265,7 @@ img.responsive-img {
 }
 
 /* =========================================================
-   ITCH.IO EMBED — NO BLACK BARS
+   ITCH.IO EMBED — FINAL FIX (NO BLACK BARS)
    ========================================================= */
 
 .itch-embed-wrapper {
@@ -285,19 +285,24 @@ img.responsive-img {
   padding-top: calc(100% * 5 / 7);
 }
 
+/* Fill wrapper and crop internal padding */
 .itch-embed-wrapper iframe {
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 110%;
   border: none;
+  transform: scale(1.03);
+  transform-origin: top center;
 }
 
-/* Mobile */
+/* Mobile: remove zoom */
 @media (max-width: 600px) {
-  .itch-embed-wrapper {
-    max-width: 100%;
+  .itch-embed-wrapper iframe {
+    top: 0;
+    height: 100%;
+    transform: none;
   }
 }
 
