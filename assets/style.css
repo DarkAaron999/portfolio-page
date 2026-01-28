@@ -26,7 +26,7 @@ body {
   line-height: 1.6;
 }
 
-/* Remove all underlines */
+/* Remove underlines */
 a {
   text-decoration: none;
   color: inherit;
@@ -112,13 +112,13 @@ a {
 }
 
 /* =========================================================
-   PROJECT GRID — RESPONSIVE, NON-OVERLAPPING
+   PROJECT GRID — FINAL NON-OVERLAPPING VERSION
    ========================================================= */
 .project-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
   margin-top: 40px;
 }
 
@@ -143,10 +143,12 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
-.project-card-thumb img {
+.project-card-thumb img,
+.project-card img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
   border-radius: 8px;
 }
 
