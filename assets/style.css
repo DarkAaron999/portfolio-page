@@ -182,17 +182,18 @@ a {
 }
 
 /* =========================================================
-   RESPONSIVE IMAGES
+   RESPONSIVE IMAGES (3D MODEL PAGES)
    ========================================================= */
-.project-image-block img,
-.project-image-full,
-img.responsive-img {
+.project-image-full {
   width: 100%;
-  max-width: 100%;
-  height: auto;
+  max-width: 650px; /* Prevents giant images on desktop */
+  margin: 0 auto 25px auto;
   display: block;
-  object-fit: contain;
-  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}
+
+.project-image-block img {
+  margin-bottom: 25px;
 }
 
 /* =========================================================
