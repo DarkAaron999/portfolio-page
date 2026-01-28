@@ -186,7 +186,7 @@ a {
    ========================================================= */
 .project-image-full {
   width: 100%;
-  max-width: 550px !important; /* FINAL FIX: smaller on desktop */
+  max-width: 550px !important; /* FINAL FIX */
   margin: 0 auto 25px auto;
   display: block;
   border-radius: 8px;
