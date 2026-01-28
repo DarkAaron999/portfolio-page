@@ -105,7 +105,7 @@ a {
 }
 
 /* =========================================================
-   NEON TITLES (3D MODELS, CARD TITLES)
+   NEON TITLES
    ========================================================= */
 .model-title,
 .project-card-title,
@@ -130,7 +130,7 @@ a {
 }
 
 /* =========================================================
-   PROJECT GRID — 3 COLUMNS DESKTOP
+   PROJECT GRID
    ========================================================= */
 .project-grid {
   display: grid;
@@ -180,9 +180,10 @@ a {
 }
 
 /* =========================================================
-   RESPONSIVE IMAGES (SWORD MODEL, GALLERIES)
+   RESPONSIVE IMAGES
    ========================================================= */
 .project-image-block img,
+.project-image-full,
 .sword-image,
 .model-image,
 img.responsive-img {
@@ -195,15 +196,14 @@ img.responsive-img {
 }
 
 /* =========================================================
-   RESPONSIVE VIDEO (DESIGN WEEK 05)
+   RESPONSIVE VIDEO
    ========================================================= */
 .video-wrapper {
-  position: relative;
   width: 100%;
   max-width: 900px;
   margin: 30px auto;
-  overflow: hidden;
   border-radius: 10px;
+  overflow: hidden;
   border: 1px solid var(--border);
 }
 
@@ -216,49 +216,47 @@ img.responsive-img {
   border: none;
 }
 
-@media (max-width: 600px) {
-  .video-wrapper {
-    max-width: 100%;
-  }
-}
-
 /* =========================================================
-   RESPONSIVE SKETCHFAB EMBEDS — FINAL FIX
+   SKETCHFAB VIEWER — FINAL FIX
    ========================================================= */
-.sketchfab-embed-wrapper {
+.project-hero {
   width: 100vw;
-  max-width: 1100px;
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.project-embed {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
 }
 
-.sketchfab-embed-wrapper iframe {
+.project-embed iframe {
   width: 100%;
-  height: 750px;
+  height: 800px;
   border: none;
   display: block;
 }
 
 @media (max-width: 600px) {
-  .sketchfab-embed-wrapper {
+  .project-hero {
     width: 100%;
-    max-width: 100%;
     transform: none;
     margin-left: 0;
   }
 
-  .sketchfab-embed-wrapper iframe {
+  .project-embed iframe {
     height: 350px;
   }
 }
 
 /* =========================================================
-   RESPONSIVE ITCH.IO EMBEDS — FINAL FIX
+   ITCH.IO EMBEDS — FINAL FIX
    ========================================================= */
 .itch-embed-wrapper {
   width: 100%;
@@ -284,7 +282,7 @@ img.responsive-img {
 }
 
 /* =========================================================
-   NEON BUTTONS (BACK BUTTON, MODEL BUTTONS)
+   NEON BUTTONS
    ========================================================= */
 .neon-button,
 .project-back a,
