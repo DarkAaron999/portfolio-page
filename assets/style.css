@@ -134,7 +134,7 @@ h6 a {
 }
 
 /* =========================================================
-   PROJECT GRID (HOME, 3D ART, DESIGN WEEK INDEX)
+   PROJECT GRID
    ========================================================= */
 .project-grid {
   display: grid;
@@ -165,24 +165,9 @@ h6 a {
   border: 1px solid var(--border);
   text-align: center;
   transition: 0.25s ease;
-
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
-}
-
-.project-card img {
-  width: 100%;
-  max-height: 260px;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.project-card-title {
-  margin-top: 10px;
-  font-weight: bold;
-  color: var(--accent);
-  text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
 }
 
 .project-card:hover {
@@ -191,48 +176,34 @@ h6 a {
   box-shadow: 0 0 15px var(--accent);
 }
 
-/* =========================================================
-   FULL-WIDTH IMAGES (DesignWeek01, 02, 03)
-   ========================================================= */
-.project-image-full {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
+/* Only the title + image are clickable */
+.project-card-link {
   display: block;
-  border-radius: 10px;
+  color: inherit;
 }
 
-/* Title above full-width images */
-.project-image-block {
-  margin: 40px auto;
-  text-align: center;
+/* Thumbnail */
+.project-card-thumb img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-.project-image-title {
-  font-size: 1.2rem;
+/* Title */
+.project-card-title {
+  margin-top: 10px;
   font-weight: bold;
-  margin-bottom: 12px;
   color: var(--accent);
   text-shadow: 0 0 8px var(--accent), 0 0 12px var(--accent2);
 }
 
-/* =========================================================
-   EMBEDDED PDF / SKETCHFAB
-   ========================================================= */
-.project-embed {
-  width: 100%;
-  max-width: 900px;
-  margin: 40px auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.project-embed iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+/* Description (NOT clickable) */
+.project-card-text {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 /* =========================================================
