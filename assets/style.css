@@ -184,8 +184,6 @@ a {
    ========================================================= */
 .project-image-block img,
 .project-image-full,
-.sword-image,
-.model-image,
 img.responsive-img {
   width: 100%;
   max-width: 100%;
@@ -267,28 +265,39 @@ img.responsive-img {
 }
 
 /* =========================================================
-   ITCH.IO EMBEDS
+   ITCH.IO EMBED — NO BLACK BARS
    ========================================================= */
+
 .itch-embed-wrapper {
   width: 100%;
   max-width: 900px;
-  margin: 30px auto;
-  border-radius: 10px;
-  border: 1px solid var(--border);
+  margin: 40px auto;
+  border-radius: 12px;
   overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+/* itch.io native aspect ratio: 7:5 */
+.itch-embed-wrapper::before {
+  content: "";
+  display: block;
+  padding-top: calc(100% * 5 / 7);
 }
 
 .itch-embed-wrapper iframe {
-  width: 100% !important;
-  height: 500px !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
-  display: block;
 }
 
+/* Mobile */
 @media (max-width: 600px) {
-  .itch-embed-wrapper iframe {
-    height: auto !important;
-    aspect-ratio: 16 / 9;
+  .itch-embed-wrapper {
+    max-width: 100%;
   }
 }
 
