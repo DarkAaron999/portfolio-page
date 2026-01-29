@@ -151,13 +151,14 @@ a {
 }
 
 /* =========================================================
-   HOMEPAGE PROJECT GRID — BULLETPROOF VERSION
+   HOMEPAGE PROJECT GRID — FINAL FIXED VERSION
    ========================================================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-lg);
   margin-top: var(--space-lg);
+  align-items: start; /* prevents baseline gaps */
 }
 
 .project-card {
@@ -166,22 +167,22 @@ a {
   border: 1px solid var(--border);
   overflow: hidden;
   transition: 0.25s ease;
-  display: flex;
-  flex-direction: column;
+  display: block;      /* FIX: remove flex */
+  padding: 0;
+  line-height: 0;      /* FIX: kills baseline spacing */
 }
 
 .project-card a {
   display: block;
   width: 100%;
-  line-height: 0; /* removes baseline gap */
+  line-height: 0;      /* FIX: removes anchor gap */
 }
 
 .project-card img {
   width: 100%;
   height: auto;
   display: block;
-  line-height: 0;
-  vertical-align: middle;
+  vertical-align: top; /* FIX: removes inline gap */
 }
 
 .project-card:hover {
@@ -192,11 +193,11 @@ a {
 
 .project-card-text {
   margin-top: var(--space-sm);
-  padding: 0 var(--space-sm) var(--space-md);
+  padding: var(--space-sm);
   text-align: center;
   color: var(--muted);
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* =========================================================
