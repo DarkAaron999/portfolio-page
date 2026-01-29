@@ -151,14 +151,15 @@ a {
 }
 
 /* =========================================================
-   HOMEPAGE PROJECT GRID — FINAL FIXED VERSION
+   HOMEPAGE PROJECT GRID — FINAL FIXED SPACING
    ========================================================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-lg);
+  column-gap: var(--space-lg); /* horizontal spacing */
+  row-gap: 0;                  /* FIX: removes space under images */
   margin-top: var(--space-lg);
-  align-items: start; /* prevents baseline gaps */
+  align-items: start;
 }
 
 .project-card {
@@ -167,15 +168,15 @@ a {
   border: 1px solid var(--border);
   overflow: hidden;
   transition: 0.25s ease;
-  display: block;      /* FIX: remove flex */
+  display: block;
   padding: 0;
-  line-height: 0;      /* FIX: kills baseline spacing */
+  line-height: 0; /* FIX: kills baseline spacing */
 }
 
 .project-card a {
   display: block;
   width: 100%;
-  line-height: 0;      /* FIX: removes anchor gap */
+  line-height: 0; /* FIX: removes anchor gap */
 }
 
 .project-card img {
