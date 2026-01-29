@@ -12,7 +12,7 @@
   --border: #1f2937;
 }
 
-/* Prevent layout jump from scrollbar */
+/* Prevent layout jump */
 html {
   overflow-y: scroll;
   scrollbar-gutter: stable;
@@ -33,7 +33,7 @@ body {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
   color: inherit;
 }
 
@@ -127,7 +127,7 @@ h2 {
 }
 
 /* =========================================================
-   PROJECT GRID (HOMEPAGE + INDEX PAGES)
+   PROJECT GRID (Homepage + Index Pages)
    ========================================================= */
 .project-grid {
   display: grid;
@@ -144,6 +144,7 @@ h2 {
 @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 }
 
@@ -169,7 +170,7 @@ h2 {
 }
 
 /* =========================================================
-   FULL-WIDTH IMAGE BLOCKS (DESIGN WEEK)
+   FULL-WIDTH IMAGE BLOCKS (Design Week)
    ========================================================= */
 .project-image-block {
   width: 100%;
@@ -191,11 +192,10 @@ h2 {
   height: auto;
   border-radius: 10px;
   border: 1px solid var(--border);
-  display: block;
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER (SWORD PAGE)
+   SKETCHFAB VIEWER (Sword Page)
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
@@ -225,7 +225,7 @@ h2 {
 }
 
 /* =========================================================
-   IMAGE GALLERY (SWORD PAGE)
+   IMAGE GALLERY (Sword Page)
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -264,6 +264,25 @@ h2 {
   font-size: 0.75rem;
   border-radius: 4px;
   color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .image-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .image-gallery img {
+    object-fit: contain;
+    max-height: 300px;
+  }
+
+  .image-tag {
+    bottom: 6px;
+    right: 6px;
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
 }
 
 /* =========================================================
