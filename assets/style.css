@@ -151,41 +151,42 @@ a {
 }
 
 /* =========================================================
-   HOMEPAGE PROJECT GRID — FINAL FIXED VERSION (OPTION C)
+   HOMEPAGE PROJECT GRID — OPTION 3 (Borders + Seamless Image)
    ========================================================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  column-gap: var(--space-lg); /* horizontal spacing */
-  row-gap: 0;                  /* FIX: removes space under images */
+  column-gap: var(--space-lg);
+  row-gap: 0; /* no vertical spacing */
   margin-top: var(--space-lg);
   align-items: start;
 }
 
 .project-card {
   background: #151a2e;
-  border-radius: 10px;
   border: 1px solid var(--border);
-  overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden; /* ensures seamless image */
   transition: 0.25s ease;
   display: block;
   padding: 0;
-  line-height: 0; /* FIX: kills baseline spacing */
-}
-
-/* Rounded top corners only */
-.project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  vertical-align: top;
-  border-radius: 10px 10px 0 0; /* OPTION C */
+  line-height: 0; /* removes baseline spacing */
 }
 
 .project-card a {
   display: block;
   width: 100%;
   line-height: 0;
+}
+
+/* ⭐ Seamless image + rounded top corners */
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid transparent; /* hides border line */
 }
 
 .project-card:hover {
