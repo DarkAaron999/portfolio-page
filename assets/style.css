@@ -26,6 +26,11 @@ body {
   line-height: 1.6;
 }
 
+/* Remove underline globally */
+a {
+  text-decoration: none;
+}
+
 /* =========================================================
    HEADER
    ========================================================= */
@@ -40,6 +45,7 @@ body {
 .site-header h1 {
   font-size: 2.4rem;
   font-weight: 800;
+  color: var(--accent);
   text-shadow: 0 0 10px var(--accent);
 }
 
@@ -56,7 +62,6 @@ body {
 .site-nav a {
   color: var(--muted);
   margin: 0 18px;
-  text-decoration: none;
   font-weight: bold;
   letter-spacing: 0.05em;
 }
@@ -85,6 +90,7 @@ body {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 10px;
+  color: var(--accent);
   text-shadow: 0 0 10px var(--accent);
 }
 
@@ -129,7 +135,7 @@ body {
   width: 70px;
   height: 70px;
   margin-bottom: 12px;
-  filter: drop-shadow(0 0 8px var(--accent));
+  filter: drop-shadow(0 0 10px var(--accent));
 }
 
 .featured-card h3 {
@@ -152,12 +158,26 @@ body {
 }
 
 /* =========================================================
-   PROJECT GRID (2D / 3D INDEX PAGES)
+   PROJECT GRID (2D / 3D INDEX)
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {
@@ -184,10 +204,11 @@ body {
   margin-bottom: 10px;
   font-weight: bold;
   color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
 }
 
 /* =========================================================
-   FULL-WIDTH IMAGE BLOCKS (2D ART)
+   FULL-WIDTH IMAGE BLOCKS
    ========================================================= */
 .project-image-block {
   width: 100%;
@@ -210,40 +231,28 @@ body {
 }
 
 /* =========================================================
-   IMAGE GALLERY (3D / SWORD PAGE)
+   FIXED IMAGE GALLERY (SWORD PAGE)
    ========================================================= */
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  margin: 30px 0;
+  align-items: start;
 }
 
 .image-gallery figure {
-  position: relative;
-  overflow: hidden;
+  background: #151a2e;
+  padding: 10px;
   border-radius: 10px;
   border: 1px solid var(--border);
+  text-align: center;
 }
 
 .image-gallery img {
   width: 100%;
-  transition: 0.3s ease;
-}
-
-.image-gallery img:hover {
-  transform: scale(1.05);
-}
-
-.image-tag {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0,0,0,0.7);
-  padding: 4px 8px;
-  font-size: 0.75rem;
-  border-radius: 4px;
-  color: var(--accent);
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* =========================================================
@@ -317,7 +326,6 @@ body {
   background: var(--accent);
   color: #000;
   font-weight: bold;
-  text-decoration: none;
   border-radius: 6px;
 }
 
@@ -335,9 +343,7 @@ body {
   border: 1px solid var(--accent);
   border-radius: 6px;
   color: var(--accent);
-  text-decoration: none;
   font-weight: bold;
-  text-align: center;
 }
 
 .email-link:hover {
