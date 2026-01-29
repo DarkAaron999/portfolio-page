@@ -355,7 +355,7 @@ h2,
 }
 
 /* =========================================================
-   LIGHTBOX
+   LIGHTBOX (FINAL FIX)
    ========================================================= */
 .lightbox-overlay {
   position: fixed;
@@ -374,16 +374,17 @@ h2,
 
 .lightbox-overlay img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 80%;
   border-radius: 10px;
+  display: block;
 }
 
 .lightbox-overlay span {
-  display: block;
-  margin-top: 15px;
+  margin-top: 12px;
   text-align: center;
   color: var(--muted);
   font-size: 0.9rem;
+  width: 100%;
 }
 
 /* =========================================================
