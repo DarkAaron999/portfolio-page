@@ -11,7 +11,6 @@
   --muted: #9ca3af;
   --border: #1f2937;
 
-  /* Spacing scale */
   --space-xs: 6px;
   --space-sm: 12px;
   --space-md: 20px;
@@ -19,13 +18,11 @@
   --space-xl: 48px;
 }
 
-/* Prevent layout jump */
 html {
   overflow-y: scroll;
   scrollbar-gutter: stable;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -61,16 +58,13 @@ a {
   text-shadow: 0 0 10px var(--accent);
 }
 
-/* Email in header */
 .header-email {
   margin-top: var(--space-sm);
-  text-align: center;
 }
 
 .header-email a {
   color: var(--accent);
   font-weight: bold;
-  letter-spacing: 0.5px;
 }
 
 .header-email a:hover {
@@ -92,7 +86,6 @@ a {
   color: var(--muted);
   margin: 0 var(--space-md);
   font-weight: bold;
-  letter-spacing: 0.05em;
 }
 
 .site-nav a:hover {
@@ -115,12 +108,11 @@ a {
 @media (max-width: 600px) {
   .container {
     padding: var(--space-lg);
-    margin: var(--space-lg) auto;
   }
 }
 
 /* =========================================================
-   TYPOGRAPHY & SPACING
+   TYPOGRAPHY
    ========================================================= */
 .project-title {
   font-size: 2rem;
@@ -134,28 +126,23 @@ a {
 .project-subtitle {
   font-size: 1.1rem;
   color: var(--muted);
-  margin: 0 auto var(--space-xl) auto;
-  max-width: 900px;
   text-align: center;
+  margin: 0 auto var(--space-xl);
+  max-width: 900px;
 }
 
-/* Paragraph spacing */
 .project-body p {
   margin-bottom: var(--space-md);
 }
 
-/* Bullet list spacing */
 .project-body ul {
-  margin-top: var(--space-sm);
-  margin-bottom: var(--space-lg);
-  padding-left: 26px;
+  margin: var(--space-sm) 0 var(--space-lg) 26px;
 }
 
 .project-body li {
   margin-bottom: var(--space-sm);
 }
 
-/* Headings */
 .project-body h2,
 .project-body h3 {
   margin-top: var(--space-xl);
@@ -177,20 +164,8 @@ a {
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-md);
-}
-
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .project-card {
@@ -198,8 +173,8 @@ a {
   padding: var(--space-sm);
   border-radius: 10px;
   border: 1px solid var(--border);
-  transition: 0.25s ease;
   text-align: center;
+  transition: 0.25s ease;
 }
 
 .project-card img {
@@ -216,35 +191,86 @@ a {
 .project-card-title {
   margin-top: var(--space-sm);
   font-weight: bold;
-  color: var(--text);
 }
 
 /* =========================================================
-   FULL-WIDTH IMAGE BLOCKS
+   IMAGE GALLERY (FIXED)
    ========================================================= */
-.project-image-block {
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.image-gallery figure {
+  background: #151a2e;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.image-gallery figcaption {
+  padding: var(--space-xs) 0;
+  color: var(--muted);
+}
+
+.image-tag {
+  position: absolute;
+  bottom: var(--space-xs);
+  right: var(--space-xs);
+  background: rgba(0,0,0,0.7);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .image-gallery img {
+    object-fit: contain;
+    max-height: 300px;
+  }
+}
+
+/* =========================================================
+   SKETCHFAB VIEWER (FIXED)
+   ========================================================= */
+.sketchfab-wrapper {
   width: 100%;
   max-width: 900px;
   margin: var(--space-xl) auto;
-  text-align: center;
-}
-
-.project-image-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
-  color: var(--accent);
-  text-shadow: 0 0 8px var(--accent);
-}
-
-.project-image-full {
-  width: 100%;
-  border-radius: 10px;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
   border: 1px solid var(--border);
 }
 
+.sketchfab-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sketchfab-credit {
+  text-align: center;
+  margin-top: var(--space-sm);
+  color: var(--muted);
+}
+
 /* =========================================================
-   RESPONSIVE EMBEDS (PDF, VIDEO, ITCH.IO)
+   EMBEDS (PDF, VIDEO, ITCH.IO)
    ========================================================= */
 .embed-wrapper {
   width: 100%;
@@ -256,8 +282,7 @@ a {
   background: #0d1224;
 }
 
-.embed-wrapper iframe,
-.embed-wrapper object {
+.embed-wrapper iframe {
   width: 100%;
   height: 100%;
   border: none;
@@ -267,43 +292,8 @@ a {
   height: 900px;
 }
 
-.embed-video,
-.project-video-full {
-  width: 100%;
+.embed-video {
   aspect-ratio: 16 / 9;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  display: block;
-  margin: 0 auto;
-}
-
-.embed-itch {
-  height: 600px;
-}
-
-@media (max-width: 600px) {
-  .embed-pdf {
-    height: 500px;
-  }
-  .embed-itch {
-    height: 450px;
-  }
-}
-
-/* =========================================================
-   VIDEO BLOCK
-   ========================================================= */
-.project-video-block {
-  width: 100%;
-  max-width: 900px;
-  margin: var(--space-xl) auto;
-  text-align: center;
-}
-
-.project-video-title {
-  font-size: 1.3rem;
-  margin-bottom: var(--space-sm);
-  color: var(--accent);
 }
 
 /* =========================================================
@@ -332,9 +322,7 @@ a {
 
 .lightbox-overlay span {
   margin-top: var(--space-sm);
-  text-align: center;
   color: var(--muted);
-  font-size: 0.9rem;
 }
 
 /* =========================================================
@@ -346,7 +334,6 @@ a {
 }
 
 .project-back a {
-  display: inline-block;
   padding: var(--space-sm) var(--space-md);
   background: var(--accent);
   color: #000;
@@ -371,7 +358,6 @@ a {
   border-top: 1px solid var(--border);
 }
 
-/* Email in footer */
 .footer-email {
   margin-top: var(--space-sm);
 }
@@ -379,7 +365,6 @@ a {
 .footer-email a {
   color: var(--accent);
   font-weight: bold;
-  letter-spacing: 0.5px;
 }
 
 .footer-email a:hover {
