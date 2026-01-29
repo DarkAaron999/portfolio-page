@@ -132,7 +132,7 @@ h2,
 }
 
 /* =========================================================
-   PROJECT GRID (Homepage + Index Pages)
+   PROJECT GRID
    ========================================================= */
 .project-grid {
   display: grid;
@@ -175,7 +175,7 @@ h2,
 }
 
 /* =========================================================
-   FULL-WIDTH IMAGE BLOCKS (Design Week)
+   FULL-WIDTH IMAGE BLOCKS
    ========================================================= */
 .project-image-block {
   width: 100%;
@@ -200,7 +200,7 @@ h2,
 }
 
 /* =========================================================
-   RESPONSIVE EMBEDS (PDFs, Videos, Itch.io, External iframes)
+   RESPONSIVE EMBEDS (PDF, VIDEO, ITCH.IO)
    ========================================================= */
 .embed-wrapper {
   width: 100%;
@@ -221,12 +221,10 @@ h2,
   display: block;
 }
 
-/* PDF height */
 .embed-pdf {
   height: 900px;
 }
 
-/* Video / YouTube / Vimeo */
 .embed-video,
 .project-video-full {
   width: 100%;
@@ -239,7 +237,6 @@ h2,
   margin: 0 auto;
 }
 
-/* itch.io */
 .embed-itch {
   height: 600px;
 }
@@ -260,7 +257,7 @@ h2,
 }
 
 /* =========================================================
-   VIDEO BLOCK (Design Week 05)
+   VIDEO BLOCK
    ========================================================= */
 .project-video-block {
   width: 100%;
@@ -278,7 +275,7 @@ h2,
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER (Sword Page)
+   SKETCHFAB VIEWER
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
@@ -297,7 +294,7 @@ h2,
 }
 
 /* =========================================================
-   IMAGE GALLERY (Sword Page)
+   IMAGE GALLERY
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -367,6 +364,7 @@ h2,
   display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 9999;
 }
 
@@ -378,6 +376,14 @@ h2,
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
+}
+
+.lightbox-overlay span {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* =========================================================
