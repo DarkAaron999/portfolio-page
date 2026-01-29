@@ -13,17 +13,10 @@ body {
   background: #0f0f0f;
   color: #e5e5e5;
   line-height: 1.6;
-  padding-bottom: 80px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* --------------------------------------------------
-   GLOBAL CONTAINER
+   GLOBAL LAYOUT
 -------------------------------------------------- */
 
 .container {
@@ -31,6 +24,87 @@ img {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+
+header {
+  width: 100%;
+  background: #111;
+  padding: 20px 0;
+  border-bottom: 2px solid #222;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.navbar a:hover {
+  color: #4db8ff;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+  width: 100%;
+  background: #111;
+  padding: 30px 0;
+  margin-top: 60px;
+  border-top: 2px solid #222;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------
+   PROJECT GRID (Homepage / 2D / 3D Index)
+-------------------------------------------------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-card-title {
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e5e5e5;
 }
 
 /* --------------------------------------------------
@@ -130,7 +204,6 @@ h3 {
   opacity: 0.8;
 }
 
-/* Tag in corner */
 .image-tag {
   position: absolute;
   bottom: 8px;
