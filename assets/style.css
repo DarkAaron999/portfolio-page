@@ -16,22 +16,10 @@ body {
 }
 
 /* --------------------------------------------------
-   GLOBAL LAYOUT
--------------------------------------------------- */
-
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* --------------------------------------------------
    HEADER
 -------------------------------------------------- */
 
 header {
-  width: 100%;
   background: #111;
   padding: 20px 0;
   border-bottom: 2px solid #222;
@@ -46,14 +34,20 @@ header {
   align-items: center;
 }
 
-.navbar a {
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e5e5e5;
+}
+
+.navbar nav a {
   color: #e5e5e5;
   text-decoration: none;
   font-weight: 600;
   margin-left: 20px;
 }
 
-.navbar a:hover {
+.navbar nav a:hover {
   color: #4db8ff;
 }
 
@@ -62,7 +56,6 @@ header {
 -------------------------------------------------- */
 
 footer {
-  width: 100%;
   background: #111;
   padding: 30px 0;
   margin-top: 60px;
@@ -73,7 +66,72 @@ footer {
 }
 
 /* --------------------------------------------------
-   PROJECT GRID (Homepage / 2D / 3D Index)
+   HOMEPAGE WELCOME
+-------------------------------------------------- */
+
+.welcome {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.welcome h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------
+   FEATURED PROJECT GRID
+-------------------------------------------------- */
+
+.featured-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.featured-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.featured-card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.featured-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.featured-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------
+   PROJECT GRID (2D / 3D Index Pages)
 -------------------------------------------------- */
 
 .project-grid {
@@ -108,7 +166,7 @@ footer {
 }
 
 /* --------------------------------------------------
-   TYPOGRAPHY
+   PROJECT PAGE TYPOGRAPHY
 -------------------------------------------------- */
 
 .project-title {
@@ -287,23 +345,3 @@ h3 {
   color: #4db8ff;
   font-size: 1rem;
   font-weight: 600;
-  text-decoration: none;
-}
-
-.project-back a:hover {
-  opacity: 0.7;
-}
-
-/* --------------------------------------------------
-   RESPONSIVE
--------------------------------------------------- */
-
-@media (max-width: 600px) {
-  .project-title {
-    font-size: 2rem;
-  }
-
-  .sketchfab-wrapper iframe {
-    height: 350px;
-  }
-}
