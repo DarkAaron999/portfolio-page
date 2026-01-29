@@ -151,7 +151,7 @@ a {
 }
 
 /* =========================================================
-   HOMEPAGE PROJECT GRID — FINAL FIXED SPACING
+   HOMEPAGE PROJECT GRID — FINAL FIXED VERSION (OPTION C)
    ========================================================= */
 .project-grid {
   display: grid;
@@ -173,17 +173,19 @@ a {
   line-height: 0; /* FIX: kills baseline spacing */
 }
 
-.project-card a {
-  display: block;
-  width: 100%;
-  line-height: 0; /* FIX: removes anchor gap */
-}
-
+/* Rounded top corners only */
 .project-card img {
   width: 100%;
   height: auto;
   display: block;
-  vertical-align: top; /* FIX: removes inline gap */
+  vertical-align: top;
+  border-radius: 10px 10px 0 0; /* OPTION C */
+}
+
+.project-card a {
+  display: block;
+  width: 100%;
+  line-height: 0;
 }
 
 .project-card:hover {
