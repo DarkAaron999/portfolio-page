@@ -1,171 +1,301 @@
----
-layout: default
-title: "Medieval Fantasy Sword"
----
+/* =========================================================
+   GLOBAL THEME
+   ========================================================= */
+:root {
+  --bg: #050816;
+  --panel: #0d1224;
+  --header: #11192e;
+  --accent: #00f6ff;
+  --accent2: #a855ff;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
 
-<div class="container">
+/* Prevent layout jump from scrollbar */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
 
-  <h1 class="project-title">Medieval Fantasy Sword</h1>
-  <p class="project-subtitle">Hand‑painted 3D weapon inspired by high‑fantasy RPGs</p>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="project-overview">
-    <p>
-      This sword was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
-      readable silhouette supported by a hand‑painted texture style and a strong magical identity.
-      The model was retopologized in Maya and textured in Substance Painter.
-    </p>
-  </div>
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
-  <div class="section-divider"></div>
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
 
-  <!-- SKETCHFAB VIEWER -->
-  <h2>3D Viewer</h2>
-  <div class="sketchfab-wrapper">
-    <iframe
-      title="Medieval Fantasy Sword"
-      frameborder="0"
-      allowfullscreen
-      mozallowfullscreen="true"
-      webkitallowfullscreen="true"
-      allow="autoplay; fullscreen; xr-spatial-tracking"
-      xr-spatial-tracking
-      execution-while-out-of-viewport
-      execution-while-not-rendered
-      web-share
-      src="https://sketchfab.com/models/614b7e6475454ba390695d9227a3fd59/embed">
-    </iframe>
-  </div>
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header {
+  background: linear-gradient(135deg, var(--header), #020617);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
 
-  <p class="sketchfab-credit">
-    <a href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59"
-       target="_blank" rel="nofollow">Medieval Fantasy Sword</a>
-    by
-    <a href="https://sketchfab.com/Aaron999" target="_blank" rel="nofollow">Aaron</a>
-    on
-    <a href="https://sketchfab.com" target="_blank" rel="nofollow">Sketchfab</a>
-  </p>
+.site-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
 
-  <div class="section-divider"></div>
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.site-nav {
+  background: #0b1121;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
 
-  <!-- REFERENCES -->
-  <h2>References</h2>
-  <div class="image-gallery">
+.site-nav a {
+  color: var(--muted);
+  margin: 0 18px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/Reference01.png' | relative_url }}" alt="">
-      <figcaption>Reference 01</figcaption>
-      <div class="image-tag">Reference</div>
-    </figure>
+.site-nav a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/Reference02.png' | relative_url }}" alt="">
-      <figcaption>Reference 02</figcaption>
-      <div class="image-tag">Reference</div>
-    </figure>
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--panel);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/Reference03.png' | relative_url }}" alt="">
-      <figcaption>Reference 03</figcaption>
-      <div class="image-tag">Reference</div>
-    </figure>
+/* =========================================================
+   TITLES & TEXT
+   ========================================================= */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/Reference04.png' | relative_url }}" alt="">
-      <figcaption>Reference 04</figcaption>
-      <div class="image-tag">Reference</div>
-    </figure>
+.project-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
 
-  </div>
+.project-subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
 
-  <div class="section-divider"></div>
+.section-title,
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 20px 0 25px;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+  text-align: center;
+}
 
-  <!-- MODELING WORKFLOW -->
-  <h2>Modeling Workflow</h2>
-  <div class="image-gallery">
+/* Divider */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  margin: 40px 0;
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="">
-      <figcaption>High Poly Sculpt</figcaption>
-      <div class="image-tag">High Poly</div>
-    </figure>
+/* =========================================================
+   PROJECT GRID (HOMEPAGE)
+   ========================================================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="">
-      <figcaption>Low Poly Model</figcaption>
-      <div class="image-tag">Low Poly</div>
-    </figure>
+/* Tablet */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="">
-      <figcaption>Sword UV Layout</figcaption>
-      <div class="image-tag">UVs</div>
-    </figure>
+/* Mobile */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/uv.png' | relative_url }}" alt="">
-      <figcaption>UV Sheet</figcaption>
-      <div class="image-tag">UVs</div>
-    </figure>
+.project-card {
+  background: #151a2e;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: 0.25s ease;
+  text-align: center;
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="">
-      <figcaption>Turnarounds</figcaption>
-      <div class="image-tag">Final</div>
-    </figure>
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
 
-  </div>
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px var(--accent);
+}
 
-  <div class="section-divider"></div>
+/* =========================================================
+   SKETCHFAB VIEWER — MATCHES YOUR HTML
+   ========================================================= */
+.sketchfab-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 20px auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
 
-  <!-- TEXTURES -->
-  <h2>Textures</h2>
-  <div class="image-gallery">
+.sketchfab-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="">
-      <figcaption>Texture Pass 01</figcaption>
-      <div class="image-tag">Textures</div>
-    </figure>
+/* Credit text */
+.sketchfab-credit {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/texture02.png' | relative_url }}" alt="">
-      <figcaption>Texture Pass 02</figcaption>
-      <div class="image-tag">Textures</div>
-    </figure>
+.sketchfab-credit a {
+  color: var(--accent);
+}
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="">
-      <figcaption>Final Texture</figcaption>
-      <div class="image-tag">Textures</div>
-    </figure>
+/* =========================================================
+   IMAGE GALLERY — MATCHES YOUR HTML EXACTLY
+   ========================================================= */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
 
-  </div>
+.image-gallery figure {
+  background: #151a2e;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
 
-  <div class="project-back">
-    <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
-  </div>
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-</div>
+.image-gallery figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 8px 0;
+}
 
-<!-- LIGHTBOX -->
-<div class="lightbox-overlay" id="lightbox">
-  <img src="" alt="">
-  <span>Click anywhere to close</span>
-</div>
+.image-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.7);
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: var(--accent);
+}
 
-<!-- LIGHTBOX SCRIPT -->
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
-  document.addEventListener('click', (e) => {
-    const img = e.target.closest('.image-gallery img');
-    if (img) {
-      lightboxImg.src = img.src;
-      lightbox.classList.add('active');
-    } else if (e.target === lightbox || lightbox.classList.contains('active')) {
-      lightbox.classList.remove('active');
-      lightboxImg.src = '';
-    }
-  });
-</script>
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+.project-back {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.project-back a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.project-back a:hover {
+  background: var(--accent2);
+  color: white;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  margin-top: 40px;
+  padding: 18px;
+  text-align: center;
+  background: #0b1121;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
