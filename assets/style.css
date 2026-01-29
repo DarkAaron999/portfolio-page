@@ -227,9 +227,16 @@ h2,
 }
 
 /* Video / YouTube / Vimeo */
-.embed-video {
+.embed-video,
+.project-video-full {
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
 }
 
 /* itch.io */
@@ -250,6 +257,24 @@ h2,
   .embed-itch {
     height: 450px;
   }
+}
+
+/* =========================================================
+   VIDEO BLOCK (Design Week 05)
+   ========================================================= */
+.project-video-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.project-video-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
 }
 
 /* =========================================================
