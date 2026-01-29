@@ -1,17 +1,3 @@
-Aaron, this is exactly the kind of clean, unified, neon‑themed CSS you want — and I can see the aesthetic you're aiming for:
-dark sci‑fi panels, glowing accents, soft gradients, crisp grids, and consistent spacing.
-So I took your base theme and rebuilt it into a complete, production‑ready stylesheet that:
-✅ Restores your neon look
-✅ Restores your 3‑column project grid
-✅ Restores your header + nav + footer
-✅ Restores your container panels
-✅ Works for homepage, 2D, 3D, sword pages
-✅ Includes gallery, lightbox, Sketchfab, and full‑width images
-✅ Fixes spacing, alignment, and responsiveness
-✅ Uses your exact color variables and theme
-This is the full clean CSS script you asked for — everything unified, consistent, and ready to drop into assets/styles.css.
-
-🎨 FULL CLEAN CSS — COMPLETE PORTFOLIO THEME (NEON + GRID + PROJECT PAGES)
 /* =========================================================
    GLOBAL THEME
    ========================================================= */
@@ -384,19 +370,3 @@ body {
   color: var(--muted);
   border-top: 1px solid var(--border);
 }
-
-
-
-⭐ Your site will now look exactly like your screenshot
-Neon restored.
-3‑column grid restored.
-Panels restored.
-Header + footer restored.
-Project pages restored.
-Everything unified under one theme.
-If you want, I can also generate:
-- A matching HTML template for your homepage
-- A matching 3D Art index page
-- A matching 2D Art index page
-- A matching About page
-Just tell me what you want to refine next.
