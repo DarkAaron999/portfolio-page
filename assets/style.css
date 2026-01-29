@@ -119,17 +119,35 @@ a {
 }
 
 /* =========================================================
-   PROJECT GRID — FIXED FOR MOBILE
+   PROJECT GRID — FINAL FIXED VERSION
    ========================================================= */
 .project-grid {
   display: grid;
-  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  margin-top: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-/* Prevent card overflow */
+/* Tablet */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
 .project-card {
   background: #151a2e;
   padding: 15px;
@@ -139,6 +157,8 @@ a {
   transition: 0.25s ease;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -151,17 +171,20 @@ a {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 8px;
   display: block;
 }
 
 /* =========================================================
-   RESTORE NEON TEXT FOR PROJECT TITLES
+   NEON PROJECT TITLES — FINAL FIX
    ========================================================= */
 .project-card-title,
 .model-title,
 .asset-title {
-  color: var(--accent);
+  color: var(--accent) !important;
   font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 12px;
   text-shadow:
     0 0 8px var(--accent),
     0 0 12px var(--accent2),
@@ -172,7 +195,7 @@ a {
 .project-card-title:hover,
 .model-title:hover,
 .asset-title:hover {
-  color: var(--accent2);
+  color: var(--accent2) !important;
   text-shadow:
     0 0 10px var(--accent2),
     0 0 18px var(--accent),
