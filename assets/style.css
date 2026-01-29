@@ -14,9 +14,9 @@
   /* Spacing scale */
   --space-xs: 6px;
   --space-sm: 12px;
-  --space-md: 18px;
-  --space-lg: 28px;
-  --space-xl: 40px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
 }
 
 /* Prevent layout jump */
@@ -36,7 +36,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 a {
@@ -122,18 +122,23 @@ a {
   text-align: center;
 }
 
+/* Paragraph spacing */
 .project-body p {
   margin-bottom: var(--space-md);
 }
 
+/* Bullet list spacing */
 .project-body ul {
-  margin: var(--space-sm) 0 var(--space-lg) var(--space-md);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  padding-left: 26px;
 }
 
 .project-body li {
   margin-bottom: var(--space-sm);
 }
 
+/* Headings */
 .project-body h2,
 .project-body h3 {
   margin-top: var(--space-xl);
@@ -345,7 +350,7 @@ a {
 }
 
 /* =========================================================
-   LIGHTBOX (FINAL FIX)
+   LIGHTBOX
    ========================================================= */
 .lightbox-overlay {
   position: fixed;
