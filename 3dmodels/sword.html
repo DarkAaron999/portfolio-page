@@ -5,11 +5,9 @@ title: "Medieval Fantasy Sword"
 
 <div class="container">
 
-  <!-- TITLE -->
   <h1 class="project-title">Medieval Fantasy Sword</h1>
   <p class="project-subtitle">Hand‑painted 3D weapon inspired by high‑fantasy RPGs</p>
 
-  <!-- OVERVIEW -->
   <div class="project-overview">
     <p>
       This sword was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
@@ -20,7 +18,6 @@ title: "Medieval Fantasy Sword"
 
   <div class="section-divider"></div>
 
-  <!-- SKETCHFAB VIEWER -->
   <h2>3D Viewer</h2>
 
   <div class="sketchfab-wrapper">
@@ -31,121 +28,95 @@ title: "Medieval Fantasy Sword"
       mozallowfullscreen="true"
       webkitallowfullscreen="true"
       allow="autoplay; fullscreen; xr-spatial-tracking"
-      xr-spatial-tracking
-      execution-while-out-of-viewport
-      execution-while-not-rendered
-      web-share
       src="https://sketchfab.com/models/614b7e6475454ba390695d9227a3fd59/embed">
     </iframe>
   </div>
 
   <p class="sketchfab-credit">
-    <a href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59"
-       target="_blank" rel="nofollow">Medieval Fantasy Sword</a>
+    <a href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59" target="_blank">Medieval Fantasy Sword</a>
     by
-    <a href="https://sketchfab.com/Aaron999" target="_blank" rel="nofollow">Aaron</a>
+    <a href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
     on
-    <a href="https://sketchfab.com" target="_blank" rel="nofollow">Sketchfab</a>
+    <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
   </p>
 
   <div class="section-divider"></div>
 
-  <!-- REFERENCES -->
   <h2>References</h2>
 
   <div class="image-gallery">
-
     {% assign refs = "Reference01.png,Reference02.png,Reference03.png,Reference04.png" | split: "," %}
     {% for img in refs %}
     <figure>
       <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="">
-      <figcaption>{{ img | replace: '.png','' }}</figcaption>
       <div class="image-tag">Reference</div>
     </figure>
     {% endfor %}
-
   </div>
 
   <div class="section-divider"></div>
 
-  <!-- MODELING WORKFLOW -->
   <h2>Modeling Workflow</h2>
 
   <div class="image-gallery">
-
     <figure>
       <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="">
-      <figcaption>High Poly Sculpt</figcaption>
       <div class="image-tag">High Poly</div>
     </figure>
 
     <figure>
       <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="">
-      <figcaption>Low Poly Model</figcaption>
       <div class="image-tag">Low Poly</div>
     </figure>
 
     <figure>
       <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="">
-      <figcaption>Sword UV Layout</figcaption>
       <div class="image-tag">UVs</div>
     </figure>
 
     <figure>
       <img src="{{ '/assets/swordassets/images/uv.png' | relative_url }}" alt="">
-      <figcaption>UV Sheet</figcaption>
       <div class="image-tag">UVs</div>
     </figure>
 
     <figure>
       <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="">
-      <figcaption>Turnarounds</figcaption>
       <div class="image-tag">Turnarounds</div>
     </figure>
-
   </div>
 
   <div class="section-divider"></div>
 
-  <!-- TEXTURES -->
   <h2>Textures</h2>
 
   <div class="image-gallery">
-
     <figure>
       <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="">
-      <figcaption>Texture Pass 01</figcaption>
-      <div class="image-tag">Texture Attempt 1</div>
+      <div class="image-tag">Texture 1</div>
     </figure>
 
     <figure>
       <img src="{{ '/assets/swordassets/images/texture02.png' | relative_url }}" alt="">
-      <figcaption>Texture Pass 02</figcaption>
-      <div class="image-tag">Texture Attempt 2</div>
+      <div class="image-tag">Texture 2</div>
     </figure>
 
     <figure>
       <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="">
-      <figcaption>Final Texture</figcaption>
       <div class="image-tag">Final Texture</div>
     </figure>
-
   </div>
 
-  <!-- BACK BUTTON -->
   <div class="project-back">
     <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
   </div>
 
 </div>
 
-<!-- LIGHTBOX -->
 <div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
   <span>Click anywhere to close</span>
 </div>
 
-<!-- LIGHTBOX SCRIPT -->
 <script>
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = lightbox.querySelector('img');
@@ -155,7 +126,7 @@ title: "Medieval Fantasy Sword"
     if (img) {
       lightboxImg.src = img.src;
       lightbox.classList.add('active');
-    } else if (e.target === lightbox || lightbox.classList.contains('active')) {
+    } else if (e.target === lightbox) {
       lightbox.classList.remove('active');
       lightboxImg.src = '';
     }
