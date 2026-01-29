@@ -185,10 +185,10 @@ a {
    RESPONSIVE IMAGES (3D MODEL PAGES)
    ========================================================= */
 .project-image-full {
-  width: 100%;
-  max-width: 550px !important; /* FINAL FIX */
-  margin: 0 auto 25px auto;
-  display: block;
+  width: 100% !important;
+  max-width: 480px !important; /* FINAL FIX: guaranteed smaller on desktop */
+  margin: 0 auto 30px auto !important;
+  display: block !important;
   border-radius: 8px;
 }
 
