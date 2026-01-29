@@ -180,6 +180,15 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
+.project-card-text {
+  margin-top: var(--space-sm);
+  padding: 0 var(--space-sm) var(--space-md);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 /* =========================================================
    SWORD PAGE — IMAGE GALLERY (UNIFORM)
    ========================================================= */
@@ -237,7 +246,6 @@ a {
   object-fit: contain;
 }
 
-/* Prevent gallery rules from affecting 2D art */
 .project-image-block img {
   height: auto !important;
   object-fit: contain !important;
