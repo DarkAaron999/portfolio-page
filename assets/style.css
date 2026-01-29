@@ -85,7 +85,6 @@ a {
   border: 1px solid var(--border);
 }
 
-/* Center major blocks */
 .container,
 .project-grid,
 .sketchfab-wrapper,
@@ -94,18 +93,9 @@ a {
   margin-right: auto;
 }
 
-/* Wider on very large screens */
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
 /* =========================================================
    TYPOGRAPHY SCALE & HEADINGS
    ========================================================= */
-
-/* H1 — Page / Project Titles */
 h1,
 .project-title {
   font-size: 2.8rem;
@@ -116,7 +106,6 @@ h1,
   text-shadow: 0 0 10px var(--accent), 0 0 15px var(--accent2);
 }
 
-/* H2 — Major Sections */
 h2 {
   font-size: 2.1rem;
   font-weight: 700;
@@ -125,7 +114,6 @@ h2 {
   text-align: center;
 }
 
-/* H3 — Subsections */
 h3,
 .section-title {
   font-size: 1.6rem;
@@ -137,7 +125,6 @@ h3,
   text-shadow: 0 0 8px var(--accent2);
 }
 
-/* Subtitle under project title */
 .project-subtitle {
   font-size: 1.2rem;
   color: var(--muted);
@@ -145,7 +132,6 @@ h3,
   margin-bottom: 30px;
 }
 
-/* Paragraphs */
 p,
 .project-body p,
 .project-overview p {
@@ -158,44 +144,8 @@ p,
   text-align: left;
 }
 
-/* Overview block (centered text but same width) */
 .project-overview {
   text-align: center;
-}
-
-/* Small text / captions */
-small,
-figcaption {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-/* =========================================================
-   UNIVERSAL SPACING SYSTEM
-   ========================================================= */
-
-/* Generic section wrapper if used */
-.section-block {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-/* Sketchfab spacing */
-.sketchfab-wrapper {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-/* Gallery spacing */
-.image-gallery {
-  margin-top: 40px;
-  margin-bottom: 80px;
-}
-
-/* Back button spacing */
-.project-back {
-  margin-top: 100px;
-  margin-bottom: 60px;
 }
 
 /* =========================================================
@@ -218,13 +168,8 @@ figcaption {
   border-radius: 2px;
 }
 
-.section-divider-strong {
-  height: 2px;
-  opacity: 0.6;
-}
-
 /* =========================================================
-   PROJECT GRID (HOME / LISTING)
+   PROJECT GRID
    ========================================================= */
 .project-grid {
   display: grid;
@@ -235,14 +180,12 @@ figcaption {
   padding: 20px 0;
 }
 
-/* Tablet */
 @media (max-width: 900px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
@@ -259,7 +202,6 @@ figcaption {
   border: 1px solid var(--border);
   text-align: center;
   transition: 0.25s ease;
-  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -274,13 +216,12 @@ figcaption {
 .project-card img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 8px;
   display: block;
 }
 
 /* =========================================================
-   NEON TITLES (CARDS + MODEL NAMES)
+   NEON TITLES
    ========================================================= */
 .project-card-title,
 .model-title,
@@ -296,9 +237,7 @@ figcaption {
   transition: 0.25s ease;
 }
 
-.project-card-title:hover,
-.model-title:hover,
-.asset-title:hover {
+.project-card-title:hover {
   color: var(--accent2) !important;
   text-shadow:
     0 0 10px var(--accent2),
@@ -307,46 +246,121 @@ figcaption {
 }
 
 /* =========================================================
-   PREMIUM GALLERY SYSTEM
+   CATEGORY TAGS
+   ========================================================= */
+.image-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  margin-top: 6px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(0, 246, 255, 0.08);
+  border: 1px solid rgba(0, 246, 255, 0.4);
+  color: var(--accent);
+}
+
+/* =========================================================
+   ARTSTATION-STYLE MASONRY GALLERY
    ========================================================= */
 .image-gallery {
-  display: grid;
-  gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .image-gallery figure {
-  margin: 0;
+  break-inside: avoid;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: galleryFadeIn 0.7s ease forwards;
 }
 
 .image-gallery img {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 10px;
   display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.image-gallery figure:hover img {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 12px rgba(0, 246, 255, 0.4),
+    0 0 22px rgba(168, 85, 255, 0.35);
 }
 
 .image-gallery figcaption {
   margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted);
   text-align: center;
 }
 
-/* Column variants */
-.gallery-1 { grid-template-columns: 1fr; }
-.gallery-2 { grid-template-columns: repeat(2, 1fr); }
-.gallery-3 { grid-template-columns: repeat(3, 1fr); }
-.gallery-4 { grid-template-columns: repeat(4, 1fr); }
+/* Staggered loading */
+.image-gallery figure:nth-child(1) { animation-delay: 0.05s; }
+.image-gallery figure:nth-child(2) { animation-delay: 0.10s; }
+.image-gallery figure:nth-child(3) { animation-delay: 0.15s; }
+.image-gallery figure:nth-child(4) { animation-delay: 0.20s; }
+.image-gallery figure:nth-child(5) { animation-delay: 0.25s; }
+.image-gallery figure:nth-child(6) { animation-delay: 0.30s; }
 
-/* Responsive gallery behavior */
-@media (max-width: 800px) {
-  .gallery-4 { grid-template-columns: repeat(2, 1fr); }
-  .gallery-3 { grid-template-columns: repeat(2, 1fr); }
+@keyframes galleryFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media (max-width: 500px) {
-  .gallery-2,
-  .gallery-3,
-  .gallery-4 {
-    grid-template-columns: 1fr;
+/* Responsive masonry */
+@media (max-width: 900px) {
+  .image-gallery {
+    column-count: 2;
   }
+}
+
+@media (max-width: 600px) {
+  .image-gallery {
+    column-count: 1;
+  }
+}
+
+/* =========================================================
+   LIGHTBOX OVERLAY
+   ========================================================= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow:
+    0 0 20px rgba(0, 246, 255, 0.5),
+    0 0 35px rgba(168, 85, 255, 0.5);
+}
+
+.lightbox-overlay span {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* =========================================================
@@ -360,12 +374,13 @@ figcaption {
   background: #000;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .sketchfab-wrapper iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: none;
@@ -378,6 +393,8 @@ figcaption {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
 }
 
 .project-back a {
