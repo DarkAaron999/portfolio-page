@@ -166,14 +166,19 @@ a {
   border: 1px solid var(--border);
   overflow: hidden;
   transition: 0.25s ease;
+  line-height: 0; /* FIX: removes empty space under images */
+}
+
+.project-card a {
+  display: block;
+  line-height: 0; /* FIX: removes anchor baseline gap */
 }
 
 .project-card img {
   width: 100%;
   height: auto;
   display: block;
-  line-height: 0;
-  vertical-align: middle;
+  vertical-align: middle; /* FIX: removes inline gap */
 }
 
 .project-card:hover {
@@ -192,7 +197,7 @@ a {
 }
 
 /* =========================================================
-   SWORD PAGE — IMAGE GALLERY (UNIFORM)
+   SWORD PAGE — IMAGE GALLERY
    ========================================================= */
 .image-gallery {
   display: grid;
