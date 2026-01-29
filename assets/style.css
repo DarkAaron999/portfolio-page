@@ -172,6 +172,8 @@ a {
   width: 100%;
   height: auto;
   display: block;
+  line-height: 0;
+  vertical-align: middle;
 }
 
 .project-card:hover {
