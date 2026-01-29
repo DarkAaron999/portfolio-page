@@ -109,13 +109,22 @@ a {
   margin-top: 10px;
 }
 
-.section-title {
+.section-title,
+h2 {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 20px 0 25px;
   color: var(--accent);
   text-shadow: 0 0 8px var(--accent);
   text-align: center;
+}
+
+/* Divider */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  margin: 40px 0;
 }
 
 /* =========================================================
@@ -163,44 +172,52 @@ a {
 }
 
 /* =========================================================
-   FULL-WIDTH IMAGE BLOCKS (2D ART)
+   SKETCHFAB VIEWER — MATCHES YOUR HTML
    ========================================================= */
-.project-image-block {
+.sketchfab-wrapper {
   width: 100%;
-  max-width: 900px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.project-image-title {
-  margin-bottom: 12px;
-  font-weight: 600;
-  color: var(--accent);
-  text-shadow: 0 0 8px var(--accent);
-}
-
-.project-image-full {
-  width: 100%;
-  border-radius: 10px;
+  max-width: 1100px;
+  margin: 0 auto 20px auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
   border: 1px solid var(--border);
 }
 
+.sketchfab-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Credit text */
+.sketchfab-credit {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.sketchfab-credit a {
+  color: var(--accent);
+}
+
 /* =========================================================
-   FIXED IMAGE GALLERY (SWORD PAGE)
+   IMAGE GALLERY — MATCHES YOUR HTML EXACTLY
    ========================================================= */
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  align-items: start;
 }
 
 .image-gallery figure {
   background: #151a2e;
-  padding: 0;
   border-radius: 10px;
   border: 1px solid var(--border);
   overflow: hidden;
+  padding: 0;
+  text-align: center;
 }
 
 .image-gallery img {
@@ -209,28 +226,21 @@ a {
   object-fit: cover;
 }
 
-/* =========================================================
-   SKETCHFAB EMBED — FIXED SIZE + CENTERED
-   ========================================================= */
-.project-hero {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 30px 0;
+.image-gallery figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 8px 0;
 }
 
-.project-embed {
-  width: 100%;
-  max-width: 1100px;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.project-embed iframe {
-  width: 100%;
-  height: 100%;
+.image-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.7);
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: var(--accent);
 }
 
 /* =========================================================
