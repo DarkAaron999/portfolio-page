@@ -61,6 +61,23 @@ a {
   text-shadow: 0 0 10px var(--accent);
 }
 
+/* Email in header */
+.header-email {
+  margin-top: var(--space-sm);
+  text-align: center;
+}
+
+.header-email a {
+  color: var(--accent);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.header-email a:hover {
+  color: var(--accent2);
+  text-shadow: 0 0 8px var(--accent2);
+}
+
 /* =========================================================
    NAVIGATION
    ========================================================= */
@@ -196,6 +213,12 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
+.project-card-title {
+  margin-top: var(--space-sm);
+  font-weight: bold;
+  color: var(--text);
+}
+
 /* =========================================================
    FULL-WIDTH IMAGE BLOCKS
    ========================================================= */
@@ -284,72 +307,6 @@ a {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER
-   ========================================================= */
-.sketchfab-wrapper {
-  width: 100%;
-  max-width: 1100px;
-  margin: var(--space-lg) auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.sketchfab-wrapper iframe {
-  width: 100%;
-  height: 100%;
-}
-
-/* =========================================================
-   IMAGE GALLERY
-   ========================================================= */
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
-}
-
-.image-gallery figure {
-  background: #151a2e;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-}
-
-.image-gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-gallery figcaption {
-  font-size: 0.9rem;
-  color: var(--muted);
-  padding: var(--space-xs) 0;
-}
-
-.image-tag {
-  position: absolute;
-  bottom: var(--space-xs);
-  right: var(--space-xs);
-  background: rgba(0,0,0,0.7);
-  padding: var(--space-xs) var(--space-sm);
-  font-size: 0.75rem;
-  border-radius: 4px;
-  color: var(--accent);
-}
-
-@media (max-width: 600px) {
-  .image-gallery img {
-    object-fit: contain;
-    max-height: 300px;
-  }
-}
-
-/* =========================================================
    LIGHTBOX
    ========================================================= */
 .lightbox-overlay {
@@ -412,4 +369,20 @@ a {
   background: #0b1121;
   color: var(--muted);
   border-top: 1px solid var(--border);
+}
+
+/* Email in footer */
+.footer-email {
+  margin-top: var(--space-sm);
+}
+
+.footer-email a {
+  color: var(--accent);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.footer-email a:hover {
+  color: var(--accent2);
+  text-shadow: 0 0 8px var(--accent2);
 }
