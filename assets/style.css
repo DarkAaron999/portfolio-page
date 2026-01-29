@@ -119,7 +119,6 @@ h2 {
   text-align: center;
 }
 
-/* Divider */
 .section-divider {
   width: 100%;
   height: 2px;
@@ -128,7 +127,7 @@ h2 {
 }
 
 /* =========================================================
-   PROJECT GRID (HOMEPAGE)
+   PROJECT GRID (HOMEPAGE + INDEX PAGES)
    ========================================================= */
 .project-grid {
   display: grid;
@@ -136,14 +135,12 @@ h2 {
   gap: 22px;
 }
 
-/* Tablet */
 @media (max-width: 900px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
@@ -172,7 +169,33 @@ h2 {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER — MATCHES YOUR HTML
+   FULL-WIDTH IMAGE BLOCKS (DESIGN WEEK)
+   ========================================================= */
+.project-image-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.project-image-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+.project-image-full {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* =========================================================
+   SKETCHFAB VIEWER (SWORD PAGE)
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
@@ -190,7 +213,6 @@ h2 {
   border: none;
 }
 
-/* Credit text */
 .sketchfab-credit {
   text-align: center;
   font-size: 0.9rem;
@@ -203,7 +225,7 @@ h2 {
 }
 
 /* =========================================================
-   IMAGE GALLERY — MATCHES YOUR HTML EXACTLY
+   IMAGE GALLERY (SWORD PAGE)
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -218,6 +240,7 @@ h2 {
   overflow: hidden;
   padding: 0;
   text-align: center;
+  position: relative;
 }
 
 .image-gallery img {
@@ -271,7 +294,7 @@ h2 {
    ========================================================= */
 .project-back {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .project-back a {
