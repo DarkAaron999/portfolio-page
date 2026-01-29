@@ -16,6 +16,17 @@ body {
 }
 
 /* --------------------------------------------------
+   GLOBAL CONTAINER
+-------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --------------------------------------------------
    HEADER
 -------------------------------------------------- */
 
@@ -37,7 +48,8 @@ header {
 .navbar h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #e5e5e5;
+  color: #4db8ff;
+  text-shadow: 0 0 8px #4db8ff;
 }
 
 .navbar nav a {
@@ -77,6 +89,8 @@ footer {
 .welcome h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: #4db8ff;
+  text-shadow: 0 0 8px #4db8ff;
 }
 
 .welcome p {
@@ -98,11 +112,13 @@ footer {
   font-size: 1.6rem;
   margin-bottom: 30px;
   text-align: center;
+  color: #4db8ff;
+  text-shadow: 0 0 6px #4db8ff;
 }
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -112,57 +128,26 @@ footer {
   padding: 30px 20px;
   text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 0 8px rgba(77, 184, 255, 0.2);
 }
 
 .featured-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 0 16px rgba(77, 184, 255, 0.4);
 }
 
 .featured-card img {
   width: 60px;
   height: 60px;
   margin-bottom: 15px;
+  filter: drop-shadow(0 0 6px #4db8ff);
 }
 
 .featured-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
-}
-
-/* --------------------------------------------------
-   PROJECT GRID (2D / 3D Index Pages)
--------------------------------------------------- */
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.project-card {
-  background: #1a1a1a;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-}
-
-.project-card-title {
-  padding: 15px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #e5e5e5;
+  color: #4db8ff;
+  text-shadow: 0 0 6px #4db8ff;
 }
 
 /* --------------------------------------------------
@@ -174,6 +159,8 @@ footer {
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
+  color: #4db8ff;
+  text-shadow: 0 0 8px #4db8ff;
 }
 
 .project-subtitle {
@@ -207,7 +194,7 @@ h3 {
 }
 
 /* --------------------------------------------------
-   FULL-WIDTH IMAGE BLOCKS (2D ART)
+   FULL-WIDTH IMAGE BLOCKS
 -------------------------------------------------- */
 
 .project-image-block {
@@ -220,6 +207,7 @@ h3 {
 .project-image-title {
   margin-bottom: 12px;
   font-weight: 600;
+  color: #4db8ff;
 }
 
 .project-image-full {
@@ -230,7 +218,7 @@ h3 {
 }
 
 /* --------------------------------------------------
-   IMAGE GALLERY (3D PAGES, SWORD PAGE)
+   IMAGE GALLERY
 -------------------------------------------------- */
 
 .image-gallery {
@@ -345,3 +333,33 @@ h3 {
   color: #4db8ff;
   font-size: 1rem;
   font-weight: 600;
+  text-decoration: none;
+}
+
+.project-back a:hover {
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .sketchfab-wrapper iframe {
+    height: 350px;
+  }
+}
