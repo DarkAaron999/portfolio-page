@@ -1,344 +1,186 @@
-/* =========================================================
-   ROOT THEME VARIABLES
-   ========================================================= */
-:root {
-  --bg: #050816;
-  --panel: #0d1224;
-  --header: #11192e;
-  --accent: #00f6ff;
-  --accent2: #a855ff;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --border: #1f2937;
-}
+/* --------------------------------------------------
+   RESET & BASE
+-------------------------------------------------- */
 
-/* =========================================================
-   GLOBAL RESET
-   ========================================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================================================
-   BODY & BASE TYPOGRAPHY
-   ========================================================= */
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.75;
+  font-family: "Inter", sans-serif;
+  background: #0f0f0f;
+  color: #e5e5e5;
+  line-height: 1.6;
+  padding-bottom: 80px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* =========================================================
-   HEADER
-   ========================================================= */
-.site-header {
-  background: linear-gradient(135deg, var(--header), #020617);
-  padding: 40px 20px;
-  text-align: center;
-  color: white;
-}
+/* --------------------------------------------------
+   GLOBAL CONTAINER
+-------------------------------------------------- */
 
-.site-header h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  text-shadow: 0 0 10px var(--accent);
-}
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-.site-nav {
-  background: #0b1121;
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid var(--border);
-}
-
-.site-nav a {
-  color: var(--muted);
-  margin: 0 18px;
-  font-weight: bold;
-}
-
-.site-nav a:hover {
-  color: var(--accent);
-}
-
-/* =========================================================
-   MAIN CONTAINER
-   ========================================================= */
 .container {
+  width: 100%;
   max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  background: var(--panel);
-  border-radius: 10px;
-  border: 1px solid var(--border);
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.container,
-.project-grid,
-.sketchfab-wrapper,
-.image-gallery {
-  margin-left: auto;
-  margin-right: auto;
-}
+/* --------------------------------------------------
+   TYPOGRAPHY
+-------------------------------------------------- */
 
-/* =========================================================
-   TYPOGRAPHY SCALE & HEADINGS
-   ========================================================= */
-h1,
 .project-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-top: 60px;
-  margin-bottom: 30px;
-  text-align: center;
-  text-shadow: 0 0 10px var(--accent), 0 0 15px var(--accent2);
-}
-
-h2 {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-top: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-align: center;
-}
-
-h3,
-.section-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: var(--accent);
-  text-shadow: 0 0 8px var(--accent2);
 }
 
 .project-subtitle {
   font-size: 1.2rem;
-  color: var(--muted);
+  opacity: 0.8;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-p,
-.project-body p,
-.project-overview p {
-  font-size: 1.08rem;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 18px;
-  margin-bottom: 28px;
-  text-align: left;
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.project-overview {
-  text-align: center;
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
-/* =========================================================
-   SECTION DIVIDERS
-   ========================================================= */
+/* --------------------------------------------------
+   SECTION DIVIDER
+-------------------------------------------------- */
+
 .section-divider {
   width: 100%;
-  max-width: 900px;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--accent2),
-    var(--accent),
-    var(--accent2),
-    transparent
-  );
-  margin: 70px auto;
-  opacity: 0.4;
-  border-radius: 2px;
+  height: 2px;
+  background: #222;
+  margin: 60px 0;
 }
 
-/* =========================================================
-   PROJECT GRID
-   ========================================================= */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+/* --------------------------------------------------
+   FULL-WIDTH IMAGE BLOCKS (2D ART)
+-------------------------------------------------- */
+
+.project-image-block {
   width: 100%;
-  max-width: 1100px;
-  padding: 20px 0;
-}
-
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================================
-   PROJECT CARDS
-   ========================================================= */
-.project-card {
-  background: #151a2e;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
+  max-width: 900px;
+  margin: 40px auto;
   text-align: center;
-  transition: 0.25s ease;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent);
-  box-shadow: 0 0 15px var(--accent);
+.project-image-title {
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-.project-card img {
+.project-image-full {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  display: block;
+  border-radius: 6px;
+  margin: 0 auto;
 }
 
-/* =========================================================
-   NEON TITLES
-   ========================================================= */
-.project-card-title,
-.model-title,
-.asset-title {
-  color: var(--accent) !important;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 12px;
-  text-shadow:
-    0 0 8px var(--accent),
-    0 0 12px var(--accent2),
-    0 0 20px var(--accent);
-  transition: 0.25s ease;
-}
+/* --------------------------------------------------
+   IMAGE GALLERY (3D PAGES, SWORD PAGE)
+-------------------------------------------------- */
 
-.project-card-title:hover {
-  color: var(--accent2) !important;
-  text-shadow:
-    0 0 10px var(--accent2),
-    0 0 18px var(--accent),
-    0 0 30px var(--accent2);
-}
-
-/* =========================================================
-   CATEGORY TAGS
-   ========================================================= */
-.image-tag {
-  display: inline-block;
-  padding: 3px 10px;
-  margin-top: 6px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background: rgba(0, 246, 255, 0.08);
-  border: 1px solid rgba(0, 246, 255, 0.4);
-  color: var(--accent);
-}
-
-/* =========================================================
-   ARTSTATION-STYLE MASONRY GALLERY
-   ========================================================= */
 .image-gallery {
-  column-count: 3;
-  column-gap: 20px;
-  margin-top: 40px;
-  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
 }
 
 .image-gallery figure {
-  break-inside: avoid;
-  margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: galleryFadeIn 0.7s ease forwards;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .image-gallery img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.3s ease;
 }
 
-.image-gallery figure:hover img {
-  transform: scale(1.03);
-  box-shadow:
-    0 0 12px rgba(0, 246, 255, 0.4),
-    0 0 22px rgba(168, 85, 255, 0.35);
+.image-gallery img:hover {
+  transform: scale(1.05);
 }
 
 .image-gallery figcaption {
   margin-top: 8px;
   font-size: 0.9rem;
-  color: var(--muted);
+  opacity: 0.8;
+}
+
+/* Tag in corner */
+.image-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.7);
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------
+   SKETCHFAB VIEWER
+-------------------------------------------------- */
+
+.sketchfab-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
+
+.sketchfab-wrapper iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 6px;
+}
+
+.sketchfab-credit {
   text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 20px;
 }
 
-/* Staggered loading */
-.image-gallery figure:nth-child(1) { animation-delay: 0.05s; }
-.image-gallery figure:nth-child(2) { animation-delay: 0.10s; }
-.image-gallery figure:nth-child(3) { animation-delay: 0.15s; }
-.image-gallery figure:nth-child(4) { animation-delay: 0.20s; }
-.image-gallery figure:nth-child(5) { animation-delay: 0.25s; }
-.image-gallery figure:nth-child(6) { animation-delay: 0.30s; }
-
-@keyframes galleryFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.sketchfab-credit a {
+  color: #4db8ff;
+  font-weight: 600;
 }
 
-/* Responsive masonry */
-@media (max-width: 900px) {
-  .image-gallery {
-    column-count: 2;
-  }
-}
+/* --------------------------------------------------
+   LIGHTBOX
+-------------------------------------------------- */
 
-@media (max-width: 600px) {
-  .image-gallery {
-    column-count: 1;
-  }
-}
-
-/* =========================================================
-   LIGHTBOX OVERLAY
-   ========================================================= */
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   display: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 9999;
 }
 
@@ -347,82 +189,48 @@ p,
 }
 
 .lightbox-overlay img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 12px;
-  box-shadow:
-    0 0 20px rgba(0, 246, 255, 0.5),
-    0 0 35px rgba(168, 85, 255, 0.5);
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 6px;
 }
 
 .lightbox-overlay span {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* =========================================================
-   SKETCHFAB VIEWER
-   ========================================================= */
-.sketchfab-wrapper {
-  width: 100%;
-  max-width: 900px;
-  position: relative;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.sketchfab-wrapper iframe {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+  bottom: 30px;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
-/* =========================================================
-   BUTTONS
-   ========================================================= */
+/* --------------------------------------------------
+   BACK BUTTON
+-------------------------------------------------- */
+
 .project-back {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 60px;
+  margin-top: 60px;
+  text-align: center;
 }
 
 .project-back a {
-  padding: 12px 22px;
-  background: var(--accent);
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
-  border: 1px solid var(--accent);
-  transition: 0.25s ease;
-  box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent2);
+  color: #4db8ff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .project-back a:hover {
-  background: var(--accent2);
-  color: #fff;
-  border-color: var(--accent2);
-  box-shadow: 0 0 15px var(--accent2), 0 0 30px var(--accent);
+  opacity: 0.7;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-.site-footer {
-  margin-top: 40px;
-  padding: 18px;
-  text-align: center;
-  background: #0b1121;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .sketchfab-wrapper iframe {
+    height: 350px;
+  }
 }
