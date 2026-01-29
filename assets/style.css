@@ -200,7 +200,7 @@ h2,
 }
 
 /* =========================================================
-   RESPONSIVE EMBEDS (PDFs, Videos, External iframes)
+   RESPONSIVE EMBEDS (PDFs, Videos, Itch.io, External iframes)
    ========================================================= */
 .embed-wrapper {
   width: 100%;
@@ -221,13 +221,20 @@ h2,
   display: block;
 }
 
+/* PDF height */
 .embed-pdf {
   height: 900px;
 }
 
+/* Video / YouTube / Vimeo */
 .embed-video {
   aspect-ratio: 16 / 9;
   height: auto;
+}
+
+/* itch.io */
+.embed-itch {
+  height: 600px;
 }
 
 @media (max-width: 600px) {
@@ -238,6 +245,10 @@ h2,
 
   .embed-pdf {
     height: 500px;
+  }
+
+  .embed-itch {
+    height: 450px;
   }
 }
 
