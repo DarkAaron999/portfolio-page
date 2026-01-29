@@ -103,7 +103,6 @@ a {
   background: var(--panel);
   border-radius: 10px;
   border: 1px solid var(--border);
-  display: block;
 }
 
 @media (max-width: 600px) {
@@ -113,7 +112,7 @@ a {
 }
 
 /* =========================================================
-   TYPOGRAPHY
+   TITLES & TEXT
    ========================================================= */
 .project-title,
 .section-title,
@@ -136,20 +135,12 @@ a {
   margin-bottom: var(--space-md);
 }
 
-.project-body ul {
-  margin: var(--space-sm) 0 var(--space-lg) 26px;
-}
-
-.project-body li {
-  margin-bottom: var(--space-sm);
-}
-
 .project-body h2 {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-md);
+  text-align: center;
   color: var(--accent);
   text-shadow: 0 0 8px var(--accent);
-  text-align: center;
 }
 
 .section-divider {
@@ -175,13 +166,11 @@ a {
   border: 1px solid var(--border);
   overflow: hidden;
   transition: 0.25s ease;
-  padding: 0;
 }
 
 .project-card img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   display: block;
 }
 
@@ -192,7 +181,7 @@ a {
 }
 
 /* =========================================================
-   IMAGE GALLERY (UNIFORM + ZOOMED)
+   SWORD PAGE — IMAGE GALLERY (UNIFORM)
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -217,8 +206,6 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
-  flex-shrink: 0;
 }
 
 .image-tag {
@@ -233,6 +220,30 @@ a {
 }
 
 /* =========================================================
+   2D ART PAGE — FULL-WIDTH IMAGES
+   ========================================================= */
+.project-image-block {
+  width: 100%;
+  max-width: 900px;
+  margin: var(--space-xl) auto;
+  text-align: center;
+}
+
+.project-image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Prevent gallery rules from affecting 2D art */
+.project-image-block img {
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* =========================================================
    SKETCHFAB VIEWER
    ========================================================= */
 .sketchfab-wrapper {
@@ -240,9 +251,6 @@ a {
   max-width: 900px;
   margin: var(--space-xl) auto;
   aspect-ratio: 16 / 9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -261,19 +269,24 @@ a {
 }
 
 /* =========================================================
-   EMBEDS (PDF, VIDEO, ITCH.IO)
+   EMBEDS — PDF, VIDEO, ITCH.IO
    ========================================================= */
 .embed-wrapper {
   max-width: 1000px;
   margin: var(--space-xl) auto;
-  display: block;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
+  background: #0d1224;
+}
+
+.embed-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .embed-pdf {
-  width: 100%;
   height: 900px;
 }
 
