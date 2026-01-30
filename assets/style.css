@@ -171,7 +171,7 @@ a {
   transition: 0.25s ease;
   display: block;
   height: auto;
-  padding-bottom: 12px; /* FIX: prevents background touching image */
+  padding-bottom: 12px;
 }
 
 .project-card:hover {
@@ -200,14 +200,6 @@ a {
 }
 
 .project-card-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* FINAL OVERRIDE — MUST BE LAST */
-.project-card-thumb > img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -228,7 +220,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid var(--border); /* FIX: clean separation */
+  border-top: 1px solid var(--border);
 }
 
 /* Hidden titles for index */
@@ -277,7 +269,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; /* FIX: prevents images dropping to bottom */
+  display: block;
 }
 
 .image-tag {
