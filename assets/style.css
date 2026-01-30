@@ -187,7 +187,7 @@ a {
 }
 
 /* =========================================================
-   OPTION A — FULL IMAGE VISIBLE, SAME CARD SIZE
+   OPTION A — FULL IMAGE, SAME CARD SIZE, NO BLACK BARS
    ========================================================= */
 .project-card-thumb {
   width: 100%;
@@ -195,7 +195,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
+  background: transparent; /* no black bars */
   overflow: hidden;
 }
 
@@ -203,6 +203,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain; /* show full image */
+  background: transparent;
 }
 
 /* Title */
