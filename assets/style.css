@@ -161,7 +161,7 @@ a {
 }
 
 /* =========================================================
-   PROJECT CARD (OVERLAP FIX)
+   PROJECT CARD
    ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
@@ -170,7 +170,7 @@ a {
   overflow: hidden;
   transition: 0.25s ease;
   display: block;
-  height: auto; /* FIX */
+  height: auto;
 }
 
 .project-card:hover {
@@ -180,17 +180,17 @@ a {
 }
 
 .project-card-link {
-  display: block; /* FIX */
-  height: auto;   /* FIX */
+  display: block;
+  height: auto;
   width: 100%;
 }
 
 /* =========================================================
-   THUMBNAILS (260px height)
+   THUMBNAILS — 320px ArtStation Style
    ========================================================= */
 .project-card-thumb {
   width: 100%;
-  height: 260px; /* UPDATED */
+  height: 320px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -205,8 +205,16 @@ a {
   display: block;
 }
 
+/* FORCE override to prevent overlap */
+.project-card-thumb > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
 /* =========================================================
-   TITLES (OPTION A)
+   TITLES
    ========================================================= */
 .project-card-title {
   margin: 0;
@@ -221,15 +229,23 @@ a {
   align-items: center;
 }
 
-/* =========================================================
-   SPECIAL INDEX RULE (OPTION B)
-   ========================================================= */
+/* Hidden titles for index */
 .index-hidden-title {
   height: 0;
   min-height: 0;
   padding: 0;
   margin: 0;
   visibility: hidden;
+}
+
+/* =========================================================
+   CARD TEXT (Unity Projects)
+   ========================================================= */
+.project-card-text {
+  text-align: center;
+  color: var(--muted);
+  padding: 0 12px 16px;
+  line-height: 1.4;
 }
 
 /* =========================================================
@@ -259,101 +275,45 @@ a {
   object-fit: cover;
 }
 
+.image-tag {
+  position: absolute;
+  bottom: var(--space-xs);
+  right: var(--space-xs);
+  background: rgba(0,0,0,0.7);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
 /* =========================================================
-   FULL-WIDTH IMAGES
+   SKETCHFAB
    ========================================================= */
-.project-image-block {
+.sketchfab-wrapper {
   width: 100%;
   max-width: 900px;
   margin: var(--space-xl) auto;
-  text-align: center;
-}
-
-.project-image-full {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
-/* =========================================================
-   EMBEDS, LIGHTBOX, FOOTER
-   ========================================================= */
-.embed-wrapper {
-  max-width: 1000px;
-  margin: var(--space-xl) auto;
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
-  background: #0d1224;
 }
 
-.embed-wrapper iframe {
+.sketchfab-wrapper iframe {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.embed-pdf {
-  height: 900px;
-}
-
-@media (max-width: 600px) {
-  .embed-pdf {
-    height: 600px;
-  }
-}
-
-.embed-video,
-.project-video-full {
-  width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-  margin: var(--space-xl) auto;
-  display: block;
-}
-
-.embed-itch {
-  width: 100%;
-  max-width: 900px;
-  height: 600px;
-  margin: var(--space-xl) auto;
-  display: block;
-}
-
-@media (max-width: 600px) {
-  .embed-itch {
-    height: 450px;
-  }
-}
-
-.lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-}
-
-.lightbox-overlay.active {
-  display: flex;
-}
-
-.lightbox-overlay img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
-}
-
-.lightbox-overlay span {
+.sketchfab-credit {
+  text-align: center;
   margin-top: var(--space-sm);
   color: var(--muted);
 }
 
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
 .project-back {
   text-align: center;
   margin-top: var(--space-xl);
@@ -372,6 +332,9 @@ a {
   color: white;
 }
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .site-footer {
   margin-top: var(--space-xl);
   padding: var(--space-md);
