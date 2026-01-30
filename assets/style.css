@@ -160,15 +160,17 @@ a {
   align-items: stretch;
 }
 
+/* =========================================================
+   PROJECT CARD (OVERLAP FIX INCLUDED)
+   ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
   transition: 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: block;        /* FIX: no flex container */
+  height: auto;          /* FIX: prevents overlap */
 }
 
 .project-card:hover {
@@ -178,15 +180,13 @@ a {
 }
 
 .project-card-link {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  display: block;        /* FIX: no flex expansion */
+  height: auto;          /* FIX: prevents stretching */
   width: 100%;
-  height: 100%;
 }
 
 /* =========================================================
-   OPTION B — CLEAN CROPPED THUMBNAILS
+   THUMBNAILS (OPTION B)
    ========================================================= */
 .project-card-thumb {
   width: 100%;
@@ -206,7 +206,7 @@ a {
 }
 
 /* =========================================================
-   TITLE BLOCK (OPTION A)
+   TITLES (OPTION A)
    ========================================================= */
 .project-card-title {
   margin: 0;
@@ -222,7 +222,7 @@ a {
 }
 
 /* =========================================================
-   SPECIAL RULE FOR INDEX (OPTION B)
+   SPECIAL INDEX RULE (OPTION B)
    ========================================================= */
 .index-hidden-title {
   height: 0;
@@ -233,7 +233,7 @@ a {
 }
 
 /* =========================================================
-   IMAGE GALLERY (Weapons)
+   IMAGE GALLERY
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -259,19 +259,8 @@ a {
   object-fit: cover;
 }
 
-.image-tag {
-  position: absolute;
-  bottom: var(--space-xs);
-  right: var(--space-xs);
-  background: rgba(0,0,0,0.7);
-  padding: var(--space-xs) var(--space-sm);
-  font-size: 0.75rem;
-  border-radius: 4px;
-  color: var(--accent);
-}
-
 /* =========================================================
-   FULL-WIDTH IMAGES (2D Art)
+   FULL-WIDTH IMAGES
    ========================================================= */
 .project-image-block {
   width: 100%;
@@ -289,32 +278,7 @@ a {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER
-   ========================================================= */
-.sketchfab-wrapper {
-  width: 100%;
-  max-width: 900px;
-  margin: var(--space-xl) auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.sketchfab-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.sketchfab-credit {
-  text-align: center;
-  margin-top: var(--space-sm);
-  color: var(--muted);
-}
-
-/* =========================================================
-   EMBEDS
+   EMBEDS, LIGHTBOX, FOOTER
    ========================================================= */
 .embed-wrapper {
   max-width: 1000px;
@@ -364,9 +328,6 @@ a {
   }
 }
 
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
 .lightbox-overlay {
   position: fixed;
   inset: 0;
@@ -393,9 +354,6 @@ a {
   color: var(--muted);
 }
 
-/* =========================================================
-   BACK BUTTON
-   ========================================================= */
 .project-back {
   text-align: center;
   margin-top: var(--space-xl);
@@ -414,9 +372,6 @@ a {
   color: white;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
 .site-footer {
   margin-top: var(--space-xl);
   padding: var(--space-md);
