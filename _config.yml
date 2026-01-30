@@ -3,19 +3,16 @@ description: "Game Design • 2D/3D Art • Technical Art"
 baseurl: "/portfolio-page"
 url: "https://darkaaron999.github.io"
 
-# Disable GitHub Pages theme (this is the fix)
+# Disable Cayman theme
 theme: null
 
-# No plugins needed
 plugins: []
 
-# Optional: keep your pages listed
 header_pages:
-  - index.md
-  - about.md
-  - contact.md
+  - index.html
+  - about.html
+  - contact.html
 
-# Ensure assets folder is processed
 include:
   - assets
 
