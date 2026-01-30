@@ -115,8 +115,7 @@ a {
    TITLES & TEXT
    ========================================================= */
 .project-title,
-.section-title,
-.project-card-title {
+.section-title {
   text-align: center;
   color: var(--accent);
   text-shadow: 0 0 10px var(--accent);
@@ -180,35 +179,29 @@ a {
 }
 
 /* Entire card clickable */
-.project-card a {
+.project-card-link {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  line-height: normal;
 }
 
 /* Thumbnail */
-.project-card img {
+.project-card-thumb img {
   width: 100%;
   height: auto;
   display: block;
-  vertical-align: top;
   border-radius: 10px 10px 0 0;
-  background: #000;
-  border-bottom: 1px solid transparent;
 }
 
-/* Title (FIXED: no more grey) */
+/* Title (FIXED: neon, centered) */
 .project-card-title {
   margin: 0;
-  padding: 12px 8px 16px;
-  color: var(--accent); /* FIX */
+  padding: 12px 8px 8px;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
   font-size: 1rem;
   text-align: center;
-  line-height: 1.3;
-  display: block;
-  text-shadow: 0 0 10px var(--accent);
 }
 
 /* Description (FIXED: centered) */
