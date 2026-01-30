@@ -1,5 +1,6 @@
+
 /* =========================================================
-   ROOT THEME VARIABLES
+   GLOBAL THEME
    ========================================================= */
 :root {
   --bg: #050816;
@@ -18,9 +19,6 @@
   --space-xl: 48px;
 }
 
-/* =========================================================
-   GLOBAL RESET
-   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -40,8 +38,8 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 /* =========================================================
@@ -118,7 +116,8 @@ a {
    TITLES & TEXT
    ========================================================= */
 .project-title,
-.section-title {
+.section-title,
+.project-card-title {
   text-align: center;
   color: var(--accent);
   text-shadow: 0 0 10px var(--accent);
@@ -137,6 +136,14 @@ a {
   margin-bottom: var(--space-md);
 }
 
+.project-body h2 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  text-align: center;
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
 .section-divider {
   width: 100%;
   height: 2px;
@@ -145,13 +152,15 @@ a {
 }
 
 /* =========================================================
-   PROJECT GRID (Homepage + 3D Art + Unity Projects)
+   PROJECT GRID (Homepage + 3D Art)
    ========================================================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-lg);
+  column-gap: var(--space-lg);
+  row-gap: var(--space-lg);
   margin-top: var(--space-lg);
+  align-items: start;
 }
 
 .project-card {
@@ -160,8 +169,26 @@ a {
   border-radius: 10px;
   overflow: hidden;
   transition: 0.25s ease;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  padding: 0;
+}
+
+/* ⭐ Option B Fix: Prevent text overlap */
+.project-card a {
+  display: block;
+  width: 100%;
+  line-height: normal;
+}
+
+/* Image styling */
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+  border-radius: 10px 10px 0 0;
+  background: #000;
+  border-bottom: 1px solid transparent;
 }
 
 .project-card:hover {
@@ -170,42 +197,19 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
-/* Entire card clickable */
-.project-card-link {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  color: inherit;
-}
-
-/* Thumbnail */
-.project-card-thumb img {
-  width: 100%;
-  height: auto;
+/* ⭐ Fix spacing under images */
+.project-card-title {
+  margin: 0;
+  padding: 12px 8px 16px;
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.3;
   display: block;
 }
 
-/* Title */
-.project-card-title {
-  margin: 0;
-  padding: 12px 8px;
-  color: var(--accent);
-  text-shadow: 0 0 10px var(--accent);
-  text-align: center;
-  font-size: 1rem;
-}
-
-/* Description */
-.project-card-text {
-  text-align: center;
-  color: var(--muted);
-  padding: 0 12px 16px;
-  flex-grow: 1;
-}
-
 /* =========================================================
-   IMAGE GALLERY (Sword + 3D Models)
+   IMAGE GALLERY (Sword Page)
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -219,6 +223,7 @@ a {
   border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,9 +231,8 @@ a {
 
 .image-gallery img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-tag {
@@ -243,40 +247,21 @@ a {
 }
 
 /* =========================================================
-   EMBEDS (PDF, Video, Itch.io)
+   FULL-WIDTH IMAGES (2D Art)
    ========================================================= */
-.embed-wrapper,
-.embed-video,
-.embed-itch,
-.project-video-full {
-  margin-left: auto;
-  margin-right: auto;
+.project-image-block {
+  width: 100%;
+  max-width: 900px;
+  margin: var(--space-xl) auto;
+  text-align: center;
+}
+
+.project-image-full {
+  width: 100%;
+  height: auto;
   display: block;
-}
-
-/* PDFs */
-.embed-pdf {
-  width: 100%;
-  max-width: 900px;
-  height: 1000px;
-  margin: var(--space-xl) auto;
-}
-
-/* Videos */
-.embed-video,
-.project-video-full {
-  max-width: 900px;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin: var(--space-xl) auto;
-}
-
-/* Itch.io */
-.embed-itch {
-  max-width: 900px;
-  width: 100%;
-  height: 650px;
-  margin: var(--space-xl) auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 /* =========================================================
@@ -295,12 +280,64 @@ a {
 .sketchfab-wrapper iframe {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .sketchfab-credit {
   text-align: center;
   margin-top: var(--space-sm);
   color: var(--muted);
+}
+
+/* =========================================================
+   EMBEDS (PDF, Video, Itch.io)
+   ========================================================= */
+.embed-wrapper {
+  max-width: 1000px;
+  margin: var(--space-xl) auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0d1224;
+}
+
+.embed-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.embed-pdf {
+  height: 900px;
+}
+
+@media (max-width: 600px) {
+  .embed-pdf {
+    height: 600px;
+  }
+}
+
+.embed-video,
+.project-video-full {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: var(--space-xl) auto;
+  display: block;
+}
+
+.embed-itch {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  margin: var(--space-xl) auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .embed-itch {
+    height: 450px;
+  }
 }
 
 /* =========================================================
