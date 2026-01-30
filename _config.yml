@@ -1,6 +1,24 @@
-theme: jekyll-theme-cayman
+title: "Aaron Rennick Portfolio"
+description: "Game Design • 2D/3D Art • Technical Art"
+baseurl: "/portfolio-page"
+url: "https://darkaaron999.github.io"
 
+# Disable GitHub Pages theme (this is the fix)
+theme: null
+
+# No plugins needed
+plugins: []
+
+# Optional: keep your pages listed
 header_pages:
   - index.md
   - about.md
   - contact.md
+
+# Ensure assets folder is processed
+include:
+  - assets
+
+markdown: kramdown
+kramdown:
+  input: GFM
