@@ -3,35 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+
+  <!-- Correct CSS path + cache buster -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=1' | relative_url }}">
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header class="site-header">
     <h1>Aaron Rennick</h1>
 
-    <!-- Email added to header -->
     <div class="header-email">
       <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
     </div>
   </header>
 
+  <!-- NAVIGATION -->
   <nav class="site-nav">
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
     {{ content }}
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     © {{ site.time | date: "%Y" }} Aaron Rennick
 
-    <!-- Email added to footer -->
     <div class="footer-email">
       <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
     </div>
