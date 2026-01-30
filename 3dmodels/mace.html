@@ -4,6 +4,10 @@ title: "Medieval Fantasy Mace"
 description: "A stylized medieval fantasy mace created using Blender, Maya, and Substance Painter."
 ---
 
+{% assign mace_references = "reference01.png,reference02.png,reference03.png" | split: "," %}
+{% assign mace_workflow = "highpoly.png,lowpoly.png,modeluv.png,uvmap.png,turnarounds.png" | split: "," %}
+{% assign mace_textures = "finaltexture01.png,finaltexture02.png" | split: "," %}
+
 <div class="page-header">
   <h1 class="project-title">Medieval Fantasy Mace</h1>
   <p class="project-subtitle">
@@ -11,9 +15,6 @@ description: "A stylized medieval fantasy mace created using Blender, Maya, and 
   </p>
 </div>
 
-<!-- ===========================
-     SKETCHFAB VIEWER
-=========================== -->
 <div class="sketchfab-wrapper">
   <iframe 
     title="Medieval Fantasy Mace"
@@ -38,84 +39,49 @@ description: "A stylized medieval fantasy mace created using Blender, Maya, and 
 <div class="section-divider"></div>
 
 <!-- ===========================
-     REFERENCES (TOP)
+     REFERENCES
 =========================== -->
 <h2 class="section-title">References</h2>
 
 <div class="image-gallery">
-
+  {% for img in mace_references %}
   <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/reference01.png' | relative_url }}" alt="Reference 01">
+    <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="">
     <figcaption class="image-tag">Reference</figcaption>
   </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/reference02.png' | relative_url }}" alt="Reference 02">
-    <figcaption class="image-tag">Reference</figcaption>
-  </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/reference03.png' | relative_url }}" alt="Reference 03">
-    <figcaption class="image-tag">Reference</figcaption>
-  </figure>
-
+  {% endfor %}
 </div>
 
 <div class="section-divider"></div>
 
 <!-- ===========================
-     MODELING WORKFLOW (MIDDLE)
+     MODELING WORKFLOW
 =========================== -->
 <h2 class="section-title">Modeling Workflow</h2>
 
 <div class="image-gallery">
-
+  {% for img in mace_workflow %}
   <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/highpoly.png' | relative_url }}" alt="High Poly Model">
-    <figcaption class="image-tag">High Poly</figcaption>
+    <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="">
+    <figcaption class="image-tag">{{ img | replace: '.png','' | capitalize }}</figcaption>
   </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Model">
-    <figcaption class="image-tag">Low Poly</figcaption>
-  </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/modeluv.png' | relative_url }}" alt="UV Layout">
-    <figcaption class="image-tag">UV Layout</figcaption>
-  </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/uvmap.png' | relative_url }}" alt="UV Map">
-    <figcaption class="image-tag">UV Map</figcaption>
-  </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
-    <figcaption class="image-tag">Turnarounds</figcaption>
-  </figure>
-
+  {% endfor %}
 </div>
 
 <div class="section-divider"></div>
 
 <!-- ===========================
-     TEXTURES (BOTTOM)
+     TEXTURES
 =========================== -->
 <h2 class="section-title">Textures</h2>
 
 <div class="image-gallery">
-
+  {% for img in mace_textures %}
   <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/finaltexture01.png' | relative_url }}" alt="Texture Sheet 01">
-    <figcaption class="image-tag">Texture Sheet 01</figcaption>
+    <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="">
+    <figcaption class="image-tag">Texture Sheet</figcaption>
   </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/maceassets/images/finaltexture02.png' | relative_url }}" alt="Texture Sheet 02">
-    <figcaption class="image-tag">Texture Sheet 02</figcaption>
-  </figure>
-
+  {% endfor %}
 </div>
 
 <div class="project-back">
