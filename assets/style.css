@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL THEME
+   ROOT THEME VARIABLES
    ========================================================= */
 :root {
   --bg: #050816;
@@ -18,6 +18,9 @@
   --space-xl: 48px;
 }
 
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +40,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 /* =========================================================
@@ -169,7 +172,9 @@ a {
 
 /* Entire card clickable */
 .project-card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   width: 100%;
   color: inherit;
 }
@@ -179,21 +184,19 @@ a {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px 10px 0 0;
 }
 
-/* Centered neon titles */
-.project-grid .project-card-title {
+/* Title */
+.project-card-title {
   margin: 0;
-  padding: 12px 8px 16px;
+  padding: 12px 8px;
   color: var(--accent);
   text-shadow: 0 0 10px var(--accent);
-  font-size: 1rem;
   text-align: center;
-  line-height: 1.3;
+  font-size: 1rem;
 }
 
-/* Centered descriptions */
+/* Description */
 .project-card-text {
   text-align: center;
   color: var(--muted);
@@ -216,7 +219,6 @@ a {
   border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
-  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,8 +226,9 @@ a {
 
 .image-gallery img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .image-tag {
@@ -237,6 +240,43 @@ a {
   font-size: 0.75rem;
   border-radius: 4px;
   color: var(--accent);
+}
+
+/* =========================================================
+   EMBEDS (PDF, Video, Itch.io)
+   ========================================================= */
+.embed-wrapper,
+.embed-video,
+.embed-itch,
+.project-video-full {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* PDFs */
+.embed-pdf {
+  width: 100%;
+  max-width: 900px;
+  height: 1000px;
+  margin: var(--space-xl) auto;
+}
+
+/* Videos */
+.embed-video,
+.project-video-full {
+  max-width: 900px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: var(--space-xl) auto;
+}
+
+/* Itch.io */
+.embed-itch {
+  max-width: 900px;
+  width: 100%;
+  height: 650px;
+  margin: var(--space-xl) auto;
 }
 
 /* =========================================================
