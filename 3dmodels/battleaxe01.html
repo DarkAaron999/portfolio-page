@@ -4,6 +4,10 @@ title: "Medieval Fantasy Battle Axe"
 description: "A stylized medieval fantasy battle axe created using Blender, Maya, and Substance Painter."
 ---
 
+{% assign axe_references = "reference01.png,reference02.png" | split: "," %}
+{% assign axe_workflow = "highpoly.png,lowpoly.png,modeluv.png,uvmap.png,turnarounds.png" | split: "," %}
+{% assign axe_textures = "finaltexture.png" | split: "," %}
+
 <div class="page-header">
   <h1 class="project-title">Medieval Fantasy Battle Axe</h1>
   <p class="project-subtitle">
@@ -11,9 +15,6 @@ description: "A stylized medieval fantasy battle axe created using Blender, Maya
   </p>
 </div>
 
-<!-- ===========================
-     SKETCHFAB VIEWER
-=========================== -->
 <div class="sketchfab-wrapper">
   <iframe 
     title="Medieval Fantasy Battle Axe"
@@ -38,74 +39,49 @@ description: "A stylized medieval fantasy battle axe created using Blender, Maya
 <div class="section-divider"></div>
 
 <!-- ===========================
-     REFERENCES (TOP)
+     REFERENCES
 =========================== -->
 <h2 class="section-title">References</h2>
 
 <div class="image-gallery">
-
+  {% for img in axe_references %}
   <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/reference01.png' | relative_url }}" alt="Reference 01">
+    <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="">
     <figcaption class="image-tag">Reference</figcaption>
   </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/reference02.png' | relative_url }}" alt="Reference 02">
-    <figcaption class="image-tag">Reference</figcaption>
-  </figure>
-
+  {% endfor %}
 </div>
 
 <div class="section-divider"></div>
 
 <!-- ===========================
-     MODELING WORKFLOW (MIDDLE)
+     MODELING WORKFLOW
 =========================== -->
 <h2 class="section-title">Modeling Workflow</h2>
 
 <div class="image-gallery">
-
+  {% for img in axe_workflow %}
   <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/highpoly.png' | relative_url }}" alt="High Poly Model">
-    <figcaption class="image-tag">High Poly</figcaption>
+    <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="">
+    <figcaption class="image-tag">{{ img | replace: '.png','' | capitalize }}</figcaption>
   </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/lowpoly.png' | relative_url }}" alt="Low Poly Model">
-    <figcaption class="image-tag">Low Poly</figcaption>
-  </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/modeluv.png' | relative_url }}" alt="UV Layout">
-    <figcaption class="image-tag">UV Layout</figcaption>
-  </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/uvmap.png' | relative_url }}" alt="UV Map">
-    <figcaption class="image-tag">UV Map</figcaption>
-  </figure>
-
-  <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
-    <figcaption class="image-tag">Turnarounds</figcaption>
-  </figure>
-
+  {% endfor %}
 </div>
 
 <div class="section-divider"></div>
 
 <!-- ===========================
-     TEXTURES (BOTTOM)
+     TEXTURES
 =========================== -->
 <h2 class="section-title">Textures</h2>
 
 <div class="image-gallery">
-
+  {% for img in axe_textures %}
   <figure>
-    <img src="{{ '/portfolio-page/assets/battleaxe01assets/images/finaltexture.png' | relative_url }}" alt="Texture Sheet">
+    <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="">
     <figcaption class="image-tag">Texture Sheet</figcaption>
   </figure>
-
+  {% endfor %}
 </div>
 
 <div class="project-back">
