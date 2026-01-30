@@ -150,7 +150,7 @@ a {
 }
 
 /* =========================================================
-   PROJECT GRID (Homepage + 3D Art + Unity)
+   PROJECT GRID
    ========================================================= */
 .project-grid {
   display: grid;
@@ -177,7 +177,6 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
-/* Entire card clickable */
 .project-card-link {
   display: flex;
   flex-direction: column;
@@ -187,18 +186,22 @@ a {
 }
 
 /* =========================================================
-   OPTION B — CLEAN, CROPPED, UNIFORM THUMBNAILS
+   OPTION B — CLEAN CROPPED THUMBNAILS (FIXED)
    ========================================================= */
 .project-card-thumb {
   width: 100%;
-  height: 200px; /* uniform card height */
-  overflow: hidden;
+  height: 200px;          /* uniform card height */
+  overflow: hidden;       /* prevents escaping */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;       /* clean behind crop */
 }
 
 .project-card-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* clean, modern, gallery-style */
+  object-fit: cover;      /* clean gallery-style crop */
   display: block;
 }
 
@@ -309,7 +312,7 @@ a {
 }
 
 /* =========================================================
-   EMBEDS (PDF, Video, Itch.io)
+   EMBEDS
    ========================================================= */
 .embed-wrapper {
   max-width: 1000px;
