@@ -23,10 +23,6 @@ description: "A stylized medieval fantasy battle axe created using Blender, Maya
     mozallowfullscreen="true"
     webkitallowfullscreen="true"
     allow="autoplay; fullscreen; xr-spatial-tracking"
-    xr-spatial-tracking
-    execution-while-out-of-viewport
-    execution-while-not-rendered
-    web-share
     src="https://sketchfab.com/models/c856f6b4bb344e5c915ae62e36c1a5dd/embed">
   </iframe>
 </div>
@@ -38,14 +34,11 @@ description: "A stylized medieval fantasy battle axe created using Blender, Maya
 
 <div class="section-divider"></div>
 
-<!-- ===========================
-     REFERENCES
-=========================== -->
 <h2 class="section-title">References</h2>
 
 <div class="image-gallery">
   {% for img in axe_references %}
-  <figure>
+  <figure class="lightbox-item" data-full="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}">
     <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="">
     <figcaption class="image-tag">Reference</figcaption>
   </figure>
@@ -54,14 +47,11 @@ description: "A stylized medieval fantasy battle axe created using Blender, Maya
 
 <div class="section-divider"></div>
 
-<!-- ===========================
-     MODELING WORKFLOW
-=========================== -->
 <h2 class="section-title">Modeling Workflow</h2>
 
 <div class="image-gallery">
   {% for img in axe_workflow %}
-  <figure>
+  <figure class="lightbox-item" data-full="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}">
     <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="">
     <figcaption class="image-tag">{{ img | replace: '.png','' | capitalize }}</figcaption>
   </figure>
@@ -70,14 +60,11 @@ description: "A stylized medieval fantasy battle axe created using Blender, Maya
 
 <div class="section-divider"></div>
 
-<!-- ===========================
-     TEXTURES
-=========================== -->
 <h2 class="section-title">Textures</h2>
 
 <div class="image-gallery">
   {% for img in axe_textures %}
-  <figure>
+  <figure class="lightbox-item" data-full="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}">
     <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="">
     <figcaption class="image-tag">Texture Sheet</figcaption>
   </figure>
