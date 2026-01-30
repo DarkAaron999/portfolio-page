@@ -1,76 +1,132 @@
 ---
 layout: default
 title: "Medieval Fantasy Mace"
-description: "A stylized medieval fantasy mace created using Blender, Maya, and Substance Painter."
 ---
 
-{% assign mace_references = "reference01.png,reference02.png,reference03.png" | split: "," %}
-{% assign mace_workflow = "highpoly.png,lowpoly.png,modeluv.png,uvmap.png,turnarounds.png" | split: "," %}
-{% assign mace_textures = "finaltexture01.png,finaltexture02.png" | split: "," %}
+<div class="container">
 
-<div class="page-header">
   <h1 class="project-title">Medieval Fantasy Mace</h1>
-  <p class="project-subtitle">
-    A stylized melee weapon created for a fantasy setting. This project includes high‑poly sculpting, low‑poly optimization, UV layout, texturing, and final presentation.
+  <p class="project-subtitle">Stylized melee weapon created for a fantasy RPG</p>
+
+  <div class="project-overview">
+    <p>
+      This mace was created as a stylized fantasy weapon. The workflow included high‑poly sculpting,
+      low‑poly retopology, UV layout, and hand‑painted texturing in Substance Painter.
+    </p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2>3D Viewer</h2>
+
+  <div class="sketchfab-wrapper">
+    <iframe
+      title="Medieval Fantasy Mace"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      src="https://sketchfab.com/models/b8cd2aba71244456b42f1a5d28feae92/embed">
+    </iframe>
+  </div>
+
+  <p class="sketchfab-credit">
+    <a href="https://sketchfab.com/3d-models/medieval-fantasy-mace-b8cd2aba71244456b42f1a5d28feae92" target="_blank">Medieval Fantasy Mace</a>
+    by
+    <a href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+    on
+    <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
   </p>
+
+  <div class="section-divider"></div>
+
+  <h2>References</h2>
+
+  <div class="image-gallery">
+    {% assign refs = "reference01.png,reference02.png,reference03.png" | split: "," %}
+    {% for img in refs %}
+    <figure>
+      <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="">
+      <div class="image-tag">Reference</div>
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2>Modeling Workflow</h2>
+
+  <div class="image-gallery">
+
+    <figure>
+      <img src="{{ '/assets/maceassets/images/highpoly.png' | relative_url }}" alt="">
+      <div class="image-tag">High Poly</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/maceassets/images/lowpoly.png' | relative_url }}" alt="">
+      <div class="image-tag">Low Poly</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/maceassets/images/modeluv.png' | relative_url }}" alt="">
+      <div class="image-tag">UV Layout</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/maceassets/images/uvmap.png' | relative_url }}" alt="">
+      <div class="image-tag">UV Map</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/maceassets/images/turnarounds.png' | relative_url }}" alt="">
+      <div class="image-tag">Turnarounds</div>
+    </figure>
+
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2>Textures</h2>
+
+  <div class="image-gallery">
+
+    <figure>
+      <img src="{{ '/assets/maceassets/images/finaltexture01.png' | relative_url }}" alt="">
+      <div class="image-tag">Texture Sheet 01</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/maceassets/images/finaltexture02.png' | relative_url }}" alt="">
+      <div class="image-tag">Texture Sheet 02</div>
+    </figure>
+
+  </div>
+
+  <div class="project-back">
+    <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
+  </div>
+
 </div>
 
-<div class="sketchfab-wrapper">
-  <iframe 
-    title="Medieval Fantasy Mace"
-    frameborder="0"
-    allowfullscreen
-    mozallowfullscreen="true"
-    webkitallowfullscreen="true"
-    allow="autoplay; fullscreen; xr-spatial-tracking"
-    src="https://sketchfab.com/models/b8cd2aba71244456b42f1a5d28feae92/embed">
-  </iframe>
+<div class="lightbox-overlay" id="lightbox">
+  <img src="" alt="">
+  <span>Click anywhere to close</span>
 </div>
 
-<p class="sketchfab-credit">
-  View on 
-  <a href="https://sketchfab.com/3d-models/medieval-fantasy-mace-b8cd2aba71244456b42f1a5d28feae92" target="_blank">Sketchfab</a>
-</p>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
 
-<div class="section-divider"></div>
-
-<h2 class="section-title">References</h2>
-
-<div class="image-gallery">
-  {% for img in mace_references %}
-  <figure class="lightbox-item" data-full="{{ '/assets/maceassets/images/' | append: img | relative_url }}">
-    <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="">
-    <figcaption class="image-tag">Reference</figcaption>
-  </figure>
-  {% endfor %}
-</div>
-
-<div class="section-divider"></div>
-
-<h2 class="section-title">Modeling Workflow</h2>
-
-<div class="image-gallery">
-  {% for img in mace_workflow %}
-  <figure class="lightbox-item" data-full="{{ '/assets/maceassets/images/' | append: img | relative_url }}">
-    <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="">
-    <figcaption class="image-tag">{{ img | replace: '.png','' | capitalize }}</figcaption>
-  </figure>
-  {% endfor %}
-</div>
-
-<div class="section-divider"></div>
-
-<h2 class="section-title">Textures</h2>
-
-<div class="image-gallery">
-  {% for img in mace_textures %}
-  <figure class="lightbox-item" data-full="{{ '/assets/maceassets/images/' | append: img | relative_url }}">
-    <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="">
-    <figcaption class="image-tag">Texture Sheet</figcaption>
-  </figure>
-  {% endfor %}
-</div>
-
-<div class="project-back">
-  <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
-</div>
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.image-gallery img');
+    if (img) {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    } else if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+  });
+</script>
