@@ -151,41 +151,42 @@ a {
 }
 
 /* =========================================================
-   HOMEPAGE PROJECT GRID — FINAL FIXED VERSION
+   PROJECT GRID (Homepage + 3D Art)
    ========================================================= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   column-gap: var(--space-lg);
-  row-gap: 0;
+  row-gap: var(--space-lg); /* ⭐ Added spacing between cards */
   margin-top: var(--space-lg);
   align-items: start;
 }
 
 .project-card {
-  background: linear-gradient(#000000, #151a2e); /* smooth blend */
+  background: linear-gradient(#000000, #151a2e);
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
   transition: 0.25s ease;
   display: block;
   padding: 0;
-  /* IMPORTANT: no line-height here */
 }
 
+/* ⭐ Option B Fix: Restore normal line-height so text doesn't overlap */
 .project-card a {
   display: block;
   width: 100%;
-  line-height: 0; /* removes inline gap */
+  line-height: normal;
 }
 
+/* Image styling */
 .project-card img {
   width: 100%;
   height: auto;
   display: block;
   vertical-align: top;
   border-radius: 10px 10px 0 0;
-  background: #000; /* ensures fade blends cleanly */
+  background: #000;
   border-bottom: 1px solid transparent;
 }
 
@@ -195,12 +196,11 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
-.project-card-text {
-  margin-top: var(--space-sm);
+.project-card-title {
   padding: var(--space-sm);
-  text-align: center;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  text-align: center;
   line-height: 1.4;
 }
 
