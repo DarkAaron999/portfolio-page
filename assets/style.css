@@ -157,7 +157,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   column-gap: var(--space-lg);
-  row-gap: var(--space-lg); /* ⭐ Added spacing between cards */
+  row-gap: var(--space-lg);
   margin-top: var(--space-lg);
   align-items: start;
 }
@@ -172,7 +172,7 @@ a {
   padding: 0;
 }
 
-/* ⭐ Option B Fix: Restore normal line-height so text doesn't overlap */
+/* ⭐ Option B Fix: Prevent text overlap */
 .project-card a {
   display: block;
   width: 100%;
@@ -196,16 +196,19 @@ a {
   box-shadow: 0 0 15px var(--accent);
 }
 
+/* ⭐ Fix spacing under images */
 .project-card-title {
-  padding: var(--space-sm);
+  margin: 0;
+  padding: 12px 8px 16px;
   color: var(--muted);
   font-size: 1rem;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.3;
+  display: block;
 }
 
 /* =========================================================
-   SWORD PAGE — IMAGE GALLERY
+   IMAGE GALLERY (Sword Page)
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -243,7 +246,7 @@ a {
 }
 
 /* =========================================================
-   2D ART PAGE — FULL-WIDTH IMAGES
+   FULL-WIDTH IMAGES (2D Art)
    ========================================================= */
 .project-image-block {
   width: 100%;
@@ -286,7 +289,7 @@ a {
 }
 
 /* =========================================================
-   EMBEDS — PDF, VIDEO, ITCH.IO
+   EMBEDS (PDF, Video, Itch.io)
    ========================================================= */
 .embed-wrapper {
   max-width: 1000px;
