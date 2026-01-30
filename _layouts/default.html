@@ -7,12 +7,11 @@
   <title>{{ page.title }}</title>
 
   <!-- Correct CSS path + cache buster -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=1' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css?v=1' | relative_url }}">
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <h1>Aaron Rennick</h1>
 
@@ -21,19 +20,16 @@
     </div>
   </header>
 
-  <!-- NAVIGATION -->
   <nav class="site-nav">
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
-  <!-- MAIN CONTENT -->
   <main class="container">
     {{ content }}
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     © {{ site.time | date: "%Y" }} Aaron Rennick
 
