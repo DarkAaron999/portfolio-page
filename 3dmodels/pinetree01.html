@@ -3,26 +3,145 @@ layout: default
 title: "Pine Tree"
 ---
 
-<div class="sketchfab-wrapper">
-  <iframe
-    title="Pine Tree"
-    src="https://sketchfab.com/models/f5b271218a4545c283ea8d31f7b016a4/embed">
-    allow="autoplay; fullscreen; xr-spatial-tracking"
-    xr-spatial-tracking
-    execution-while-out-of-viewport
-    execution-while-not-rendered
-    web-share>
-  </iframe>
+<div class="container">
+
+  <h1 class="project-title">Pine Tree</h1>
+  <p class="project-subtitle">Stylized pine tree created using high‑poly baking and hand‑painted textures</p>
+
+  <div class="project-overview">
+    <p>
+      This stylized pine tree was created using a hybrid workflow: high‑poly sculpting for the branches,
+      baking onto a flat plane for leaf detail, and hand‑painted textures for the final look.
+      The normal map was generated using <strong>Materialize</strong> from the baked image exported from Maya.
+    </p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2>3D Viewer</h2>
+
+  <div class="sketchfab-wrapper">
+    <iframe
+      title="Pine Tree"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      src="https://sketchfab.com/models/f5b271218a4545c283ea8d31f7b016a4/embed">
+    </iframe>
+  </div>
+
+  <p class="sketchfab-credit">
+    <a href="https://sketchfab.com/3d-models/pine-tree-f5b271218a4545c283ea8d31f7b016a4" target="_blank">Pine Tree</a>
+    by
+    <a href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+    on
+    <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
+  </p>
+
+  <div class="section-divider"></div>
+
+  <h2>References</h2>
+
+  <div class="image-gallery">
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/reference01.png' | relative_url }}" alt="">
+      <div class="image-tag">Reference</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/reference02.png' | relative_url }}" alt="">
+      <div class="image-tag">Reference</div>
+    </figure>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2>Modeling Workflow</h2>
+
+  <div class="image-gallery">
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/modeluv.png' | relative_url }}" alt="">
+      <div class="image-tag">UV Layout</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/barkuv.png' | relative_url }}" alt="">
+      <div class="image-tag">Bark UV</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/branchesuv.png' | relative_url }}" alt="">
+      <div class="image-tag">Branches UV</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/modeltexture.png' | relative_url }}" alt="">
+      <div class="image-tag">Texture Sheet</div>
+    </figure>
+
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2>Textures</h2>
+
+  <div class="image-gallery">
+
+    <!-- Bark -->
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/bark_bc.png' | relative_url }}" alt="">
+      <div class="image-tag">Bark Base Color</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/bark_n.png' | relative_url }}" alt="">
+      <div class="image-tag">Bark Normal</div>
+    </figure>
+
+    <!-- Branches -->
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/branches_bc.png' | relative_url }}" alt="">
+      <div class="image-tag">Branches Base Color</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/branches_n.png' | relative_url }}" alt="">
+      <div class="image-tag">Branches Normal</div>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/pinetreeassets/images/branches_a.png' | relative_url }}" alt="">
+      <div class="image-tag">Branches Alpha</div>
+    </figure>
+
+  </div>
+
+  <div class="project-back">
+    <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
+  </div>
+
 </div>
 
-<h1 class="project-title">Pine Tree</h1>
-<p class="project-subtitle">Stylized pine tree model</p>
-
-<div class="project-body">
-  <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
-  <p>This pine tree was modeled in Maya and textured in Photoshop.</p>
+<div class="lightbox-overlay" id="lightbox">
+  <img src="" alt="">
+  <span>Click anywhere to close</span>
 </div>
 
-<div class="project-back">
-  <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
-</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.image-gallery img');
+    if (img) {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    } else if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+  });
+</script>
