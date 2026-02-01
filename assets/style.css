@@ -290,7 +290,7 @@ img {
 }
 
 /* =========================================================
-   SQUARE GRID GALLERY (REPLACES MASONRY)
+   SQUARE GRID GALLERY (GLOBAL)
    ========================================================= */
 .masonry-gallery,
 .image-gallery {
@@ -329,7 +329,7 @@ img {
 }
 
 /* =========================================================
-   SKETCHFAB — FULL SIZE
+   SKETCHFAB — FULL SIZE + CREDIT FIX
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
@@ -347,7 +347,6 @@ img {
   border: none;
 }
 
-/* SKETCHFAB CREDIT */
 .sketchfab-credit {
   text-align: center;
   margin-top: var(--space-md);
