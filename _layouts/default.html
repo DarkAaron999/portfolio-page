@@ -6,12 +6,12 @@
 
   <title>{{ page.title }}</title>
 
-  <!-- CSS with cache buster -->
-  <link rel="stylesheet" href="{{ '/assets/style.css?v=3' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css?v=4' | relative_url }}">
 </head>
 
 <body>
 
+  <!-- FULL-WIDTH HEADER -->
   <header class="site-header">
     <h1>Aaron Rennick</h1>
 
@@ -20,20 +20,21 @@
     </div>
   </header>
 
+  <!-- FULL-WIDTH NAV -->
   <nav class="site-nav">
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
-  <!-- All pages get ONE container -->
+  <!-- CONTENT CONTAINER (ONLY ONE) -->
   <main class="container">
     {{ content }}
   </main>
 
+  <!-- FULL-WIDTH FOOTER -->
   <footer class="site-footer">
     © {{ site.time | date: "%Y" }} Aaron Rennick
-
     <div class="footer-email">
       <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
     </div>
