@@ -159,12 +159,7 @@ img {
   height: 2px;
   margin: var(--space-xxl) 0;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   box-shadow: 0 0 10px rgba(0, 246, 255, 0.35);
 }
 
@@ -186,11 +181,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.55)
-  );
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.55));
   z-index: 1;
 }
 
@@ -343,7 +334,7 @@ img {
 .sketchfab-wrapper {
   width: 100%;
   max-width: 1200px;
-  margin: var(--space-xxl) auto;
+  margin: var(--space-xl) auto var(--space-md);
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
@@ -354,6 +345,41 @@ img {
   width: 100% !important;
   height: 100% !important;
   border: none;
+}
+
+/* SKETCHFAB CREDIT */
+.sketchfab-credit {
+  text-align: center;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xl);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   MODELING WORKFLOW — SIDE BY SIDE
+   ========================================================= */
+.alt-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.alt-block img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.alt-text p {
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+  .alt-block {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================================
@@ -427,7 +453,7 @@ img {
 }
 
 /* =========================================================
-   CENTER ALL PROJECT IMAGES (2D ART, CARD GAME, ETC.)
+   CENTER ALL PROJECT IMAGES
    ========================================================= */
 .project-image-block,
 .cardgame-image-block {
@@ -536,7 +562,6 @@ img {
    MOBILE OPTIMIZATION
    ========================================================= */
 @media (max-width: 700px) {
-
   .split-intro {
     grid-template-columns: 1fr;
   }
