@@ -112,7 +112,7 @@ a {
 }
 
 /* =========================================================
-   TITLES — SOFT NEON + MORE SPACING
+   TITLES — SOFT NEON
    ========================================================= */
 .project-title,
 .section-title {
@@ -125,17 +125,6 @@ a {
     0 0 6px rgba(0, 246, 255, 0.4);
 }
 
-.project-card-title {
-  text-align: center;
-  color: var(--accent);
-  font-weight: 700;
-  margin: var(--space-sm) 0 var(--space-xs);
-  line-height: 1.4;
-  text-shadow:
-    0 0 2px var(--accent),
-    0 0 4px rgba(0, 246, 255, 0.4);
-}
-
 .project-subtitle {
   font-size: 1.15rem;
   color: var(--muted);
@@ -146,24 +135,7 @@ a {
 }
 
 /* =========================================================
-   SOFT NEON SECTION DIVIDER
-   ========================================================= */
-.section-divider {
-  width: 100%;
-  height: 2px;
-  margin: var(--space-xl) 0;
-  border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent),
-    transparent
-  );
-  box-shadow: 0 0 6px rgba(0, 246, 255, 0.35);
-}
-
-/* =========================================================
-   PARAGRAPHS + BULLET POINTS — MORE SPACING
+   PARAGRAPHS + LISTS
    ========================================================= */
 p {
   margin-bottom: var(--space-md);
@@ -180,6 +152,23 @@ li {
 }
 
 /* =========================================================
+   SECTION DIVIDER — SOFT NEON
+   ========================================================= */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  margin: var(--space-xl) 0;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  box-shadow: 0 0 6px rgba(0, 246, 255, 0.35);
+}
+
+/* =========================================================
    PROJECT GRID
    ========================================================= */
 .project-grid {
@@ -191,7 +180,7 @@ li {
 }
 
 /* =========================================================
-   PROJECT CARD — FLEX SAFE (NO OVERLAP)
+   PROJECT CARD
    ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
@@ -203,27 +192,10 @@ li {
   flex-direction: column;
 }
 
-.project-card-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 .project-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
   box-shadow: 0 0 12px var(--accent);
-}
-
-/* =========================================================
-   PROJECT CARD IMAGE — AUTO HEIGHT (NO OVERLAP)
-   ========================================================= */
-.project-card-thumb {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  display: block;
-  background: #000;
 }
 
 .project-card-thumb img {
@@ -233,15 +205,14 @@ li {
   object-fit: cover;
 }
 
-/* =========================================================
-   PROJECT CARD TEXT — CENTERED
-   ========================================================= */
-.project-card-text {
+.project-card-title {
   text-align: center;
-  color: var(--muted);
-  padding: 0 var(--space-md) var(--space-md);
-  line-height: 1.7;
-  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin: var(--space-sm) 0 var(--space-xs);
+  text-shadow:
+    0 0 2px var(--accent),
+    0 0 4px rgba(0, 246, 255, 0.4);
 }
 
 /* =========================================================
@@ -259,10 +230,6 @@ li {
   border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .image-gallery img {
@@ -296,7 +263,6 @@ li {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
 }
 
 /* =========================================================
@@ -312,69 +278,6 @@ li {
   border: 1px solid var(--border);
 }
 
-.sketchfab-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.sketchfab-credit {
-  text-align: center;
-  margin-top: var(--space-sm);
-  color: var(--muted);
-}
-
-/* =========================================================
-   EMBEDS
-   ========================================================= */
-.embed-wrapper {
-  max-width: 1000px;
-  margin: var(--space-xl) auto;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: #0d1224;
-}
-
-.embed-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.embed-pdf {
-  height: 900px;
-}
-
-@media (max-width: 600px) {
-  .embed-pdf {
-    height: 600px;
-  }
-}
-
-.embed-video,
-.project-video-full {
-  width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-  margin: var(--space-xl) auto;
-  display: block;
-}
-
-.embed-itch {
-  width: 100%;
-  max-width: 900px;
-  height: 600px;
-  margin: var(--space-xl) auto;
-  display: block;
-}
-
-@media (max-width: 600px) {
-  .embed-itch {
-    height: 450px;
-  }
-}
-
 /* =========================================================
    LIGHTBOX
    ========================================================= */
@@ -387,21 +290,23 @@ li {
   align-items: center;
   flex-direction: column;
   z-index: 9999;
+  transition: opacity 0.25s ease;
 }
 
 .lightbox-overlay.active {
   display: flex;
+  opacity: 1;
+}
+
+.lightbox-overlay:not(.active) {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .lightbox-overlay img {
   max-width: 90%;
   max-height: 80%;
   border-radius: 12px;
-}
-
-.lightbox-overlay span {
-  margin-top: var(--space-sm);
-  color: var(--muted);
 }
 
 /* =========================================================
@@ -437,16 +342,134 @@ li {
   border-top: 1px solid var(--border);
 }
 
-.footer-email {
+/* =========================================================
+   NEW LAYOUT FEATURES — HERO, SPLIT INTRO, ALT BLOCKS
+   ========================================================= */
+.hero-banner {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.75));
+}
+
+.hero-banner-content {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: var(--space-lg);
+  z-index: 2;
+}
+
+.hero-banner-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(0, 246, 255, 0.35);
+}
+
+.hero-banner-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
   margin-top: var(--space-sm);
 }
 
-.footer-email a {
-  color: var(--accent);
-  font-weight: bold;
+.split-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
 }
 
-.footer-email a:hover {
-  color: var(--accent2);
-  text-shadow: 0 0 6px var(--accent2);
+.intro-meta {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  padding: var(--space-lg);
+  border-radius: 12px;
+}
+
+.alt-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+
+.alt-block:nth-child(even) {
+  direction: rtl;
+}
+
+.alt-block:nth-child(even) .alt-text {
+  direction: ltr;
+}
+
+.alt-block img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.alt-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   MASONRY GALLERY
+   ========================================================= */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.masonry-gallery figure {
+  break-inside: avoid;
+  margin-bottom: var(--space-md);
+}
+
+.masonry-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.masonry-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0, 246, 255, 0.4);
+}
+
+/* =========================================================
+   MICRO-INTERACTIONS
+   ========================================================= */
+.hover-zoom {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-zoom:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 12px rgba(0, 246, 255, 0.4);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
