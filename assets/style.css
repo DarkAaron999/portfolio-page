@@ -9,21 +9,31 @@
 }
 
 body {
-  background: #0d0d0d;
-  color: #e6e6e6;
+  background: #050505;
+  color: #e8faff;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
 }
 
+/* Neon accent color */
+:root {
+  --neon: #00eaff;
+  --neon-soft: #7df9ff;
+  --bg-dark: #0a0a0a;
+  --bg-card: #111;
+  --border: #1a1a1a;
+}
+
 /* Links */
 a {
-  color: #7df9ff;
+  color: var(--neon-soft);
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 a:hover {
-  color: #b3ffff;
+  color: white;
+  text-shadow: 0 0 6px var(--neon);
 }
 
 /* =========================================
@@ -36,11 +46,6 @@ a:hover {
   padding: 0 20px;
 }
 
-/* Tightened spacing */
-main.container {
-  padding-top: 10px;
-}
-
 /* =========================================
    HEADER
 ========================================= */
@@ -48,17 +53,20 @@ main.container {
 .site-header {
   text-align: center;
   padding: 12px 0;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid var(--border);
+  background: #080808;
 }
 
 .site-header h1 {
   font-size: 1.8rem;
   font-weight: 600;
+  color: var(--neon);
+  text-shadow: 0 0 8px var(--neon);
 }
 
 .header-email a {
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* =========================================
@@ -68,20 +76,21 @@ main.container {
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
   padding: 8px 0;
-  border-bottom: 1px solid #1a1a1a;
-  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  background: #080808;
 }
 
 .site-nav a {
-  font-size: 0.95rem;
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 4px;
+  font-size: 0.95rem;
 }
 
 .site-nav a:hover {
-  background: #1a1a1a;
+  background: #0f0f0f;
+  box-shadow: 0 0 8px var(--neon);
 }
 
 /* =========================================
@@ -92,9 +101,10 @@ main.container {
   text-align: center;
   padding: 14px 0;
   margin-top: 40px;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--border);
   font-size: 0.9rem;
   opacity: 0.8;
+  background: #080808;
 }
 
 .footer-email {
@@ -110,9 +120,10 @@ main.container {
   aspect-ratio: 16 / 5;
   background-size: cover;
   background-position: center;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 25px;
   position: relative;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.15);
 }
 
 .hero-banner-content {
@@ -124,11 +135,13 @@ main.container {
 .hero-banner-title {
   font-size: 2.4rem;
   font-weight: 700;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon);
 }
 
 .hero-banner-subtitle {
   font-size: 1.1rem;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 /* =========================================
@@ -137,17 +150,18 @@ main.container {
 
 .page-header {
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .project-title {
   font-size: 2rem;
   margin-bottom: 6px;
+  color: var(--neon);
+  text-shadow: 0 0 8px var(--neon);
 }
 
 .project-subtitle {
   font-size: 1.1rem;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* =========================================
@@ -171,6 +185,8 @@ main.container {
 
 .intro-meta h3 {
   margin-bottom: 8px;
+  color: var(--neon);
+  text-shadow: 0 0 6px var(--neon);
 }
 
 .intro-meta ul {
@@ -188,12 +204,15 @@ main.container {
 .section-title {
   font-size: 1.6rem;
   margin: 25px 0 10px;
+  color: var(--neon);
+  text-shadow: 0 0 6px var(--neon);
 }
 
 .section-divider {
   height: 1px;
-  background: #1a1a1a;
+  background: var(--border);
   margin: 25px 0;
+  box-shadow: 0 0 6px rgba(0, 234, 255, 0.2);
 }
 
 /* =========================================
@@ -208,8 +227,8 @@ main.container {
 }
 
 .project-card {
-  background: #111;
-  border: 1px solid #1f1f1f;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
   transition: 0.25s ease;
@@ -217,7 +236,8 @@ main.container {
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: #7df9ff;
+  border-color: var(--neon);
+  box-shadow: 0 0 12px var(--neon);
 }
 
 .project-card-thumb img {
@@ -231,7 +251,7 @@ main.container {
 }
 
 /* =========================================
-   ALT BLOCKS (Sword page workflow)
+   ALT BLOCKS (Sword workflow)
 ========================================= */
 
 .alt-block {
@@ -243,6 +263,7 @@ main.container {
 .alt-block img {
   width: 50%;
   border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.2);
 }
 
 .alt-text {
@@ -266,6 +287,7 @@ main.container {
 .masonry-gallery img {
   width: 100%;
   border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.15);
 }
 
 .image-tag {
@@ -276,6 +298,8 @@ main.container {
   padding: 3px 8px;
   font-size: 0.8rem;
   border-radius: 4px;
+  color: var(--neon);
+  text-shadow: 0 0 6px var(--neon);
 }
 
 /* =========================================
@@ -300,6 +324,7 @@ main.container {
   max-width: 90%;
   max-height: 90%;
   border-radius: 6px;
+  box-shadow: 0 0 20px var(--neon);
 }
 
 /* =========================================
@@ -311,11 +336,12 @@ main.container {
 }
 
 .project-back a {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .project-back a:hover {
   opacity: 1;
+  text-shadow: 0 0 6px var(--neon);
 }
 
 /* =========================================
