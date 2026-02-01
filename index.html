@@ -14,7 +14,7 @@ title: "Home"
 <div class="fade-in">
 
   <!-- SPLIT INTRO -->
-  <div class="split-intro fade-in">
+  <div class="split-intro">
     <div class="intro-text">
       <p>
         Hi, I’m <strong>Aaron Rennick</strong> — a Game Designer and Technical Artist specializing in
@@ -33,63 +33,26 @@ title: "Home"
     </div>
   </div>
 
-  <h2 class="section-title fade-in">🎮 Featured Projects</h2>
+  <h2 class="section-title">🎮 Featured Projects</h2>
 
-  <div class="project-grid fade-in">
+  <div class="project-grid">
 
-    <!-- 3D Art -->
+    {% assign projects = 
+      "3dart,2dart,leveldesign,unityprojects,designweek,cardgame" | split: "," %}
+    {% assign titles = 
+      "3D Art,2D Art,Level Design,Unity Projects,Design Week,Card Game" | split: "," %}
+    {% assign thumbs = 
+      "3dart.png,2dart.png,leveldesign.png,unityprojects.png,designweek.png,cardgame01.png" | split: "," %}
+
+    {% for i in (0..5) %}
     <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/projects/3dart.html' | relative_url }}">
+      <a class="project-card-link" href="{{ '/projects/' | append: projects[i] | append: '.html' | relative_url }}">
         <div class="project-card-thumb">
-          <img src="{{ '/assets/projectthumbnails/images/3dart.png' | relative_url }}" alt="3D Art">
+          <img src="{{ '/assets/projectthumbnails/images/' | append: thumbs[i] | relative_url }}" alt="{{ titles[i] }}">
         </div>
       </a>
     </div>
-
-    <!-- 2D Art -->
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/projects/2dart.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/projectthumbnails/images/2dart.png' | relative_url }}" alt="2D Art">
-        </div>
-      </a>
-    </div>
-
-    <!-- Level Design -->
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/projects/leveldesign.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/projectthumbnails/images/leveldesign.png' | relative_url }}" alt="Level Design">
-        </div>
-      </a>
-    </div>
-
-    <!-- Unity Projects -->
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/projects/unityprojects.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/projectthumbnails/images/unityprojects.png' | relative_url }}" alt="Unity Projects">
-        </div>
-      </a>
-    </div>
-
-    <!-- Design Week -->
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/projects/designweek.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/projectthumbnails/images/designweek.png' | relative_url }}" alt="Design Week">
-        </div>
-      </a>
-    </div>
-
-    <!-- Card Game -->
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/projects/cardgame.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/projectthumbnails/images/cardgame01.png' | relative_url }}" alt="Card Game">
-        </div>
-      </a>
-    </div>
+    {% endfor %}
 
   </div>
 
