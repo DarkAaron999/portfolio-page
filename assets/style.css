@@ -160,7 +160,7 @@ img {
 }
 
 /* =========================================================
-   HERO BANNER — FIXED DARK TEXT ISSUE
+   HERO BANNER
    ========================================================= */
 .hero-banner {
   width: 100%;
@@ -231,7 +231,7 @@ img {
 }
 
 /* =========================================================
-   PROJECT CARD — FIXED EMPTY SPACE ISSUE
+   PROJECT CARD
    ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
@@ -267,7 +267,7 @@ img {
 }
 
 /* =========================================================
-   IMAGE GALLERY — FIXED CENTERING + TAGS
+   IMAGE GALLERY
    ========================================================= */
 .image-gallery {
   display: grid;
@@ -316,7 +316,7 @@ img {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER — FIXED SIZE
+   SKETCHFAB VIEWER
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
@@ -329,7 +329,7 @@ img {
 }
 
 /* =========================================================
-   VIDEO WRAPPER — FIXED SIZE + CENTERING
+   VIDEO WRAPPER
    ========================================================= */
 .video-wrapper {
   width: 100%;
@@ -345,16 +345,23 @@ img {
 }
 
 /* =========================================================
-   PDF VIEWER — FIXED SIZE
+   PDF VIEWER — FINAL FIX
    ========================================================= */
-.pdf-viewer {
+.embed-wrapper.embed-pdf {
   width: 100%;
-  height: calc(100vh - 200px);
-  max-height: 900px;
-  border: none;
-  display: block;
+  max-width: 1200px;
   margin: var(--space-xxl) auto;
   border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.embed-wrapper.embed-pdf iframe {
+  width: 100%;
+  height: calc(100vh - 200px);
+  max-height: 1000px;
+  border: none;
+  display: block;
 }
 
 /* =========================================================
@@ -434,7 +441,7 @@ img {
 }
 
 /* =========================================================
-   FOOTER — NEW
+   FOOTER
    ========================================================= */
 .site-footer {
   margin-top: var(--space-xxl);
@@ -444,10 +451,6 @@ img {
   color: var(--muted);
   border-top: 1px solid var(--border);
   border-radius: 12px 12px 0 0;
-}
-
-.site-footer p {
-  margin-bottom: var(--space-sm);
 }
 
 .site-footer a {
