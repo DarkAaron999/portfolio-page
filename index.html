@@ -3,19 +3,40 @@ layout: default
 title: "Home"
 ---
 
-<div class="page-header">
-  <h1 class="project-title">👾 Welcome to My Portfolio</h1>
-  <p class="project-subtitle">
-    Hi, I’m <strong>Aaron Rennick</strong> — Game Designer / 2D / 3D Artist
-  </p>
+<!-- HERO BANNER -->
+<div class="hero-banner" style="background-image:url('/assets/projectthumbnails/images/3dart.png')">
+  <div class="hero-banner-content">
+    <h1 class="hero-banner-title">👾 Welcome to My Portfolio</h1>
+    <p class="hero-banner-subtitle">Game Designer • 2D & 3D Artist • Technical Creator</p>
+  </div>
 </div>
 
-<h2 class="section-title">🎮 Featured Projects</h2>
+<!-- SPLIT INTRO -->
+<div class="split-intro fade-in">
+  <div class="intro-text">
+    <p>
+      Hi, I’m <strong>Aaron Rennick</strong> — a Game Designer and Technical Artist specializing in
+      3D modeling, 2D art, Unity development, and collaborative design workflows.
+    </p>
+  </div>
 
-<div class="project-grid">
+  <div class="intro-meta">
+    <h3>Skills</h3>
+    <ul>
+      <li>3D Modeling (Maya, Blender)</li>
+      <li>Texturing (Photoshop, Substance Painter)</li>
+      <li>Unity Development</li>
+      <li>Technical Art & Pipelines</li>
+    </ul>
+  </div>
+</div>
+
+<h2 class="section-title fade-in">🎮 Featured Projects</h2>
+
+<div class="project-grid fade-in">
 
   <!-- 3D Art -->
-  <div class="project-card">
+  <div class="project-card hover-zoom">
     <a class="project-card-link" href="{{ '/projects/3dart.html' | relative_url }}">
       <div class="project-card-thumb">
         <img src="{{ '/assets/projectthumbnails/images/3dart.png' | relative_url }}" alt="3D Art">
@@ -24,7 +45,7 @@ title: "Home"
   </div>
 
   <!-- 2D Art -->
-  <div class="project-card">
+  <div class="project-card hover-zoom">
     <a class="project-card-link" href="{{ '/projects/2dart.html' | relative_url }}">
       <div class="project-card-thumb">
         <img src="{{ '/assets/projectthumbnails/images/2dart.png' | relative_url }}" alt="2D Art">
@@ -33,7 +54,7 @@ title: "Home"
   </div>
 
   <!-- Level Design -->
-  <div class="project-card">
+  <div class="project-card hover-zoom">
     <a class="project-card-link" href="{{ '/projects/leveldesign.html' | relative_url }}">
       <div class="project-card-thumb">
         <img src="{{ '/assets/projectthumbnails/images/leveldesign.png' | relative_url }}" alt="Level Design">
@@ -42,7 +63,7 @@ title: "Home"
   </div>
 
   <!-- Unity Projects -->
-  <div class="project-card">
+  <div class="project-card hover-zoom">
     <a class="project-card-link" href="{{ '/projects/unityprojects.html' | relative_url }}">
       <div class="project-card-thumb">
         <img src="{{ '/assets/projectthumbnails/images/unityprojects.png' | relative_url }}" alt="Unity Projects">
@@ -51,7 +72,7 @@ title: "Home"
   </div>
 
   <!-- Design Week -->
-  <div class="project-card">
+  <div class="project-card hover-zoom">
     <a class="project-card-link" href="{{ '/projects/designweek.html' | relative_url }}">
       <div class="project-card-thumb">
         <img src="{{ '/assets/projectthumbnails/images/designweek.png' | relative_url }}" alt="Design Week">
@@ -60,7 +81,7 @@ title: "Home"
   </div>
 
   <!-- Card Game -->
-  <div class="project-card">
+  <div class="project-card hover-zoom">
     <a class="project-card-link" href="{{ '/projects/cardgame.html' | relative_url }}">
       <div class="project-card-thumb">
         <img src="{{ '/assets/projectthumbnails/images/cardgame01.png' | relative_url }}" alt="Card Game">
