@@ -8,20 +8,20 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #050505;
-  color: #e8faff;
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-}
-
-/* Neon accent color */
 :root {
   --neon: #00eaff;
   --neon-soft: #7df9ff;
-  --bg-dark: #0a0a0a;
-  --bg-card: #111;
-  --border: #1a1a1a;
+  --bg-dark: #0f1115;      /* brighter than pure black */
+  --bg-card: #14171c;
+  --border: #1f2227;
+  --text: #e8faff;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
 }
 
 /* Links */
@@ -46,19 +46,24 @@ a:hover {
   padding: 0 20px;
 }
 
+/* Remove extra space above hero */
+main.container {
+  padding-top: 0;
+}
+
 /* =========================================
    HEADER
 ========================================= */
 
 .site-header {
   text-align: center;
-  padding: 12px 0;
+  padding: 6px 0; /* reduced */
   border-bottom: 1px solid var(--border);
-  background: #080808;
+  background: #0c0e12;
 }
 
 .site-header h1 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
   color: var(--neon);
   text-shadow: 0 0 8px var(--neon);
@@ -77,9 +82,10 @@ a:hover {
   display: flex;
   justify-content: center;
   gap: 22px;
-  padding: 8px 0;
+  padding: 4px 0; /* reduced */
   border-bottom: 1px solid var(--border);
-  background: #080808;
+  background: #0c0e12;
+  margin-bottom: 6px;
 }
 
 .site-nav a {
@@ -89,7 +95,7 @@ a:hover {
 }
 
 .site-nav a:hover {
-  background: #0f0f0f;
+  background: #11141a;
   box-shadow: 0 0 8px var(--neon);
 }
 
@@ -99,12 +105,12 @@ a:hover {
 
 .site-footer {
   text-align: center;
-  padding: 14px 0;
+  padding: 12px 0; /* reduced */
   margin-top: 40px;
   border-top: 1px solid var(--border);
   font-size: 0.9rem;
   opacity: 0.8;
-  background: #080808;
+  background: #0c0e12;
 }
 
 .footer-email {
@@ -117,13 +123,19 @@ a:hover {
 
 .hero-banner {
   width: 100%;
-  aspect-ratio: 16 / 5;
+  aspect-ratio: 16 / 4; /* tighter, less empty space */
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   position: relative;
   box-shadow: 0 0 20px rgba(0, 234, 255, 0.15);
+}
+
+@media (min-width: 900px) {
+  .hero-banner {
+    aspect-ratio: 16 / 3.5; /* even tighter on desktop */
+  }
 }
 
 .hero-banner-content {
@@ -133,7 +145,7 @@ a:hover {
 }
 
 .hero-banner-title {
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 700;
   color: var(--neon);
   text-shadow: 0 0 10px var(--neon);
@@ -367,7 +379,7 @@ a:hover {
   }
 
   .hero-banner {
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 16 / 6;
   }
 
   .alt-block {
