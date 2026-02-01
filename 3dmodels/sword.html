@@ -3,24 +3,42 @@ layout: default
 title: "Medieval Fantasy Sword"
 ---
 
-<div class="container">
+<!-- ===================== HERO BANNER ===================== -->
+<div class="hero-banner" style="background-image:url('/assets/swordassets/images/texturefinal.png')">
+  <div class="hero-banner-content">
+    <h1 class="hero-banner-title">Medieval Fantasy Sword</h1>
+    <p class="hero-banner-subtitle">Hand‑painted hero prop for a high‑fantasy RPG</p>
+  </div>
+</div>
 
-  <h1 class="project-title">Medieval Fantasy Sword</h1>
-  <p class="project-subtitle">Hand‑painted 3D weapon inspired by high‑fantasy RPGs</p>
+<div class="container fade-in">
 
-  <div class="project-overview">
-    <p>
-      This sword was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
-      readable silhouette supported by a hand‑painted texture style and a strong magical identity.
-      The model was retopologized in Maya and textured in Substance Painter.
-    </p>
+  <!-- ===================== SPLIT INTRO ===================== -->
+  <div class="split-intro">
+    <div class="intro-text">
+      <p>
+        This sword was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
+        readable silhouette supported by a hand‑painted texture style and a strong magical identity.
+        The model was retopologized in Maya and textured in Substance Painter.
+      </p>
+    </div>
+
+    <div class="intro-meta">
+      <h3>Project Info</h3>
+      <ul>
+        <li><strong>Role:</strong> 3D Artist</li>
+        <li><strong>Software:</strong> Maya, Substance Painter, Photoshop</li>
+        <li><strong>Workflow:</strong> High‑poly → Low‑poly → UVs → Bake → Hand‑paint</li>
+      </ul>
+    </div>
   </div>
 
   <div class="section-divider"></div>
 
-  <h2>3D Viewer</h2>
+  <!-- ===================== SKETCHFAB VIEWER ===================== -->
+  <h2 class="section-title fade-in">3D Viewer</h2>
 
-  <div class="sketchfab-wrapper">
+  <div class="sketchfab-wrapper fade-in">
     <iframe
       title="Medieval Fantasy Sword"
       frameborder="0"
@@ -32,7 +50,7 @@ title: "Medieval Fantasy Sword"
     </iframe>
   </div>
 
-  <p class="sketchfab-credit">
+  <p class="sketchfab-credit fade-in">
     <a href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59" target="_blank">Medieval Fantasy Sword</a>
     by
     <a href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
@@ -42,9 +60,10 @@ title: "Medieval Fantasy Sword"
 
   <div class="section-divider"></div>
 
-  <h2>References</h2>
+  <!-- ===================== REFERENCES ===================== -->
+  <h2 class="section-title fade-in">References</h2>
 
-  <div class="image-gallery">
+  <div class="masonry-gallery fade-in">
     {% assign refs = "Reference01.png,Reference02.png,Reference03.png,Reference04.png" | split: "," %}
     {% for img in refs %}
     <figure>
@@ -56,40 +75,43 @@ title: "Medieval Fantasy Sword"
 
   <div class="section-divider"></div>
 
-  <h2>Modeling Workflow</h2>
+  <!-- ===================== MODELING WORKFLOW ===================== -->
+  <h2 class="section-title fade-in">Modeling Workflow</h2>
 
-  <div class="image-gallery">
-    <figure>
-      <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="">
-      <div class="image-tag">High Poly</div>
-    </figure>
+  <div class="alt-block fade-in">
+    <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="">
+    <div class="alt-text">
+      <p>The high‑poly sculpt established the main shapes, bevels, and magical silhouette.</p>
+    </div>
+  </div>
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="">
-      <div class="image-tag">Low Poly</div>
-    </figure>
+  <div class="alt-block fade-in">
+    <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="">
+    <div class="alt-text">
+      <p>The low‑poly mesh was optimized for real‑time use while preserving the silhouette.</p>
+    </div>
+  </div>
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="">
-      <div class="image-tag">UVs</div>
-    </figure>
+  <div class="alt-block fade-in">
+    <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="">
+    <div class="alt-text">
+      <p>UVs were laid out to maximize texture resolution and minimize distortion.</p>
+    </div>
+  </div>
 
-    <figure>
-      <img src="{{ '/assets/swordassets/images/uv.png' | relative_url }}" alt="">
-      <div class="image-tag">UVs</div>
-    </figure>
-
-    <figure>
-      <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="">
-      <div class="image-tag">Turnarounds</div>
-    </figure>
+  <div class="alt-block fade-in">
+    <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="">
+    <div class="alt-text">
+      <p>Turnarounds helped refine proportions and ensure readability from all angles.</p>
+    </div>
   </div>
 
   <div class="section-divider"></div>
 
-  <h2>Textures</h2>
+  <!-- ===================== TEXTURES ===================== -->
+  <h2 class="section-title fade-in">Textures</h2>
 
-  <div class="image-gallery">
+  <div class="masonry-gallery fade-in">
     <figure>
       <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="">
       <div class="image-tag">Texture 1</div>
@@ -106,12 +128,13 @@ title: "Medieval Fantasy Sword"
     </figure>
   </div>
 
-  <div class="project-back">
+  <div class="project-back fade-in">
     <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
   </div>
 
 </div>
 
+<!-- ===================== LIGHTBOX ===================== -->
 <div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
   <span>Click anywhere to close</span>
@@ -122,7 +145,7 @@ title: "Medieval Fantasy Sword"
   const lightboxImg = lightbox.querySelector('img');
 
   document.addEventListener('click', (e) => {
-    const img = e.target.closest('.image-gallery img');
+    const img = e.target.closest('.masonry-gallery img, .image-gallery img');
     if (img) {
       lightboxImg.src = img.src;
       lightbox.classList.add('active');
