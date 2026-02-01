@@ -6,8 +6,8 @@
 
   <title>{{ page.title }}</title>
 
-  <!-- Correct CSS path + cache buster -->
-  <link rel="stylesheet" href="{{ '/assets/style.css?v=2' | relative_url }}">
+  <!-- CSS with cache buster -->
+  <link rel="stylesheet" href="{{ '/assets/style.css?v=3' | relative_url }}">
 </head>
 
 <body>
@@ -26,8 +26,8 @@
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
-  <!-- IMPORTANT: no container here -->
-  <main>
+  <!-- All pages get ONE container -->
+  <main class="container">
     {{ content }}
   </main>
 
