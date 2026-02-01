@@ -120,6 +120,15 @@ img {
 }
 
 /* =========================================================
+   ABOUT PAGE — SPACIOUS TEXT
+   ========================================================= */
+.page-about p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.9;
+  font-size: 1.1rem;
+}
+
+/* =========================================================
    TITLES
    ========================================================= */
 .project-title,
@@ -160,7 +169,7 @@ img {
 }
 
 /* =========================================================
-   HERO BANNER
+   HERO BANNER — FIXED Z-INDEX
    ========================================================= */
 .hero-banner {
   width: 100%;
@@ -182,12 +191,14 @@ img {
     rgba(0,0,0,0.15),
     rgba(0,0,0,0.55)
   );
+  z-index: 1;
 }
 
 .hero-banner-content {
   position: absolute;
   bottom: var(--space-xl);
   left: var(--space-xl);
+  z-index: 2;
 }
 
 .hero-banner-title {
@@ -221,13 +232,25 @@ img {
 }
 
 /* =========================================================
-   PROJECT GRID
+   PROJECT GRID — 3 COLUMNS
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
   margin-top: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================================
@@ -241,6 +264,7 @@ img {
   transition: 0.25s ease;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .project-card:hover {
@@ -266,16 +290,25 @@ img {
   text-shadow: 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
+.project-card-text {
+  text-align: center;
+  margin: var(--space-sm) auto var(--space-md);
+  max-width: 90%;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 /* =========================================================
-   IMAGE GALLERY
+   IMAGE GALLERY — SQUARE IMAGES + TAG ALIGNMENT
    ========================================================= */
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--space-lg);
 }
 
 .image-gallery figure {
+  aspect-ratio: 1 / 1;
   background: #151a2e;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -284,8 +317,9 @@ img {
 }
 
 .image-gallery img {
-  display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-tag {
@@ -301,22 +335,7 @@ img {
 }
 
 /* =========================================================
-   MASONRY GALLERY
-   ========================================================= */
-.masonry-gallery {
-  column-count: 3;
-  column-gap: var(--space-lg);
-  margin-bottom: var(--space-xxl);
-}
-
-.masonry-gallery figure {
-  break-inside: avoid;
-  margin-bottom: var(--space-lg);
-  position: relative;
-}
-
-/* =========================================================
-   SKETCHFAB VIEWER
+   SKETCHFAB — FULL SIZE
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
@@ -328,24 +347,40 @@ img {
   border: 1px solid var(--border);
 }
 
+.sketchfab-wrapper iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
+}
+
 /* =========================================================
-   VIDEO WRAPPER
+   VIDEO WRAPPER — CENTERED + RESPONSIVE
    ========================================================= */
-.video-wrapper {
+.project-video-block {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: var(--space-xxl) 0;
 }
 
-.video-wrapper video {
+.project-video-full {
   width: 100%;
   max-width: 900px;
   border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .project-video-full {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* =========================================================
-   PDF VIEWER — FINAL FIX
+   PDF VIEWER — FULL SIZE
    ========================================================= */
 .embed-wrapper.embed-pdf {
   width: 100%;
@@ -365,32 +400,47 @@ img {
 }
 
 /* =========================================================
-   ITCH.IO CENTERING
+   ITCH.IO + GENERIC EMBEDS — CENTERED
    ========================================================= */
-.itch-wrapper {
+.embed-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: var(--space-xxl) 0;
+  align-items: center;
+  margin: var(--space-xl) 0;
+}
+
+.embed-wrapper iframe {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+  .embed-wrapper iframe {
+    width: 100% !important;
+    height: auto;
+  }
 }
 
 /* =========================================================
-   ALTERNATING CONTENT BLOCKS
+   CENTER ALL PROJECT IMAGES (2D ART, CARD GAME, ETC.)
    ========================================================= */
-.alt-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+.project-image-block,
+.cardgame-image-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: var(--space-xxl);
+  margin: var(--space-xl) 0;
 }
 
-.alt-block:nth-child(even) {
-  direction: rtl;
-}
-
-.alt-block:nth-child(even) .alt-text {
-  direction: ltr;
+.project-image-full,
+.cardgame-image-block img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 12px;
 }
 
 /* =========================================================
@@ -483,10 +533,6 @@ img {
    MOBILE OPTIMIZATION
    ========================================================= */
 @media (max-width: 700px) {
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
 
   .split-intro {
     grid-template-columns: 1fr;
