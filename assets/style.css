@@ -38,9 +38,6 @@ body {
   padding: 0 12px;
 }
 
-/* =========================================================
-   LINKS
-   ========================================================= */
 a {
   text-decoration: none;
   color: inherit;
@@ -437,15 +434,30 @@ img {
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER — NEW
    ========================================================= */
 .site-footer {
   margin-top: var(--space-xxl);
-  padding: var(--space-lg);
+  padding: var(--space-xl);
   text-align: center;
   background: #0b1121;
   color: var(--muted);
   border-top: 1px solid var(--border);
+  border-radius: 12px 12px 0 0;
+}
+
+.site-footer p {
+  margin-bottom: var(--space-sm);
+}
+
+.site-footer a {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.site-footer a:hover {
+  color: var(--accent2);
+  text-shadow: 0 0 6px var(--accent2);
 }
 
 /* =========================================================
