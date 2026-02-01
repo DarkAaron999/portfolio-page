@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL THEME
+   GLOBAL THEME — CYBER NEON
    ========================================================= */
 :root {
   --bg: #050816;
@@ -16,6 +16,7 @@
   --space-md: 24px;
   --space-lg: 36px;
   --space-xl: 56px;
+  --space-xxl: 96px;
 }
 
 * {
@@ -37,6 +38,9 @@ body {
   padding: 0 12px;
 }
 
+/* =========================================================
+   LINKS
+   ========================================================= */
 a {
   text-decoration: none;
   color: inherit;
@@ -45,6 +49,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* =========================================================
@@ -61,7 +66,7 @@ img {
   font-size: 2.6rem;
   font-weight: 800;
   color: var(--accent);
-  text-shadow: 0 0 4px var(--accent);
+  text-shadow: 0 0 6px var(--accent);
 }
 
 .header-email {
@@ -104,7 +109,7 @@ img {
    ========================================================= */
 .container {
   max-width: 1100px;
-  margin: var(--space-xl) auto;
+  margin: var(--space-xxl) auto;
   padding: var(--space-xl);
   background: var(--panel);
   border-radius: 12px;
@@ -127,12 +132,12 @@ img {
   font-weight: 800;
   margin-bottom: var(--space-lg);
   text-shadow:
-    0 0 3px var(--accent),
-    0 0 6px rgba(0, 246, 255, 0.4);
+    0 0 4px var(--accent),
+    0 0 10px rgba(0, 246, 255, 0.4);
 }
 
 .project-subtitle {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--muted);
   text-align: center;
   margin: 0 auto var(--space-xl);
@@ -146,7 +151,7 @@ img {
 .section-divider {
   width: 100%;
   height: 2px;
-  margin: var(--space-xl) 0;
+  margin: var(--space-xxl) 0;
   border-radius: 2px;
   background: linear-gradient(
     90deg,
@@ -154,7 +159,68 @@ img {
     var(--accent),
     transparent
   );
-  box-shadow: 0 0 6px rgba(0, 246, 255, 0.35);
+  box-shadow: 0 0 10px rgba(0, 246, 255, 0.35);
+}
+
+/* =========================================================
+   HERO BANNER — FIXED DARK TEXT ISSUE
+   ========================================================= */
+.hero-banner {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: var(--space-xxl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.hero-banner-content {
+  position: absolute;
+  bottom: var(--space-xl);
+  left: var(--space-xl);
+}
+
+.hero-banner-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 14px rgba(0, 246, 255, 0.7);
+}
+
+.hero-banner-subtitle {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin-top: var(--space-sm);
+}
+
+/* =========================================================
+   SPLIT INTRO
+   ========================================================= */
+.split-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xxl);
+}
+
+.intro-meta {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  padding: var(--space-xl);
+  border-radius: 12px;
 }
 
 /* =========================================================
@@ -162,13 +228,13 @@ img {
    ========================================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
   margin-top: var(--space-lg);
 }
 
 /* =========================================================
-   PROJECT CARD
+   PROJECT CARD — FIXED EMPTY SPACE ISSUE
    ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
@@ -183,7 +249,7 @@ img {
 .project-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
+  box-shadow: 0 0 14px var(--accent);
 }
 
 .project-card-thumb img {
@@ -193,19 +259,23 @@ img {
 }
 
 .project-card-title {
-  text-align: center;
+  margin: var(--space-sm) 0 var(--space-md);
+  padding: 0 var(--space-sm);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--accent);
-  font-weight: 700;
-  margin: var(--space-sm) 0 var(--space-xs);
+  text-shadow: 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
 /* =========================================================
-   IMAGE GALLERY
+   IMAGE GALLERY — FIXED CENTERING + TAGS
    ========================================================= */
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
 }
 
 .image-gallery figure {
@@ -216,16 +286,21 @@ img {
   position: relative;
 }
 
+.image-gallery img {
+  display: block;
+  margin: 0 auto;
+}
+
 .image-tag {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  bottom: 10px;
+  right: 10px;
   background: rgba(0,0,0,0.65);
-  padding: 4px 10px;
-  font-size: 0.75rem;
+  padding: 6px 12px;
+  font-size: 0.8rem;
   border-radius: 4px;
   color: var(--accent);
-  z-index: 5;
+  z-index: 10;
 }
 
 /* =========================================================
@@ -233,22 +308,23 @@ img {
    ========================================================= */
 .masonry-gallery {
   column-count: 3;
-  column-gap: var(--space-md);
-  margin-bottom: var(--space-xl);
+  column-gap: var(--space-lg);
+  margin-bottom: var(--space-xxl);
 }
 
 .masonry-gallery figure {
   break-inside: avoid;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  position: relative;
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER (FIXED)
+   SKETCHFAB VIEWER — FIXED SIZE
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
   max-width: 1200px;
-  margin: var(--space-xl) auto;
+  margin: var(--space-xxl) auto;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
@@ -256,95 +332,42 @@ img {
 }
 
 /* =========================================================
-   VIDEO CENTERING (FIXED)
+   VIDEO WRAPPER — FIXED SIZE + CENTERING
    ========================================================= */
 .video-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: var(--space-xl) 0;
+  margin: var(--space-xxl) 0;
 }
 
 .video-wrapper video {
-  max-width: 100%;
+  width: 100%;
+  max-width: 900px;
   border-radius: 12px;
 }
 
 /* =========================================================
-   PDF VIEWER (FIXED)
+   PDF VIEWER — FIXED SIZE
    ========================================================= */
 .pdf-viewer {
   width: 100%;
-  height: 80vh;
+  height: calc(100vh - 200px);
+  max-height: 900px;
   border: none;
-  margin: var(--space-xl) 0;
+  display: block;
+  margin: var(--space-xxl) auto;
   border-radius: 12px;
 }
 
 /* =========================================================
-   ITCH.IO CENTERING (FIXED)
+   ITCH.IO CENTERING
    ========================================================= */
 .itch-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: var(--space-xl) 0;
-}
-
-/* =========================================================
-   HERO BANNER
-   ========================================================= */
-.hero-banner {
-  width: 100%;
-  height: 380px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  margin-bottom: var(--space-xl);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.75));
-}
-
-.hero-banner-content {
-  position: absolute;
-  bottom: var(--space-lg);
-  left: var(--space-lg);
-}
-
-.hero-banner-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(0, 246, 255, 0.35);
-}
-
-.hero-banner-subtitle {
-  font-size: 1.2rem;
-  color: var(--muted);
-  margin-top: var(--space-sm);
-}
-
-/* =========================================================
-   SPLIT INTRO
-   ========================================================= */
-.split-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-xl);
-}
-
-.intro-meta {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  padding: var(--space-lg);
-  border-radius: 12px;
+  margin: var(--space-xxl) 0;
 }
 
 /* =========================================================
@@ -355,7 +378,7 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-xl);
   align-items: center;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-xxl);
 }
 
 .alt-block:nth-child(even) {
@@ -397,7 +420,7 @@ img {
    ========================================================= */
 .project-back {
   text-align: center;
-  margin-top: var(--space-xl);
+  margin-top: var(--space-xxl);
 }
 
 .project-back a {
@@ -414,7 +437,35 @@ img {
 }
 
 /* =========================================================
-   MOBILE OPTIMIZATION (FIXED)
+   FOOTER
+   ========================================================= */
+.site-footer {
+  margin-top: var(--space-xxl);
+  padding: var(--space-lg);
+  text-align: center;
+  background: #0b1121;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATION
    ========================================================= */
 @media (max-width: 700px) {
 
