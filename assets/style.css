@@ -1,5 +1,6 @@
+
 /* =========================================================
-   GLOBAL THEME — CYBER NEON
+   GLOBAL THEME
    ========================================================= */
 :root {
   --bg: #050816;
@@ -11,12 +12,11 @@
   --muted: #9ca3af;
   --border: #1f2937;
 
-  --space-xs: 6px;
-  --space-sm: 10px;
-  --space-md: 18px;
-  --space-lg: 26px;
-  --space-xl: 36px;
-  --space-xxl: 60px;
+  --space-xs: 8px;
+  --space-sm: 14px;
+  --space-md: 24px;
+  --space-lg: 36px;
+  --space-xl: 56px;
 }
 
 * {
@@ -37,47 +37,50 @@ body {
   line-height: 1.75;
 }
 
-/* =========================================================
-   FULL-WIDTH HEADER + FOOTER (Option A compatible)
-   ========================================================= */
-.site-header,
-.site-nav,
-.site-footer {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* =========================================================
-   HEADER — REDUCED SPACING
+   HEADER
    ========================================================= */
 .site-header {
   background: linear-gradient(135deg, var(--header), #020617);
-  padding: var(--space-lg) 0;
+  padding: var(--space-xl) var(--space-md);
   text-align: center;
   border-bottom: 1px solid var(--border);
 }
 
 .site-header h1 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: var(--accent);
-  text-shadow: 0 0 6px var(--accent);
+  text-shadow: 0 0 4px var(--accent);
 }
 
 .header-email {
-  margin-top: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.header-email a {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.header-email a:hover {
+  color: var(--accent2);
+  text-shadow: 0 0 6px var(--accent2);
 }
 
 /* =========================================================
-   NAVIGATION — REDUCED SPACING
+   NAVIGATION
    ========================================================= */
 .site-nav {
   background: #0b1121;
-  padding: var(--space-xs) 0;
+  padding: var(--space-sm);
   text-align: center;
   border-bottom: 1px solid var(--border);
-  margin-bottom: var(--space-sm);
 }
 
 .site-nav a {
@@ -92,63 +95,89 @@ body {
 }
 
 /* =========================================================
-   MAIN CONTAINER — CONTENT MOVED UPWARD
+   MAIN CONTAINER
    ========================================================= */
 .container {
   max-width: 1100px;
-  margin: var(--space-lg) auto;
-  padding: var(--space-lg);
+  margin: var(--space-xl) auto;
+  padding: var(--space-xl);
   background: var(--panel);
   border-radius: 12px;
   border: 1px solid var(--border);
 }
 
-/* =========================================================
-   HERO BANNER — NO EMPTY SPACE ABOVE
-   ========================================================= */
-.hero-banner {
-  width: 100%;
-  height: 240px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  margin-bottom: var(--space-lg);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-banner-content {
-  position: absolute;
-  bottom: var(--space-md);
-  left: var(--space-md);
-  z-index: 2;
-}
-
-.hero-banner-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: white;
-  text-shadow: 0 0 14px var(--accent);
+@media (max-width: 600px) {
+  .container {
+    padding: var(--space-lg);
+  }
 }
 
 /* =========================================================
-   TITLES
+   TITLES — SOFT NEON + MORE SPACING
    ========================================================= */
 .project-title,
 .section-title {
   text-align: center;
   color: var(--accent);
   font-weight: 800;
-  margin: var(--space-md) 0;
-  text-shadow: 0 0 6px var(--accent);
+  margin-bottom: var(--space-lg);
+  text-shadow:
+    0 0 3px var(--accent),
+    0 0 6px rgba(0, 246, 255, 0.4);
+}
+
+.project-card-title {
+  text-align: center;
+  color: var(--accent);
+  font-weight: 700;
+  margin: var(--space-sm) 0 var(--space-xs);
+  line-height: 1.4;
+  text-shadow:
+    0 0 2px var(--accent),
+    0 0 4px rgba(0, 246, 255, 0.4);
 }
 
 .project-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--muted);
   text-align: center;
-  margin: 0 auto var(--space-lg);
+  margin: 0 auto var(--space-xl);
   max-width: 900px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SOFT NEON SECTION DIVIDER
+   ========================================================= */
+.section-divider {
+  width: 100%;
+  height: 2px;
+  margin: var(--space-xl) 0;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  box-shadow: 0 0 6px rgba(0, 246, 255, 0.35);
+}
+
+/* =========================================================
+   PARAGRAPHS + BULLET POINTS — MORE SPACING
+   ========================================================= */
+p {
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+ul, ol {
+  margin: var(--space-md) 0 var(--space-md) var(--space-lg);
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: var(--space-sm);
 }
 
 /* =========================================================
@@ -158,10 +187,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  align-items: start;
 }
 
 /* =========================================================
-   PROJECT CARD
+   PROJECT CARD — FLEX SAFE (NO OVERLAP)
    ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
@@ -169,37 +200,73 @@ body {
   border-radius: 12px;
   overflow: hidden;
   transition: 0.25s ease;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow: 0 0 14px var(--accent);
+  box-shadow: 0 0 12px var(--accent);
 }
 
 /* =========================================================
-   IMAGE GALLERY — SQUARES + TAGS + CENTERED
+   PROJECT CARD IMAGE — AUTO HEIGHT (NO OVERLAP)
    ========================================================= */
-.image-gallery,
-.masonry-gallery {
+.project-card-thumb {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
+  background: #000;
+}
+
+.project-card-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================================
+   PROJECT CARD TEXT — CENTERED
+   ========================================================= */
+.project-card-text {
+  text-align: center;
+  color: var(--muted);
+  padding: 0 var(--space-md) var(--space-md);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   IMAGE GALLERY
+   ========================================================= */
+.image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-md);
 }
 
-.image-gallery figure,
-.masonry-gallery figure {
-  aspect-ratio: 1 / 1;
+.image-gallery figure {
   background: #151a2e;
   border-radius: 12px;
   border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-gallery img,
-.masonry-gallery img {
+.image-gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -207,45 +274,39 @@ body {
 
 .image-tag {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0,0,0,0.65);
-  padding: 4px 10px;
-  font-size: 0.8rem;
+  bottom: var(--space-xs);
+  right: var(--space-xs);
+  background: rgba(0,0,0,0.7);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
   border-radius: 4px;
   color: var(--accent);
 }
 
 /* =========================================================
-   LIGHTBOX — FIXED CENTERING
+   FULL-WIDTH IMAGES
    ========================================================= */
-.lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+.project-image-block {
+  width: 100%;
+  max-width: 900px;
+  margin: var(--space-xl) auto;
+  text-align: center;
 }
 
-.lightbox-overlay.active {
-  display: flex;
-}
-
-.lightbox-overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
+.project-image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 /* =========================================================
-   SKETCHFAB — FULL WIDTH + CENTERED
+   SKETCHFAB
    ========================================================= */
 .sketchfab-wrapper {
   width: 100%;
-  max-width: 1100px;
-  margin: var(--space-lg) auto;
+  max-width: 900px;
+  margin: var(--space-xl) auto;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
@@ -255,79 +316,138 @@ body {
 .sketchfab-wrapper iframe {
   width: 100%;
   height: 100%;
-  border: none;
+  display: block;
+}
+
+.sketchfab-credit {
+  text-align: center;
+  margin-top: var(--space-sm);
+  color: var(--muted);
 }
 
 /* =========================================================
-   PDF VIEWER — FULL WIDTH + CENTERED
+   EMBEDS
    ========================================================= */
-.embed-wrapper.embed-pdf {
-  width: 100%;
-  max-width: 1100px;
-  margin: var(--space-lg) auto;
+.embed-wrapper {
+  max-width: 1000px;
+  margin: var(--space-xl) auto;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
-}
-
-.embed-wrapper.embed-pdf iframe {
-  width: 100%;
-  height: 80vh;
-  border: none;
-}
-
-/* =========================================================
-   ITCH.IO — CENTERED
-   ========================================================= */
-.embed-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: var(--space-lg) 0;
+  background: #0d1224;
 }
 
 .embed-wrapper iframe {
-  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-/* =========================================================
-   VIDEO — CENTERED
-   ========================================================= */
-.project-video-block {
-  display: flex;
-  justify-content: center;
-  margin: var(--space-lg) 0;
+.embed-pdf {
+  height: 900px;
 }
 
+@media (max-width: 600px) {
+  .embed-pdf {
+    height: 600px;
+  }
+}
+
+.embed-video,
 .project-video-full {
   width: 100%;
   max-width: 900px;
-  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  margin: var(--space-xl) auto;
+  display: block;
+}
+
+.embed-itch {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  margin: var(--space-xl) auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .embed-itch {
+    height: 450px;
+  }
 }
 
 /* =========================================================
-   BACK BUTTON — FIXED
+   LIGHTBOX
+   ========================================================= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.lightbox-overlay span {
+  margin-top: var(--space-sm);
+  color: var(--muted);
+}
+
+/* =========================================================
+   BACK BUTTON
    ========================================================= */
 .project-back {
   text-align: center;
-  margin-top: var(--space-lg);
+  margin-top: var(--space-xl);
 }
 
 .project-back a {
   padding: var(--space-sm) var(--space-md);
   background: var(--accent);
-  color: black;
-  border-radius: 6px;
+  color: #000;
   font-weight: bold;
+  border-radius: 6px;
+}
+
+.project-back a:hover {
+  background: var(--accent2);
+  color: white;
 }
 
 /* =========================================================
-   FOOTER — REDUCED SPACING
+   FOOTER
    ========================================================= */
 .site-footer {
-  padding: var(--space-lg) 0;
   margin-top: var(--space-xl);
+  padding: var(--space-md);
+  text-align: center;
   background: #0b1121;
   color: var(--muted);
   border-top: 1px solid var(--border);
+}
+
+.footer-email {
+  margin-top: var(--space-sm);
+}
+
+.footer-email a {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.footer-email a:hover {
+  color: var(--accent2);
+  text-shadow: 0 0 6px var(--accent2);
 }
