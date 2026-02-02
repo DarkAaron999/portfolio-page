@@ -5,28 +5,24 @@ title: "Medieval Fantasy Sword"
 
 <div class="container fade-in">
 
-  <!-- HERO / PAGE TITLE -->
   <header class="hero">
     <h1 class="page-title neon-title">Medieval Fantasy Sword</h1>
     <p class="page-subtitle neon-subtitle">Hand‑painted hero prop for a high‑fantasy RPG</p>
   </header>
 
-  <!-- PROJECT OVERVIEW -->
   <section class="project-overview">
     <p>
-      This 3D sword was created as a <strong>hero prop for a fantasy RPG</strong>, 
-      with a focus on a clean, readable silhouette and a <strong>hand-painted texture style</strong>. 
-      The model was retopologized in Maya and textured in Substance Painter, 
-      ensuring game-ready optimization while maintaining a strong magical identity.
+      This 3D sword was created as a <strong>hero prop for a fantasy RPG</strong>,
+      with a focus on a clean, readable silhouette and <strong>hand-painted texture style</strong>.
+      The model was retopologized in Maya and textured in Substance Painter.
     </p>
   </section>
 
   <div class="section-divider"></div>
 
-  <!-- 3D VIEWER -->
   <section class="project-3d-viewer">
     <h2 class="section-title">3D Viewer</h2>
-    <div class="sketchfab-wrapper">
+    <div class="sketchfab-wrapper" style="text-align:center;">
       <iframe
         title="Medieval Fantasy Sword"
         frameborder="0"
@@ -34,12 +30,12 @@ title: "Medieval Fantasy Sword"
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
         allow="autoplay; fullscreen; xr-spatial-tracking"
-        src="https://sketchfab.com/models/614b7e6475454ba390695d9227a3fd59/embed">
+        src="https://sketchfab.com/models/614b7e6475454ba390695d9227a3fd59/embed"
+        style="max-width:100%;height:480px;">
       </iframe>
     </div>
-    <p class="sketchfab-credit neon-subtitle">
-      <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59" target="_blank">View on Sketchfab</a> by
-      <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+    <p class="neon-subtitle" style="text-align:center; margin-top:10px;">
+      Medieval Fantasy Sword by <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a> on <a class="neon-link" href="https://sketchfab.com" target="_blank">Sketchfab</a>
     </p>
   </section>
 
@@ -52,7 +48,7 @@ title: "Medieval Fantasy Sword"
       {% assign refs = "Reference01.png,Reference02.png,Reference03.png,Reference04.png" | split: "," %}
       {% for img in refs %}
       <figure class="square-image">
-        <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference image">
+        <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference">
         <div class="image-tag">Reference</div>
       </figure>
       {% endfor %}
@@ -66,11 +62,11 @@ title: "Medieval Fantasy Sword"
     <h2 class="section-title">Modeling Workflow</h2>
     <div class="square-gallery">
       <figure class="square-image">
-        <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High Poly Sculpt">
+        <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High Poly">
         <div class="image-tag">High Poly</div>
       </figure>
       <figure class="square-image">
-        <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+        <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low Poly">
         <div class="image-tag">Low Poly</div>
       </figure>
       <figure class="square-image">
@@ -91,11 +87,11 @@ title: "Medieval Fantasy Sword"
     <h2 class="section-title">Textures</h2>
     <div class="square-gallery">
       <figure class="square-image">
-        <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="Texture 1">
+        <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="Albedo">
         <div class="image-tag">Albedo</div>
       </figure>
       <figure class="square-image">
-        <img src="{{ '/assets/swordassets/images/texture02.png' | relative_url }}" alt="Texture 2">
+        <img src="{{ '/assets/swordassets/images/texture02.png' | relative_url }}" alt="Roughness / Metalness">
         <div class="image-tag">Roughness / Metalness</div>
       </figure>
       <figure class="square-image">
@@ -105,31 +101,31 @@ title: "Medieval Fantasy Sword"
     </div>
   </section>
 
-  <!-- BACK BUTTON -->
   <div class="project-back">
     <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
   </div>
-
 </div>
 
 <!-- LIGHTBOX -->
 <div class="lightbox-overlay" id="lightbox">
-  <img src="" alt="">
-  <span>Click anywhere to close</span>
+  <div class="lightbox-content">
+    <img src="" alt="">
+    <span class="lightbox-caption">Click anywhere to close</span>
+  </div>
 </div>
 
 <script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
 
-  document.addEventListener('click', (e) => {
-    const img = e.target.closest('.square-gallery img');
-    if (img) {
-      lightboxImg.src = img.src;
-      lightbox.classList.add('active');
-    } else if (e.target === lightbox) {
-      lightbox.classList.remove('active');
-      lightboxImg.src = '';
-    }
-  });
+document.addEventListener('click', (e) => {
+  const img = e.target.closest('.square-gallery img, .project-card-thumb img');
+  if (img) {
+    lightboxImg.src = img.src;
+    lightbox.classList.add('active');
+  } else if (e.target === lightbox || e.target.closest('#lightbox span')) {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+  }
+});
 </script>
