@@ -249,6 +249,13 @@ a {
   text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
+.project-card-text {
+  text-align: center;
+  padding: 0 var(--space-md) var(--space-md);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 /* =========================================================
    SKETCHFAB VIEWER
    ========================================================= */
