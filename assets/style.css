@@ -116,30 +116,33 @@ a {
   margin-bottom: var(--space-md);
 }
 
+/* Center hero text */
 .hero-banner-content {
   position: absolute;
-  bottom: var(--space-md);
-  left: var(--space-md);
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
 }
 
-/* Neon hero text */
+/* Soft neon hero text */
 .neon-title {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--accent);
   text-shadow:
-    0 0 6px var(--accent),
-    0 0 12px var(--accent),
-    0 0 20px rgba(0, 246, 255, 0.6);
+    0 0 3px var(--accent),
+    0 0 6px rgba(0, 246, 255, 0.4);
 }
 
 .neon-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--accent2);
   font-weight: bold;
   text-shadow:
-    0 0 4px var(--accent2),
-    0 0 10px rgba(168, 85, 255, 0.5);
+    0 0 2px var(--accent2),
+    0 0 4px rgba(168, 85, 255, 0.4);
 }
 
 /* =========================================================
