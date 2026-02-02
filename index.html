@@ -3,32 +3,32 @@ layout: default
 title: "Portfolio"
 ---
 
-<div class="container fade-in">
+<div class="fade-in">
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <h1 class="page-welcome neon-title">👾 Welcome to My Portfolio</h1>
-    <p class="page-subtitle neon-subtitle">Game Designer • 2D/3D Artist</p>
-  </header>
+  <h1 class="page-welcome neon-title">👾 Welcome to My Portfolio</h1>
+  <p class="page-subtitle neon-subtitle">Game Designer • 2D/3D Artist</p>
 
-  <!-- FEATURED PROJECTS -->
-  <section class="featured-projects">
-    <h2 class="section-title">🎮 Featured Projects</h2>
+  <h2 class="section-title">🎮 Featured Projects</h2>
 
-    <div class="project-grid">
-      {% assign projects = "3dart,2dart,leveldesign,unityprojects,designweek,cardgame" | split: "," %}
-      {% assign thumbs = "3dart.png,2dart.png,leveldesign.png,unityprojects.png,designweek.png,cardgame01.png" | split: "," %}
+  <div class="project-grid">
 
-      {% for i in (0..5) %}
-      <div class="project-card">
-        <a class="project-card-link" href="{{ '/projects/' | append: projects[i] | append: '.html' | relative_url }}">
-          <div class="project-card-thumb">
-            <img src="{{ '/assets/projectthumbnails/images/' | append: thumbs[i] | relative_url }}" alt="Project thumbnail">
-          </div>
-        </a>
-      </div>
-      {% endfor %}
+    {% assign projects = 
+      "3dart,2dart,leveldesign,unityprojects,designweek,cardgame" | split: "," %}
+    {% assign titles = 
+      "3D Art,2D Art,Level Design,Unity Projects,Design Week,Card Game" | split: "," %}
+    {% assign thumbs = 
+      "3dart.png,2dart.png,leveldesign.png,unityprojects.png,designweek.png,cardgame01.png" | split: "," %}
+
+    {% for i in (0..5) %}
+    <div class="project-card hover-zoom">
+      <a class="project-card-link" href="{{ '/projects/' | append: projects[i] | append: '.html' | relative_url }}">
+        <div class="project-card-thumb">
+          <img src="{{ '/assets/projectthumbnails/images/' | append: thumbs[i] | relative_url }}" alt="{{ titles[i] }}">
+        </div>
+      </a>
     </div>
-  </section>
+    {% endfor %}
+
+  </div>
 
 </div>
