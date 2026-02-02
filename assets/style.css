@@ -114,7 +114,7 @@ a {
 }
 
 /* =========================================================
-   PAGE TITLES
+   TITLES
    ========================================================= */
 .page-welcome,
 .project-title {
@@ -180,7 +180,7 @@ a {
   line-height: 1.8;
 }
 
-/* Bullet point spacing */
+/* Bullet spacing */
 .project-body ul li {
   margin-bottom: var(--space-sm);
 }
@@ -188,6 +188,12 @@ a {
 .project-body ul {
   padding-left: var(--space-md);
   margin-bottom: var(--space-lg);
+}
+
+/* Add spacing ABOVE paragraphs after bullet lists */
+.project-body ul + p,
+.project-body ul + .project-overview-text {
+  margin-top: var(--space-md);
 }
 
 /* =========================================================
@@ -198,10 +204,6 @@ a {
   max-width: 900px;
   margin: 0 auto var(--space-lg);
   line-height: 1.8;
-}
-
-.project-overview-text.spaced-top {
-  margin-top: var(--space-lg);
 }
 
 /* =========================================================
@@ -218,17 +220,14 @@ a {
   color: var(--accent);
   font-weight: 700;
   font-size: 1.3rem;
-  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
 .project-image-full {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  height: auto;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: #151a2e;
 }
 
 /* =========================================================
@@ -243,7 +242,6 @@ a {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
-  background: #151a2e;
 }
 
 .pdf-wrapper iframe,
@@ -259,14 +257,6 @@ a {
 .project-video-block {
   text-align: center;
   margin: var(--space-lg) auto;
-}
-
-.project-video-title {
-  text-align: center;
-  margin-bottom: var(--space-sm);
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 1.3rem;
 }
 
 .project-video-full {
@@ -302,70 +292,11 @@ a {
   font-size: 0.95rem;
 }
 
-/* =========================================================
-   SQUARE GALLERY
-   ========================================================= */
-.square-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
-  margin-top: var(--space-md);
-}
-
-.square-image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #151a2e;
-}
-
-.square-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-tag {
-  position: absolute;
-  bottom: var(--space-xs);
-  right: var(--space-xs);
-  background: rgba(0,0,0,0.7);
-  padding: var(--space-xs) var(--space-sm);
-  font-size: 0.75rem;
-  border-radius: 4px;
+/* Restore hyperlink visibility */
+.sketchfab-credit a {
   color: var(--accent);
-}
-
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
-.lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-}
-
-.lightbox-overlay.active {
-  display: flex;
-}
-
-.lightbox-overlay img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 12px;
-}
-
-.lightbox-overlay span {
-  margin-top: var(--space-sm);
-  color: var(--muted);
+  font-weight: bold;
+  text-shadow: 0 0 4px var(--accent);
 }
 
 /* =========================================================
@@ -378,27 +309,20 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-@media (min-width: 1024px) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* Fix empty space in cards */
+.project-card-link {
+  display: block;
+  height: 100%;
 }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================================================
-   PROJECT CARD
-   ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
   transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -409,14 +333,14 @@ a {
 
 .project-card-thumb img {
   width: 100%;
-  height: auto;
+  display: block;
 }
 
 .project-card-title {
   text-align: center;
   color: var(--accent);
   font-weight: 700;
-  margin: var(--space-sm) 0 var(--space-xs);
+  padding: var(--space-sm);
 }
 
 /* =========================================================
