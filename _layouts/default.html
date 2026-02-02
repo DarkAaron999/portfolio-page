@@ -6,14 +6,14 @@
 
   <title>{{ page.title }}</title>
 
-  <link rel="stylesheet" href="{{ '/assets/style.css?v=4' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css?v=5' | relative_url }}">
 </head>
 
 <body>
 
   <!-- FULL-WIDTH HEADER -->
   <header class="site-header">
-    <h1>Aaron Rennick</h1>
+    <h1 class="site-title">Aaron Rennick</h1>
 
     <div class="header-email">
       <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
@@ -27,7 +27,7 @@
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
-  <!-- CONTENT CONTAINER (ONLY ONE) -->
+  <!-- CONTENT CONTAINER -->
   <main class="container">
     {{ content }}
   </main>
@@ -39,6 +39,29 @@
       <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
     </div>
   </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox">
+    <img src="" alt="">
+    <span>Click anywhere to close</span>
+  </div>
+
+  <script>
+    // LIGHTBOX FUNCTIONALITY
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.addEventListener('click', (e) => {
+      const img = e.target.closest('.square-gallery img, .project-card-thumb img');
+      if (img) {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      } else if (e.target === lightbox || e.target.closest('#lightbox span')) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      }
+    });
+  </script>
 
 </body>
 </html>
