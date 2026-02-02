@@ -1,23 +1,16 @@
+
 /* =========================================================
-   GLOBAL THEME — V2
+   GLOBAL THEME
    ========================================================= */
 :root {
   --bg: #050816;
   --panel: #0d1224;
-  --panel-soft: #121833;
-  --header: #0b1121;
-
-  --accent-strong: #00f6ff;
-  --accent-soft: #7feeff;
-  --accent-glow: rgba(0, 246, 255, 0.35);
-
-  --text-main: #e5e7eb;
-  --text-muted: #b3b8c4;
-
+  --header: #11192e;
+  --accent: #00f6ff;
+  --accent2: #f5f5f5;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
   --border: #1f2937;
-
-  --radius-sm: 6px;
-  --radius-md: 12px;
 
   --space-xs: 8px;
   --space-sm: 14px;
@@ -26,9 +19,6 @@
   --space-xl: 56px;
 }
 
-/* =========================================================
-   RESET
-   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -38,43 +28,26 @@
 html,
 body {
   height: 100%;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 body {
   background: var(--bg);
-  color: var(--text-main);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: var(--text);
+  font-family: Arial, sans-serif;
   line-height: 1.75;
   display: flex;
   flex-direction: column;
 }
 
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--accent-strong);
-  outline-offset: 3px;
+main.container {
+  flex: 1;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
-/* =========================================================
-   LINKS
-   ========================================================= */
 a {
-  color: var(--accent-strong);
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 
 /* =========================================================
@@ -88,22 +61,25 @@ a:hover {
 }
 
 .site-header h1 {
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 800;
-  color: var(--accent-strong);
-  text-shadow: 0 0 4px var(--accent-glow);
+  color: var(--accent);
+  text-shadow: 0 0 4px var(--accent);
 }
 
-.header-role {
-  margin-top: var(--space-xs);
-  font-size: 1.05rem;
-  color: var(--text-muted);
+.header-email a,
+.footer-email a {
+  color: var(--accent);
+  font-weight: bold;
+  text-shadow: 0 0 4px var(--accent);
+  transition: 0.2s ease;
 }
 
-.header-email a {
-  display: inline-block;
-  margin-top: var(--space-xs);
-  font-weight: 600;
+.header-email a:hover,
+.footer-email a:hover {
+  color: white;
+  text-shadow: 0 0 8px var(--accent);
+  text-decoration: underline;
 }
 
 /* =========================================================
@@ -117,79 +93,92 @@ a:hover {
 }
 
 .site-nav a {
-  color: var(--text-muted);
-  margin: 0 var(--space-sm);
-  font-weight: 600;
+  color: var(--muted);
+  margin: 0 var(--space-md);
+  font-weight: bold;
 }
 
 .site-nav a:hover {
-  color: var(--accent-strong);
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
 }
 
 /* =========================================================
    MAIN CONTAINER
    ========================================================= */
-main.container {
-  flex: 1;
-}
-
 .container {
   max-width: 1100px;
   margin: var(--space-lg) auto;
   padding: var(--space-lg);
   background: var(--panel);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   border: 1px solid var(--border);
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: var(--space-md);
-    margin: var(--space-md);
-  }
 }
 
 /* =========================================================
    PAGE TITLES
    ========================================================= */
-.page-title {
+.page-welcome,
+.project-title {
   text-align: center;
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: var(--accent-strong);
+  margin-top: var(--space-sm);
   margin-bottom: var(--space-xs);
+  font-size: 2.4rem;
+  font-weight: 800;
 }
 
-.page-subtitle {
+.page-subtitle,
+.project-subtitle {
   text-align: center;
-  color: var(--text-muted);
   margin-bottom: var(--space-lg);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.neon-title {
+  color: var(--accent);
+  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
+}
+
+.neon-subtitle {
+  color: var(--accent2);
+  text-shadow: 0 0 2px var(--accent2), 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.neon-link {
+  color: var(--accent);
+  font-weight: bold;
+  text-shadow: 0 0 4px var(--accent);
+  transition: 0.2s ease;
+}
+
+.neon-link:hover {
+  color: white;
+  text-shadow: 0 0 8px var(--accent);
+  text-decoration: underline;
 }
 
 /* =========================================================
-   SECTION TITLES
+   SECTION TITLE
    ========================================================= */
 .section-title {
-  margin: var(--space-lg) 0 var(--space-md);
   text-align: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 800;
+  margin: var(--space-lg) 0 var(--space-md);
+  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
 /* =========================================================
    SECTION DIVIDER
    ========================================================= */
 .section-divider {
+  width: 100%;
   height: 2px;
   margin: var(--space-xl) 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent-strong),
-    transparent
-  );
-  opacity: 0.6;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  box-shadow: 0 0 6px rgba(0, 246, 255, 0.35);
 }
 
 /* =========================================================
@@ -203,6 +192,7 @@ main.container {
 .project-body p,
 .project-body ul {
   margin-bottom: var(--space-md);
+  line-height: 1.8;
 }
 
 .project-body ul {
@@ -210,17 +200,22 @@ main.container {
 }
 
 /* =========================================================
-   PROJECT INFO STRIP
+   CENTERED OVERVIEW TEXT
    ========================================================= */
-.project-meta {
+.project-overview-text {
   text-align: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-bottom: var(--space-md);
+  max-width: 900px;
+  margin: 0 auto var(--space-lg);
+  line-height: 1.8;
+}
+
+/* Extra spacing utility for specific lines */
+.project-overview-text.spaced-top {
+  margin-top: var(--space-lg);
 }
 
 /* =========================================================
-   IMAGE BLOCKS
+   2D / GENERAL IMAGE BLOCKS
    ========================================================= */
 .project-image-block {
   text-align: center;
@@ -228,118 +223,281 @@ main.container {
 }
 
 .project-image-title {
+  text-align: center;
   margin-bottom: var(--space-sm);
-  font-weight: 600;
-  color: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
 .project-image-full {
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
-  border-radius: var(--radius-md);
+  height: auto;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  background: var(--panel-soft);
+  background: #151a2e;
 }
 
 /* =========================================================
-   VIDEO / EMBED BLOCKS
+   PDF VIEWER (LEVEL DESIGN, DW03, ETC.)
    ========================================================= */
-.embed-frame {
+.pdf-wrapper,
+.embed-pdf {
   width: 100%;
+  max-width: 1000px;
+  margin: var(--space-lg) auto;
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--panel-soft);
+  border-radius: 12px;
   overflow: hidden;
+  border: 1px solid var(--border);
+  background: #151a2e;
 }
 
-.embed-frame iframe,
-.embed-frame video {
+.pdf-wrapper iframe,
+.embed-pdf iframe {
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
 }
 
 /* =========================================================
-   SKETCHFAB
+   VIDEO BLOCKS (DESIGN WEEK 05)
+   ========================================================= */
+.project-video-block {
+  text-align: center;
+  margin: var(--space-lg) auto;
+}
+
+.project-video-title {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
+}
+
+.project-video-full {
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #151a2e;
+}
+
+/* =========================================================
+   SKETCHFAB VIEWER
    ========================================================= */
 .sketchfab-wrapper {
+  width: 100%;
   max-width: 900px;
   margin: var(--space-lg) auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.sketchfab-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .sketchfab-credit {
   text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  font-size: 0.95rem;
 }
 
 /* =========================================================
-   PROJECT GRID
+   SQUARE IMAGE GALLERY
+   ========================================================= */
+.square-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.square-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #151a2e;
+}
+
+.square-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-tag {
+  position: absolute;
+  bottom: var(--space-xs);
+  right: var(--space-xs);
+  background: rgba(0, 0, 0, 0.7);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: var(--accent);
+  text-shadow: 0 0 4px var(--accent);
+}
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.lightbox-overlay span {
+  margin-top: var(--space-sm);
+  color: var(--muted);
+}
+
+/* =========================================================
+   RESPONSIVE PROJECT GRID (DESIGN WEEK, UNITY, ETC.)
    ========================================================= */
 .project-grid {
   display: grid;
   gap: var(--space-lg);
+  margin-top: var(--space-md);
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================================
    PROJECT CARD
    ========================================================= */
 .project-card {
-  background: linear-gradient(#050816, var(--panel-soft));
+  background: linear-gradient(#000000, #151a2e);
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: 0.25s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-strong);
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
 }
 
-.project-card img {
+.project-card-thumb img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
 .project-card-title {
   text-align: center;
+  color: var(--accent);
   font-weight: 700;
-  color: var(--accent-soft);
   margin: var(--space-sm) 0 var(--space-xs);
+  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
 .project-card-text {
-  padding: 0 var(--space-md) var(--space-md);
   text-align: center;
-  color: var(--text-muted);
+  padding: 0 var(--space-md) var(--space-md);
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
 /* =========================================================
-   BUTTONS
+   ITCH.IO EMBED
    ========================================================= */
-.primary-button {
-  display: inline-block;
-  padding: var(--space-sm) var(--space-md);
-  background: var(--accent-strong);
-  color: #000;
-  font-weight: 700;
-  border-radius: var(--radius-sm);
+.embed-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-lg) 0;
 }
 
-.primary-button:hover {
-  background: var(--accent-soft);
+.embed-wrapper iframe {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* =========================================================
+   CONTACT PAGE HELPERS
+   ========================================================= */
+.contact-center {
+  text-align: center;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+.project-back {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+
+.project-back a {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.project-back a:hover {
+  background: var(--accent2);
+  color: black;
 }
 
 /* =========================================================
    FOOTER
    ========================================================= */
 .site-footer {
-  background: #0b1121;
   padding: var(--space-sm);
   text-align: center;
-  color: var(--text-muted);
+  background: #0b1121;
+  color: var(--muted);
   border-top: 1px solid var(--border);
 }
