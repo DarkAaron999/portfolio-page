@@ -24,7 +24,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   overflow-y: scroll;
   scrollbar-gutter: stable;
@@ -207,29 +208,13 @@ a {
   line-height: 1.8;
 }
 
-/* =========================================================
-   PDF VIEWER (FIXED + CENTERED + LARGE)
-   ========================================================= */
-.pdf-wrapper {
-  width: 100%;
-  max-width: 1000px;
-  margin: var(--space-lg) auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: #151a2e;
-}
-
-.pdf-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
+/* Extra spacing utility for specific lines */
+.project-overview-text.spaced-top {
+  margin-top: var(--space-lg);
 }
 
 /* =========================================================
-   2D ART IMAGE BLOCKS
+   2D / GENERAL IMAGE BLOCKS
    ========================================================= */
 .project-image-block {
   text-align: center;
@@ -250,6 +235,56 @@ a {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #151a2e;
+}
+
+/* =========================================================
+   PDF VIEWER (LEVEL DESIGN, DW03, ETC.)
+   ========================================================= */
+.pdf-wrapper,
+.embed-pdf {
+  width: 100%;
+  max-width: 1000px;
+  margin: var(--space-lg) auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #151a2e;
+}
+
+.pdf-wrapper iframe,
+.embed-pdf iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* =========================================================
+   VIDEO BLOCKS (DESIGN WEEK 05)
+   ========================================================= */
+.project-video-block {
+  text-align: center;
+  margin: var(--space-lg) auto;
+}
+
+.project-video-title {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
+}
+
+.project-video-full {
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: #151a2e;
@@ -310,7 +345,7 @@ a {
   position: absolute;
   bottom: var(--space-xs);
   right: var(--space-xs);
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: var(--space-xs) var(--space-sm);
   font-size: 0.75rem;
   border-radius: 4px;
@@ -324,7 +359,7 @@ a {
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: none;
   justify-content: center;
   align-items: center;
@@ -348,7 +383,7 @@ a {
 }
 
 /* =========================================================
-   RESPONSIVE PROJECT GRID
+   RESPONSIVE PROJECT GRID (DESIGN WEEK, UNITY, ETC.)
    ========================================================= */
 .project-grid {
   display: grid;
@@ -425,6 +460,13 @@ a {
 .embed-wrapper iframe {
   border-radius: 12px;
   border: 1px solid var(--border);
+}
+
+/* =========================================================
+   CONTACT PAGE HELPERS
+   ========================================================= */
+.contact-center {
+  text-align: center;
 }
 
 /* =========================================================
