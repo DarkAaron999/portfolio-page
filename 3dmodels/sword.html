@@ -5,15 +5,18 @@ title: "Medieval Fantasy Sword"
 
 <div class="container fade-in">
 
-  <!-- PAGE TITLE -->
-  <h1 class="page-title neon-title">Medieval Fantasy Sword</h1>
-  <p class="page-subtitle neon-subtitle">Hand‑painted hero prop for a high‑fantasy RPG</p>
+  <!-- HERO / PAGE TITLE -->
+  <header class="hero">
+    <h1 class="page-title neon-title">Medieval Fantasy Sword</h1>
+    <p class="page-subtitle neon-subtitle">Hand‑painted hero prop for a high‑fantasy RPG</p>
+  </header>
 
   <!-- PROJECT OVERVIEW -->
   <section class="project-overview">
     <p>
-      This 3D sword was created as a **hero prop for a fantasy RPG**, with a focus on a clean, readable silhouette 
-      and a **hand-painted texture style**. The model was retopologized in Maya and textured in Substance Painter, 
+      This 3D sword was created as a <strong>hero prop for a fantasy RPG</strong>, 
+      with a focus on a clean, readable silhouette and a <strong>hand-painted texture style</strong>. 
+      The model was retopologized in Maya and textured in Substance Painter, 
       ensuring game-ready optimization while maintaining a strong magical identity.
     </p>
   </section>
@@ -21,80 +24,88 @@ title: "Medieval Fantasy Sword"
   <div class="section-divider"></div>
 
   <!-- 3D VIEWER -->
-  <h2 class="section-title">3D Viewer</h2>
-  <div class="sketchfab-wrapper">
-    <iframe
-      title="Medieval Fantasy Sword"
-      frameborder="0"
-      allowfullscreen
-      mozallowfullscreen="true"
-      webkitallowfullscreen="true"
-      allow="autoplay; fullscreen; xr-spatial-tracking"
-      src="https://sketchfab.com/models/614b7e6475454ba390695d9227a3fd59/embed">
-    </iframe>
-  </div>
-  <p class="sketchfab-credit neon-subtitle">
-    <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59" target="_blank">View on Sketchfab</a> by
-    <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
-  </p>
+  <section class="project-3d-viewer">
+    <h2 class="section-title">3D Viewer</h2>
+    <div class="sketchfab-wrapper">
+      <iframe
+        title="Medieval Fantasy Sword"
+        frameborder="0"
+        allowfullscreen
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        src="https://sketchfab.com/models/614b7e6475454ba390695d9227a3fd59/embed">
+      </iframe>
+    </div>
+    <p class="sketchfab-credit neon-subtitle">
+      <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59" target="_blank">View on Sketchfab</a> by
+      <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+    </p>
+  </section>
 
   <div class="section-divider"></div>
 
   <!-- REFERENCES -->
-  <h2 class="section-title">References</h2>
-  <div class="square-gallery">
-    {% assign refs = "Reference01.png,Reference02.png,Reference03.png,Reference04.png" | split: "," %}
-    {% for img in refs %}
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference image">
-      <div class="image-tag">Reference</div>
-    </figure>
-    {% endfor %}
-  </div>
+  <section class="project-references">
+    <h2 class="section-title">References</h2>
+    <div class="square-gallery">
+      {% assign refs = "Reference01.png,Reference02.png,Reference03.png,Reference04.png" | split: "," %}
+      {% for img in refs %}
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference image">
+        <div class="image-tag">Reference</div>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
 
   <div class="section-divider"></div>
 
   <!-- MODELING WORKFLOW -->
-  <h2 class="section-title">Modeling Workflow</h2>
-  <div class="square-gallery">
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High Poly Sculpt">
-      <div class="image-tag">High Poly</div>
-    </figure>
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
-      <div class="image-tag">Low Poly</div>
-    </figure>
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
-    </figure>
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
-      <div class="image-tag">Turnarounds</div>
-    </figure>
-  </div>
+  <section class="project-workflow">
+    <h2 class="section-title">Modeling Workflow</h2>
+    <div class="square-gallery">
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High Poly Sculpt">
+        <div class="image-tag">High Poly</div>
+      </figure>
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+        <div class="image-tag">Low Poly</div>
+      </figure>
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="UV Layout">
+        <div class="image-tag">UV Layout</div>
+      </figure>
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
+        <div class="image-tag">Turnarounds</div>
+      </figure>
+    </div>
+  </section>
 
   <div class="section-divider"></div>
 
   <!-- TEXTURES -->
-  <h2 class="section-title">Textures</h2>
-  <div class="square-gallery">
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="Texture 1">
-      <div class="image-tag">Albedo</div>
-    </figure>
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/texture02.png' | relative_url }}" alt="Texture 2">
-      <div class="image-tag">Roughness / Metalness</div>
-    </figure>
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="Final Texture">
-      <div class="image-tag">Final Texture</div>
-    </figure>
-  </div>
+  <section class="project-textures">
+    <h2 class="section-title">Textures</h2>
+    <div class="square-gallery">
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="Texture 1">
+        <div class="image-tag">Albedo</div>
+      </figure>
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/texture02.png' | relative_url }}" alt="Texture 2">
+        <div class="image-tag">Roughness / Metalness</div>
+      </figure>
+      <figure class="square-image">
+        <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="Final Texture">
+        <div class="image-tag">Final Texture</div>
+      </figure>
+    </div>
+  </section>
 
-  <!-- BACK LINK -->
+  <!-- BACK BUTTON -->
   <div class="project-back">
     <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
   </div>
