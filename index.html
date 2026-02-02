@@ -12,13 +12,12 @@ title: "Portfolio"
   </header>
 
   <!-- FEATURED PROJECTS -->
-  <section>
+  <section class="featured-projects">
     <h2 class="section-title">🎮 Featured Projects</h2>
+
     <div class="project-grid">
-      {% assign projects = 
-        "3dart,2dart,leveldesign,unityprojects,designweek,cardgame" | split: "," %}
-      {% assign thumbs = 
-        "3dart.png,2dart.png,leveldesign.png,unityprojects.png,designweek.png,cardgame01.png" | split: "," %}
+      {% assign projects = "3dart,2dart,leveldesign,unityprojects,designweek,cardgame" | split: "," %}
+      {% assign thumbs = "3dart.png,2dart.png,leveldesign.png,unityprojects.png,designweek.png,cardgame01.png" | split: "," %}
 
       {% for i in (0..5) %}
       <div class="project-card">
@@ -29,7 +28,6 @@ title: "Portfolio"
         </a>
       </div>
       {% endfor %}
-
     </div>
   </section>
 
