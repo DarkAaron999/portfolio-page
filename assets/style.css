@@ -24,7 +24,8 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
+  height: 100%;
   overflow-y: scroll;
   scrollbar-gutter: stable;
 }
@@ -34,6 +35,12 @@ body {
   color: var(--text);
   font-family: Arial, sans-serif;
   line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex: 1;
 }
 
 a {
@@ -52,7 +59,7 @@ a {
 }
 
 .site-header h1 {
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 800;
   color: var(--accent);
   text-shadow: 0 0 4px var(--accent);
@@ -102,34 +109,25 @@ a {
 }
 
 /* =========================================================
-   FULL-WIDTH HERO BANNER
+   PAGE TITLE (REPLACES HERO BANNER)
    ========================================================= */
-.hero-banner {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  height: 260px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  margin-bottom: var(--space-md);
-}
-
-/* Center hero text */
-.hero-banner-content {
-  position: absolute;
-  bottom: var(--space-lg);
-  left: 50%;
-  transform: translateX(-50%);
+.page-welcome {
   text-align: center;
-  width: 100%;
-}
-
-/* Soft neon hero text */
-.neon-title {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-xs);
   font-size: 2.4rem;
   font-weight: 800;
+}
+
+.page-subtitle {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Soft neon glow */
+.neon-title {
   color: var(--accent);
   text-shadow:
     0 0 3px var(--accent),
@@ -137,9 +135,7 @@ a {
 }
 
 .neon-subtitle {
-  font-size: 1.1rem;
   color: var(--accent2);
-  font-weight: bold;
   text-shadow:
     0 0 2px var(--accent2),
     0 0 4px rgba(168, 85, 255, 0.4);
@@ -197,15 +193,15 @@ a {
 }
 
 /* =========================================================
-   FOOTER — REDUCED SPACING
+   FOOTER — STAYS AT BOTTOM
    ========================================================= */
 .site-footer {
-  margin-top: var(--space-lg);
   padding: var(--space-sm);
   text-align: center;
   background: #0b1121;
   color: var(--muted);
   border-top: 1px solid var(--border);
+  margin-top: var(--space-lg);
 }
 
 .footer-email {
