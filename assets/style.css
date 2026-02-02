@@ -6,7 +6,7 @@
   --panel: #0d1224;
   --header: #11192e;
   --accent: #00f6ff;
-  --accent2: #f5f5f5; /* off‑white replacement */
+  --accent2: #f5f5f5; /* off‑white */
   --text: #e5e7eb;
   --muted: #9ca3af;
   --border: #1f2937;
@@ -242,7 +242,8 @@ a {
 /* =========================================================
    CENTERED OVERVIEW TEXT
    ========================================================= */
-.project-overview p {
+.project-overview p,
+.project-overview-text {
   text-align: center;
   max-width: 900px;
   margin: 0 auto var(--space-lg);
@@ -285,6 +286,34 @@ a {
   border-radius: 4px;
   color: var(--accent);
   text-shadow: 0 0 4px var(--accent);
+}
+
+/* =========================================================
+   FULL-WIDTH 2D ART IMAGES
+   ========================================================= */
+.project-image-block {
+  text-align: center;
+  margin: var(--space-lg) auto;
+}
+
+.project-image-full {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #151a2e;
+}
+
+.project-image-title {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  color: var(--accent);
+  font-weight: 700;
+  text-shadow:
+    0 0 3px var(--accent),
+    0 0 6px rgba(0, 246, 255, 0.4);
 }
 
 /* =========================================================
