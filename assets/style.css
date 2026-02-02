@@ -163,7 +163,7 @@ a {
   text-align: center;
   color: var(--accent);
   font-weight: 800;
-  margin-bottom: var(--space-lg);
+  margin: var(--space-lg) 0 var(--space-md);
   text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
 }
 
@@ -180,9 +180,26 @@ a {
 }
 
 /* =========================================================
+   PROJECT BODY
+   ========================================================= */
+.project-body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-body p,
+.project-body ul {
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+.project-body ul {
+  padding-left: var(--space-md);
+}
+
+/* =========================================================
    CENTERED OVERVIEW TEXT
    ========================================================= */
-.project-overview p,
 .project-overview-text {
   text-align: center;
   max-width: 900px;
@@ -257,147 +274,17 @@ a {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER
+   ITCH.IO EMBED (CENTERED)
    ========================================================= */
-.sketchfab-wrapper {
-  width: 100%;
-  max-width: 900px;
-  margin: var(--space-lg) auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.sketchfab-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.sketchfab-credit {
-  text-align: center;
-  margin-top: var(--space-sm);
-}
-
-/* =========================================================
-   SQUARE IMAGE GALLERY
-   ========================================================= */
-.square-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
-}
-
-.square-image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #151a2e;
-}
-
-.square-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-tag {
-  position: absolute;
-  bottom: var(--space-xs);
-  right: var(--space-xs);
-  background: rgba(0,0,0,0.7);
-  padding: var(--space-xs) var(--space-sm);
-  font-size: 0.75rem;
-  border-radius: 4px;
-  color: var(--accent);
-  text-shadow: 0 0 4px var(--accent);
-}
-
-/* =========================================================
-   FULL-WIDTH 2D ART IMAGES
-   ========================================================= */
-.project-image-block {
-  text-align: center;
-  margin: var(--space-lg) auto;
-}
-
-.project-image-full {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #151a2e;
-}
-
-.project-image-title {
-  text-align: center;
-  margin-bottom: var(--space-sm);
-  color: var(--accent);
-  font-weight: 700;
-  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0, 246, 255, 0.4);
-}
-
-/* =========================================================
-   PDF VIEWER (LEVEL DESIGN)
-   ========================================================= */
-.pdf-wrapper {
-  width: 100%;
-  max-width: 1000px;
-  margin: var(--space-lg) auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: #151a2e;
-}
-
-.pdf-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* =========================================================
-   CONTACT PAGE
-   ========================================================= */
-.contact-center {
-  text-align: center;
-  margin-bottom: var(--space-lg);
-}
-
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
-.lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-}
-
-.lightbox-overlay.active {
+.embed-wrapper {
   display: flex;
+  justify-content: center;
+  margin: var(--space-lg) 0;
 }
 
-.lightbox-overlay img {
-  max-width: 90%;
-  max-height: 80%;
+.embed-wrapper iframe {
   border-radius: 12px;
-}
-
-.lightbox-overlay span {
-  margin-top: var(--space-sm);
-  color: var(--muted);
+  border: 1px solid var(--border);
 }
 
 /* =========================================================
