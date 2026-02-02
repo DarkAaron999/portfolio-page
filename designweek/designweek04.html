@@ -4,187 +4,194 @@ title: "Design Week 04 — Hybrid Puzzle Game with Physical Integration"
 description: "A digital puzzle game supported by a physical component. I contributed concept pitches, system design, art, animation, Unity setup, and technical implementation for the final storybook prototype."
 ---
 
-<h1 class="project-title">Design Week 04 — Hybrid Puzzle Game with Physical Integration</h1>
-<p class="project-subtitle">
-  A digital puzzle game supported by a meaningful physical component. This week pushed me to think across mediums, pitch confidently, and take on a technical artist role while helping assemble the final Unity prototype.
-</p>
+<div class="container fade-in">
 
-<div class="project-body">
+  <h1 class="page-welcome neon-title">Design Week 04 — Hybrid Puzzle Game</h1>
+  <p class="project-subtitle neon-subtitle">
+    A digital puzzle game supported by a meaningful physical component. This week pushed me to think across mediums,
+    pitch confidently, and take on a technical artist role while helping assemble the final Unity prototype.
+  </p>
 
-  <!-- DESIGN CHALLENGE -->
-  <h2>Design Challenge</h2>
-  <p>
-    The goal for this week was to create a <strong>digital puzzle game</strong> that relied on a <strong>physical component</strong> to help players solve the puzzles. 
+  <p class="project-overview-text">
+    The goal for this week was to create a <strong>digital puzzle game</strong> that relied on a
+    <strong>physical component</strong> to help players solve the puzzles.
     The physical element needed to feel essential, not decorative, and the digital experience had to be built around it.
   </p>
 
-  <!-- INITIAL CONCEPT -->
-  <h2>My Initial Concept — Planet Rotation Puzzle</h2>
-  <p>
-    My first idea explored something I’ve always been drawn to: space, planets, and orbital patterns. 
-    I pitched a <strong>solar‑system rotation puzzle</strong> where players align planets so that specific connection points form a path from one world to the next.
+  <div class="section-divider"></div>
+
+  <h2 class="section-title">My Initial Concept — Planet Rotation Puzzle</h2>
+
+  <p class="project-overview-text">
+    My first idea explored something I’ve always been drawn to: space, planets, and orbital patterns.
+    I pitched a <strong>solar‑system rotation puzzle</strong> where players align planets so that specific connection points form a path.
   </p>
 
-  <p>
-    The physical component was a <strong>printed star map</strong> showing all planetary connection points. 
+  <p class="project-overview-text">
+    The physical component was a <strong>printed star map</strong> showing all planetary connection points.
     Players would use the map to plan rotations and understand how each planet linked to the next.
   </p>
 
-  <ul>
+  <ul class="project-body">
     <li><strong>Theme:</strong> Solar system / planetary alignment</li>
     <li><strong>Structure:</strong> Non‑linear, multi‑area, no time limit</li>
     <li><strong>Physical Component:</strong> A map revealing all connection points</li>
     <li><strong>My Work:</strong> Early sketches, system layout, puzzle flow</li>
   </ul>
 
-</div>
+  <div class="project-image-block">
+    <h3 class="project-image-title">Planet Rotation Concept Sketch</h3>
+    <img class="project-image-full" src="{{ '/assets/designweek04assets/images/planetrotationsketch.png' | relative_url }}">
+  </div>
 
-<div class="project-image-block">
-  <h3 class="project-image-title">Planet Rotation Concept Sketch</h3>
-  <img class="project-image-full" src="{{ '/assets/designweek04assets/images/planetrotationsketch.png' | relative_url }}">
-</div>
+  <div class="section-divider"></div>
 
-<div class="project-body">
+  <h2 class="section-title">My Proposed Design — <em>The Maze of Code</em></h2>
 
-  <!-- MAZE OF CODE -->
-  <h2>My Proposed Design — <em>The Maze of Code</em></h2>
-  <p>
-    After sharing our initial concepts, we moved into a proposal phase. 
-    My formal pitch was a logic‑driven puzzle game called <strong>The Maze of Code</strong>, where players help a knight escape a maze by assembling blocks of code.
+  <p class="project-overview-text">
+    My formal pitch was a logic‑driven puzzle game called <strong>The Maze of Code</strong>,
+    where players help a knight escape a maze by assembling blocks of code.
   </p>
 
-  <p>
+  <p class="project-overview-text">
     The goal was to teach players how to think in small, logical steps — almost like a gentle introduction to programming.
   </p>
 
-  <h3>Core Mechanics</h3>
-  <ul>
-    <li><strong>Green blocks:</strong> Move ( ) units in a chosen direction</li>
+  <h3 class="section-title">Core Mechanics</h3>
+
+  <ul class="project-body">
+    <li><strong>Green blocks:</strong> Move units in a chosen direction</li>
     <li><strong>Yellow blocks:</strong> Pick up key</li>
     <li><strong>Red blocks:</strong> Attack enemy</li>
     <li>Players drag and drop blocks, then insert values to execute actions</li>
   </ul>
 
-  <h3>Physical Component</h3>
-  <p>
-    A printed sheet of <strong>code comments</strong> explaining how each block works — essentially a reference guide players needed to solve the puzzles.
+  <h3 class="section-title">Physical Component</h3>
+
+  <p class="project-overview-text">
+    A printed sheet of <strong>code comments</strong> explaining how each block works — a reference guide players needed to solve the puzzles.
   </p>
 
-  <h3>Teach → Test → Challenge Structure</h3>
-  <ul>
+  <h3 class="section-title">Teach → Test → Challenge Structure</h3>
+
+  <ul class="project-body">
     <li><strong>Maze 1:</strong> Teaches movement</li>
     <li><strong>Maze 2:</strong> Introduces pick‑ups</li>
     <li><strong>Maze 3:</strong> Introduces enemies</li>
-    <li><strong>Final Maze:</strong> Combines everything into a full challenge</li>
+    <li><strong>Final Maze:</strong> Combines everything</li>
   </ul>
 
-</div>
+  <div class="project-image-block">
+    <h3 class="project-image-title">Maze of Code — Early Sketch</h3>
+    <img class="project-image-full" src="{{ '/assets/designweek04assets/images/maze.png' | relative_url }}">
+  </div>
 
-<div class="project-image-block">
-  <h3 class="project-image-title">Maze of Code — Early Sketch</h3>
-  <img class="project-image-full" src="{{ '/assets/designweek04assets/images/maze.png' | relative_url }}">
-</div>
+  <div class="section-divider"></div>
 
-<div class="project-body">
+  <h2 class="section-title">Team’s Chosen Direction — Chessboard Puzzle</h2>
 
-  <!-- TEAM DIRECTION -->
-  <h2>The Team’s Chosen Direction — Chessboard Puzzle Game</h2>
-  <p>
-    As a team, we reviewed all proposals and selected a concept built around a <strong>chessboard puzzle</strong>. 
+  <p class="project-overview-text">
+    As a team, we reviewed all proposals and selected a concept built around a <strong>chessboard puzzle</strong>.
     The idea was to deduce the correct moves for each piece to reach its destination.
   </p>
 
-  <ul>
+  <ul class="project-body">
     <li><strong>Structure:</strong> Level‑based progression</li>
     <li><strong>Puzzle Type:</strong> Logical / environmental</li>
     <li><strong>Mechanics:</strong> Dragging cards, activating levers, pressure plates, avoiding enemies</li>
     <li><strong>Physical Component:</strong> A real chessboard used to plan moves</li>
   </ul>
 
-  <p>
+  <p class="project-overview-text">
     It was a strong idea, but during feedback we realized it lacked emotional clarity and didn’t fully connect the physical and digital components.
   </p>
 
-  <!-- FINAL GAME -->
-  <h2>Pivot to the Final Game — <em>The Knight and the Mad King</em></h2>
-  <p>
-    After feedback, we pivoted to a more cohesive and story‑driven concept: a <strong>storybook puzzle game</strong> called <em>The Knight and the Mad King</em>.
+  <div class="section-divider"></div>
+
+  <h2 class="section-title">Pivot to the Final Game — <em>The Knight and the Mad King</em></h2>
+
+  <p class="project-overview-text">
+    After feedback, we pivoted to a more cohesive and story‑driven concept:
+    a <strong>storybook puzzle game</strong> called <em>The Knight and the Mad King</em>.
   </p>
 
-  <h3>Player Role & Perspective</h3>
-  <p>
+  <h3 class="section-title">Player Role & Perspective</h3>
+
+  <p class="project-overview-text">
     The player must deduce the story using clues and context, then accurately depict the event shown in the book to progress.
   </p>
 
-  <h3>Game Structure</h3>
-  <ul>
+  <h3 class="section-title">Game Structure</h3>
+
+  <ul class="project-body">
     <li>Linear progression</li>
     <li>Multi‑area storybook</li>
     <li>Flip to the next page when the event is correctly depicted</li>
   </ul>
 
-  <h3>Puzzle Type</h3>
-  <p>
+  <h3 class="section-title">Puzzle Type</h3>
+
+  <p class="project-overview-text">
     Environmental puzzles based on interpreting visual clues and placing the correct sprites in the correct areas.
   </p>
 
-  <h3>Physical Component — Origami Clues</h3>
-  <p>
-    Players fold a sheet of paper in specific ways to reveal hidden hints. 
-    This became one of the most creative and memorable physical integrations we’ve done so far.
+  <h3 class="section-title">Physical Component — Origami Clues</h3>
+
+  <p class="project-overview-text">
+    Players fold a sheet of paper in specific ways to reveal hidden hints.
+    This became one of the most creative and memorable physical integrations we’ve done.
   </p>
 
-  <!-- YOUR ROLE -->
-  <h2>My Role — Technical Artist, Visual Designer & Unity Integrator</h2>
-  <p>
-    This week pushed me into a role I really enjoyed: <strong>technical artist</strong>. 
-    I worked across both the visual and functional sides of the project, and helped assemble the final prototype in <strong>Unity</strong>.
+  <div class="section-divider"></div>
+
+  <h2 class="section-title">My Role — Technical Artist & Unity Integrator</h2>
+
+  <p class="project-overview-text">
+    This week pushed me into a role I really enjoyed: <strong>technical artist</strong>.
+    I worked across both the visual and functional sides of the project, and helped assemble the final prototype in Unity.
   </p>
 
-  <ul>
+  <ul class="project-body">
     <li>Designed and illustrated the storybook</li>
     <li>Created animations for page transitions and interactive elements</li>
     <li>Produced character art, including multiple king illustrations</li>
-    <li>Set up each background image inside the Unity scene</li>
+    <li>Set up each background image inside Unity</li>
     <li>Integrated sprites, puzzle logic, and interactive elements</li>
     <li>Ensured the book felt tactile, readable, and cohesive</li>
-    <li>Helped assemble the playable Unity prototype through iteration and testing</li>
+    <li>Helped assemble the playable Unity prototype</li>
   </ul>
 
-  <p>
+  <p class="project-overview-text">
     Working in Unity allowed us to rapidly test puzzle logic, refine interactions, and ensure the storybook felt alive and responsive.
   </p>
 
-</div>
+  <div class="project-image-block">
+    <h3 class="project-image-title">Storybook Animation</h3>
+    <img class="project-image-full" src="{{ '/assets/designweek04assets/images/bookainmation.png' | relative_url }}">
+  </div>
 
-<!-- FULL-WIDTH IMAGE BLOCKS -->
-<div class="project-image-block">
-  <h3 class="project-image-title">Storybook Animation</h3>
-  <img class="project-image-full" src="{{ '/assets/designweek04assets/images/bookainmation.png' | relative_url }}">
-</div>
+  <div class="project-image-block">
+    <h3 class="project-image-title">Character Art — Kings</h3>
+    <img class="project-image-full" src="{{ '/assets/designweek04assets/images/characters.png' | relative_url }}">
+  </div>
 
-<div class="project-image-block">
-  <h3 class="project-image-title">Character Art — Kings</h3>
-  <img class="project-image-full" src="{{ '/assets/designweek04assets/images/characters.png' | relative_url }}">
-</div>
+  <div class="project-image-block">
+    <h3 class="project-image-title">Static Page Layout</h3>
+    <img class="project-image-full" src="{{ '/assets/designweek04assets/images/static.png' | relative_url }}">
+  </div>
 
-<div class="project-image-block">
-  <h3 class="project-image-title">Static Page Layout</h3>
-  <img class="project-image-full" src="{{ '/assets/designweek04assets/images/static.png' | relative_url }}">
-</div>
+  <div class="section-divider"></div>
 
-<div class="project-body">
+  <h2 class="section-title">Takeaway</h2>
 
-  <!-- TAKEAWAY -->
-  <h2>Takeaway</h2>
-  <p>
-    This week taught me how powerful hybrid design can be when the physical and digital elements truly support each other. 
-    I also discovered how much I enjoy technical art — building something that feels alive, functional, and visually cohesive. 
-    Working in <strong>Unity</strong> made the prototype feel real, and it was one of the most creatively fulfilling weeks so far.
+  <p class="project-overview-text">
+    This week taught me how powerful hybrid design can be when the physical and digital elements truly support each other.
+    I also discovered how much I enjoy technical art — building something that feels alive, functional, and visually cohesive.
+    Working in <strong>Unity</strong> made the prototype feel real and creatively fulfilling.
   </p>
 
-</div>
+  <div class="project-back">
+    <a href="{{ '/projects/designweek.html' | relative_url }}">← Back to Design Projects</a>
+  </div>
 
-<div class="project-back">
-  <a href="{{ '/projects/designweek.html' | relative_url }}">← Back to Design Projects</a>
 </div>
