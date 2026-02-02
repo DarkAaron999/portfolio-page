@@ -3,22 +3,25 @@ layout: default
 title: "Pine Tree"
 ---
 
-<div class="container">
+<div class="fade-in">
 
-  <h1 class="project-title">Pine Tree</h1>
-  <p class="project-subtitle">Stylized pine tree created using high‑poly baking and hand‑painted textures</p>
+  <!-- PAGE TITLE -->
+  <h1 class="page-welcome neon-title">Pine Tree</h1>
+  <p class="page-subtitle neon-subtitle">Stylized pine tree created using high‑poly baking and hand‑painted textures</p>
 
+  <!-- OVERVIEW -->
   <div class="project-overview">
     <p>
       This stylized pine tree was created using a hybrid workflow: high‑poly sculpting for the branches,
       baking onto a flat plane for leaf detail, and hand‑painted textures for the final look.
-      The normal map was generated using <strong>Materialize</strong> from the baked image exported from Maya.
+      The normal map was generated using Materialize from the baked image exported from Maya.
     </p>
   </div>
 
   <div class="section-divider"></div>
 
-  <h2>3D Viewer</h2>
+  <!-- ===================== SKETCHFAB VIEWER ===================== -->
+  <h2 class="section-title">3D Viewer</h2>
 
   <div class="sketchfab-wrapper">
     <iframe
@@ -32,25 +35,27 @@ title: "Pine Tree"
     </iframe>
   </div>
 
-  <p class="sketchfab-credit">
-    <a href="https://sketchfab.com/3d-models/pine-tree-f5b271218a4545c283ea8d31f7b016a4" target="_blank">Pine Tree</a>
+  <!-- Neon hyperlink credit -->
+  <p class="sketchfab-credit neon-subtitle">
+    <a class="neon-link" href="https://sketchfab.com/3d-models/pine-tree-f5b271218a4545c283ea8d31f7b016a4" target="_blank">Pine Tree</a>
     by
-    <a href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+    <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
     on
-    <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
+    <a class="neon-link" href="https://sketchfab.com" target="_blank">Sketchfab</a>
   </p>
 
   <div class="section-divider"></div>
 
-  <h2>References</h2>
+  <!-- ===================== REFERENCES ===================== -->
+  <h2 class="section-title">References</h2>
 
-  <div class="image-gallery">
-    <figure>
+  <div class="square-gallery">
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/reference01.png' | relative_url }}" alt="">
       <div class="image-tag">Reference</div>
     </figure>
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/reference02.png' | relative_url }}" alt="">
       <div class="image-tag">Reference</div>
     </figure>
@@ -58,26 +63,27 @@ title: "Pine Tree"
 
   <div class="section-divider"></div>
 
-  <h2>Modeling Workflow</h2>
+  <!-- ===================== MODELING WORKFLOW ===================== -->
+  <h2 class="section-title">Modeling Workflow</h2>
 
-  <div class="image-gallery">
+  <div class="square-gallery">
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/modeluv.png' | relative_url }}" alt="">
       <div class="image-tag">UV Layout</div>
     </figure>
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/barkuv.png' | relative_url }}" alt="">
       <div class="image-tag">Bark UV</div>
     </figure>
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/branchesuv.png' | relative_url }}" alt="">
       <div class="image-tag">Branches UV</div>
     </figure>
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/modeltexture.png' | relative_url }}" alt="">
       <div class="image-tag">Model Textured</div>
     </figure>
@@ -86,33 +92,34 @@ title: "Pine Tree"
 
   <div class="section-divider"></div>
 
-  <h2>Textures</h2>
+  <!-- ===================== TEXTURES ===================== -->
+  <h2 class="section-title">Textures</h2>
 
-  <div class="image-gallery">
+  <div class="square-gallery">
 
     <!-- Bark -->
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/bark_bc.png' | relative_url }}" alt="">
       <div class="image-tag">Bark Base Color</div>
     </figure>
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/bark_n.png' | relative_url }}" alt="">
       <div class="image-tag">Bark Normal</div>
     </figure>
 
     <!-- Branches -->
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/branches_bc.png' | relative_url }}" alt="">
       <div class="image-tag">Branches Base Color</div>
     </figure>
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/branches_n.png' | relative_url }}" alt="">
       <div class="image-tag">Branches Normal</div>
     </figure>
 
-    <figure>
+    <figure class="square-image">
       <img src="{{ '/assets/pinetreeassets/images/branches_a.png' | relative_url }}" alt="">
       <div class="image-tag">Branches Alpha</div>
     </figure>
@@ -125,6 +132,7 @@ title: "Pine Tree"
 
 </div>
 
+<!-- ===================== LIGHTBOX ===================== -->
 <div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
   <span>Click anywhere to close</span>
@@ -135,7 +143,7 @@ title: "Pine Tree"
   const lightboxImg = lightbox.querySelector('img');
 
   document.addEventListener('click', (e) => {
-    const img = e.target.closest('.image-gallery img');
+    const img = e.target.closest('.square-gallery img');
     if (img) {
       lightboxImg.src = img.src;
       lightbox.classList.add('active');
