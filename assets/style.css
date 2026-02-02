@@ -1,4 +1,3 @@
-
 /* =========================================================
    GLOBAL THEME
    ========================================================= */
@@ -43,34 +42,30 @@ a {
 }
 
 /* =========================================================
-   HEADER
+   HEADER — REDUCED SPACING
    ========================================================= */
 .site-header {
   background: linear-gradient(135deg, var(--header), #020617);
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
   text-align: center;
   border-bottom: 1px solid var(--border);
 }
 
 .site-header h1 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--accent);
   text-shadow: 0 0 4px var(--accent);
 }
 
 .header-email {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .header-email a {
   color: var(--accent);
   font-weight: bold;
-}
-
-.header-email a:hover {
-  color: var(--accent2);
-  text-shadow: 0 0 6px var(--accent2);
+  text-shadow: 0 0 4px var(--accent);
 }
 
 /* =========================================================
@@ -78,7 +73,7 @@ a {
    ========================================================= */
 .site-nav {
   background: #0b1121;
-  padding: var(--space-sm);
+  padding: var(--space-xs);
   text-align: center;
   border-bottom: 1px solid var(--border);
 }
@@ -95,27 +90,61 @@ a {
 }
 
 /* =========================================================
-   MAIN CONTAINER
+   MAIN CONTAINER — CONTENT HIGHER
    ========================================================= */
 .container {
   max-width: 1100px;
-  margin: var(--space-xl) auto;
-  padding: var(--space-xl);
+  margin: var(--space-lg) auto;
+  padding: var(--space-lg);
   background: var(--panel);
   border-radius: 12px;
   border: 1px solid var(--border);
 }
 
-@media (max-width: 600px) {
-  .container {
-    padding: var(--space-lg);
-  }
+/* =========================================================
+   FULL-WIDTH HERO BANNER
+   ========================================================= */
+.hero-banner {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.hero-banner-content {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+}
+
+/* Neon hero text */
+.neon-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow:
+    0 0 6px var(--accent),
+    0 0 12px var(--accent),
+    0 0 20px rgba(0, 246, 255, 0.6);
+}
+
+.neon-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent2);
+  font-weight: bold;
+  text-shadow:
+    0 0 4px var(--accent2),
+    0 0 10px rgba(168, 85, 255, 0.5);
 }
 
 /* =========================================================
-   TITLES — SOFT NEON + MORE SPACING
+   SECTION TITLE
    ========================================================= */
-.project-title,
 .section-title {
   text-align: center;
   color: var(--accent);
@@ -126,60 +155,6 @@ a {
     0 0 6px rgba(0, 246, 255, 0.4);
 }
 
-.project-card-title {
-  text-align: center;
-  color: var(--accent);
-  font-weight: 700;
-  margin: var(--space-sm) 0 var(--space-xs);
-  line-height: 1.4;
-  text-shadow:
-    0 0 2px var(--accent),
-    0 0 4px rgba(0, 246, 255, 0.4);
-}
-
-.project-subtitle {
-  font-size: 1.15rem;
-  color: var(--muted);
-  text-align: center;
-  margin: 0 auto var(--space-xl);
-  max-width: 900px;
-  line-height: 1.8;
-}
-
-/* =========================================================
-   SOFT NEON SECTION DIVIDER
-   ========================================================= */
-.section-divider {
-  width: 100%;
-  height: 2px;
-  margin: var(--space-xl) 0;
-  border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent),
-    transparent
-  );
-  box-shadow: 0 0 6px rgba(0, 246, 255, 0.35);
-}
-
-/* =========================================================
-   PARAGRAPHS + BULLET POINTS — MORE SPACING
-   ========================================================= */
-p {
-  margin-bottom: var(--space-md);
-  line-height: 1.8;
-}
-
-ul, ol {
-  margin: var(--space-md) 0 var(--space-md) var(--space-lg);
-  line-height: 1.8;
-}
-
-li {
-  margin-bottom: var(--space-sm);
-}
-
 /* =========================================================
    PROJECT GRID
    ========================================================= */
@@ -187,12 +162,11 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-lg);
-  margin-top: var(--space-lg);
-  align-items: start;
+  margin-top: var(--space-md);
 }
 
 /* =========================================================
-   PROJECT CARD — FLEX SAFE (NO OVERLAP)
+   PROJECT CARD
    ========================================================= */
 .project-card {
   background: linear-gradient(#000000, #151a2e);
@@ -200,14 +174,6 @@ li {
   border-radius: 12px;
   overflow: hidden;
   transition: 0.25s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 .project-card:hover {
@@ -216,15 +182,8 @@ li {
   box-shadow: 0 0 12px var(--accent);
 }
 
-/* =========================================================
-   PROJECT CARD IMAGE — AUTO HEIGHT (NO OVERLAP)
-   ========================================================= */
 .project-card-thumb {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  display: block;
-  background: #000;
+  line-height: 0;
 }
 
 .project-card-thumb img {
@@ -235,203 +194,11 @@ li {
 }
 
 /* =========================================================
-   PROJECT CARD TEXT — CENTERED
-   ========================================================= */
-.project-card-text {
-  text-align: center;
-  color: var(--muted);
-  padding: 0 var(--space-md) var(--space-md);
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-/* =========================================================
-   IMAGE GALLERY
-   ========================================================= */
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
-}
-
-.image-gallery figure {
-  background: #151a2e;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  position: relative;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-tag {
-  position: absolute;
-  bottom: var(--space-xs);
-  right: var(--space-xs);
-  background: rgba(0,0,0,0.7);
-  padding: var(--space-xs) var(--space-sm);
-  font-size: 0.75rem;
-  border-radius: 4px;
-  color: var(--accent);
-}
-
-/* =========================================================
-   FULL-WIDTH IMAGES
-   ========================================================= */
-.project-image-block {
-  width: 100%;
-  max-width: 900px;
-  margin: var(--space-xl) auto;
-  text-align: center;
-}
-
-.project-image-full {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-/* =========================================================
-   SKETCHFAB
-   ========================================================= */
-.sketchfab-wrapper {
-  width: 100%;
-  max-width: 900px;
-  margin: var(--space-xl) auto;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.sketchfab-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.sketchfab-credit {
-  text-align: center;
-  margin-top: var(--space-sm);
-  color: var(--muted);
-}
-
-/* =========================================================
-   EMBEDS
-   ========================================================= */
-.embed-wrapper {
-  max-width: 1000px;
-  margin: var(--space-xl) auto;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: #0d1224;
-}
-
-.embed-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.embed-pdf {
-  height: 900px;
-}
-
-@media (max-width: 600px) {
-  .embed-pdf {
-    height: 600px;
-  }
-}
-
-.embed-video,
-.project-video-full {
-  width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-  margin: var(--space-xl) auto;
-  display: block;
-}
-
-.embed-itch {
-  width: 100%;
-  max-width: 900px;
-  height: 600px;
-  margin: var(--space-xl) auto;
-  display: block;
-}
-
-@media (max-width: 600px) {
-  .embed-itch {
-    height: 450px;
-  }
-}
-
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
-.lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-}
-
-.lightbox-overlay.active {
-  display: flex;
-}
-
-.lightbox-overlay img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 12px;
-}
-
-.lightbox-overlay span {
-  margin-top: var(--space-sm);
-  color: var(--muted);
-}
-
-/* =========================================================
-   BACK BUTTON
-   ========================================================= */
-.project-back {
-  text-align: center;
-  margin-top: var(--space-xl);
-}
-
-.project-back a {
-  padding: var(--space-sm) var(--space-md);
-  background: var(--accent);
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
-}
-
-.project-back a:hover {
-  background: var(--accent2);
-  color: white;
-}
-
-/* =========================================================
-   FOOTER
+   FOOTER — REDUCED SPACING
    ========================================================= */
 .site-footer {
-  margin-top: var(--space-xl);
-  padding: var(--space-md);
+  margin-top: var(--space-lg);
+  padding: var(--space-sm);
   text-align: center;
   background: #0b1121;
   color: var(--muted);
@@ -439,15 +206,11 @@ li {
 }
 
 .footer-email {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .footer-email a {
   color: var(--accent);
   font-weight: bold;
-}
-
-.footer-email a:hover {
-  color: var(--accent2);
-  text-shadow: 0 0 6px var(--accent2);
+  text-shadow: 0 0 4px var(--accent);
 }
