@@ -3,139 +3,110 @@ layout: default
 title: "3D Art"
 ---
 
-<div class="fade-in">
+<div class="container fade-in">
 
   <!-- PAGE TITLE -->
-  <h1 class="page-welcome neon-title">3D Art</h1>
-  <p class="page-subtitle neon-subtitle">Models • Props • Environments • Fantasy Assets</p>
+  <header class="page-header text-center">
+    <h1 class="page-welcome neon-title">3D Art</h1>
+    <p class="page-subtitle neon-subtitle">Models • Props • Environments • Fantasy Assets</p>
+  </header>
 
   <!-- ===================== WEAPONS ===================== -->
-  <h2 class="section-title fade-in">⚔️ Weapons</h2>
+  <section class="project-section">
+    <h2 class="section-title text-center">⚔️ Weapons</h2>
+    <div class="project-grid center-content">
 
-  <div class="project-grid fade-in">
+      {% assign weapons = "sword,mace,battleaxe01" | split: "," %}
+      {% assign weapon_titles = "Medieval Fantasy Sword,Medieval Fantasy Mace,Medieval Fantasy Battle Axe" | split: "," %}
+      {% assign weapon_thumbs = "swordthumbnail.png,macethumbnail.png,battleaxethumbnail.png" | split: "," %}
 
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/sword.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/swordthumbnail.png' | relative_url }}" alt="Sword">
-        </div>
-        <h3 class="project-card-title">Medieval Fantasy Sword</h3>
-      </a>
+      {% for i in (0..2) %}
+      <div class="project-card hover-zoom">
+        <a class="project-card-link" href="{{ '/3dmodels/' | append: weapons[i] | append: '.html' | relative_url }}">
+          <div class="project-card-thumb">
+            <img src="{{ '/assets/3dartthumbnails/images/' | append: weapon_thumbs[i] | relative_url }}" alt="{{ weapon_titles[i] }}">
+          </div>
+          <h3 class="project-card-title text-center">{{ weapon_titles[i] }}</h3>
+        </a>
+      </div>
+      {% endfor %}
+
     </div>
-
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/mace.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/macethumbnail.png' | relative_url }}" alt="Mace">
-        </div>
-        <h3 class="project-card-title">Medieval Fantasy Mace</h3>
-      </a>
-    </div>
-
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/battleaxe01.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/battleaxethumbnail.png' | relative_url }}" alt="Battle Axe">
-        </div>
-        <h3 class="project-card-title">Medieval Fantasy Battle Axe</h3>
-      </a>
-    </div>
-
-  </div>
+  </section>
 
   <div class="section-divider"></div>
 
   <!-- ===================== NATURE ===================== -->
-  <h2 class="section-title fade-in">🌿 Nature</h2>
+  <section class="project-section">
+    <h2 class="section-title text-center">🌿 Nature</h2>
+    <div class="project-grid center-content">
 
-  <div class="project-grid fade-in">
+      {% assign nature = "pinetree01,fantasyplants,rocks" | split: "," %}
+      {% assign nature_titles = "Pine Tree,Fantasy Plants,Rock Set" | split: "," %}
+      {% assign nature_thumbs = "pinetreethumbnail.png,fantasyplantsthumbnail.png,rocksthumbnail.png" | split: "," %}
 
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/pinetree01.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/pinetreethumbnail.png' | relative_url }}" alt="Pine Tree">
-        </div>
-        <h3 class="project-card-title">Pine Tree</h3>
-      </a>
+      {% for i in (0..2) %}
+      <div class="project-card hover-zoom">
+        <a class="project-card-link" href="{{ '/3dmodels/' | append: nature[i] | append: '.html' | relative_url }}">
+          <div class="project-card-thumb">
+            <img src="{{ '/assets/3dartthumbnails/images/' | append: nature_thumbs[i] | relative_url }}" alt="{{ nature_titles[i] }}">
+          </div>
+          <h3 class="project-card-title text-center">{{ nature_titles[i] }}</h3>
+        </a>
+      </div>
+      {% endfor %}
+
     </div>
-
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/fantasyplants.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/fantasyplantsthumbnail.png' | relative_url }}" alt="Fantasy Plants">
-        </div>
-        <h3 class="project-card-title">Fantasy Plants</h3>
-      </a>
-    </div>
-
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/rocks.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/rocksthumbnail.png' | relative_url }}" alt="Rocks">
-        </div>
-        <h3 class="project-card-title">Rock Set</h3>
-      </a>
-    </div>
-
-  </div>
+  </section>
 
   <div class="section-divider"></div>
 
   <!-- ===================== ENVIRONMENT & PROPS ===================== -->
-  <h2 class="section-title fade-in">🏗️ Environment & Props</h2>
+  <section class="project-section">
+    <h2 class="section-title text-center">🏗️ Environment & Props</h2>
+    <div class="project-grid center-content">
 
-  <div class="project-grid fade-in">
+      {% assign envprops = "factoryassets,kitchen,alchemyhouse" | split: "," %}
+      {% assign envprops_titles = "Factory Assets,Kitchen Scene,Alchemy House" | split: "," %}
+      {% assign envprops_thumbs = "factoryassetsthumbnail.png,kitchenthumbnail.png,alchemyhousethumbnail.png" | split: "," %}
 
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/factoryassets.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/factoryassetsthumbnail.png' | relative_url }}" alt="Factory Assets">
-        </div>
-        <h3 class="project-card-title">Factory Assets</h3>
-      </a>
+      {% for i in (0..2) %}
+      <div class="project-card hover-zoom">
+        <a class="project-card-link" href="{{ '/3dmodels/' | append: envprops[i] | append: '.html' | relative_url }}">
+          <div class="project-card-thumb">
+            <img src="{{ '/assets/3dartthumbnails/images/' | append: envprops_thumbs[i] | relative_url }}" alt="{{ envprops_titles[i] }}">
+          </div>
+          <h3 class="project-card-title text-center">{{ envprops_titles[i] }}</h3>
+        </a>
+      </div>
+      {% endfor %}
+
     </div>
-
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/kitchen.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/kitchenthumbnail.png' | relative_url }}" alt="Kitchen">
-        </div>
-        <h3 class="project-card-title">Kitchen Scene</h3>
-      </a>
-    </div>
-
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/alchemyhouse.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/alchemyhousethumbnail.png' | relative_url }}" alt="Alchemy House">
-        </div>
-        <h3 class="project-card-title">Alchemy House</h3>
-      </a>
-    </div>
-
-  </div>
+  </section>
 
   <div class="section-divider"></div>
 
   <!-- ===================== LOGOS ===================== -->
-  <h2 class="section-title fade-in">🎨 Logos & Branding</h2>
+  <section class="project-section">
+    <h2 class="section-title text-center">🎨 Logos & Branding</h2>
+    <div class="project-grid center-content">
 
-  <div class="project-grid fade-in">
+      <div class="project-card hover-zoom">
+        <a class="project-card-link" href="{{ '/3dmodels/lgglogo.html' | relative_url }}">
+          <div class="project-card-thumb">
+            <img src="{{ '/assets/3dartthumbnails/images/lgglogothumbnail.png' | relative_url }}" alt="LGG Logo">
+          </div>
+          <h3 class="project-card-title text-center">LGG Logo</h3>
+        </a>
+      </div>
 
-    <div class="project-card hover-zoom">
-      <a class="project-card-link" href="{{ '/3dmodels/lgglogo.html' | relative_url }}">
-        <div class="project-card-thumb">
-          <img src="{{ '/assets/3dartthumbnails/images/lgglogothumbnail.png' | relative_url }}" alt="LGG Logo">
-        </div>
-        <h3 class="project-card-title">LGG Logo</h3>
-      </a>
     </div>
-
-  </div>
+  </section>
 
   <div class="section-divider"></div>
 
-  <div class="project-back fade-in">
+  <!-- BACK LINK -->
+  <div class="project-back text-center">
     <a href="{{ '/' | relative_url }}">← Back to Home</a>
   </div>
 
