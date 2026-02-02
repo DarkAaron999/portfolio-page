@@ -1,23 +1,11 @@
-/* =========================================================
-   GLOBAL THEME — CLEAN V2
-   ========================================================= */
 :root {
   --bg: #050816;
   --panel: #0d1224;
-  --panel-soft: #121833;
-  --header: #0b1121;
-
-  --accent-strong: #00f6ff;
-  --accent-soft: #7feeff;
-  --accent-glow: rgba(0, 246, 255, 0.35);
-
-  --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
-
+  --accent: #00f6ff;
+  --accent2: #f5f5f5;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
   --border: #1f2937;
-
-  --radius-sm: 6px;
-  --radius-md: 12px;
 
   --space-xs: 8px;
   --space-sm: 14px;
@@ -26,270 +14,70 @@
   --space-xl: 56px;
 }
 
-/* =========================================================
-   RESET
-   ========================================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  line-height: 1.75;
+body {
+  font-family: Arial, sans-serif;
   background: var(--bg);
-  color: var(--text-main);
-  overflow-y: scroll;
-}
-
-a {
-  text-decoration: none;
-  color: var(--accent-strong);
-  transition: 0.2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--accent-strong);
-  outline-offset: 2px;
-}
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-.site-header {
-  background: linear-gradient(135deg, var(--header), #020617);
-  text-align: center;
-  padding: var(--space-lg) var(--space-md);
-  border-bottom: 1px solid var(--border);
-}
-
-.site-header h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: var(--accent-strong);
-  text-shadow: 0 0 4px var(--accent-glow);
-}
-
-.header-role {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  margin-top: var(--space-xs);
-}
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-.site-nav {
-  background: var(--header);
-  padding: var(--space-xs);
-  text-align: center;
-  border-bottom: 1px solid var(--border);
-}
-
-.site-nav a {
-  color: var(--text-muted);
-  margin: 0 var(--space-sm);
-  font-weight: 600;
-}
-
-.site-nav a:hover {
-  color: var(--accent-strong);
-}
-
-/* =========================================================
-   MAIN CONTAINER
-   ========================================================= */
-main.container {
-  flex: 1;
+  color: var(--text);
+  line-height: 1.75;
 }
 
 .container {
   max-width: 1100px;
+  width: 95%;
   margin: var(--space-lg) auto;
   padding: var(--space-lg);
   background: var(--panel);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
   border: 1px solid var(--border);
 }
 
-/* =========================================================
-   PAGE TITLES
-   ========================================================= */
-.page-title, .project-title {
+.page-title {
   text-align: center;
   font-size: 2.4rem;
   font-weight: 800;
-  color: var(--accent-strong);
+  color: var(--accent);
+  text-shadow: 0 0 4px var(--accent);
   margin-bottom: var(--space-sm);
-  text-shadow: 0 0 4px var(--accent-glow);
 }
 
-.page-subtitle, .project-subtitle {
+.page-subtitle {
   text-align: center;
-  color: var(--text-muted);
+  color: var(--accent2);
+  font-weight: bold;
   margin-bottom: var(--space-lg);
+  text-shadow: 0 0 3px var(--accent2);
 }
 
-/* =========================================================
-   SECTION TITLES
-   ========================================================= */
 .section-title {
   text-align: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--accent-soft);
+  font-weight: 800;
+  color: var(--accent);
   margin: var(--space-lg) 0 var(--space-md);
+  text-shadow: 0 0 3px var(--accent), 0 0 6px rgba(0,246,255,0.4);
 }
 
-/* =========================================================
-   SECTION DIVIDER
-   ========================================================= */
 .section-divider {
   height: 2px;
-  width: 100%;
-  margin: var(--space-xl) 0;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   border-radius: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-strong), transparent);
-  opacity: 0.6;
+  margin: var(--space-xl) 0;
+  box-shadow: 0 0 6px rgba(0,246,255,0.35);
 }
 
-/* =========================================================
-   PROJECT BODY
-   ========================================================= */
-.project-body {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.project-body p,
-.project-body ul {
-  margin-bottom: var(--space-md);
-  line-height: 1.8;
-}
-
-.project-body ul {
-  padding-left: var(--space-md);
-}
-
-/* =========================================================
-   IMAGE & VIDEO BLOCKS
-   ========================================================= */
-.project-image-block, .project-video-block, .sketchfab-wrapper {
-  text-align: center;
-  margin: var(--space-lg) auto;
-}
-
-.project-image-title, .project-video-title {
-  color: var(--accent-soft);
-  font-weight: 600;
-  margin-bottom: var(--space-sm);
-}
-
-.project-image-full, .project-video-full, .embed-frame iframe {
-  max-width: 100%;
-  width: 100%;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--panel-soft);
-}
-
-/* =========================================================
-   SKETCHFAB CREDIT
-   ========================================================= */
-.sketchfab-credit {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: var(--space-sm);
-}
-
-/* =========================================================
-   PROJECT GRID
-   ========================================================= */
-.project-grid {
+.square-gallery {
   display: grid;
-  gap: var(--space-lg);
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
-@media (min-width: 1024px) {
-  .project-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (min-width: 600px) and (max-width: 1023px) {
-  .project-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 599px) {
-  .project-grid { grid-template-columns: 1fr; }
-}
-
-/* =========================================================
-   PROJECT CARD
-   ========================================================= */
-.project-card {
-  background: linear-gradient(#050816, var(--panel-soft));
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-strong);
-  box-shadow: 0 0 12px var(--accent-glow);
-}
-
-.project-card img {
-  width: 100%;
-  display: block;
-}
-
-.project-card-title {
-  text-align: center;
-  font-weight: 700;
-  color: var(--accent-soft);
-  margin: var(--space-sm) 0 var(--space-xs);
-}
-
-.project-card-text {
-  text-align: center;
-  padding: 0 var(--space-md) var(--space-md);
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-/* =========================================================
-   BUTTONS & BACK LINK
-   ========================================================= */
-.primary-button, .project-back a {
-  display: inline-block;
-  padding: var(--space-sm) var(--space-md);
-  background: var(--accent-strong);
-  color: #000;
-  font-weight: bold;
-  border-radius: var(--radius-sm);
-  text-align: center;
-  transition: 0.2s ease;
-}
-
-.primary-button:hover, .project-back a:hover {
-  background: var(--accent-soft);
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-.site-footer {
-  background: var(--header);
-  padding: var(--space-sm);
-  text-align: center;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border);
-}
+.square-image {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  b
