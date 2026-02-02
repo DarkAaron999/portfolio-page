@@ -1,35 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/style.css?v=5' | relative_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/style.css?v=4' | relative_url }}">
 </head>
 
 <body>
+
+  <!-- FULL-WIDTH HEADER -->
   <header class="site-header">
-    <h1 class="site-title">Aaron Rennick</h1>
+    <h1>Aaron Rennick</h1>
+
     <div class="header-email">
       <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
     </div>
   </header>
 
+  <!-- FULL-WIDTH NAV -->
   <nav class="site-nav">
     <a href="{{ '/' | relative_url }}">Home</a>
     <a href="{{ '/about.html' | relative_url }}">About</a>
     <a href="{{ '/contact.html' | relative_url }}">Contact</a>
   </nav>
 
+  <!-- CONTENT CONTAINER (ONLY ONE) -->
   <main class="container">
     {{ content }}
   </main>
 
+  <!-- FULL-WIDTH FOOTER -->
   <footer class="site-footer">
     © {{ site.time | date: "%Y" }} Aaron Rennick
     <div class="footer-email">
       <a href="mailto:aaronrennick1221@gmail.com">aaronrennick1221@gmail.com</a>
     </div>
   </footer>
+
 </body>
 </html>
