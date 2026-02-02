@@ -49,7 +49,7 @@ a {
 }
 
 /* =========================================================
-   HEADER — REDUCED SPACING
+   HEADER
    ========================================================= */
 .site-header {
   background: linear-gradient(135deg, var(--header), #020617);
@@ -97,7 +97,7 @@ a {
 }
 
 /* =========================================================
-   MAIN CONTAINER — CONTENT HIGHER
+   MAIN CONTAINER
    ========================================================= */
 .container {
   max-width: 1100px;
@@ -109,9 +109,10 @@ a {
 }
 
 /* =========================================================
-   PAGE TITLE (REPLACES HERO BANNER)
+   PAGE TITLES
    ========================================================= */
-.page-welcome {
+.page-welcome,
+.project-title {
   text-align: center;
   margin-top: var(--space-sm);
   margin-bottom: var(--space-xs);
@@ -119,14 +120,15 @@ a {
   font-weight: 800;
 }
 
-.page-subtitle {
+.page-subtitle,
+.project-subtitle {
   text-align: center;
   margin-bottom: var(--space-lg);
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-/* Soft neon glow */
+/* Neon glow */
 .neon-title {
   color: var(--accent);
   text-shadow:
@@ -210,7 +212,7 @@ a {
 }
 
 /* =========================================================
-   PROJECT CARD TITLE — SOFT NEON + CENTERED
+   PROJECT CARD TITLE
    ========================================================= */
 .project-card-title {
   text-align: center;
@@ -221,6 +223,97 @@ a {
   text-shadow:
     0 0 3px var(--accent),
     0 0 6px rgba(0, 246, 255, 0.4);
+}
+
+/* =========================================================
+   SQUARE IMAGE GALLERY
+   ========================================================= */
+.square-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.square-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #151a2e;
+}
+
+.square-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Image tags */
+.image-tag {
+  position: absolute;
+  bottom: var(--space-xs);
+  right: var(--space-xs);
+  background: rgba(0,0,0,0.7);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: var(--accent);
+  text-shadow: 0 0 4px var(--accent);
+}
+
+/* =========================================================
+   SKETCHFAB VIEWER
+   ========================================================= */
+.sketchfab-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: var(--space-lg) auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.sketchfab-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sketchfab-credit {
+  text-align: center;
+  margin-top: var(--space-sm);
+}
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.lightbox-overlay span {
+  margin-top: var(--space-sm);
+  color: var(--muted);
 }
 
 /* =========================================================
@@ -245,7 +338,7 @@ a {
 }
 
 /* =========================================================
-   FOOTER — STAYS AT BOTTOM
+   FOOTER
    ========================================================= */
 .site-footer {
   padding: var(--space-sm);
