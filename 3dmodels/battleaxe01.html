@@ -47,7 +47,7 @@ title: "Medieval Fantasy Battle Axe"
   <!-- ===================== REFERENCES ===================== -->
   <h2 class="section-title">Reference Images</h2>
   <div class="square-gallery">
-    {% assign refs = "reference01.png,reference02.png,reference03.png,reference04.png" | split: "," %}
+    {% assign refs = "reference01.png,reference02.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
       <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
@@ -96,7 +96,7 @@ title: "Medieval Fantasy Battle Axe"
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/finaltexture1.png' | relative_url }}" alt="Final Texture">
+      <img src="{{ '/assets/battleaxe01assets/images/finaltexture.png' | relative_url }}" alt="Final Texture">
       <div class="image-tag">Final Texture</div>
     </figure>
 
