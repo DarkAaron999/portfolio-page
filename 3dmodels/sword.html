@@ -5,22 +5,26 @@ title: "Medieval Fantasy Sword"
 
 <div class="container fade-in">
 
-  <!-- PAGE TITLE -->
+  <!-- ===================== HERO ===================== -->
   <h1 class="page-welcome neon-title">Medieval Fantasy Sword</h1>
-  <p class="page-subtitle neon-subtitle">Hand‑painted hero prop for a high‑fantasy RPG</p>
+  <p class="page-subtitle neon-subtitle">
+    Hand‑painted hero prop for a high‑fantasy RPG • Modeled in Maya | Textured in Substance Painter
+  </p>
 
-<!-- OVERVIEW -->
-<div class="project-overview-text spaced-top">
-  This sword was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
-  readable silhouette supported by a hand‑painted texture style and a strong magical identity.
-  The model was retopologized in Maya and textured in Substance Painter.
-</div>
+  <!-- ===================== OVERVIEW ===================== -->
+  <div class="project-overview-text spaced-top">
+    <p>
+      <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
+      <strong>Tools:</strong> Maya, Substance Painter<br>
+      <strong>Workflow:</strong> High Poly Sculpt → Low Poly Retopology → UV Layout → Hand‑painted Textures → Turnarounds<br>
+      <strong>Goal:</strong> Deliver a visually striking hero sword with a clean silhouette and game-ready textures.
+    </p>
+  </div>
 
   <div class="section-divider"></div>
 
-  <!-- ===================== SKETCHFAB VIEWER ===================== -->
-  <h2 class="section-title">3D Viewer</h2>
-
+  <!-- ===================== 3D VIEWER ===================== -->
+  <h2 class="section-title">Interactive 3D Viewer</h2>
   <div class="sketchfab-wrapper">
     <iframe
       title="Medieval Fantasy Sword"
@@ -33,26 +37,24 @@ title: "Medieval Fantasy Sword"
     </iframe>
   </div>
 
-  <!-- Neon hyperlink credit -->
   <p class="sketchfab-credit neon-subtitle">
-    <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59" target="_blank">Medieval Fantasy Sword</a>
-    by
-    <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
-    on
-    <a class="neon-link" href="https://sketchfab.com" target="_blank">Sketchfab</a>
+    <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-sword-614b7e6475454ba390695d9227a3fd59" target="_blank">View on Sketchfab</a>
+    by <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
   </p>
 
   <div class="section-divider"></div>
 
   <!-- ===================== REFERENCES ===================== -->
-  <h2 class="section-title">References</h2>
-
+  <h2 class="section-title">Reference Images</h2>
   <div class="square-gallery">
     {% assign refs = "Reference01.png,Reference02.png,Reference03.png,Reference04.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference image">
-      <div class="image-tag">Reference</div>
+      <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      <div class="image-tag">Reference {{ forloop.index }}</div>
+      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
+        Used to design the sword's silhouette, proportions, and details.
+      </figcaption>
     </figure>
     {% endfor %}
   </div>
@@ -61,37 +63,38 @@ title: "Medieval Fantasy Sword"
 
   <!-- ===================== MODELING WORKFLOW ===================== -->
   <h2 class="section-title">Modeling Workflow</h2>
-
   <div class="square-gallery">
 
     <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High poly sculpt">
+      <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High Poly Sculpt">
       <div class="image-tag">High Poly</div>
+      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
+        Detailed sculpt in Maya for shape and surface forms.
+      </figcaption>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low poly mesh">
+      <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
       <div class="image-tag">Low Poly</div>
+      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
+        Retopologized mesh optimized for real-time use.
+      </figcaption>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="UV layout">
+      <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="UV Layout">
       <div class="image-tag">UV Layout</div>
+      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
+        UVs arranged for efficient texturing.
+      </figcaption>
     </figure>
 
     <figure class="square-image">
       <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
       <div class="image-tag">Turnarounds</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/texture01.png' | relative_url }}" alt="Texture 1">
-      <div class="image-tag">Textures Attempt 1</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/texture02.png' | relative_url }}" alt="Texture 2">
-      <div class="image-tag">Textures Attempt 2</div>
+      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
+        Multiple angles to showcase silhouette and proportions.
+      </figcaption>
     </figure>
 
   </div>
@@ -99,18 +102,23 @@ title: "Medieval Fantasy Sword"
   <div class="section-divider"></div>
 
   <!-- ===================== TEXTURES ===================== -->
-  <h2 class="section-title">Textures</h2>
-
+  <h2 class="section-title">Hand-Painted Textures</h2>
   <div class="square-gallery">
 
     <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/swordbc.png' | relative_url }}" alt="Texture 1">
-      <div class="image-tag">Bace Texture</div>
+      <img src="{{ '/assets/swordassets/images/swordbc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Base Color</div>
+      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
+        Hand-painted in Substance Painter to define the sword's primary look.
+      </figcaption>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="Final texture">
-      <div class="image-tag">Model Texture</div>
+      <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="Final Texture">
+      <div class="image-tag">Final Texture</div>
+      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
+        Final combined texture applied to low-poly mesh for presentation.
+      </figcaption>
     </figure>
 
   </div>
