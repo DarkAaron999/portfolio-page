@@ -3,7 +3,7 @@ layout: default
 title: "Medieval Fantasy Battle Axe"
 ---
 
-<div class="fade-in">
+<div class="container fade-in">
 
   <!-- PAGE TITLE -->
   <h1 class="page-welcome neon-title">Medieval Fantasy Battle Axe</h1>
@@ -11,18 +11,15 @@ title: "Medieval Fantasy Battle Axe"
 
   <!-- OVERVIEW -->
   <div class="project-overview-text spaced-top">
-    <p>
-      This battle axe was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
-      readable silhouette supported by a hand‑painted texture style and a strong magical identity.
-      The model was retopologized in Maya and textured in Substance Painter.
-    </p>
+    This battle axe was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
+    readable silhouette supported by a hand‑painted texture style and a strong magical identity.
+    The model was retopologized in Maya and textured in Substance Painter.
   </div>
 
   <div class="section-divider"></div>
 
-  <!-- ===================== SKETCHFAB VIEWER ===================== -->
+  <!-- 3D VIEWER -->
   <h2 class="section-title">3D Viewer</h2>
-
   <div class="sketchfab-wrapper">
     <iframe
       title="Medieval Fantasy Battle Axe"
@@ -34,8 +31,6 @@ title: "Medieval Fantasy Battle Axe"
       src="https://sketchfab.com/models/c856f6b4bb344e5c915ae62e36c1a5dd/embed">
     </iframe>
   </div>
-
-  <!-- Neon hyperlink credit -->
   <p class="sketchfab-credit neon-subtitle">
     <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-battle-axe-c856f6b4bb344e5c915ae62e36c1a5dd" target="_blank">Medieval Fantasy Battle Axe</a>
     by
@@ -44,67 +39,35 @@ title: "Medieval Fantasy Battle Axe"
     <a class="neon-link" href="https://sketchfab.com" target="_blank">Sketchfab</a>
   </p>
 
+  <!-- REFERENCES -->
   <div class="section-divider"></div>
-
-  <!-- ===================== REFERENCES ===================== -->
   <h2 class="section-title">References</h2>
-
   <div class="square-gallery">
     {% assign refs = "reference01.png,reference02.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="">
+      <img src="{{ '/assets/battleaxe01assets/images/' | append: img | relative_url }}" alt="Reference">
       <div class="image-tag">Reference</div>
     </figure>
     {% endfor %}
   </div>
 
+  <!-- MODELING WORKFLOW -->
   <div class="section-divider"></div>
-
-  <!-- ===================== MODELING WORKFLOW ===================== -->
   <h2 class="section-title">Modeling Workflow</h2>
-
   <div class="square-gallery">
-
-    <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/highpoly.png' | relative_url }}" alt="">
-      <div class="image-tag">High Poly</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/lowpoly.png' | relative_url }}" alt="">
-      <div class="image-tag">Low Poly</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/modeluv.png' | relative_url }}" alt="">
-      <div class="image-tag">UV Layout</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/uvmap.png' | relative_url }}" alt="">
-      <div class="image-tag">UV Map</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/turnarounds.png' | relative_url }}" alt="">
-      <div class="image-tag">Turnarounds</div>
-    </figure>
-
+    <figure class="square-image"><img src="{{ '/assets/battleaxe01assets/images/highpoly.png' | relative_url }}"><div class="image-tag">High Poly</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/battleaxe01assets/images/lowpoly.png' | relative_url }}"><div class="image-tag">Low Poly</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/battleaxe01assets/images/modeluv.png' | relative_url }}"><div class="image-tag">UV Layout</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/battleaxe01assets/images/uvmap.png' | relative_url }}"><div class="image-tag">UV Map</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/battleaxe01assets/images/turnarounds.png' | relative_url }}"><div class="image-tag">Turnarounds</div></figure>
   </div>
 
+  <!-- TEXTURES -->
   <div class="section-divider"></div>
-
-  <!-- ===================== TEXTURES ===================== -->
   <h2 class="section-title">Textures</h2>
-
   <div class="square-gallery">
-
-    <figure class="square-image">
-      <img src="{{ '/assets/battleaxe01assets/images/finaltexture.png' | relative_url }}" alt="">
-      <div class="image-tag">Final Texture</div>
-    </figure>
-
+    <figure class="square-image"><img src="{{ '/assets/battleaxe01assets/images/finaltexture.png' | relative_url }}"><div class="image-tag">Final Texture</div></figure>
   </div>
 
   <div class="project-back">
@@ -113,7 +76,6 @@ title: "Medieval Fantasy Battle Axe"
 
 </div>
 
-<!-- ===================== LIGHTBOX ===================== -->
 <div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
   <span>Click anywhere to close</span>
@@ -122,7 +84,6 @@ title: "Medieval Fantasy Battle Axe"
 <script>
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = lightbox.querySelector('img');
-
   document.addEventListener('click', (e) => {
     const img = e.target.closest('.square-gallery img');
     if (img) {
