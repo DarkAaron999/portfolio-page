@@ -322,20 +322,20 @@ a {
 }
 
 /* =========================================================
-   SQUARE IMAGE GALLERY (fixed)
+   SQUARE IMAGE GALLERY FIXED (perfect squares)
    ========================================================= */
 .square-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px)); /* fixed width */
+  justify-content: center; /* center grid if screen wider than total items */
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
 
-/* Square container */
 .square-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* force square */
+  aspect-ratio: 1 / 1; /* maintain perfect square */
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -345,17 +345,15 @@ a {
   align-items: center;
 }
 
-/* Force images to fill container and crop */
 .square-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;       /* crop to container */
-  object-position: center; /* focus on center */
+  object-position: center;
   display: block;
   border-radius: 12px;
 }
 
-/* Tag overlay */
 .image-tag {
   position: absolute;
   bottom: var(--space-xs);
@@ -368,11 +366,6 @@ a {
   text-shadow: 0 0 4px var(--accent);
 }
 
-/* Optional: Make all images exactly the same max-height (optional fine-tuning) */
-.square-gallery figure {
-  margin: 0;
-  height: 260px; /* fixed height for all squares */
-}
 
 /* =========================================================
    LIGHTBOX
