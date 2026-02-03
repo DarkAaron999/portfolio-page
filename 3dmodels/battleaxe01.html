@@ -17,7 +17,7 @@ title: "Medieval Fantasy Battle Axe"
       <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
       <strong>Tools:</strong> Maya, Substance Painter<br>
       <strong>Workflow:</strong> References → Turnarounds → Low Poly → UV Layout → Hand-painted Texture<br>
-      <strong>Goal:</strong> Create a bold fantasy axe with strong silhouette readability.
+      <strong>Goal:</strong> Create a bold fantasy battle axe with strong silhouette and clear material definition.
     </p>
   </div>
 
@@ -30,20 +30,27 @@ title: "Medieval Fantasy Battle Axe"
       title="Medieval Fantasy Battle Axe"
       frameborder="0"
       allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
       allow="autoplay; fullscreen; xr-spatial-tracking"
-      src="PASTE_SKETCHFAB_EMBED_URL_HERE">
+      src="https://sketchfab.com/models/c856f6b4bb344e5c915ae62e36c1a5dd/embed">
     </iframe>
   </div>
+
+<p class="sketchfab-credit neon-subtitle">
+  <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-battle-axe-c856f6b4bb344e5c915ae62e36c1a5dd" target="_blank">View on Sketchfab</a>
+  by <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+</p>
 
   <div class="section-divider"></div>
 
   <!-- ===================== REFERENCES ===================== -->
   <h2 class="section-title">Reference Images</h2>
   <div class="square-gallery">
-    {% assign refs = "reference01.png,reference02.png" | split: "," %}
+    {% assign refs = "reference01.png,reference02.png,reference03.png,reference04.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
-      <img src="{{ '/assets/battleaxeassets/images/' | append: img | relative_url }}">
+      <img src="{{ '/assets/battleaxeassets/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
       <div class="image-tag">Reference {{ forloop.index }}</div>
     </figure>
     {% endfor %}
@@ -54,10 +61,45 @@ title: "Medieval Fantasy Battle Axe"
   <!-- ===================== MODELING WORKFLOW ===================== -->
   <h2 class="section-title">Modeling Workflow</h2>
   <div class="square-gallery">
-    <figure class="square-image"><img src="{{ '/assets/battleaxeassets/images/turnarounds.png' | relative_url }}"><div class="image-tag">Turnarounds</div></figure>
-    <figure class="square-image"><img src="{{ '/assets/battleaxeassets/images/lowpoly.png' | relative_url }}"><div class="image-tag">Low Poly</div></figure>
-    <figure class="square-image"><img src="{{ '/assets/battleaxeassets/images/uv.png' | relative_url }}"><div class="image-tag">UV Layout</div></figure>
-    <figure class="square-image"><img src="{{ '/assets/battleaxeassets/images/highpoly.png' | relative_url }}"><div class="image-tag">High Poly</div></figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/battleaxeassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/battleaxeassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/battleaxeassets/images/uv.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/battleaxeassets/images/highpoly.png' | relative_url }}" alt="High Poly">
+      <div class="image-tag">High Poly</div>
+    </figure>
+
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== TEXTURES ===================== -->
+  <h2 class="section-title">Hand-Painted Textures</h2>
+  <div class="square-gallery">
+
+    <figure class="square-image">
+      <img src="{{ '/assets/battleaxeassets/images/basecolor.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/battleaxeassets/images/finaltexture.png' | relative_url }}" alt="Final Texture">
+      <div class="image-tag">Final Texture</div>
+    </figure>
+
   </div>
 
   <div class="project-back">
