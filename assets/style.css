@@ -366,6 +366,70 @@ a {
   text-shadow: 0 0 4px var(--accent);
 }
 
+/* =========================================================
+   HYBRID FLEX/GALLERY LAYOUT
+   ========================================================= */
+.hybrid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.hybrid-item {
+  display: flex;
+  background: #151a2e;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.hybrid-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.hybrid-image {
+  flex: 0 0 260px; /* fixed width for square image */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.hybrid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hybrid-caption {
+  flex: 1;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.hybrid-caption .caption-title {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 799px) {
+  .hybrid-item {
+    flex-direction: column;
+  }
+  .hybrid-image {
+    width: 100%;
+  }
+}
 
 /* =========================================================
    LIGHTBOX
