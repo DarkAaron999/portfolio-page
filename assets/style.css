@@ -208,7 +208,6 @@ a {
   line-height: 1.8;
 }
 
-/* Extra spacing utility for specific lines */
 .project-overview-text.spaced-top {
   margin-top: var(--space-lg);
 }
@@ -241,7 +240,7 @@ a {
 }
 
 /* =========================================================
-   PDF VIEWER (LEVEL DESIGN, DW03, ETC.)
+   PDF VIEWER
    ========================================================= */
 .pdf-wrapper,
 .embed-pdf {
@@ -264,7 +263,7 @@ a {
 }
 
 /* =========================================================
-   VIDEO BLOCKS (DESIGN WEEK 05)
+   VIDEO BLOCKS
    ========================================================= */
 .project-video-block {
   text-align: center;
@@ -383,7 +382,7 @@ a {
 }
 
 /* =========================================================
-   RESPONSIVE PROJECT GRID (DESIGN WEEK, UNITY, ETC.)
+   RESPONSIVE PROJECT GRID
    ========================================================= */
 .project-grid {
   display: grid;
@@ -499,4 +498,70 @@ a {
   background: #0b1121;
   color: var(--muted);
   border-top: 1px solid var(--border);
+}
+
+/* =========================================================
+   MOBILE FIXES – UNITY PROJECT PAGES
+   ========================================================= */
+@media (max-width: 599px) {
+
+  .container {
+    padding: var(--space-md);
+    margin: var(--space-md) auto;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+    margin-top: var(--space-xs);
+  }
+
+  .project-subtitle {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-body p,
+  .project-body ul {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .project-overview-text {
+    padding: 0 var(--space-xs);
+    font-size: 0.95rem;
+  }
+
+  .project-image-block,
+  .project-video-block {
+    margin: var(--space-md) auto;
+  }
+
+  .project-image-title,
+  .project-video-title {
+    font-size: 1.1rem;
+  }
+
+  .project-video-full,
+  .embed-wrapper iframe,
+  .pdf-wrapper,
+  .embed-pdf {
+    border-radius: 8px;
+  }
+
+  .sketchfab-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-back a {
+    display: inline-block;
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+@media (hover: none) {
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
