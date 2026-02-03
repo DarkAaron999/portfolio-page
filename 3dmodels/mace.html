@@ -3,7 +3,7 @@ layout: default
 title: "Medieval Fantasy Mace"
 ---
 
-<div class="fade-in">
+<div class="container fade-in">
 
   <!-- PAGE TITLE -->
   <h1 class="page-welcome neon-title">Medieval Fantasy Mace</h1>
@@ -11,18 +11,15 @@ title: "Medieval Fantasy Mace"
 
   <!-- OVERVIEW -->
   <div class="project-overview-text spaced-top">
-    <p>
-      This mace was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
-      readable silhouette supported by a hand‑painted texture style and a strong magical identity.
-      The model was retopologized in Maya and textured in Substance Painter.
-    </p>
+    This mace was created as a hero prop for a fantasy RPG. The goal was to develop a clean,
+    readable silhouette supported by a hand‑painted texture style and a strong magical identity.
+    The model was retopologized in Maya and textured in Substance Painter.
   </div>
 
   <div class="section-divider"></div>
 
-  <!-- ===================== SKETCHFAB VIEWER ===================== -->
+  <!-- 3D VIEWER -->
   <h2 class="section-title">3D Viewer</h2>
-
   <div class="sketchfab-wrapper">
     <iframe
       title="Medieval Fantasy Mace"
@@ -34,8 +31,6 @@ title: "Medieval Fantasy Mace"
       src="https://sketchfab.com/models/b8cd2aba71244456b42f1a5d28feae92/embed">
     </iframe>
   </div>
-
-  <!-- Neon hyperlink credit -->
   <p class="sketchfab-credit neon-subtitle">
     <a class="neon-link" href="https://sketchfab.com/3d-models/medieval-fantasy-mace-b8cd2aba71244456b42f1a5d28feae92" target="_blank">Medieval Fantasy Mace</a>
     by
@@ -44,11 +39,9 @@ title: "Medieval Fantasy Mace"
     <a class="neon-link" href="https://sketchfab.com" target="_blank">Sketchfab</a>
   </p>
 
+  <!-- REFERENCES -->
   <div class="section-divider"></div>
-
-  <!-- ===================== REFERENCES ===================== -->
   <h2 class="section-title">References</h2>
-
   <div class="square-gallery">
     {% assign refs = "reference01.png,reference02.png,reference03.png" | split: "," %}
     {% for img in refs %}
@@ -59,57 +52,23 @@ title: "Medieval Fantasy Mace"
     {% endfor %}
   </div>
 
+  <!-- MODELING WORKFLOW -->
   <div class="section-divider"></div>
-
-  <!-- ===================== MODELING WORKFLOW ===================== -->
   <h2 class="section-title">Modeling Workflow</h2>
-
   <div class="square-gallery">
-
-    <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/highpoly.png' | relative_url }}" alt="High Poly">
-      <div class="image-tag">High Poly</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/lowpoly.png' | relative_url }}" alt="Low Poly">
-      <div class="image-tag">Low Poly</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/modeluv.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/uvmap.png' | relative_url }}" alt="UV Map">
-      <div class="image-tag">UV Map</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
-      <div class="image-tag">Turnarounds</div>
-    </figure>
-
+    <figure class="square-image"><img src="{{ '/assets/maceassets/images/highpoly.png' | relative_url }}"><div class="image-tag">High Poly</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/maceassets/images/lowpoly.png' | relative_url }}"><div class="image-tag">Low Poly</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/maceassets/images/modeluv.png' | relative_url }}"><div class="image-tag">UV Layout</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/maceassets/images/uvmap.png' | relative_url }}"><div class="image-tag">UV Map</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/maceassets/images/turnarounds.png' | relative_url }}"><div class="image-tag">Turnarounds</div></figure>
   </div>
 
+  <!-- TEXTURES -->
   <div class="section-divider"></div>
-
-  <!-- ===================== TEXTURES ===================== -->
   <h2 class="section-title">Textures</h2>
-
   <div class="square-gallery">
-
-    <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/finaltexture01.png' | relative_url }}" alt="Final Texture 1">
-      <div class="image-tag">Final Texture 1</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/finaltexture02.png' | relative_url }}" alt="Final Texture 2">
-      <div class="image-tag">Final Texture 2</div>
-    </figure>
-
+    <figure class="square-image"><img src="{{ '/assets/maceassets/images/finaltexture01.png' | relative_url }}"><div class="image-tag">Final Texture 1</div></figure>
+    <figure class="square-image"><img src="{{ '/assets/maceassets/images/finaltexture02.png' | relative_url }}"><div class="image-tag">Final Texture 2</div></figure>
   </div>
 
   <div class="project-back">
@@ -118,7 +77,6 @@ title: "Medieval Fantasy Mace"
 
 </div>
 
-<!-- ===================== LIGHTBOX ===================== -->
 <div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
   <span>Click anywhere to close</span>
@@ -127,7 +85,6 @@ title: "Medieval Fantasy Mace"
 <script>
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = lightbox.querySelector('img');
-
   document.addEventListener('click', (e) => {
     const img = e.target.closest('.square-gallery img');
     if (img) {
