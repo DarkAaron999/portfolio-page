@@ -16,8 +16,8 @@ title: "Medieval Fantasy Sword"
     <p>
       <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
       <strong>Tools:</strong> Maya, Substance Painter<br>
-      <strong>Workflow:</strong> Turnarounds → Low Poly → UV Layout → High Poly → Hand‑painted Texture<br>
-      <strong>Goal:</strong> Deliver a visually striking hero sword with a clean silhouette and game-ready texture.
+      <strong>Workflow:</strong> Turnarounds → Low Poly → UV Layout → High Poly → Hand‑painted Textures<br>
+      <strong>Goal:</strong> Deliver a visually striking hero sword with a clean silhouette and game-ready textures.
     </p>
   </div>
 
@@ -46,16 +46,18 @@ title: "Medieval Fantasy Sword"
 
   <!-- ===================== REFERENCES ===================== -->
   <h2 class="section-title">Reference Images</h2>
-  <div class="square-gallery">
+  <div class="hybrid-gallery">
     {% assign refs = "Reference01.png,Reference02.png,Reference03.png,Reference04.png" | split: "," %}
     {% for img in refs %}
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
-      <div class="image-tag">Reference {{ forloop.index }}</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        Guided the sword's silhouette, proportions, and detailing.
-      </figcaption>
-    </figure>
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">Reference {{ forloop.index }}</div>
+        <p>Used to design the sword's silhouette, proportions, and details.</p>
+      </div>
+    </div>
     {% endfor %}
   </div>
 
@@ -63,72 +65,82 @@ title: "Medieval Fantasy Sword"
 
   <!-- ===================== MODELING WORKFLOW ===================== -->
   <h2 class="section-title">Modeling Workflow</h2>
-  <div class="square-gallery">
+  <div class="hybrid-gallery">
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">Turnarounds</div>
+        <p>Multiple angles to showcase the sword’s silhouette and proportions.</p>
+      </div>
+    </div>
 
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
-      <div class="image-tag">Turnarounds</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        Multiple angles to showcase silhouette and proportions.
-      </figcaption>
-    </figure>
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">Low Poly</div>
+        <p>Optimized low-poly mesh for real-time use.</p>
+      </div>
+    </div>
 
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
-      <div class="image-tag">Low Poly</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        Optimized low-poly mesh for real-time use.
-      </figcaption>
-    </figure>
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/uv.png' | relative_url }}" alt="UV Layout">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">UV Layout</div>
+        <p>UVs arranged efficiently for texturing.</p>
+      </div>
+    </div>
 
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/uv.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        UVs arranged for efficient texturing.
-      </figcaption>
-    </figure>
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="Model UV">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">Model UV</div>
+        <p>Shows how UVs map onto the final model.</p>
+      </div>
+    </div>
 
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/sworduv.png' | relative_url }}" alt="Model UV">
-      <div class="image-tag">Model UV</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        Final UV applied to the model for hand-painted texturing.
-      </figcaption>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High Poly Mesh">
-      <div class="image-tag">High Poly</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        High-poly version modeled in Maya to define shape and surface details.
-      </figcaption>
-    </figure>
-
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/highpoly.png' | relative_url }}" alt="High Poly Version">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">High Poly</div>
+        <p>Detailed version used as a reference for the low-poly model.</p>
+      </div>
+    </div>
   </div>
 
   <div class="section-divider"></div>
 
   <!-- ===================== TEXTURES ===================== -->
   <h2 class="section-title">Hand-Painted Textures</h2>
-  <div class="square-gallery">
+  <div class="hybrid-gallery">
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/swordbc.png' | relative_url }}" alt="Base Color">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">Base Color</div>
+        <p>Hand-painted in Substance Painter to define the sword's primary look.</p>
+      </div>
+    </div>
 
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/swordbc.png' | relative_url }}" alt="Base Color">
-      <div class="image-tag">Base Color</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        Hand-painted in Substance Painter to define the sword's primary colors and materials.
-      </figcaption>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="Final Texture">
-      <div class="image-tag">Final Texture</div>
-      <figcaption class="project-overview-text" style="font-size:0.85rem; text-align:center; margin-top:4px;">
-        Final combined texture applied to low-poly mesh for game-ready presentation.
-      </figcaption>
-    </figure>
-
+    <div class="hybrid-item">
+      <div class="hybrid-image">
+        <img src="{{ '/assets/swordassets/images/texturefinal.png' | relative_url }}" alt="Final Texture">
+      </div>
+      <div class="hybrid-caption">
+        <div class="caption-title">Final Texture</div>
+        <p>Final combined texture applied to low-poly mesh for presentation.</p>
+      </div>
+    </div>
   </div>
 
   <div class="project-back">
@@ -148,7 +160,7 @@ title: "Medieval Fantasy Sword"
   const lightboxImg = lightbox.querySelector('img');
 
   document.addEventListener('click', (e) => {
-    const img = e.target.closest('.square-gallery img');
+    const img = e.target.closest('.hybrid-image img, .square-gallery img');
     if (img) {
       lightboxImg.src = img.src;
       lightbox.classList.add('active');
