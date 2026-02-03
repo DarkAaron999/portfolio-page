@@ -322,7 +322,7 @@ a {
 }
 
 /* =========================================================
-   SQUARE IMAGE GALLERY (Updated for consistent squares)
+   SQUARE IMAGE GALLERY (fixed)
    ========================================================= */
 .square-gallery {
   display: grid;
@@ -331,6 +331,7 @@ a {
   margin-top: var(--space-md);
 }
 
+/* Square container */
 .square-image {
   position: relative;
   width: 100%;
@@ -339,14 +340,22 @@ a {
   border-radius: 12px;
   border: 1px solid var(--border);
   background: #151a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Force images to fill container and crop */
 .square-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills square and crops if needed */
+  object-fit: cover;       /* crop to container */
+  object-position: center; /* focus on center */
+  display: block;
+  border-radius: 12px;
 }
 
+/* Tag overlay */
 .image-tag {
   position: absolute;
   bottom: var(--space-xs);
@@ -357,7 +366,12 @@ a {
   border-radius: 4px;
   color: var(--accent);
   text-shadow: 0 0 4px var(--accent);
-  pointer-events: none; /* optional fine-tuning */
+}
+
+/* Optional: Make all images exactly the same max-height (optional fine-tuning) */
+.square-gallery figure {
+  margin: 0;
+  height: 260px; /* fixed height for all squares */
 }
 
 /* =========================================================
