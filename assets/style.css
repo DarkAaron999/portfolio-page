@@ -313,13 +313,13 @@ a {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER
+   SKETCHFAB VIEWER - FULL WIDTH OPTION
    ========================================================= */
 .sketchfab-wrapper {
-  width: 100%;        /* fill the container width */
-  max-width: none;    /* remove previous max-width restriction */
-  margin: var(--space-lg) 0; /* spacing above and below */
-  aspect-ratio: 16 / 9;
+  width: 100vw;                 /* full viewport width */
+  max-width: 100vw;             /* ignore container limits */
+  margin: var(--space-lg) calc(-50vw + 50%); /* center within viewport */
+  aspect-ratio: 16 / 9;         /* maintain 16:9 ratio */
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
