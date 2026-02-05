@@ -57,6 +57,22 @@ a {
 }
 
 /* =========================================================
+   FADE-IN ANIMATION
+   ========================================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
    HEADER
    ========================================================= */
 .site-header {
@@ -297,11 +313,11 @@ a {
 }
 
 /* =========================================================
-   SKETCHFAB VIEWER (STANDARDIZED)
+   SKETCHFAB VIEWER
    ========================================================= */
 .sketchfab-wrapper {
-  width: 100%;           /* Fill parent container */
-  max-width: 1100px;     /* Same as container max-width */
+  width: 100%;
+  max-width: 100%; /* match container */
   margin: var(--space-lg) auto;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
@@ -319,6 +335,14 @@ a {
   text-align: center;
   margin-top: var(--space-sm);
   font-size: 0.95rem;
+}
+
+.sketchfab-credit a {
+  color: var(--accent);
+}
+
+.sketchfab-credit a:hover {
+  text-decoration: underline;
 }
 
 /* =========================================================
@@ -367,71 +391,6 @@ a {
 }
 
 /* =========================================================
-   HYBRID FLEX/GALLERY LAYOUT
-   ========================================================= */
-.hybrid-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  margin-top: var(--space-md);
-}
-
-.hybrid-item {
-  display: flex;
-  background: #151a2e;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  transition: 0.25s ease;
-}
-
-.hybrid-item:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
-}
-
-.hybrid-image {
-  flex: 0 0 260px; /* fixed width for square image */
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  position: relative;
-}
-
-.hybrid-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.hybrid-caption {
-  flex: 1;
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.hybrid-caption .caption-title {
-  color: var(--accent);
-  font-weight: 700;
-  margin-bottom: var(--space-xs);
-}
-
-@media (max-width: 799px) {
-  .hybrid-item {
-    flex-direction: column;
-  }
-  .hybrid-image {
-    width: 100%;
-  }
-}
-
-/* =========================================================
    LIGHTBOX
    ========================================================= */
 .lightbox-overlay {
@@ -442,6 +401,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: var(--space-sm);
   z-index: 9999;
 }
 
@@ -456,8 +416,9 @@ a {
 }
 
 .lightbox-overlay span {
-  margin-top: var(--space-sm);
+  text-align: center;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
 /* =========================================================
