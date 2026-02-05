@@ -321,6 +321,10 @@ a {
   font-size: 0.95rem;
 }
 
+.project-page .sketchfab-wrapper {
+  max-width: 100%;
+}
+
 /* =========================================================
    SQUARE IMAGE GALLERY FIXED (perfect squares)
    ========================================================= */
