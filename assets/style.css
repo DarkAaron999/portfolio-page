@@ -347,35 +347,32 @@ a {
 }
 
 /* =========================================================
-   RESPONSIVE SQUARE IMAGE GALLERY - 3 columns desktop
+   RESPONSIVE SQUARE IMAGE GALLERY - FIXED SIZE & CENTERED
    ========================================================= */
 .square-gallery {
   display: grid;
   gap: var(--space-md);
-  justify-content: center;
   margin: var(--space-md) auto;
-
-  /* Mobile default: 1 column */
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  justify-items: center;                  /* center images inside columns */
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
-  /* Tablet: 2 columns */
+@media (max-width: 1024px) {
   .square-gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 per row for tablets */
   }
 }
 
-@media (min-width: 1025px) {
-  /* Desktop: 3 columns */
+@media (max-width: 600px) {
   .square-gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;            /* 1 per row for mobile */
   }
 }
 
 .square-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;  /* keep square */
+  position: relative;
+  width: 250px;           
+  height: 250px;          
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -388,7 +385,7 @@ a {
 .square-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* crop to fill square */
+  object-fit: cover;       
   object-position: center;
   display: block;
   border-radius: 12px;
