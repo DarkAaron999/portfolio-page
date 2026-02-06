@@ -347,49 +347,50 @@ a {
 }
 
 /* =========================================================
-   PERFECTLY SQUARE, EQUAL-SIZED GRID IMAGES
+   RESPONSIVE PERFECTLY SQUARE IMAGE GALLERY
    ========================================================= */
 .square-gallery {
   display: grid;
   gap: var(--space-md);
-  justify-content: center;
+  justify-content: center; /* center the grid */
   margin-top: var(--space-md);
 
-  /* 3 per row on desktop, auto-fit ensures squares fill space */
-  grid-template-columns: repeat(3, 1fr);
+  /* 3 per row on desktop */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 @media (max-width: 1024px) {
   .square-gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+    grid-template-columns: repeat(2, 1fr); /* tablets: 2 per row */
   }
 }
 
 @media (max-width: 600px) {
   .square-gallery {
-    grid-template-columns: repeat(1, 1fr); /* 1 per row on mobile */
+    grid-template-columns: repeat(1, 1fr); /* mobile: 1 per row */
   }
 }
 
 .square-image {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* trick to force perfect square */
+  aspect-ratio: 1 / 1;      /* perfect square */
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: #151a2e;
+  display: flex;
+  justify-content: center;  /* center image inside figure */
+  align-items: center;
 }
 
 .square-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* crop to container perfectly */
+  object-fit: cover;        /* crop image to fill square */
   object-position: center;
   border-radius: 12px;
+  display: block;
 }
 
 .image-tag {
