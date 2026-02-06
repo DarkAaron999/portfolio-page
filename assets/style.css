@@ -346,36 +346,43 @@ a {
   text-decoration: underline;
 }
 
-/* =========================================================
-   RESPONSIVE SQUARE IMAGE GALLERY - FIXED SIZE & CENTERED
-   ========================================================= */
+/* ===========================================
+   RESPONSIVE FLEX IMAGE GALLERY – CENTERED
+   3 in row desktop / 2 tablet / 1 mobile
+   =========================================== */
 .square-gallery {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* always center rows */
   gap: var(--space-md);
   margin: var(--space-md) auto;
-  grid-template-columns: repeat(3, 250px); /* exactly 3 per row */
-  justify-content: center; /* center the whole grid */
-  justify-items: center;   /* center images inside columns */
 }
 
-@media (max-width: 1024px) {
-  .square-gallery {
-    grid-template-columns: repeat(2, 250px); /* 2 per row for tablets */
+/* desktop */
+@media (min-width: 1025px) {
+  .square-gallery .square-image {
+    flex: 0 0 calc(33.333% - var(--space-md)); /* 3 per row */
   }
 }
 
+/* tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .square-gallery .square-image {
+    flex: 0 0 calc(50% - var(--space-md)); /* 2 per row */
+  }
+}
+
+/* mobile */
 @media (max-width: 600px) {
-  .square-gallery {
-    grid-template-columns: 1fr; /* 1 per row for mobile */
-    justify-items: center;       /* center the single image */
+  .square-gallery .square-image {
+    flex: 0 0 100%; /* 1 per row */
   }
 }
 
 .square-image {
   position: relative;
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: #151a2e;
@@ -387,9 +394,8 @@ a {
 .square-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* crop to fill square */
+  object-fit: cover;
   object-position: center;
-  display: block;
   border-radius: 12px;
 }
 
@@ -402,7 +408,6 @@ a {
   font-size: 0.75rem;
   border-radius: 4px;
   color: var(--accent);
-  text-shadow: 0 0 4px var(--accent);
 }
 
 /* =========================================================
