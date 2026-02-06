@@ -181,6 +181,19 @@ a {
 }
 
 /* =========================================================
+   PAGE SUBTITLE WIDTH FIX (IMPORTANT)
+   ========================================================= */
+.page-subtitle,
+.project-subtitle {
+  max-width: 800px;     /* prevents long text from widening page */
+  margin-left: auto;
+  margin-right: auto;  /* centers subtitle block */
+  line-height: 1.5;
+  padding: 0 var(--space-sm);
+  white-space: normal; /* allow wrapping */
+}
+
+/* =========================================================
    SECTION TITLE
    ========================================================= */
 .section-title {
