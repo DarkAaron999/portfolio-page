@@ -351,10 +351,8 @@ a {
    ========================================================= */
 .square-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 260px)); /* fixed width per image */
-  justify-content: center; /* center the row even if fewer images */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-md);
-  margin-top: var(--space-md);
 }
 
 .square-image {
