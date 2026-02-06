@@ -347,54 +347,50 @@ a {
 }
 
 /* =========================================================
-   FIXED-SIZE RESPONSIVE SQUARE IMAGE GALLERY - CENTERED WITH TAGS
+   RESPONSIVE SQUARE IMAGE GALLERY - FIXED SIZE & CENTERED
    ========================================================= */
 .square-gallery {
   display: grid;
   gap: var(--space-md);
-  justify-content: center;   /* center all rows */
-  margin: var(--space-md) auto; /* center gallery in container */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible, same size images */
-  max-width: 800px;          /* optional: limit max width to avoid stretching */
+  justify-content: center;   /* center gallery */
+  margin: var(--space-md) auto;
+  grid-template-columns: repeat(auto-fit, 250px); /* fixed width for all images */
 }
 
 @media (max-width: 1024px) {
   .square-gallery {
-    grid-template-columns: repeat(2, 250px); /* 2 per row on tablet */
+    grid-template-columns: repeat(2, 250px); /* 2 per row for tablets */
   }
 }
 
 @media (max-width: 600px) {
   .square-gallery {
-    grid-template-columns: repeat(1, 100%); /* 1 per row on mobile */
+    grid-template-columns: repeat(1, 250px); /* 1 per row for mobile */
   }
 }
 
 .square-image {
   position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;      /* perfect square */
+  width: 250px;           /* fixed width */
+  height: 250px;          /* fixed height */
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: #151a2e;
-
   display: flex;
-  justify-content: center;  /* center image */
+  justify-content: center;
   align-items: center;
 }
 
-/* Make image fill the square */
 .square-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;       /* crop to fill square */
   object-position: center;
-  border-radius: 12px;
   display: block;
+  border-radius: 12px;
 }
 
-/* Tags stay inside the figure */
 .image-tag {
   position: absolute;
   bottom: var(--space-xs);
@@ -405,7 +401,6 @@ a {
   border-radius: 4px;
   color: var(--accent);
   text-shadow: 0 0 4px var(--accent);
-  z-index: 10; /* ensure tag is on top */
 }
 
 /* =========================================================
