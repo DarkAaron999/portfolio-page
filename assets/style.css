@@ -347,12 +347,11 @@ a {
 }
 
 /* =========================================================
-   SQUARE IMAGE GALLERY FIXED (perfect squares)
+   SQUARE IMAGE GALLERY FLEXIBLE
    ========================================================= */
 .square-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 260px)); /* fixed width */
-  justify-content: center; /* center grid if screen wider than total items */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* flexible width */
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
