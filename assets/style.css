@@ -353,8 +353,9 @@ a {
   display: grid;
   gap: var(--space-md);
   margin: var(--space-md) auto;
-  grid-template-columns: repeat(3, 250px); /* 3 per row on desktop */
-  justify-content: center;                 /* center the whole grid */
+  grid-template-columns: repeat(auto-fit, 250px); /* fit as many 250px columns as possible */
+  justify-content: center; /* center the whole grid */
+  justify-items: center; /* center images inside their columns */
 }
 
 @media (max-width: 1024px) {
