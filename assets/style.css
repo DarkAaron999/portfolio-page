@@ -347,32 +347,35 @@ a {
 }
 
 /* =========================================================
-   RESPONSIVE SQUARE IMAGE GALLERY - FIXED SIZE & CENTERED
+   RESPONSIVE SQUARE IMAGE GALLERY - 3 columns desktop
    ========================================================= */
 .square-gallery {
   display: grid;
   gap: var(--space-md);
-  justify-content: center;   /* center gallery */
+  justify-content: center;
   margin: var(--space-md) auto;
-  grid-template-columns: repeat(auto-fit, 250px); /* fixed width for all images */
+
+  /* Mobile default: 1 column */
+  grid-template-columns: repeat(1, 1fr);
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Tablet: 2 columns */
   .square-gallery {
-    grid-template-columns: repeat(2, 250px); /* 2 per row for tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 1025px) {
+  /* Desktop: 3 columns */
   .square-gallery {
-    grid-template-columns: repeat(1, 250px); /* 1 per row for mobile */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .square-image {
-  position: relative;
-  width: 250px;           /* fixed width */
-  height: 250px;          /* fixed height */
+  width: 100%;
+  aspect-ratio: 1 / 1;  /* keep square */
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid var(--border);
