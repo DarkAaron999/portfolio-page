@@ -1,24 +1,24 @@
 ---
 layout: default
-title: "Fantasy Plants"
+title: "Factory Assets"
 ---
 
 <div class="container fade-in">
 
   <!-- ===================== HERO ===================== -->
-  <h1 class="page-welcome neon-title">Fantasy Plants</h1>
+  <h1 class="page-welcome neon-title">Factory Assets</h1>
   <p class="page-subtitle neon-subtitle">
-    Stylized environment prop with baked foliage<br>
-    Modeled in Maya | Textured using Photoshop and Materialize
+    Hand‑painted modular set for a factory<br>
+    Modelled in Maya | Textured in Photoshop
   </p>
 
   <!-- ===================== OVERVIEW ===================== -->
   <div class="project-overview-text spaced-top">
     <p>
       <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
-      <strong>Tools:</strong> Maya, Photoshop, Materialize<br>
-      <strong>Workflow:</strong> High Poly Leaf → Bake to Planes → Normal Generation → Hand-Painted Texture<br>
-      <strong>Goal:</strong> Create a lightweight stylized plants suitable for real-time environments.
+      <strong>Tools:</strong> Maya, Photoshop<br>
+      <strong>Workflow:</strong> References → Turnarounds → Low Poly → UV Layout → Hand-painted Texture<br>
+      <strong>Goal:</strong> Create a visually striking modular set with a clean silhouette and game-ready texture.
     </p>
   </div>
 
@@ -28,18 +28,18 @@ title: "Fantasy Plants"
   <h2 class="section-title">Interactive 3D Viewer</h2>
   <div class="sketchfab-wrapper">
     <iframe
-      title="Fantasy Plants"
+      title="Factory Assets"
       frameborder="0"
       allowfullscreen
       mozallowfullscreen="true"
       webkitallowfullscreen="true"
       allow="autoplay; fullscreen; xr-spatial-tracking"
-      src="https://sketchfab.com/models/197497f04a1344bab6eb59fff69b57ef/embed">
+      src="https://sketchfab.com/models/4ab40d98ef9240d286cccd0459f892ff/embed">
     </iframe>
   </div>
 
   <p class="sketchfab-credit neon-subtitle">
-    <a class="neon-link" href="https://sketchfab.com/3d-models/fantasy-plants-197497f04a1344bab6eb59fff69b57ef" target="_blank">View on Sketchfab</a>
+    <a class="neon-link" href="https://sketchfab.com/3d-models/factory-assets-4ab40d98ef9240d286cccd0459f892ff" target="_blank">View on Sketchfab</a>
     by <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
   </p>
 
@@ -48,10 +48,10 @@ title: "Fantasy Plants"
   <!-- ===================== REFERENCES ===================== -->
   <h2 class="section-title">Reference Images</h2>
   <div class="square-gallery">
-    {% assign refs = "reference01.png,reference02.png" | split: "," %}
+    {% assign refs = "reference01.png,reference02.png,reference03.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
       <div class="image-tag">Reference {{ forloop.index }}</div>
     </figure>
     {% endfor %}
@@ -64,18 +64,128 @@ title: "Fantasy Plants"
   <div class="square-gallery">
 
     <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
-      <div class="image-tag">Low Poly</div>
+      <img src="{{ '/assets/3dmodelsassets/factory/images/factory_sketch.png' | relative_url }}" alt="Sketch">
+      <div class="image-tag">Sketch</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/uvlayout.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
+      <img src="{{ '/assets/3dmodelsassets/factory/images/factory_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Factory Low Poly</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/modeluv.png' | relative_url }}" alt="Model UV">
-      <div class="image-tag">Model UV</div>
+      <img src="{{ '/assets/3dmodelsassets/factory/images/wall_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Wall UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/wallwindow_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Wall & Window UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/walldoor_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Wall & Door UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/factory_modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Factory Model UV</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt01_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Conveyor Belt 01 Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt01_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Conveyor Belt 01 Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt01_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Conveyor Belt 01 UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt02_modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Conveyor Belt 02 Model UV</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt02_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Conveyor Belt 02 Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt02_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Conveyor Belt 02 Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt02_uvlayoyt.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Conveyor Belt 02 UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt02_modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Conveyor Belt 02 Model UV</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt03_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Conveyor Belt 03 Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt03_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Conveyor Belt 03 Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt03_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Conveyor Belt 03 UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt03_modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Conveyor Belt 03 Model UV</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/barrel_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Barrel Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/barrel_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Barrel Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/barrel_uvlayoyt.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Barrel UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/barrel_modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Barrel Model UV</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/node_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Node Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/node_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Node UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/node_modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Node Model UV</div>
     </figure>
 
   </div>
@@ -87,17 +197,22 @@ title: "Fantasy Plants"
   <div class="square-gallery">
 
     <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/fantasyplants_bc.png' | relative_url }}" alt="Base Color">
-      <div class="image-tag">Leaf Base Colour</div>
-    </figure>
-
-        <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/fantasyplants_n.png' | relative_url }}" alt="Normal Map">
-      <div class="image-tag">Normal Map</div>
+      <img src="{{ '/assets/3dmodelsassets/factory/images/wallfloor_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Wall & Floor Base Color</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/modeltexture.png' | relative_url }}" alt="Final Texture">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/conveyorbelt_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Conveyor Belt Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/factory/images/barrel_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Wall & Floor Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/rocks/images/modeltexture.png' | relative_url }}" alt="Final Texture">
       <div class="image-tag">Final Texture</div>
     </figure>
 
