@@ -3,26 +3,247 @@ layout: default
 title: "Alchemy House"
 ---
 
-<div class="sketchfab-wrapper">
-  <iframe
-    title="Alchemy House"
-    src="https://sketchfab.com/models/6710279e303446d798c2b60305ccc449/embed">
-    allow="autoplay; fullscreen; xr-spatial-tracking"
-    xr-spatial-tracking
-    execution-while-out-of-viewport
-    execution-while-not-rendered
-    web-share>
-  </iframe>
+<div class="container fade-in">
+
+  <!-- ===================== HERO ===================== -->
+  <h1 class="page-welcome neon-title">Alchemy House</h1>
+  <p class="page-subtitle neon-subtitle">
+    Hand‑painted environment of a alchemist house<br>
+    Modelled in Maya | Textured in Photoshop
+  </p>
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <div class="project-overview-text spaced-top">
+    <p>
+      <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
+      <strong>Tools:</strong> Maya, Photoshop<br>
+      <strong>Workflow:</strong> References → Turnarounds → Low Poly → UV Layout → Hand-painted Texture<br>
+      <strong>Goal:</strong> Create a visually striking alchemist house with a clean silhouette and game-ready texture.
+    </p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== 3D VIEWER ===================== -->
+  <h2 class="section-title">Interactive 3D Viewer</h2>
+  <div class="sketchfab-wrapper">
+    <iframe
+      title="Alchemy House"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      src="https://sketchfab.com/models/6710279e303446d798c2b60305ccc449/embed">
+    </iframe>
+  </div>
+
+  <p class="sketchfab-credit neon-subtitle">
+    <a class="neon-link" href="https://sketchfab.com/3d-models/aaronr-week4-day5-alchemy-house-6710279e303446d798c2b60305ccc449" target="_blank">View on Sketchfab</a>
+    by <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+  </p>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== REFERENCES ===================== -->
+  <h2 class="section-title">Reference Images</h2>
+  <div class="square-gallery">
+    {% assign refs = "reference01.png,reference02.png,reference03.png" | split: "," %}
+    {% for img in refs %}
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      <div class="image-tag">Reference {{ forloop.index }}</div>
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== MODELING WORKFLOW ===================== -->
+  <h2 class="section-title">Modeling Workflow</h2>
+  <div class="square-gallery">
+
+    <h2 class="section-title">kitchen</h2>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/interior_alchemyhouse_sketch.png' | relative_url }}" alt="Sketch">
+      <div class="image-tag">Interior Sketch</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/exterior_alchemyhouse_sketch.png' | relative_url }}" alt="Sketch">
+      <div class="image-tag">Exterior Sketch</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/barrel_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Barrel Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/book_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Book Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/candleholder_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Candle Holder Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/chalk_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Chalk Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/chest_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Chest Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/closedbook_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Closed Book Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/doorhandle_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Door Handle Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/planter_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Planter Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/potion01_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Potion 01 Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/potion02_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Potion 02 Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/potionholder_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Potion Holder Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/scroll_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Scroll Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/table_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Table Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/stool_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Stool Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse01_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Alchemy House 01 Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse02_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Alchemy House 02 Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/table_lowpoly_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Table Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Alchemy House UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/table_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">Table UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse_modeluv' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Alchemy House Model UV</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/table_modeluv' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Table Model UV</div>
+    </figure>
+
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== TEXTURES ===================== -->
+  <h2 class="section-title">Hand-Painted Textures</h2>
+  <div class="square-gallery">
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse01_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Alchemy House 01 Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse02_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Alchemy House 02 Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/table_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Table Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse01_modeltexture.png' | relative_url }}" alt="Final Texture">
+      <div class="image-tag">Alchemy House 01 Final Texture</div>
+    </figure>
+
+        <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/alchemyhouse02_modeltexture.png' | relative_url }}" alt="Final Texture">
+      <div class="image-tag">Alchemy House 02 Final Texture</div>
+    </figure>
+
+        <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/alchemy_house/images/table_modeltexture.png' | relative_url }}" alt="Final Texture">
+      <div class="image-tag">Table Final Texture</div>
+    </figure>
+
+  </div>
+
+  <div class="project-back">
+    <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
+  </div>
+
 </div>
 
-<h1 class="project-title">Alchemy House</h1>
-<p class="project-subtitle">3D model of an alchemy house</p>
-
-<div class="project-body">
-  <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
-  <p>This alchemy house was modeled in Maya and textured in Photoshop.</p>
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox-overlay" id="lightbox">
+  <img src="" alt="">
+  <span>Click anywhere to close</span>
 </div>
 
-<div class="project-back">
-  <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
-</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.square-gallery img');
+    if (img) {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    } else if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+  });
+</script>
