@@ -1,28 +1,210 @@
+
 ---
 layout: default
 title: "Kitchen"
 ---
 
-<div class="sketchfab-wrapper">
-  <iframe
-    title="Kitchen"
-    src="https://sketchfab.com/models/19c795c758784e21b2468a0c3d91cf29/embed">
-    allow="autoplay; fullscreen; xr-spatial-tracking"
-    xr-spatial-tracking
-    execution-while-out-of-viewport
-    execution-while-not-rendered
-    web-share>
-  </iframe>
+<div class="container fade-in">
+
+  <!-- ===================== HERO ===================== -->
+  <h1 class="page-welcome neon-title">Kitchen</h1>
+  <p class="page-subtitle neon-subtitle">
+    Hand‑painted environment of a kitchen<br>
+    Modelled in Maya | Textured in Photoshop
+  </p>
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <div class="project-overview-text spaced-top">
+    <p>
+      <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
+      <strong>Tools:</strong> Maya, Photoshop<br>
+      <strong>Workflow:</strong> References → Turnarounds → Low Poly → UV Layout → Hand-painted Texture<br>
+      <strong>Goal:</strong> Create a visually striking kitchen environment with a clean silhouette and game-ready texture.
+    </p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== 3D VIEWER ===================== -->
+  <h2 class="section-title">Interactive 3D Viewer</h2>
+  <div class="sketchfab-wrapper">
+    <iframe
+      title="Kitchen"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      src="https://sketchfab.com/models/19c795c758784e21b2468a0c3d91cf29/embed">
+    </iframe>
+  </div>
+
+  <p class="sketchfab-credit neon-subtitle">
+    <a class="neon-link" href="https://sketchfab.com/3d-models/aarons-kitchen-19c795c758784e21b2468a0c3d91cf29" target="_blank">View on Sketchfab</a>
+    by <a class="neon-link" href="https://sketchfab.com/Aaron999" target="_blank">Aaron</a>
+  </p>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== REFERENCES ===================== -->
+  <h2 class="section-title">Reference Images</h2>
+  <div class="square-gallery">
+    {% assign refs = "reference01.png,reference02.png,reference03.png,reference03.png" | split: "," %}
+    {% for img in refs %}
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      <div class="image-tag">Reference {{ forloop.index }}</div>
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== MODELING WORKFLOW ===================== -->
+  <h2 class="section-title">Modeling Workflow</h2>
+  <div class="square-gallery">
+
+    <h2 class="section-title">kitchen</h2>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen_sketch.png' | relative_url }}" alt="Sketch">
+      <div class="image-tag">Sketch</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/stove_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Stove Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/fridge_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Fridge Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/chair_turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Chair Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/cabinet_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Cabinet Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/dishwasher_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Dishwasher Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/door_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Door Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/doorknob_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Door Knob Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/hanginglight_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Hanging Light Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/ovenvent_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Oven Vent Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/sink_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Sink Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/window_turnaroundss.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Window Turnarounds</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen_lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">kitchen Low Poly</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen01_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">kitchen 01 UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen02_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">kitchen 02 UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen03_uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">kitchen 03 UV Layout</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen_modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">kitchen Model UV</div>
+    </figure>
+
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== TEXTURES ===================== -->
+  <h2 class="section-title">Hand-Painted Textures</h2>
+  <div class="square-gallery">
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen01_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Kitchen 01 Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen02_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Kitchen 02 Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen03_bc.png' | relative_url }}" alt="Base Color">
+      <div class="image-tag">Kitchen 03 Base Color</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsasset/kitchen/images/kitchen_modeltexture.png' | relative_url }}" alt="Final Texture">
+      <div class="image-tag">Final Texture</div>
+    </figure>
+
+  </div>
+
+  <div class="project-back">
+    <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
+  </div>
+
 </div>
 
-<h1 class="project-title">Kitchen</h1>
-<p class="project-subtitle">3D model of a kitchen environment</p>
-
-<div class="project-body">
-  <p>Use your mouse or touch to orbit, pan, and zoom the model.</p>
-  <p>This kitchen scene was modeled in Maya and textured in Photoshop.</p>
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox-overlay" id="lightbox">
+  <img src="" alt="">
+  <span>Click anywhere to close</span>
 </div>
 
-<div class="project-back">
-  <a href="{{ '/projects/3dart.html' | relative_url }}">← Back to 3D Art</a>
-</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.square-gallery img');
+    if (img) {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    } else if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+  });
+</script>
