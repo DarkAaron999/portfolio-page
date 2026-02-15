@@ -18,7 +18,7 @@ title: "Medieval Fantasy Mace"
       <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
       <strong>Tools:</strong> Maya, Substance Painter<br>
       <strong>Workflow:</strong> Reference gathering → Turnarounds → Low-poly modeling → UV layout → High-poly modeling → Hand-painted texturing<br>
-      <strong>Goal:</strong> a stylized fantasy mace with a strong silhouette, clear material definition, and game-ready presentation.
+      <strong>Goal:</strong> Create a stylized fantasy mace with a strong silhouette, clear material definition, and game-ready presentation.
     </p>
   </div>
 
@@ -51,7 +51,7 @@ title: "Medieval Fantasy Mace"
     {% assign refs = "reference01.png,reference02.png,reference03.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      <img src="{{ '/assets/3dmodelsassets/mace/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
       <div class="image-tag">Reference {{ forloop.index }}</div>
     </figure>
     {% endfor %}
@@ -63,29 +63,30 @@ title: "Medieval Fantasy Mace"
   <h2 class="section-title">Modeling Workflow</h2>
   <div class="square-gallery">
 
+    <!-- Turnarounds -->
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
-      <div class="image-tag">Turnarounds</div>
+      <img src="{{ '/assets/3dmodelsassets/mace/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Front, Side & Top Views</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
-      <div class="image-tag">Low Poly</div>
+      <img src="{{ '/assets/3dmodelsassets/mace/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Low Poly – Clean topology</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/uvmap.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
+      <img src="{{ '/assets/3dmodelsassets/mace/images/uvlayout.png' | relative_url }}" alt="UV Layout">
+      <div class="image-tag">UV Layout – Efficient packing</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/modeluv.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
+      <img src="{{ '/assets/3dmodelsassets/mace/images/modeluv.png' | relative_url }}" alt="Model UV">
+      <div class="image-tag">Model UV – Organized per material</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/highpoly.png' | relative_url }}" alt="High Poly">
-      <div class="image-tag">High Poly</div>
+      <img src="{{ '/assets/3dmodelsassets/mace/images/highpoly.png' | relative_url }}" alt="High Poly">
+      <div class="image-tag">High Poly Sculpt – Detail & silhouette</div>
     </figure>
 
   </div>
@@ -97,12 +98,12 @@ title: "Medieval Fantasy Mace"
   <div class="square-gallery">
 
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/macebc.png' | relative_url }}" alt="Base Color">
+      <img src="{{ '/assets/3dmodelsassets/mace/images/mace_bc.png' | relative_url }}" alt="Base Color">
       <div class="image-tag">Base Color</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/maceassets/images/finaltexture01.png' | relative_url }}" alt="Final Texture">
+      <img src="{{ '/assets/3dmodelsassets/mace/images/modeltexture.png' | relative_url }}" alt="Final Texture">
       <div class="image-tag">Final Texture</div>
     </figure>
 
