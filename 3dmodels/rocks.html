@@ -51,7 +51,7 @@ title: "Rock Set"
     {% assign refs = "reference01.png,reference02.png,reference03.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      <img src="{{ '/assets/3dmodelsassets/rocks/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
       <div class="image-tag">Reference {{ forloop.index }}</div>
     </figure>
     {% endfor %}
