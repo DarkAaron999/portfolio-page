@@ -18,7 +18,7 @@ title: "Pine Tree"
       <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
       <strong>Tools:</strong> Maya, Photoshop, Materialize<br>
       <strong>Workflow:</strong> Reference gathering → Turnarounds → Low Poly → UV Layout → High-poly branch → Bake to planes → Normal map generation → Hand-painted Textures<br>
-      <strong>Objective:</strong> Produce a lightweight, stylized pine tree optimized for real-time environments.
+      <strong>Goal:</strong> Produce a lightweight, stylized pine tree optimized for real-time environments.
     </p>
   </div>
 
@@ -51,7 +51,7 @@ title: "Pine Tree"
     {% assign refs = "reference01.png,reference02.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
       <div class="image-tag">Reference {{ forloop.index }}</div>
     </figure>
     {% endfor %}
@@ -64,23 +64,28 @@ title: "Pine Tree"
   <div class="square-gallery">
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
-      <div class="image-tag">Low Poly</div>
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
+      <div class="image-tag">Low Poly Mesh</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/barkuv.png' | relative_url }}" alt="Bark UV Layout">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/barkuvlayout.png' | relative_url }}" alt="Bark UV Layout">
       <div class="image-tag">Bark UV Layout</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/branchesuv.png' | relative_url }}" alt="Branches UV Layout">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/branchesuvlayout.png' | relative_url }}" alt="Branches UV Layout">
       <div class="image-tag">Branches UV Layout</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/modeluv.png' | relative_url }}" alt="Complete Model UV">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/modeluv.png' | relative_url }}" alt="Complete Model UV">
       <div class="image-tag">Model UV</div>
+    </figure>
+
+    <figure class="square-image">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/turnarounds.png' | relative_url }}" alt="Turnarounds">
+      <div class="image-tag">Front, Side & Top Views</div>
     </figure>
 
   </div>
@@ -92,32 +97,32 @@ title: "Pine Tree"
   <div class="square-gallery">
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/bark_bc.png' | relative_url }}" alt="Bark Base Color">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/bark_bc.png' | relative_url }}" alt="Bark Base Color">
       <div class="image-tag">Bark Base Color</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/bark_n.png' | relative_url }}" alt="Bark Normal Map">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/bark_n.png' | relative_url }}" alt="Bark Normal Map">
       <div class="image-tag">Bark Normal Map</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/branches_bc.png' | relative_url }}" alt="Branches Base Color">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/branches_bc.png' | relative_url }}" alt="Branches Base Color">
       <div class="image-tag">Branches Base Color</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/branches_n.png' | relative_url }}" alt="Branches Normal Map">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/branches_n.png' | relative_url }}" alt="Branches Normal Map">
       <div class="image-tag">Branches Normal Map</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/branches_a.png' | relative_url }}" alt="Branches Alpha Map">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/branches_a.png' | relative_url }}" alt="Branches Alpha Map">
       <div class="image-tag">Branches Alpha Map</div>
     </figure>
 
     <figure class="square-image">
-      <img src="{{ '/assets/pinetreeassets/images/modeltexture.png' | relative_url }}" alt="Final Texture">
+      <img src="{{ '/assets/3dmodelsassets/pinetree/images/modeltexture.png' | relative_url }}" alt="Final Texture">
       <div class="image-tag">Final Texture</div>
     </figure>
 
