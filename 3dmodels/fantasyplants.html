@@ -8,17 +8,17 @@ title: "Fantasy Plants"
   <!-- ===================== HERO ===================== -->
   <h1 class="page-welcome neon-title">Fantasy Plants</h1>
   <p class="page-subtitle neon-subtitle">
-    Stylized environment prop with baked foliage<br>
-    Modelled in Maya | Textured using Photoshop and Materialize
+    Hand‑painted modular set for a factory<br>
+    Modelled in Maya | Textured in Photoshop
   </p>
 
   <!-- ===================== OVERVIEW ===================== -->
   <div class="project-overview-text spaced-top">
     <p>
       <strong>Role:</strong> 3D Artist – Modeling, UV Mapping, Texturing<br>
-      <strong>Tools:</strong> Maya, Photoshop, Materialize<br>
-      <strong>Workflow:</strong> High Poly Leaf → Bake to Planes → Normal Generation → Hand-Painted Texture<br>
-      <strong>Goal:</strong> Create a lightweight stylized plants suitable for real-time environments.
+      <strong>Tools:</strong> Maya, Photoshop<br>
+      <strong>Workflow:</strong> References → Turnarounds → Low Poly → UV Layout → Hand-painted Texture<br>
+      <strong>Goal:</strong> Create a visually striking planats set with a clean silhouette and game-ready texture.
     </p>
   </div>
 
@@ -48,7 +48,7 @@ title: "Fantasy Plants"
   <!-- ===================== REFERENCES ===================== -->
   <h2 class="section-title">Reference Images</h2>
   <div class="square-gallery">
-    {% assign refs = "reference01.png,reference02.png,reference03.png" | split: "," %}
+    {% assign refs = "reference01.png,reference02.png" | split: "," %}
     {% for img in refs %}
     <figure class="square-image">
       <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/' | append: img | relative_url }}" alt="Reference {{ forloop.index }}">
@@ -78,21 +78,6 @@ title: "Fantasy Plants"
       <div class="image-tag">Model UV</div>
     </figure>
 
-        <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
-      <div class="image-tag">Low Poly</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/uvlayout.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/modeluv.png' | relative_url }}" alt="Model UV">
-      <div class="image-tag">Model UV</div>
-    </figure>
-
   </div>
 
   <div class="section-divider"></div>
@@ -103,32 +88,17 @@ title: "Fantasy Plants"
 
     <figure class="square-image">
       <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/fantasyplants_bc.png' | relative_url }}" alt="Base Color">
-      <div class="image-tag">Leaf Base Color</div>
+      <div class="image-tag">Base Color</div>
     </figure>
 
     <figure class="square-image">
       <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/fantasyplants_n.png' | relative_url }}" alt="Normal Map">
-      <div class="image-tag">Leaf Normal Map</div>
+      <div class="image-tag">Normal Map</div>
     </figure>
 
     <figure class="square-image">
       <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/modeltexture.png' | relative_url }}" alt="Final Texture">
       <div class="image-tag">Final Texture</div>
-    </figure>
-
-        <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/lowpoly.png' | relative_url }}" alt="Low Poly Mesh">
-      <div class="image-tag">Low Poly</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/uvlayout.png' | relative_url }}" alt="UV Layout">
-      <div class="image-tag">UV Layout</div>
-    </figure>
-
-    <figure class="square-image">
-      <img src="{{ '/assets/3dmodelsassets/fantasyplants/images/modeluv.png' | relative_url }}" alt="Model UV">
-      <div class="image-tag">Model UV</div>
     </figure>
 
   </div>
