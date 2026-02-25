@@ -1,0 +1,99 @@
+---
+layout: default
+title: "2D Environment Titles"
+description: "Stylized 2D game environments and tilesets."
+---
+
+<div class="container fade-in">
+
+  <!-- HERO -->
+  <h1 class="page-welcome neon-title">2D Environment Titles</h1>
+  <p class="page-subtitle neon-subtitle">
+    Stylized pixel environments and modular tilesets for game development.
+    Focus is on clear gameplay readability, strong silhouettes, and modular design for production pipelines.
+  </p>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== ENVIRONMENT ASSETS ===================== -->
+  <h2 class="section-title">Pixel Art Environments</h2>
+  <p class="project-overview-text">
+    Modular environment designs for top-down or side-scrolling games. These tilesets and props emphasize clarity, atmosphere, and flexible level design.
+  </p>
+
+  <!-- Terrain & Decorative Tiles -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Terrain & Decorative Tiles</h3>
+    <p class="project-overview-text">
+      Tileable terrain and decorative assets for modular level construction.
+    </p>
+    <div class="square-gallery">
+      <div class="square-image">
+        <a href="{{ '/assets/2dartassets/images/terrain_tiles.png' | relative_url }}" class="lightbox-link">
+          <img src="{{ '/assets/2dartassets/images/terrain_tiles.png' | relative_url }}" alt="Pixel terrain tiles">
+        </a>
+      </div>
+      <div class="square-image">
+        <a href="{{ '/assets/2dartassets/images/terrain_props.png' | relative_url }}" class="lightbox-link">
+          <img src="{{ '/assets/2dartassets/images/terrain_props.png' | relative_url }}" alt="Pixel terrain props">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sci-Fi Environment & Interactive Elements -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Sci-Fi Environment & Interactive Elements</h3>
+    <p class="project-overview-text">
+      Modular sci-fi tiles and props designed for interactive environments and level design.
+    </p>
+    <div class="square-gallery">
+      <div class="square-image">
+        <a href="{{ '/assets/2dartassets/images/space_station.png' | relative_url }}" class="lightbox-link">
+          <img src="{{ '/assets/2dartassets/images/space_station.png' | relative_url }}" alt="Sci-fi pixel environment">
+        </a>
+      </div>
+      <div class="square-image">
+        <a href="{{ '/assets/2dartassets/images/space_props.png' | relative_url }}" class="lightbox-link">
+          <img src="{{ '/assets/2dartassets/images/space_props.png' | relative_url }}" alt="Sci-fi pixel props">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- BACK TO 2D ART -->
+  <div class="project-back">
+    <a href="{{ '/' | relative_url }}">← Back to 2D Art</a>
+  </div>
+
+</div>
+
+<!-- LIGHTBOX OVERLAY -->
+<div class="lightbox-overlay">
+  <img src="" alt="">
+  <span></span>
+</div>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const lightbox = document.querySelector('.lightbox-overlay');
+  const lightboxImage = lightbox.querySelector('img');
+  const lightboxCaption = lightbox.querySelector('span');
+
+  document.querySelectorAll('.lightbox-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      lightboxImage.src = this.href;
+      lightboxCaption.textContent = this.querySelector('img').alt;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', function() {
+    lightbox.classList.remove('active');
+  });
+});
+</script>
