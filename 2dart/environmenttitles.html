@@ -18,21 +18,21 @@ description: "Stylized 2D game environments and tilesets."
   <!-- ===================== ENVIRONMENT ASSETS ===================== -->
   <h2 class="section-title">Pixel Art Environments</h2>
   <p class="project-overview-text">
-    Modular environment designs for top-down or side-scrolling games. These tilesets and props emphasize clarity, atmosphere, and flexible level design.
+    Modular environment designs for top-down or side-scrolling games. These tilesets emphasize clarity, atmosphere, and flexible level design.
   </p>
 
-  <!-- Terrain -->
+  <!-- Terrain Tiles -->
   <div class="project-image-block">
     <h3 class="project-image-title">Terrain Tiles</h3>
     <p class="project-overview-text">
       Tileable terrain assets for modular level construction.
     </p>
     <div class="square-gallery">
-      <div class="square-image">
+      <figure class="square-image">
         <a href="{{ '/assets/2dartassets/images/terrain_tiles.png' | relative_url }}" class="lightbox-link">
           <img src="{{ '/assets/2dartassets/images/terrain_tiles.png' | relative_url }}" alt="Pixel terrain tiles">
         </a>
-      </div>
+      </figure>
     </div>
   </div>
 
@@ -43,11 +43,11 @@ description: "Stylized 2D game environments and tilesets."
       Modular sci-fi tiles designed for interactive environments and level design.
     </p>
     <div class="square-gallery">
-      <div class="square-image">
+      <figure class="square-image">
         <a href="{{ '/assets/2dartassets/images/space_station.png' | relative_url }}" class="lightbox-link">
           <img src="{{ '/assets/2dartassets/images/space_station.png' | relative_url }}" alt="Sci-fi pixel environment">
         </a>
-      </div>
+      </figure>
     </div>
   </div>
 
@@ -61,29 +61,24 @@ description: "Stylized 2D game environments and tilesets."
 </div>
 
 <!-- LIGHTBOX OVERLAY -->
-<div class="lightbox-overlay">
+<div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
-  <span></span>
+  <span>Click anywhere to close</span>
 </div>
 
 <!-- LIGHTBOX SCRIPT -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const lightbox = document.querySelector('.lightbox-overlay');
-  const lightboxImage = lightbox.querySelector('img');
-  const lightboxCaption = lightbox.querySelector('span');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
 
-  document.querySelectorAll('.lightbox-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      lightboxImage.src = this.href;
-      lightboxCaption.textContent = this.querySelector('img').alt;
-      lightbox.classList.add('active');
-    });
-  });
-
-  lightbox.addEventListener('click', function() {
+document.addEventListener('click', e => {
+  const img = e.target.closest('.square-gallery img');
+  if (img) {
+    lightboxImg.src = img.src;
+    lightbox.classList.add('active');
+  } else if (e.target === lightbox) {
     lightbox.classList.remove('active');
-  });
+    lightboxImg.src = '';
+  }
 });
 </script>
