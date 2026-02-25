@@ -1,0 +1,134 @@
+---
+layout: default
+title: "2D Characters"
+description: "Stylized character design."
+---
+
+<div class="container fade-in">
+
+  <!-- ===================== HERO ===================== -->
+  <h1 class="page-welcome neon-title">2D Characters</h1>
+  <p class="page-subtitle neon-subtitle">
+    Stylized characters and pixel environments created for game development. 
+    Focus is on strong silhouettes, visual clarity, and designs that support real-time production pipelines.
+  </p>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== CHARACTER DESIGN ===================== -->
+  <h2 class="section-title">Character Design</h2>
+  <p class="project-overview-text">
+    A collection of stylized characters focusing on shape language, readability, and gameplay function.
+    These designs explore RPG archetypes and are created with 3D production, animation, and in-game clarity in mind.
+  </p>
+
+  <!-- Reporter -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Reporter</h3>
+    <p class="project-overview-text">
+      Grounded contemporary character designed for narrative-driven games.
+    </p>
+    <a href="{{ '/assets/2dartassets/images/walking_sprites.png' | relative_url }}" class="lightbox-link">
+      <img class="project-image-full" src="{{ '/assets/2dartassets/images/walking_sprites.png' | relative_url }}" alt="Reporter character design">
+    </a>
+  </div>
+
+  <!-- Red Dress Lady -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Red Dress Lady</h3>
+    <p class="project-overview-text">
+      Expressive character designed for cinematic storytelling.
+    </p>
+    <a href="{{ '/assets/2dartassets/images/red_dress_sprite.png' | relative_url }}" class="lightbox-link">
+      <img class="project-image-full" src="{{ '/assets/2dartassets/images/red_dress_sprite.png' | relative_url }}" alt="Red dress character">
+    </a>
+  </div>
+
+  <!-- Robotic Alien Pair -->
+  <h3 class="project-image-title">Robotic Alien Designs</h3>
+  <p class="project-overview-text">
+    Hybrid sci-fi creature exploring contrast between organic and mechanical forms.
+  </p>
+  <div class="square-gallery">
+    <div class="square-image">
+      <a href="{{ '/assets/2dartassets/images/alien_sprites.png' | relative_url }}" class="lightbox-link">
+        <img src="{{ '/assets/2dartassets/images/alien_sprites.png' | relative_url }}" alt="Robotic alien design">
+      </a>
+    </div>
+    <div class="square-image">
+      <a href="{{ '/assets/2dartassets/images/alien_progression.png' | relative_url }}" class="lightbox-link">
+        <img src="{{ '/assets/2dartassets/images/alien_progression.png' | relative_url }}" alt="Alien design iteration">
+      </a>
+    </div>
+  </div>
+
+  <!-- Wizard -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Wizard</h3>
+    <p class="project-overview-text">
+      Fantasy mage designed for strong top-down readability.
+    </p>
+    <a href="{{ '/assets/2dartassets/images/wizard_selection.png' | relative_url }}" class="lightbox-link">
+      <img class="project-image-full" src="{{ '/assets/2dartassets/images/wizard_selection.png' | relative_url }}" alt="Wizard character design">
+    </a>
+  </div>
+
+  <!-- Knights & Archer -->
+  <h3 class="project-image-title">Knights & Archer</h3>
+  <p class="project-overview-text">
+    Frontline tanks and agile ranged units, emphasizing armor, readability, and animation-friendly design.
+  </p>
+  <div class="square-gallery">
+    <div class="square-image">
+      <a href="{{ '/assets/2dartassets/images/knight01.png' | relative_url }}" class="lightbox-link">
+        <img src="{{ '/assets/2dartassets/images/knight01.png' | relative_url }}" alt="Knight 01 character design">
+      </a>
+    </div>
+    <div class="square-image">
+      <a href="{{ '/assets/2dartassets/images/knight02.png' | relative_url }}" class="lightbox-link">
+        <img src="{{ '/assets/2dartassets/images/knight02.png' | relative_url }}" alt="Knight 02 character design">
+      </a>
+    </div>
+    <div class="square-image">
+      <a href="{{ '/assets/2dartassets/images/archer.png' | relative_url }}" class="lightbox-link">
+        <img src="{{ '/assets/2dartassets/images/archer.png' | relative_url }}" alt="Archer character design">
+      </a>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- BACK TO 2D ART -->
+  <div class="project-back">
+    <a href="{{ '/' | relative_url }}">← Back to 2D Art</a>
+  </div>
+
+</div>
+
+<!-- LIGHTBOX OVERLAY -->
+<div class="lightbox-overlay">
+  <img src="" alt="">
+  <span></span>
+</div>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const lightbox = document.querySelector('.lightbox-overlay');
+  const lightboxImage = lightbox.querySelector('img');
+  const lightboxCaption = lightbox.querySelector('span');
+
+  document.querySelectorAll('.lightbox-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      lightboxImage.src = this.href;
+      lightboxCaption.textContent = this.querySelector('img').alt;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', function() {
+    lightbox.classList.remove('active');
+  });
+});
+</script>
