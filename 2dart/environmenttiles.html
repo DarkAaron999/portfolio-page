@@ -1,0 +1,79 @@
+
+---
+layout: default
+title: "2D Environment Tiles"
+description: "Stylized 2D game environments and tilesets."
+---
+
+<div class="container fade-in">
+
+  <!-- HERO -->
+  <h1 class="page-welcome neon-title">2D Environment Tiles</h1>
+  <p class="page-subtitle neon-subtitle">
+    Stylized pixel environments and modular tilesets for game development.
+    Focus is on clear gameplay readability, strong silhouettes, and modular design for production pipelines.
+  </p>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== ENVIRONMENT ASSETS ===================== -->
+  <h2 class="section-title">Pixel Art Environments</h2>
+  <p class="project-overview-text">
+    Modular environment designs for top-down or side-scrolling games. These tilesets emphasize clarity, atmosphere, and flexible level design.
+  </p>
+
+  <!-- Terrain Tiles -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Terrain Tiles</h3>
+    <p class="project-overview-text">
+      Tileable terrain assets for modular level construction.
+    </p>
+    <div class="square-gallery">
+      <figure class="square-image">
+        <img src="{{ '/assets/2dartassets/images/terrain_tiles.png' | relative_url }}" alt="Pixel terrain tiles">
+      </figure>
+    </div>
+  </div>
+
+  <!-- Sci-Fi Environment -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Sci-Fi Environment</h3>
+    <p class="project-overview-text">
+      Modular sci-fi tiles designed for interactive environments and level design.
+    </p>
+    <div class="square-gallery">
+      <figure class="square-image">
+        <img src="{{ '/assets/2dartassets/images/space_station.png' | relative_url }}" alt="Sci-fi pixel environment">
+      </figure>
+    </div>
+  </div>
+
+  <!-- BACK TO 2D ART -->
+  <div class="project-back">
+    <a href="{{ '/projects/2dart.html' | relative_url }}">← Back to 2D Art</a>
+  </div>
+
+</div>
+
+<!-- LIGHTBOX OVERLAY -->
+<div class="lightbox-overlay" id="lightbox">
+  <img src="" alt="">
+  <span>Click anywhere to close</span>
+</div>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+document.addEventListener('click', e => {
+  const img = e.target.closest('.square-gallery img');
+  if (img) {
+    lightboxImg.src = img.src;
+    lightbox.classList.add('active');
+  } else if (e.target === lightbox) {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+  }
+});
+</script>
