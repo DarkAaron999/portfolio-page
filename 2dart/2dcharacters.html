@@ -30,10 +30,10 @@ description: "Stylized character design."
     <p class="project-overview-text">
       Contemporary character designed for narrative-driven gameplay and interactive storytelling.
     </p>
-
     <div class="square-gallery">
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/reportersprites.png' | relative_url }}" alt="Reporter character sprite">
+        <div class="image-tag">Reporter</div>
       </figure>
     </div>
   </div>
@@ -44,10 +44,10 @@ description: "Stylized character design."
     <p class="project-overview-text">
       Expressive character designed for cinematic scenes and narrative-focused gameplay.
     </p>
-
     <div class="square-gallery">
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/reddresssprite.png' | relative_url }}" alt="Red dress character sprite">
+        <div class="image-tag">Red Dress Lady</div>
       </figure>
     </div>
   </div>
@@ -59,14 +59,14 @@ description: "Stylized character design."
       Sci-fi character exploration combining organic and mechanical forms. This concept
       focuses on visual contrast and iterative design development.
     </p>
-
     <div class="square-gallery">
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/aliensprites.png' | relative_url }}" alt="Robotic alien sprite">
+        <div class="image-tag">Robotic Alien</div>
       </figure>
-
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/alienprogression.png' | relative_url }}" alt="Alien design progression">
+        <div class="image-tag">Alien Progression</div>
       </figure>
     </div>
   </div>
@@ -77,10 +77,10 @@ description: "Stylized character design."
     <p class="project-overview-text">
       Fantasy mage designed for strong readability in top-down gameplay environments.
     </p>
-
     <div class="square-gallery">
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/wizardselection.png' | relative_url }}" alt="Wizard character sprite">
+        <div class="image-tag">Wizard</div>
       </figure>
     </div>
   </div>
@@ -92,18 +92,18 @@ description: "Stylized character design."
       Armored frontline units paired with a ranged archer. These designs emphasize
       armor silhouettes, role clarity, and animation-friendly forms.
     </p>
-
     <div class="square-gallery">
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/knight01.png' | relative_url }}" alt="Knight character sprite 1">
+        <div class="image-tag">Knight 01</div>
       </figure>
-
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/knight02.png' | relative_url }}" alt="Knight character sprite 2">
+        <div class="image-tag">Knight 02</div>
       </figure>
-
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/charactersprites/images/archer.png' | relative_url }}" alt="Archer character sprite">
+        <div class="image-tag">Archer</div>
       </figure>
     </div>
   </div>
@@ -115,36 +115,26 @@ description: "Stylized character design."
 
 </div>
 
-
 <!-- ===================== LIGHTBOX OVERLAY ===================== -->
-
 <div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
   <span>Click anywhere to close</span>
 </div>
 
-
 <!-- ===================== LIGHTBOX SCRIPT ===================== -->
-
 <script>
-
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = lightbox.querySelector("img");
 
 document.addEventListener("click", function(e){
-
   const img = e.target.closest(".square-gallery img");
 
   if(img){
     lightboxImg.src = img.src;
     lightbox.classList.add("active");
-  }
-
-  else if(e.target === lightbox){
+  } else if(e.target === lightbox){
     lightbox.classList.remove("active");
     lightboxImg.src = "";
   }
-
 });
-
 </script>
