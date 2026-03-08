@@ -1,0 +1,112 @@
+---
+layout: default
+title: "Hand Painted"
+description: "Hand painted illustrations and material studies."
+---
+
+<div class="container fade-in">
+
+  <!-- ===================== HERO ===================== -->
+  <h1 class="page-welcome neon-title">Hand Painted</h1>
+  <p class="page-subtitle neon-subtitle">
+    Hand-painted illustration and material studies exploring color, lighting,
+    and surface detail. These works focus on traditional painting techniques
+    adapted for digital game art workflows.
+  </p>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== ILLUSTRATION ===================== -->
+  <h2 class="section-title">Illustration</h2>
+  <p class="project-overview-text">
+    Narrative-driven illustration work exploring stylized characters and
+    fantasy storytelling through hand-painted rendering techniques.
+  </p>
+
+  <!-- Alice in Wonderland -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Alice in Wonderland</h3>
+    <p class="project-overview-text">
+      Hand-painted fantasy illustration inspired by the classic story.
+      The piece explores color harmony, lighting, and character mood while
+      demonstrating a layered painting workflow.
+    </p>
+
+    <div class="square-gallery">
+
+      <figure class="square-image">
+        <img src="{{ '/assets/2dartassets/handpainted/images/alicesketch.png' | relative_url }}" alt="Alice in Wonderland sketch">
+      </figure>
+
+      <figure class="square-image">
+        <img src="{{ '/assets/2dartassets/handpainted/images/alicebasecolor.png' | relative_url }}" alt="Alice base color stage">
+      </figure>
+
+      <figure class="square-image">
+        <img src="{{ '/assets/2dartassets/handpainted/images/alicefinal.png' | relative_url }}" alt="Final Alice painting">
+      </figure>
+
+    </div>
+  </div>
+
+  <!-- ===================== MATERIAL STUDIES ===================== -->
+  <h2 class="section-title">Material Studies</h2>
+  <p class="project-overview-text">
+    Material studies exploring organic forms, texture, and light interaction.
+    These exercises focus on understanding natural surfaces and translating
+    them into stylized painted assets.
+  </p>
+
+  <!-- Leaf Study -->
+  <div class="project-image-block">
+    <h3 class="project-image-title">Leaf Study</h3>
+    <p class="project-overview-text">
+      Hand-painted leaf study focusing on natural structure, color variation,
+      and subtle lighting across organic surfaces.
+    </p>
+
+    <div class="square-gallery">
+      <figure class="square-image">
+        <img src="{{ '/assets/2dartassets/handpainted/images/leafstudy.png' | relative_url }}" alt="Hand painted leaf study">
+      </figure>
+    </div>
+  </div>
+
+  <!-- BACK TO 2D ART -->
+  <div class="project-back">
+    <a href="{{ '/projects/2dart.html' | relative_url }}">← Back to 2D Art</a>
+  </div>
+
+</div>
+
+<!-- ===================== LIGHTBOX OVERLAY ===================== -->
+
+<div class="lightbox-overlay" id="lightbox">
+  <img src="" alt="">
+  <span>Click anywhere to close</span>
+</div>
+
+<!-- ===================== LIGHTBOX SCRIPT ===================== -->
+
+<script>
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+
+document.addEventListener("click", function(e){
+
+  const img = e.target.closest(".square-gallery img");
+
+  if(img){
+    lightboxImg.src = img.src;
+    lightbox.classList.add("active");
+  }
+
+  else if(e.target === lightbox){
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  }
+
+});
+
+</script>
