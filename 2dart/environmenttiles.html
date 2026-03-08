@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "2D Environment Tiles"
-description: "Stylized 2D game environments and tilesets."
+description: "Stylized 2D game environments and modular tilesets."
 ---
 
 <div class="container fade-in">
@@ -9,8 +9,9 @@ description: "Stylized 2D game environments and tilesets."
   <!-- HERO -->
   <h1 class="page-welcome neon-title">2D Environment Tiles</h1>
   <p class="page-subtitle neon-subtitle">
-    Stylized pixel environments and modular tilesets for game development.
-    Focus is on clear gameplay readability, strong silhouettes, and modular design for production pipelines.
+    Stylized pixel-art environments and modular tilesets designed for 2D games.
+    These assets focus on gameplay readability, clear silhouettes, and modular
+    construction to support efficient level design pipelines.
   </p>
 
   <div class="section-divider"></div>
@@ -18,15 +19,18 @@ description: "Stylized 2D game environments and tilesets."
   <!-- ===================== ENVIRONMENT ASSETS ===================== -->
   <h2 class="section-title">Pixel Art Environments</h2>
   <p class="project-overview-text">
-    Modular environment designs for top-down or side-scrolling games. These tilesets emphasize clarity, atmosphere, and flexible level design.
+    Modular environment assets designed for top-down and side-scrolling games.
+    These tilesets emphasize visual clarity, strong shapes, and flexible layouts
+    to support dynamic level building.
   </p>
 
   <!-- Terrain Tiles -->
   <div class="project-image-block">
     <h3 class="project-image-title">Terrain Tiles</h3>
     <p class="project-overview-text">
-      Tileable terrain assets for modular level construction.
+      Tileable terrain assets designed for modular level construction in outdoor environments.
     </p>
+
     <div class="square-gallery">
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/environmenttiles/images/terraintiles.png' | relative_url }}" alt="Pixel terrain tiles">
@@ -36,36 +40,42 @@ description: "Stylized 2D game environments and tilesets."
 
   <!-- Sci-Fi Environment -->
   <div class="project-image-block">
-    <h3 class="project-image-title">Sci-Fi Environment</h3>
+    <h3 class="project-image-title">Sci-Fi Environment Tiles</h3>
     <p class="project-overview-text">
-      Modular sci-fi tiles designed for interactive environments and level design.
+      Modular sci-fi tiles designed for futuristic environments such as space stations
+      or industrial facilities. Built for flexible layout and interactive level design.
     </p>
+
     <div class="square-gallery">
       <figure class="square-image">
-        <img src="{{ '/assets/2dartassets/environmenttiles/images/spacestationtiles.png' | relative_url }}" alt="Sci-fi pixel environment">
+        <img src="{{ '/assets/2dartassets/environmenttiles/images/spacestationtiles.png' | relative_url }}" alt="Sci-fi pixel environment tiles">
       </figure>
     </div>
   </div>
 
-    <!-- Stone Tiles -->
+  <!-- Stone Tiles -->
   <div class="project-image-block">
     <h3 class="project-image-title">Stone Tiles</h3>
     <p class="project-overview-text">
-      Tileable stone set for modular level construction.
+      Hand-painted stone tiles designed to seamlessly repeat for cave or dungeon environments.
+      These assets emphasize texture variation and natural stone shapes.
     </p>
+
     <div class="square-gallery">
       <figure class="square-image">
-        <img src="{{ '/assets/2dartassets/environmenttiles/images/stonetile.png' | relative_url }}" alt="Pixel stone tiles">
+        <img src="{{ '/assets/2dartassets/environmenttiles/images/stonetile.png' | relative_url }}" alt="Stone tile environment texture">
       </figure>
     </div>
   </div>
 
-      <!-- Side Walk Tiles -->
+  <!-- Sidewalk Tiles -->
   <div class="project-image-block">
     <h3 class="project-image-title">Sidewalk Tiles</h3>
     <p class="project-overview-text">
-      Tileable sidewalk made for 2D platformer.
+      Tileable sidewalk environment designed for 2D platformer levels and urban environments.
+      Built for clean repetition and consistent gameplay readability.
     </p>
+
     <div class="square-gallery">
       <figure class="square-image">
         <img src="{{ '/assets/2dartassets/environmenttiles/images/sidewalktiles.png' | relative_url }}" alt="Pixel sidewalk tiles">
@@ -80,25 +90,34 @@ description: "Stylized 2D game environments and tilesets."
 
 </div>
 
-<!-- LIGHTBOX OVERLAY -->
+<!-- ===================== LIGHTBOX OVERLAY ===================== -->
+
 <div class="lightbox-overlay" id="lightbox">
   <img src="" alt="">
   <span>Click anywhere to close</span>
 </div>
 
-<!-- LIGHTBOX SCRIPT -->
-<script>
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox.querySelector('img');
+<!-- ===================== LIGHTBOX SCRIPT ===================== -->
 
-document.addEventListener('click', e => {
-  const img = e.target.closest('.square-gallery img');
-  if (img) {
+<script>
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = lightbox.querySelector("img");
+
+document.addEventListener("click", function(e){
+
+  const img = e.target.closest(".square-gallery img");
+
+  if(img){
     lightboxImg.src = img.src;
-    lightbox.classList.add('active');
-  } else if (e.target === lightbox) {
-    lightbox.classList.remove('active');
-    lightboxImg.src = '';
+    lightbox.classList.add("active");
   }
+
+  else if(e.target === lightbox){
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  }
+
 });
+
 </script>
