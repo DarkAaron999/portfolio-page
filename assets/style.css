@@ -507,16 +507,23 @@ a {
   font-size: 0.95rem;
 }
 
-/* =========================================================
-   ITCH.IO EMBED
-   ========================================================= */
-.embed-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: var(--space-lg) 0;
+/* =====================
+   ITCH.IO EMBED — RESPONSIVE
+   ===================== */
+.embed-wrapper.responsive-iframe {
+  position: relative;
+  width: 100%;           /* fill container width */
+  padding-bottom: 10%;   /* banner height ratio, tweak if needed */
+  height: 0;
+  overflow: hidden;
 }
 
-.embed-wrapper iframe {
+.embed-wrapper.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;           /* scale to container width */
+  height: 100%;          /* match wrapper height */
   border-radius: 12px;
   border: 1px solid var(--border);
 }
