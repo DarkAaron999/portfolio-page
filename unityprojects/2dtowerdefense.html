@@ -6,6 +6,7 @@ description: "A 2D tower defense game built in Unity, featuring custom art, towe
 
 <div class="container fade-in">
 
+  <!-- PAGE HERO -->
   <h1 class="page-welcome neon-title">2D Tower Defense</h1>
   <p class="page-subtitle neon-subtitle">
     A fully custom 2D tower defense game built in Unity. I created all code, art assets, UI, and gameplay systems — from tower logic to enemy pathing.
@@ -22,8 +23,8 @@ description: "A 2D tower defense game built in Unity, featuring custom art, towe
 
   <div class="section-divider"></div>
 
+  <!-- FEATURES -->
   <h2 class="section-title">Features</h2>
-
   <ul class="project-body">
     <li>Click‑to‑place tower system with tile‑based placement</li>
     <li>Multiple tower types with unique attack patterns</li>
@@ -34,22 +35,20 @@ description: "A 2D tower defense game built in Unity, featuring custom art, towe
 
   <div class="section-divider"></div>
 
+  <!-- ITCH.IO BANNER -->
   <h2 class="section-title">Play the Game</h2>
-
   <p class="project-overview-text">
     Click the banner below to play the full WebGL build on itch.io.
   </p>
 
-  <div class="embed-wrapper">
-    <iframe frameborder="0" src="https://itch.io/embed/2637926" width="552" height="167">
-      <a href="https://darkaaron999.itch.io/2d-tower-defense">2D Tower Defense by Aaron</a>
-    </iframe>
+  <div class="embed-wrapper responsive-iframe">
+    <iframe src="https://itch.io/embed/2637926" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div class="section-divider"></div>
 
+  <!-- DEVELOPMENT NOTES -->
   <h2 class="section-title">Development Notes</h2>
-
   <p class="project-overview-text">
     This project strengthened my understanding of tower placement logic, enemy pathfinding, wave progression, and 2D asset creation.
     Building both the visuals and gameplay systems gave me full control over readability, pacing, and balance.
@@ -59,7 +58,33 @@ description: "A 2D tower defense game built in Unity, featuring custom art, towe
     It also helped refine my workflow for small‑scale Unity projects — from prototyping mechanics to polishing UI and preparing a WebGL build.
   </p>
 
+  <!-- BACK BUTTON -->
   <div class="project-back">
     <a href="{{ '/projects/unityprojects.html' | relative_url }}">← Back to Unity Projects</a>
   </div>
 
+</div>
+
+<!-- =====================
+   RESPONSIVE ITCH.IO BANNER CSS
+   ===================== -->
+<style>
+/* Make itch.io banner responsive */
+.embed-wrapper.responsive-iframe {
+  position: relative;
+  width: 100%;           /* fill container width */
+  padding-bottom: 10%;   /* banner height ratio; adjust 8–12% if needed */
+  height: 0;
+  overflow: hidden;
+}
+
+.embed-wrapper.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #1f2937; /* matches your theme border */
+  border-radius: 12px;
+}
+</style>
